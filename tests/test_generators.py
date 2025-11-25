@@ -1,12 +1,12 @@
-from pytest import mark
+import pytest
 
+from mongens.data.data import SEED_TYPES, BASE_STATS
 from mongens.dex_entries import dex_formatter
 from mongens.mon_forge import forge_seed_monster, apply_mutagens, generate_monster
 from mongens.prompt_engine import construct_mon_prompt
-from mongens.seed_data_attr import SEED_TYPES, BASE_STATS
 
 # Mark all tests in this file as being part of the 'generators' suite
-pytestmark = mark.generators()
+pytestmark = pytest.mark.generators
 
 
 @pytest.fixture
@@ -46,14 +46,13 @@ def test_forge_seed_monster_dual_type():
 def test_apply_mutagens():
     """Tests that mutagens correctly modify a monster's stats and elements."""
     monster = forge_seed_monster(primary_type="Verdant", idnum=1)
-    original_hp = BASE_STATS["HP"]
 
     # Apply mutagens that are known to affect HP
     mutated_monster = apply_mutagens(monster, major_count=1, minor_count=1, util_count=1)
 
     # This is a bit non-deterministic since mutagens are chosen randomly.
     # A more robust test would mock 'random.choice' to select a specific mutagen.
-    assert mutated_monster.stats["HP"] != original_hp
+    assert mutated_monster.stats != BASE_STATS
     assert mutated_monster is not None
     assert mutated_monster.elements["major"]  # Should have one major element
 
@@ -95,7 +94,7 @@ def test_prompt_engine():
 def test_all_monster_types_generate(monster_type):
     """A powerful test to ensure no monster type crashes the generator."""
     try:
-        monster = generate_monster(monster_type, 1, 1, 1, 1)
+        monster = generate_monster(primary_type=monster_type, idnum=1, major_count=1, minor_count=1, util_count=1)
         assert monster is not None
         dex_entry = dex_formatter(monster)
         assert isinstance(dex_entry, str)

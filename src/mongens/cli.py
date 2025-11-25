@@ -3,7 +3,7 @@ from dataclasses import asdict
 from pprint import pprint
 from random import choice
 
-from .data.data import (
+from mongens.data.data import (
     SEED_TYPES,
     HABITATS_BY_TYPE,
     MAJOR_MODS,
@@ -40,9 +40,9 @@ def main():
     parser_dex.add_argument(
         "-t2", "--secondary_type",
         type=str,
-        default=None,
+        default="random",
         choices=SEED_TYPES + ["random"],
-        help="The secondary type of monster to generate. Defaults to None."
+        help="The secondary type of monster to generate. Defaults to a random type. Only the primary type is guaranteed, the second is only possible."
     )
     parser_dex.add_argument(
         "-c", "--count",
@@ -79,14 +79,13 @@ def main():
     parser_unique.add_argument(
         "-t2", "--secondary_type",
         type=str,
-        default=None,
+        default="random",
         choices=SEED_TYPES + ["random"],
-        help="The secondary type of monster to generate. Defaults to None."
+        help="The secondary type of monster to generate."
     )
     parser_unique.add_argument("--majors", type=int, default=1, help="Number of major mutagens.")
-    parser_unique.add_argument("--minors", type=int, default=2, help="Number of minor mutagens.")
+    parser_unique.add_argument("--minors", type=int, default=1, help="Number of minor mutagens.")
     parser_unique.add_argument("--utils", type=int, default=1, help="Number of utility mutagens.")
-
 
     # ===================================================================
     # --- Execution Logic ---
@@ -118,7 +117,7 @@ def main():
             entry_text = dex_formatter(monster_template)
             output_lines.append(entry_text)
 
-        full_output = ("\n\n" + "-"*60 + "\n\n").join(output_lines)
+        full_output = ("\n\n" + "-" * 60 + "\n\n").join(output_lines)
 
         if args.output:
             try:
@@ -185,6 +184,7 @@ def main():
             except ValueError:
                 continue
         pprint(asdict(wild_monster))
+
 
 if __name__ == "__main__":
     main()

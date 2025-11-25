@@ -4,7 +4,7 @@ from dataclasses import dataclass
 from random import choice
 from typing import Dict, List, Any, Optional
 
-from .data.data import (
+from mongens.data.data import (
     BASE_STATS,
     SEED_TYPES,
     INCOMPATIBLE_TYPE_PAIRS,

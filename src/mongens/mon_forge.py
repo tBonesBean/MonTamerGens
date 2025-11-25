@@ -3,7 +3,7 @@ from __future__ import annotations
 from random import choice
 from typing import Optional
 
-from .data.data import (
+from mongens.data.data import (
     MAJOR_MODS,
     MINOR_MODS,
     UTILITY_MODS,

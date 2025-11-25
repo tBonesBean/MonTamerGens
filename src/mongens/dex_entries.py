@@ -2,7 +2,7 @@ from pathlib import Path
 from random import choice, random
 from typing import List
 
-from .data.data import (
+from mongens.data.data import (
     SEED_TYPES
 )
 from .mon_forge import (
@@ -86,7 +86,7 @@ def dex_formatter(seed: MonsterSeed) -> str:
 
     # Simple tags summary from meta, if present
     tags = seed.meta.get("tags", []) or []
-    resist = seed.meta._get("resist", []) or []
+    resist = seed.meta.get("resist", []) or []
     weak = seed.meta.get("weak", []) or []
 
     tags_str = ", ".join(tags)
