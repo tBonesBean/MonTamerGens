@@ -6,7 +6,7 @@ here = pathlib.Path(__file__).parent.resolve()
 
 setup(
     name='MonsterGenerators',
-    version='0.1.0',
+    version='0.2.0',
     package_dir={'': 'src'},
     packages=find_packages(where='src'),
     package_data={
@@ -52,7 +52,7 @@ setup(
     author='Your Name',
     author_email='your.email@example.com',
     description='A fantasy monster generator.',
-    long_description=open('README.md').read(),
+    long_description=open('README.MD').read(),
     long_description_content_type='text/markdown',
     url='https://github.com/yourusername/monstergenerators',
     classifiers=[

@@ -2,13 +2,13 @@ from pathlib import Path
 from random import choice, random
 from typing import List
 
-from mongens.data.data import (
-    SEED_TYPES
+from .data.data import (
+	SEED_TYPES
 )
 from .mon_forge import (
-    MonsterSeed,
-    apply_mutagens,
-    forge_seed_monster
+	MonsterSeed,
+	apply_mutagens,
+	forge_seed_monster
 )
 
 

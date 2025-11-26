@@ -51,7 +51,7 @@ mongen dexentry --primary_type Geomorph --count 20 --output dex.txt
 You can also use the library directly in your Python code:
 
 ```python
-from mongens.mon_forge import generate_monster
+from .mon_forge import generate_monster
 from mongens.dex_entries import dex_formatter
 
 # Generate a single monster

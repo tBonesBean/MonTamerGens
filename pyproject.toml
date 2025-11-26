@@ -4,13 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "MonsterGenerators"
-version = "0.1.0"
+version = "0.2.0"
 authors = [
   { name="Your Name", email="your.email@example.com" },
 ]
-license = "MIT AND (Apache-2.0 OR BSD-2-Clause)"
+[pr]
 description = "A fantasy monster generator."
-readme = "README.md"
+readme = "./README.md"
 requires-python = ">=3.7"
 classifiers = [
     "Programming Language :: Python :: 3",
@@ -47,6 +47,10 @@ dependencies = [
     "pylint==4.0.3",
     "pyproject_hooks==1.2.0",
 ]
+
+[project.license-files]
+license = "MIT AND (Apache-2.0 OR BSD-2-Clause)"
+url = "https://github.com/yourusername/monstergenerators"
 
 [project.scripts]
 mongen = "mongens.cli:main"
