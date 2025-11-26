@@ -13,14 +13,16 @@ setup(
         'mongens': ['data/*'],
     },
     install_requires=[
-        'pytest==9.0.1',
         'setuptools==80.9.0',
-        'astroid==4.0.2',
         'build==1.3.0',
+        'wheel==0.38.4',
+        'pyproject_hooks==1.2.0',
+        'pytest==9.0.1',
+        'packaging==25.0',
+        'astroid==4.0.2',
         'certifi==2025.11.12',
         'charset-normalizer==3.4.4',
         'colorama==0.4.6',
-        'wheel==0.38.4',
         'dill==0.4.0',
         'docstringify==1.1.1',
         'docutils==0.22.3',
@@ -37,12 +39,10 @@ setup(
         'mdurl==0.1.2',
         'more-itertools==10.8.0',
         'nh3==0.3.2',
-        'packaging==25.0',
         'platformdirs==4.5.0',
         'pluggy==1.6.0',
         'Pygments==2.19.2',
         'pylint==4.0.3',
-        'pyproject_hooks==1.2.0',
     ],
     entry_points={
         'console_scripts': [
@@ -57,7 +57,6 @@ setup(
     url='https://github.com/yourusername/monstergenerators',
     classifiers=[
         'Programming Language :: Python :: 3',
-        'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
     ],
 )
