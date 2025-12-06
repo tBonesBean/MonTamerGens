@@ -1,6 +1,6 @@
 # 🎨 GODOT MONSTER TRAINER — 32-Bit Pixel Art Style Guide (v1)
 
--  *Dex-certified. Bean-approved.*
+- *Dex-certified. Bean-approved.*
 
 ## 1\. Overall Visual Philosophy
 
@@ -20,8 +20,7 @@ Think:
 
 “Dragon Warrior Monsters if it was made for platforms like NDS or GBA.”
 
-#### *- - - Typical Sprite Image Variations:*
-
+*--- Typical Sprite Image Variations:*
 
 | SPRITE TYPE           | RESOLUTION   |                                                                                 NOTES |
 |:----------------------|:-------------|--------------------------------------------------------------------------------------:|
@@ -32,39 +31,40 @@ Think:
 
 ## 2\. Palette Rules
 
-##### Base Palette
+### Base Palette
 
-* \~32–40 usable colors total  
-* 4–6 colors per major hue  
-* High contrast shadows  
-* Slight purple tint to shadows (SNES aesthetic trick)  
-* No pure white except for eyes/glints  
-* No pure black except for heavy outlines
+- \~32–40 usable colors total  
+- 4–6 colors per major hue  
+- High contrast shadows  
+- Slight purple tint to shadows (SNES aesthetic trick)  
+- No pure white except for eyes/glints  
+- No pure black except for heavy outlines
 
-###### Shading Style
+### Shading Style
 
-* “Chunked” anti-aliasing  
-* 1→2→3 value ramps per material  
-* Light source: upper-left
+- “Chunked” anti-aliasing  
+- 1→2→3 value ramps per material  
+- Light source: upper-left
 
 Mutagens may “break” light rules in special cases (e.g. bioluminescent)
 
 ## 3\. Design Rules Per Monster Component
 
-#### A. Primary and Secondary Types (Body Plan Base)
+### A. Primary and Secondary Types (Body Plan Base)
 
 Use **primary\_type** and **secondary\_type**** to determine:
 
-* silhouette  
-* limb count  
-* posture  
-* texture  
-* muscle/fat distribution  
-* natural color families
-###### **if provided. Only primary type is guaranteed.
+- silhouette  
+- limb count  
+- posture  
+- texture  
+- muscle/fat distribution  
+- natural color families
+
+***if provided. Only primary type is guaranteed*
+
 | *Type*        | *Silhouette suggestive guideline; typical, but loosely regulated, visual commonalities between Monster types.*                                                     |
 |---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 
 | Dread         | unsettling elongated posture, asymmetrical shapes, shadowy presence, exotic anatomical figure, missing or extra physical features                                  |
 | Cryoform      | sharp angular shapes, crystalline ice reflections, jagged silhouette, frosty/ aura if an aura prompted                                                             |
 | Geomorph      | typically thicker physique, rock-hewn or crystallized structures and silhouettes,  diverse mineral textures/colors                                                 |
@@ -84,14 +84,14 @@ Use **primary\_type** and **secondary\_type**** to determine:
 
 ###
 
-#### B. MAJOR MODS and MINOR MODS (Mutagens)
+#### MAJOR MODS (Mutagens)
 
 These ALWAYS modify:
 
-* color splashes  
-* limb texture  
-* aura/glow  
-* subtle silhouette shifts
+- color splashes  
+- limb texture  
+- aura/glow  
+- subtle silhouette shifts
 
 Examples:
 
@@ -101,20 +101,19 @@ Examples:
 - Sensei *→ athletic, bipedal combat-ready stance*  
 - Glacial *→ inertial, sense of deliberate motion, terrain may determine ratio between solid ice / thaw*
 
-#### C. Utility Elements
+#### UTILITY MODS
 
 These (potentially) modify:
 
-* accessories  
-* markings  
-* behavior/mood in pose  
-* subtle glow/aura cues
+- accessories  
+- markings  
+- behavior/mood in pose  
+- subtle glow/aura cues
 
 Examples:
 
 - CosmicInterpreter → *small halos, runes, star particles*  
-- Pet Cloud → *floating tiny cloud companion*  
-- RuneSlots+1 → *glowing runic circles on body*
+- RuneReader → *glowing runic circles on body*
 
 #### D. Traits (Triplets)
 
@@ -128,40 +127,41 @@ These **ALWAYS** add visible flair:
 “Allergic to Gold” → *blotchy gold rash spots*  
 “Pet Cloud” → *literal small cloud friend*
 
-**An attempt must be made to make every trait directly visible in the sprite**.
+**An attempt must be made to make distinct traits visible in the sprite**.
 
 ## 4\. Pose Rules
 
 All battle sprites follow:
 
-* ¾ perspective  
-* Facing toward the player (diagonally)  
-* One dominant gesture (raised limb, open mouth, wing flare)  
-* Slight idle lean forward as if ready to engage  
-* Tail/appendages angled outward to avoid overlapping silhouette
-* Reverse/Over-the-Shoulder perspective
+- ¾ perspective  
+- Facing toward the player (diagonally)  
+- One dominant gesture (raised limb, open mouth, wing flare)  
+- Slight idle lean forward as if ready to engage  
+- Tail/appendages angled outward to avoid overlapping silhouette
+- Reverse/Over-the-Shoulder perspective
 
 Portrait / Catalog Entries follow:
 
-* High detail and attention to specific visual aspects derived from prompt
-* Unique posture, action pose
-* Thematically parallel to information provided by prompt
-* Background/Context based on *habitat** and *type(s)**
-* Below the portrait will be text describing Stats, Traits, Personality, etc.
-###### * *keywords from the prompt*
+- High detail and attention to specific visual aspects derived from prompt
+- Unique posture, action pose
+- Thematically parallel to information provided by prompt
+- Background/Context based on *habitat* and *type(s)*
+- Below the portrait will be text describing Stats, Personality, Meta, etc.
+
+**keywords from the prompt*
 
 ## 5\. Balance Between Randomness & Readability
 
 Since generation is random, this art style guide provides balance and consistency within the creative randomness.
-	the following rules define such a balance:
+ the following rules define such a balance:
 
-* Types + Traits = 60% of the monster's 'visual identity'  
-  * Major / Minor Elements = 25%  
-  * Utility Elements = 15%   
+- Types + Traits = 60% of the monster's 'visual identity'  
+  - Major / Minor Mutagens = 25%  
+  - Utility Mutagens = 15%
   
-* No sprite should feel “overloaded” → cap at:  
-  * 2 major color accents  
-  * 1 aura effect  
-  * 2 visible trait objects
+- No sprite should feel “overloaded” → cap at:  
+  - 2 major color accents  
+  - 1 aura effect  
+  - 2 visible trait objects
 
-If a monster rolls too many visuals → prune down to most meaningful elements.  
+If a monster rolls too many visuals → prune down to most meaningful Mutagens.  

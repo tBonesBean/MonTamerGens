@@ -32,7 +32,7 @@ def construct_mon_prompt(seed) -> str:
 
     # If there's no specific override, fall back to the type-based description
     if not body_desc:
-        body_desc = type_visuals.get(primary_type, "distinct creature silhouette")
+        body_desc = TYPE_VISUALS.get(primary_type, "distinct creature silhouette")
 
     subject_line = f"A {species} monster, {primary_type} type, {body_desc}."
 
@@ -45,7 +45,7 @@ def construct_mon_prompt(seed) -> str:
 
     prompt_glow = ""
     combined_mods = majors + utilities
-    if any("Luminescent" in m or "Solar" in m or "Fire" in m for m in combined_mods):
+    if any("Luminescent" in m or "Solar" in m or "Inferno" in m for m in combined_mods):
         prompt_glow = "emitting a subtle bioluminescent glow, "
 
     mods_line = (
@@ -76,12 +76,12 @@ def construct_mon_prompt(seed) -> str:
 
     # --- ASSEMBLE PROMPT ---
     full_prompt = (
-        f"{art_style_header}\n"
+        f"{STYLE_HEADER}\n"
         f"Subject: {subject_line}\n"
         f"{mods_line} {prompt_glow}\n"
         f"{details_line}\n"
         f"{pose_instruction}\n"
-        f"{technical_specs}"
+        f"{TECHNICAL_SPECS}"
     )
 
     return full_prompt
