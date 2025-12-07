@@ -1,0 +1,839 @@
+{
+  "II7YO7RFDQ": {
+    "idnum": 2,
+    "name": "Folus",
+    "species": "Thorn Hydra",
+    "primary_type": "Sylvan",
+    "secondary_type": "Insect",
+    "habitat": "Verdant Plains",
+    "stats": {
+      "HP": 133,
+      "ATK": 55,
+      "DEF": 55,
+      "SPATK": 66,
+      "SPDEF": 60,
+      "SPD": 45,
+      "ACC": 103,
+      "EVA": 8,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Extrasensory"
+      ],
+      "utility": [
+        "Grinder"
+      ]
+    },
+    "traits": [
+      "Exagerrated Tail",
+      "Broken Crown",
+      "Never Ages"
+    ],
+    "tempers": {
+      "mood": "Territorial",
+      "affinity": "Compassion"
+    },
+    "meta": {
+      "tags": [
+        "Precognition",
+        "Mind-Reader",
+        "Determined",
+        "NoPainNoGain"
+      ],
+      "resist": [],
+      "weak": [],
+      "notes": [],
+      "unique_id": "II7YO7RFDQ"
+    }
+  },
+  "23NWAB7YY1": {
+    "idnum": 3,
+    "name": "Verdian, the Sentinel",
+    "species": "Willow-Wisp Matron",
+    "primary_type": "Sylvan",
+    "secondary_type": "Anomalous",
+    "habitat": "Blooming Valley",
+    "stats": {
+      "HP": 150,
+      "ATK": 54,
+      "DEF": 54,
+      "SPATK": 67,
+      "SPDEF": 64,
+      "SPD": 52,
+      "ACC": 98,
+      "EVA": 13,
+      "LUCK": 17
+    },
+    "mutagens": {
+      "major": [
+        "Riftwalker"
+      ],
+      "utility": [
+        "Alchemist"
+      ]
+    },
+    "traits": [
+      "Cracked Porcelain Mask",
+      "Silver Bell",
+      "Terrified Of Silence"
+    ],
+    "tempers": {
+      "mood": "Bashful",
+      "affinity": "Kindness"
+    },
+    "meta": {
+      "tags": [
+        "Teleport:Long",
+        "DimensionalSlip",
+        "Transmute",
+        "PotionMaster"
+      ],
+      "resist": [],
+      "weak": [
+        "Metallic"
+      ],
+      "notes": [],
+      "unique_id": "23NWAB7YY1"
+    }
+  },
+  "HMREY1QDCH": {
+    "idnum": 4,
+    "name": "Verdroot",
+    "species": "Yew Tree Spirit",
+    "primary_type": "Sylvan",
+    "secondary_type": null,
+    "habitat": "Oldgrowth Marsh",
+    "stats": {
+      "HP": 140,
+      "ATK": 56,
+      "DEF": 50,
+      "SPATK": 70,
+      "SPDEF": 60,
+      "SPD": 42,
+      "ACC": 95,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "BrightFlare"
+      ],
+      "utility": [
+        "SuperPositioned"
+      ]
+    },
+    "traits": [
+      "Hovers When It Rains",
+      "Ancient Coin Collection",
+      "Forgetting Faces Instantly"
+    ],
+    "tempers": {
+      "mood": "Humble",
+      "affinity": "Deviousness"
+    },
+    "meta": {
+      "tags": [
+        "Burn:Overtime",
+        "Cinderwake",
+        "Quantum",
+        "Uncertainty"
+      ],
+      "resist": [],
+      "weak": [
+        "Aquatic"
+      ],
+      "notes": [],
+      "unique_id": "HMREY1QDCH"
+    }
+  },
+  "KTH6KMQOSL": {
+    "idnum": 5,
+    "name": "Stale",
+    "species": "Wollemi Pine Dryosaur",
+    "primary_type": "Sylvan",
+    "secondary_type": null,
+    "habitat": "Shattered Plateau",
+    "stats": {
+      "HP": 157,
+      "ATK": 64,
+      "DEF": 54,
+      "SPATK": 57,
+      "SPDEF": 60,
+      "SPD": 40,
+      "ACC": 95,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Bloodforge"
+      ],
+      "utility": [
+        "Diviner"
+      ]
+    },
+    "traits": [
+      "Glowing Eyes",
+      "Vial Of Mist",
+      "Immune To Cold"
+    ],
+    "tempers": {
+      "mood": "Gracious",
+      "affinity": "Gentleness"
+    },
+    "meta": {
+      "tags": [
+        "Regen:OnHit",
+        "Hemofury",
+        "Reveal:Secrets",
+        "Dowsing"
+      ],
+      "resist": [],
+      "weak": [
+        "Radiant"
+      ],
+      "notes": [],
+      "unique_id": "KTH6KMQOSL"
+    }
+  },
+  "V44YIFQCHP": {
+    "idnum": 6,
+    "name": "Bryus, the Lost",
+    "species": "Dryad",
+    "primary_type": "Sylvan",
+    "secondary_type": "Ancient",
+    "habitat": "Thornveil Thicket",
+    "stats": {
+      "HP": 174,
+      "ATK": 56,
+      "DEF": 58,
+      "SPATK": 66,
+      "SPDEF": 60,
+      "SPD": 36,
+      "ACC": 95,
+      "EVA": 5,
+      "LUCK": 15
+    },
+    "mutagens": {
+      "major": [
+        "Brimstone"
+      ],
+      "utility": [
+        "Diviner"
+      ]
+    },
+    "traits": [
+      "Translucent Skin",
+      "Holds Pouches Of Secret Contents",
+      "Dreams Of Drowning"
+    ],
+    "tempers": {
+      "mood": "Compassionate",
+      "affinity": "Arrogance"
+    },
+    "meta": {
+      "tags": [
+        "Ignite:Low",
+        "Kindle",
+        "Reveal:Secrets",
+        "Dowsing"
+      ],
+      "resist": [],
+      "weak": [],
+      "notes": [],
+      "unique_id": "V44YIFQCHP"
+    }
+  },
+  "4BQLVX4Z01": {
+    "idnum": 7,
+    "name": "Pefea",
+    "species": "Razor-Leaf Tiger",
+    "primary_type": "Sylvan",
+    "secondary_type": "Ice",
+    "habitat": "Ironwood Deep",
+    "stats": {
+      "HP": 160,
+      "ATK": 50,
+      "DEF": 50,
+      "SPATK": 61,
+      "SPDEF": 85,
+      "SPD": 37,
+      "ACC": 95,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Crystalline"
+      ],
+      "utility": [
+        "Symbiote"
+      ]
+    },
+    "traits": [
+      "Glowing Eyes",
+      "Enchanted Scarf",
+      "Never Ages"
+    ],
+    "tempers": {
+      "mood": "Amiable",
+      "affinity": "Indifference"
+    },
+    "meta": {
+      "tags": [
+        "Shatter:OnCrit",
+        "HealingAura",
+        "Lifebond"
+      ],
+      "resist": [
+        "Mind"
+      ],
+      "weak": [],
+      "notes": [],
+      "unique_id": "4BQLVX4Z01"
+    }
+  },
+  "LCMP12DG9F": {
+    "idnum": 8,
+    "name": "Bryian",
+    "species": "Willow-Wisp Matron",
+    "primary_type": "Sylvan",
+    "secondary_type": null,
+    "habitat": "Wyrmscar Ridge",
+    "stats": {
+      "HP": 140,
+      "ATK": 55,
+      "DEF": 50,
+      "SPATK": 57,
+      "SPDEF": 60,
+      "SPD": 44,
+      "ACC": 95,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Feralkin"
+      ],
+      "utility": [
+        "LongSeeker"
+      ]
+    },
+    "traits": [
+      "Metal Jaw And Shoulderplates",
+      "Gills",
+      "Allergic To Salt"
+    ],
+    "tempers": {
+      "mood": "Arrogant",
+      "affinity": "Tolerance"
+    },
+    "meta": {
+      "tags": [
+        "Howl:Pack",
+        "Tracker",
+        "Tracker",
+        "TreasureHunter"
+      ],
+      "resist": [],
+      "weak": [],
+      "notes": [],
+      "unique_id": "LCMP12DG9F"
+    }
+  },
+  "0QRDPEULLM": {
+    "idnum": 9,
+    "name": "Megaraptor",
+    "species": "Bee-Lord",
+    "primary_type": "Sylvan",
+    "secondary_type": "Ancient",
+    "habitat": "Thornveil Thicket",
+    "stats": {
+      "HP": 174,
+      "ATK": 56,
+      "DEF": 58,
+      "SPATK": 63,
+      "SPDEF": 69,
+      "SPD": 36,
+      "ACC": 105,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Radiant"
+      ],
+      "utility": [
+        "AntiExtinct"
+      ]
+    },
+    "traits": [
+      "Antler Crown",
+      "Pocket Of Ashes",
+      "Can\u2019t Cry"
+    ],
+    "tempers": {
+      "mood": "Territorial",
+      "affinity": "Generosity"
+    },
+    "meta": {
+      "tags": [
+        "Cure:Blind",
+        "HolyLight",
+        "LastOfKind",
+        "Endangered"
+      ],
+      "resist": [],
+      "weak": [
+        "Shrouded"
+      ],
+      "notes": [],
+      "unique_id": "0QRDPEULLM"
+    }
+  },
+  "YK3I8Y6L45": {
+    "idnum": 10,
+    "name": "Crumo, the Survivalist",
+    "species": "Yew Tree Spirit",
+    "primary_type": "Sylvan",
+    "secondary_type": "Astral",
+    "habitat": "Fungal Vales",
+    "stats": {
+      "HP": 133,
+      "ATK": 55,
+      "DEF": 50,
+      "SPATK": 70,
+      "SPDEF": 69,
+      "SPD": 46,
+      "ACC": 95,
+      "EVA": 8,
+      "LUCK": 13
+    },
+    "mutagens": {
+      "major": [
+        "ArcheoAnomaly"
+      ],
+      "utility": [
+        "Transient"
+      ]
+    },
+    "traits": [
+      "Scaled Neck",
+      "Broken Pocket Watch",
+      "Speaks To Shadows"
+    ],
+    "tempers": {
+      "mood": "Compassionate",
+      "affinity": "Intellect"
+    },
+    "meta": {
+      "tags": [
+        "Sentience:Inconsistent",
+        "TemporalFlux",
+        "Wanderer",
+        "Survivalist"
+      ],
+      "resist": [],
+      "weak": [],
+      "notes": [],
+      "unique_id": "YK3I8Y6L45"
+    }
+  },
+  "8QOVICGZQ8": {
+    "idnum": 2,
+    "name": "Sylyool, the Gleaming",
+    "species": "Mandrake",
+    "primary_type": "Sylvan",
+    "secondary_type": "Brawler",
+    "habitat": "Blooming Valley",
+    "stats": {
+      "HP": 140,
+      "ATK": 66,
+      "DEF": 52,
+      "SPATK": 51,
+      "SPDEF": 60,
+      "SPD": 53,
+      "ACC": 95,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "SandCrawler"
+      ],
+      "utility": [
+        "Ageless"
+      ]
+    },
+    "traits": [
+      "Webbed Fingers",
+      "Compass That Points Home",
+      "Hums When Nervous"
+    ],
+    "tempers": {
+      "mood": "Impatient",
+      "affinity": "Open-Mindedness"
+    },
+    "meta": {
+      "tags": [
+        "Initiative:Sand",
+        "Burrow",
+        "Lore:Gates",
+        "AncientWisdom"
+      ],
+      "resist": [],
+      "weak": [],
+      "notes": [],
+      "unique_id": "8QOVICGZQ8"
+    }
+  },
+  "E806NLI61L": {
+    "idnum": 3,
+    "name": "Thallian",
+    "species": "Canopy Arborcat",
+    "primary_type": "Sylvan",
+    "secondary_type": null,
+    "habitat": "Ironwood Deep",
+    "stats": {
+      "HP": 154,
+      "ATK": 57,
+      "DEF": 60,
+      "SPATK": 57,
+      "SPDEF": 60,
+      "SPD": 40,
+      "ACC": 95,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Monolithic"
+      ],
+      "utility": [
+        "BornLeader"
+      ]
+    },
+    "traits": [
+      "Crystal Antlers",
+      "Wears Heavy Amulets",
+      "Collects Fallen Stars"
+    ],
+    "tempers": {
+      "mood": "Tolerant",
+      "affinity": "Trustfulness"
+    },
+    "meta": {
+      "tags": [
+        "Ambush:Burrow",
+        "Tremorsense",
+        "VeteranPresence",
+        "BattleCry",
+        "Rally"
+      ],
+      "resist": [],
+      "weak": [
+        "Astral"
+      ],
+      "notes": [],
+      "unique_id": "E806NLI61L"
+    }
+  },
+  "YJBPZ4TG1X": {
+    "idnum": 5,
+    "name": "Folus, the Silent",
+    "species": "Floral Behemoth",
+    "primary_type": "Sylvan",
+    "secondary_type": null,
+    "habitat": "Misty Glades",
+    "stats": {
+      "HP": 147,
+      "ATK": 61,
+      "DEF": 60,
+      "SPATK": 57,
+      "SPDEF": 67,
+      "SPD": 40,
+      "ACC": 95,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Fossilized"
+      ],
+      "utility": [
+        "Confidant"
+      ]
+    },
+    "traits": [
+      "Stone Skin",
+      "Silver Coin",
+      "Leaves Frost Footprints"
+    ],
+    "tempers": {
+      "mood": "Amiable",
+      "affinity": "Warmth"
+    },
+    "meta": {
+      "tags": [
+        "Ability:Revive",
+        "Whispers",
+        "VeiledKnowledge"
+      ],
+      "resist": [
+        "Mineral"
+      ],
+      "weak": [],
+      "notes": [],
+      "unique_id": "YJBPZ4TG1X"
+    }
+  },
+  "VK7IEVH3XE": {
+    "idnum": 6,
+    "name": "Verdus",
+    "species": "Mandrake",
+    "primary_type": "Sylvan",
+    "secondary_type": null,
+    "habitat": "Ironwood Deep",
+    "stats": {
+      "HP": 168,
+      "ATK": 50,
+      "DEF": 50,
+      "SPATK": 57,
+      "SPDEF": 85,
+      "SPD": 36,
+      "ACC": 95,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Glacial"
+      ],
+      "utility": [
+        "Diviner"
+      ]
+    },
+    "traits": [
+      "Cracked Porcelain Mask",
+      "Crystal Monocle",
+      "Steps Make Subtle Sparks"
+    ],
+    "tempers": {
+      "mood": "Conceited",
+      "affinity": "Irritability"
+    },
+    "meta": {
+      "tags": [
+        "IceArmor",
+        "Reveal:Secrets",
+        "Dowsing"
+      ],
+      "resist": [
+        "Frostbound"
+      ],
+      "weak": [
+        "Tempest"
+      ],
+      "notes": [],
+      "unique_id": "VK7IEVH3XE"
+    }
+  },
+  "UTGO6YXXIX": {
+    "idnum": 7,
+    "name": "Thallian",
+    "species": "Canopy Arborcat",
+    "primary_type": "Sylvan",
+    "secondary_type": "Astral",
+    "habitat": "Oldgrowth Marsh",
+    "stats": {
+      "HP": 133,
+      "ATK": 55,
+      "DEF": 50,
+      "SPATK": 70,
+      "SPDEF": 69,
+      "SPD": 46,
+      "ACC": 95,
+      "EVA": 8,
+      "LUCK": 13
+    },
+    "mutagens": {
+      "major": [
+        "ArcheoAnomaly"
+      ],
+      "utility": [
+        "AntiExtinct"
+      ]
+    },
+    "traits": [
+      "Mismatched Eyes",
+      "Builds Nest With Shells",
+      "Can\u2019t Be Photographed At Sunrise or Sunset"
+    ],
+    "tempers": {
+      "mood": "Friendly",
+      "affinity": "Glory"
+    },
+    "meta": {
+      "tags": [
+        "Sentience:Inconsistent",
+        "TemporalFlux",
+        "LastOfKind",
+        "Endangered"
+      ],
+      "resist": [],
+      "weak": [],
+      "notes": [],
+      "unique_id": "UTGO6YXXIX"
+    }
+  },
+  "2OLIEBCXZ0": {
+    "idnum": 8,
+    "name": "Thallroot, the Endangered",
+    "species": "Fungal-Hulk",
+    "primary_type": "Sylvan",
+    "secondary_type": null,
+    "habitat": "Blooming Valley",
+    "stats": {
+      "HP": 140,
+      "ATK": 50,
+      "DEF": 50,
+      "SPATK": 63,
+      "SPDEF": 60,
+      "SPD": 49,
+      "ACC": 95,
+      "EVA": 10,
+      "LUCK": 12
+    },
+    "mutagens": {
+      "major": [
+        "Riftwalker"
+      ],
+      "utility": [
+        "AntiExtinct"
+      ]
+    },
+    "traits": [
+      "One Glass Eye",
+      "Stamp Collection",
+      "Sees Prophecy In Flames"
+    ],
+    "tempers": {
+      "mood": "Devious",
+      "affinity": "Humility"
+    },
+    "meta": {
+      "tags": [
+        "Teleport:Long",
+        "DimensionalSlip",
+        "LastOfKind",
+        "Endangered"
+      ],
+      "resist": [],
+      "weak": [
+        "Metallic"
+      ],
+      "notes": [],
+      "unique_id": "2OLIEBCXZ0"
+    }
+  },
+  "RFGPA2H4XM": {
+    "idnum": 9,
+    "name": "Futalo",
+    "species": "Yew Tree Spirit",
+    "primary_type": "Sylvan",
+    "secondary_type": "Toxic",
+    "habitat": "Dayless Mosswood",
+    "stats": {
+      "HP": 150,
+      "ATK": 57,
+      "DEF": 91,
+      "SPATK": 67,
+      "SPDEF": 60,
+      "SPD": 39,
+      "ACC": 95,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Metallic"
+      ],
+      "utility": [
+        "Transient"
+      ]
+    },
+    "traits": [
+      "Glowing Body Pattern",
+      "Golden Thread",
+      "Voice Echoes Twice"
+    ],
+    "tempers": {
+      "mood": "Gentle",
+      "affinity": "Open-Mindedness"
+    },
+    "meta": {
+      "tags": [
+        "MetalCoat",
+        "Wanderer",
+        "Survivalist"
+      ],
+      "resist": [
+        "Toxic"
+      ],
+      "weak": [
+        "Electric"
+      ],
+      "notes": [],
+      "unique_id": "RFGPA2H4XM"
+    }
+  },
+  "77HSNYZR8U": {
+    "idnum": 10,
+    "name": "Verdus, the Uncertain",
+    "species": "Photosynthetic Drake",
+    "primary_type": "Sylvan",
+    "secondary_type": "Mythic",
+    "habitat": "Fungal Vales",
+    "stats": {
+      "HP": 185,
+      "ATK": 50,
+      "DEF": 50,
+      "SPATK": 64,
+      "SPDEF": 75,
+      "SPD": 40,
+      "ACC": 100,
+      "EVA": 5,
+      "LUCK": 15
+    },
+    "mutagens": {
+      "major": [
+        "Cavernborn"
+      ],
+      "utility": [
+        "SuperPositioned"
+      ]
+    },
+    "traits": [
+      "Exagerrated Tail",
+      "Pocket Mirror",
+      "Nocturnal"
+    ],
+    "tempers": {
+      "mood": "Amiable",
+      "affinity": "Sensitivity"
+    },
+    "meta": {
+      "tags": [
+        "Accuracy:Dark",
+        "Echolocation",
+        "Quantum",
+        "Uncertainty"
+      ],
+      "resist": [],
+      "weak": [],
+      "notes": [],
+      "unique_id": "77HSNYZR8U"
+    }
+  }
+}

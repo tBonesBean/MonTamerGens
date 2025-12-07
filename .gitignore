@@ -7,7 +7,7 @@ a
 
 # C extensions
 *.so
-.tmp.driveupload/*
+.tmp.driveupload/
 
 # Distribution / packaging
 .Python
@@ -31,3 +31,6 @@ ENV/
 # IDE-specific files
 .idea/
 .vscode/
+MTG.code-workspace
+.gitignore
+mongen_dexentry.txt
