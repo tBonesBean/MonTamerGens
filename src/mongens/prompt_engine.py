@@ -1,4 +1,5 @@
 from .data.art_data import *
+from .forge_name import format_dual_type
 
 
 def translate_term(term: str) -> str:
@@ -18,7 +19,7 @@ def construct_mon_prompt(seed) -> str:
     primary_type = seed.primary_type
     secondary_type = seed.secondary_type
     habitat = seed.habitat
-    traits = seed.traits
+    traits = seed.physical_traits
 
     # Use .get() for the dictionaries *within* the object
     mutagens = seed.mutagens
@@ -34,7 +35,13 @@ def construct_mon_prompt(seed) -> str:
     if not body_desc:
         body_desc = TYPE_VISUALS.get(primary_type, "distinct creature silhouette")
 
-    subject_line = f"A {species} monster, {primary_type} type, {body_desc}."
+    # Use formatted dual-type label for the subject when possible
+    formatted_type = (
+        format_dual_type(primary_type, secondary_type)
+        if secondary_type
+        else primary_type
+    )
+    subject_line = f"A {species} monster, {formatted_type} type, {body_desc}."
 
     # --- 4. MUTAGENS (25% Weight) ---
     visual_modifiers = []

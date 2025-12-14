@@ -4,66 +4,38 @@ from random import choice, random
 from .data.data import *
 from .forge_name import *
 from .mon_forge import apply_mutagens, forge_seed_monster
-from .monster_cache import OUTPUT_PATH
-from .monsterseed import MonsterSeed
+from .monster_cache import OUTPUT_PATH, save_monster
+from .monsterseed import MonsterSeed, choose_type_pair
 
 def _summarize_stats(stats: dict) -> str:
     """
     Turn the raw stats dictionary into a compact 'stat line' string.
     Example: 'HP 62 • ATK 54 • DEF 60 • SPATK 55 • SPDEF 58 • SPD 49'
     """
-
-    order = ["HP", "ATK", "DEF", "SPATK", "SPDEF", "SPD"]
-    int_order = ["ACC", "EVA", "LUCK"]
-    int_pieces = []
+    order = ["HP", "ATK", "DEF", "SPATK", "SPDEF", "SPD", "ACC", "EVA", "LUCK"]
     pieces = []
 
     for key in order:
         if key in stats:
             pieces.append(f"{key} {stats[key]}")
-    for key in int_order:
-        if key in stats:
-            int_pieces.append(f"{key} {stats[key]}")
-    stat_summary = str(
-        " • ".join(pieces) + "\n" + "    -Intangibles: " + " • ".join(int_pieces)
-    )
+    stat_summary = str(" • ".join(pieces) + "\n")
     return stat_summary
 
 
-def _summarize_traits(traits: List[str]) -> str:
+def _summarize_physical_details(physical_traits: List[str], held_item: str | None) -> str:
     """
-    Turn the 3 trait phrases into one readable sentence fragment.
-    We treat them as: appearance / gear / quirk.
+    Formats the physical traits and held item into a readable block.
     """
-    if not traits:
-        return "Details about this creature are still under study."
-
-    # Pad to length 3 so we don't crash if a future seed has fewer.
-    t = (traits + ["", "", ""])[:3]
-
-    # Ensure all traits are strings
-    str_traits = []
-    for trait in t:
-        if isinstance(trait, list):
-            str_traits.append(" ".join(trait))
-        else:
-            str_traits.append(trait)
-
-    appearance, gear, quirk = str_traits
-
     parts = []
-    if appearance:
-        parts.append(f"Appearance: {appearance}")
-    if gear:
-        parts.append(f"Token: {gear}")
-    if quirk:
-        parts.append(f"Recorded Quirk: {quirk}")
-
-    # Join nicely and add a period.
-    text = "\n".join(parts)
-    if not text.endswith("."):
-        text += "."
-    return text
+    if physical_traits:
+        parts.append(f"Physical Traits: {', '.join(physical_traits)}")
+    if held_item:
+        parts.append(f"Observed carrying: {held_item}")
+    
+    if not parts:
+        return "Distinctive features have not yet been documented."
+        
+    return "\n".join(parts)
 
 
 def dex_formatter(seed: MonsterSeed) -> str:
@@ -77,7 +49,7 @@ def dex_formatter(seed: MonsterSeed) -> str:
     primary_type = seed.primary_type
     secondary_type = seed.secondary_type
     mutagens = seed.mutagens
-    traits_line = _summarize_traits(seed.traits)
+    traits_line = _summarize_physical_details(seed.physical_traits, seed.held_item)
     stat_line = _summarize_stats(seed.stats)
     # Simple tags summary from meta, if present
     tags = seed.meta.get("tags", []) or []
@@ -98,11 +70,13 @@ def dex_formatter(seed: MonsterSeed) -> str:
     lines.append(header_line)
     lines.append("")
 
-    # Type
+    # Type (use formatted dual-type when available)
     if not secondary_type:
         type_line = f"  -Type: {primary_type}"
     else:
-        type_line = f"  -Types: {primary_type}/{secondary_type}"
+        # prefer adjective-noun formatting for readability
+        formatted = format_dual_type(primary_type, secondary_type, style="adj-n")
+        type_line = f"  -Types: {formatted} ({primary_type}/{secondary_type})"
     lines.append(type_line)
     lines.append("")
 
@@ -152,15 +126,7 @@ def generate_dex_batch(
         seed = None
         while seed is None:
             try:
-                primary_type = choice(SEED_TYPES)
-                secondary_type = None
-                if random.random() < 0.5:  # 50% chance of having a secondary type
-                    possible_secondary_types = [
-                        t for t in SEED_TYPES if t != primary_type
-                    ]
-                    if possible_secondary_types:
-                        secondary_type = choice(possible_secondary_types)
-
+                primary_type, secondary_type = choose_type_pair(secondary_chance=0.5)
                 seed = forge_seed_monster(
                     idnum=dex_number,
                     primary_type=primary_type,
@@ -178,6 +144,7 @@ def generate_dex_batch(
 
         # Turn the fully-forged seed into Dex text
         entry_text = dex_formatter(full_seed)
+        save_monster(full_seed) # Also save the generated seed to the JSONL cache
         entries.append(entry_text)
 
     # If the caller gave us a path, write everything to disk

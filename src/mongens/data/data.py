@@ -1,4 +1,6 @@
 from typing import Dict
+from pathlib import Path
+import yaml
 
 
 # -- Baseline stats (can override per species later, after mutagens do # there thing and populate stat boxes)
@@ -18,7 +20,7 @@ SEED_TYPES = [
     "Mineral",
     "Beast",
     "Aquatic",
-    "Ice",
+    "Frost",
     "Brawler",
     "Insect",
     "Mythic",
@@ -32,6 +34,27 @@ SEED_TYPES = [
     "Astral",
     "Anomalous",
 ]
+# Base rarity weights for each type. Higher is more common.
+SEED_TYPES_WEIGHTED = {
+    "Mineral": 1.0,
+    "Beast": 1.0,
+    "Aquatic": 1.0,
+    "Frost": 0.8,
+    "Brawler": 0.8,
+    "Insect": 1.0,
+    "Mythic": 0.7,
+    "Electric": 0.9,
+    "Sylvan": 1.0,
+    "Aerial": 0.8,
+    "Dread": 0.7,
+    "Inferno": 0.9,
+    "Toxic": 0.9,
+    "Ancient": 0.7,
+    "Astral": 0.7,
+    "Anomalous": 0.3,
+}
+
+SEED_TYPES = sorted(list(SEED_TYPES_WEIGHTED.keys()))
 
 FORMS_BY_TYPE = {
     "Mineral": {
@@ -41,30 +64,29 @@ FORMS_BY_TYPE = {
         "Rock Hyrax": 0.5,
         "Basilisk Lizard": 0.5,
         "Gargoyle": 0.5,
-        "Moai-Stone Colossus": 0.5,
+        "Moai Colossus": 0.5,
         "Giant Anteater": 0.5,
         "Trilobite": 0.5,
         "Komodo Dragon": 0.5,
         "Khalkotauroi": 0.5,
         "Stoneback Tortoise Beast": 0.5,
         "Obsidian Sandwyrm": 0.5,
-        "Basalt Crag-Walker": 0.5,
+        "Basalt CragWalker": 0.5,
         "Sandstone Sphinx": 0.5,
-        "Geode-Backed Armadillo": 0.5,
-        "Living Avalanche": 0.5,
-        "Shale-Skinned Wyrm": 0.5,
+        "Geode Armadillo": 0.5,
+        "Avalanche King": 0.5,
+        "Shale Wyrm": 0.5,
         "Marble Titan": 0.5,
-        "Gravel-Hide Rhino": 0.5,
+        "GravelHide Rhino": 0.5,
         "Petrified Wood Ent": 0.5,
         "Cavernous Maw": 0.5,
-        "Crystal-Veined Basilisk": 0.5,
+        "Crystal Basilisk": 0.5,
     },
     "Beast": {
         "Smilodon": 0.5,
         "Minotaur": 0.5,
         "Wolverine": 0.5,
         "Wild Boar": 0.5,
-        "Mastiff": 0.5,
         "Dire Hound": 0.5,
         "Pangolin": 0.5,
         "Tasmanian Tiger": 0.5,
@@ -76,9 +98,9 @@ FORMS_BY_TYPE = {
         "Calydonian Boar": 0.5,
         "Dire Wolf Alpha": 0.5,
         "Grizzly King": 0.5,
-        "Shadow-pelt Panther": 0.5,
+        "Shadowpelt Panther": 0.5,
         "Charging Auroch": 0.5,
-        "Razor-Tusked Felldrake": 0.5,
+        "Razor Felldrake": 0.5,
         "Alpha Chimera": 0.5,
         "Savage Manticore": 0.5,
         "Horn-Crested Grazer": 0.5,
@@ -110,12 +132,12 @@ FORMS_BY_TYPE = {
         "PearlShell Turtle": 0.5,
         "Vortex Eel": 0.5,
     },
-    "Ice": {
+    "Frost": {
         "Polar Bear": 0.5,
         "Woolly Rhinoceros": 0.5,
         "Wendigo": 0.5,
         "Snowy Owl": 0.5,
-        "Ice Elemental": 0.5,
+        "Frost Elemental": 0.5,
         "Caribou": 0.5,
         "Yeti": 0.5,
         "Sabertooth": 0.5,
@@ -123,15 +145,15 @@ FORMS_BY_TYPE = {
         "Narwhal": 0.5,
         "Jotunn": 0.5,
         "Snow Kirin": 0.5,
-        "Ice Wyrmling Drake": 0.5,
+        "Frost Wyrmling Drake": 0.5,
         "Glacial Behemoth": 0.5,
-        "Ice Wyvern": 0.5,
-        "Permafrost Mammoth": 0.5,
+        "Frost Wyvern": 0.5,
+        "Mammoth": 0.5,
         "Snow Lynx": 0.5,
         "Avalanche Spirit": 0.5,
         "Hoarfrost Gryphon": 0.5,
         "Tundra Stalker": 0.5,
-        "Regal Elk": 0.5,
+        "Regal Caribou": 0.5,
         "Frozen SoulEater": 0.5,
     },
     "Brawler": {
@@ -145,14 +167,14 @@ FORMS_BY_TYPE = {
         "Cassowary": 0.5,
         "Thylacoleo": 0.5,
         "Chimpanzee": 0.5,
-        "Stone-Fist Gargant": 0.5,
+        "Quartz Gargant": 0.5,
         "Pummeler Homunculus": 0.5,
         "Oni Boxer": 0.5,
         "Asura": 0.5,
         "Ogre": 0.5,
         "Brawling Centaur": 0.5,
         "Capoeira-Dancer Sprite": 0.5,
-        "Pressure-Point Monk": 0.5,
+        "PressurePoint Monk": 0.5,
         "Fist Golem": 0.5,
         "Cyclops": 0.5,
         "Satyr": 0.5,
@@ -174,15 +196,15 @@ FORMS_BY_TYPE = {
         "Unkcela": 0.5,
         "Trilobite Colossus": 0.5,
         "Hive Tyrant": 0.5,
-        "Acid-Spitting Bombardier": 0.5,
-        "Glass-Winged Wasp": 0.5,
-        "Phase-Shifting Spider": 0.5,
+        "Acid Bombardier": 0.5,
+        "Glass Wasp": 0.5,
+        "Phased Spider": 0.5,
         "Mycelial Centipede": 0.5,
-        "Obsidian-Carapace Scorpion": 0.5,
-        "Resin-Trapping Weaver": 0.5,
-        "Nectar-Drinking Hornet": 0.5,
+        "Obsidian Scorpion": 0.5,
+        "Resin Weaver": 0.5,
+        "Seeker Hornet": 0.5,
         "Swarm Lord": 0.5,
-        "Quicksand-Pit Scarab": 0.5,
+        "Quicksand Scarab": 0.5,
     },
     "Mythic": {
         "Griffin": 0.5,
@@ -199,15 +221,15 @@ FORMS_BY_TYPE = {
         "Hippogriff": 0.5,
         "Tikbalang": 0.5,
         "Celestial Dragon": 0.5,
-        "World-Tortoise": 0.5,
+        "Terra Tortoise": 0.5,
         "Norn": 0.5,
         "Dreameater Baku": 0.5,
         "Storm Roc": 0.5,
-        "Sun-Eating Fenrir": 0.5,
-        "Wish-Granting Djinn": 0.5,
+        "SunEating Fenrir": 0.5,
+        "Unpredictable Djinn": 0.5,
         "Sphinx": 0.5,
         "Unicorn": 0.5,
-        "ForgeGod Hephaestus": 0.5,
+        "Hephaestus": 0.5,
     },
     "Electric": {
         "Electric Eel": 0.5,
@@ -222,15 +244,15 @@ FORMS_BY_TYPE = {
         "Raiju": 0.5,
         "Volt Seraph": 0.5,
         "Living Tesla Coil": 0.5,
-        "Magnetic-Field Distorter": 0.5,
+        "Field Distorter": 0.5,
         "Ionized Drake": 0.5,
-        "Super-Capacitor Jellyfish": 0.5,
-        "Plasma-Arc Spider": 0.5,
+        "Ancestor Jellyfish": 0.5,
+        "Arc Spider": 0.5,
         "Lightning Hound": 0.5,
         "Electrified Lynx": 0.5,
-        "Static-Charged Condor": 0.5,
+        "Zap Condor": 0.5,
         "Ball-Lightning Elemental": 0.5,
-        "Railgun-Beetle": 0.5,
+        "Railgun Beetle": 0.5,
     },
     "Sylvan": {
         "Dryad": 0.5,
@@ -276,7 +298,7 @@ FORMS_BY_TYPE = {
         "MirageWing Hummingbird": 0.5,
         "Obsidian Owl": 0.5,
         "Sonic Screecher": 0.5,
-        "DKingfisher": 0.5,
+        "Kingfisher": 0.5,
         "Apex Condor": 0.5,
         "Albatross": 0.5,
         "Parrot": 0.5,
@@ -438,7 +460,7 @@ SEEDTYPE_ATTR = {
         "add": {},
         "tags": ["Amphibious", "Resist:Inferno", "Weak:Electric"],
     },
-    "Ice": {
+    "Frost": {
         "mul": {"SPDEF": 1.40, "HP": 1.15, "SPATK": 1.15, "SPD": 0.85},
         "add": {"SPDEF": 5},
         "tags": ["FrostAura", "Resist:Aquatic", "Weak:Inferno"],
@@ -481,7 +503,7 @@ SEEDTYPE_ATTR = {
     "Inferno": {
         "mul": {"SPATK": 1.25, "ATK": 1.20, "SPDEF": 0.90},
         "add": {"SPATK": 10},
-        "tags": ["Ignite", "Resist:Ice", "Weak:Aquatic"],
+        "tags": ["Ignite", "Resist:Frost", "Weak:Aquatic"],
     },
     "Toxic": {
         "mul": {"SPATK": 1.35, "DEF": 1.25, "HP": 1.15, "SPD": 0.95},
@@ -520,7 +542,7 @@ TYPE_SYNERGY_BOOSTS = {
     frozenset(["Insect", "Toxic"]): 1.15,
     frozenset(["Mineral", "Ancient"]): 0.90,
     frozenset(["Sylvan", "Aquatic"]): 0.80,
-    frozenset(["Ice", "Ancient"]): 1.00,
+    frozenset(["Frost", "Ancient"]): 1.00,
     frozenset(["Inferno", "Mineral"]): 0.70,
     frozenset(["Aquatic", "Electric"]): 0.60,
     frozenset(["Brawler", "Beast"]): 1.15,
@@ -533,7 +555,7 @@ TYPE_SYNERGY_BOOSTS = {
     frozenset(["Mythic", "Ancient"]): 0.60,
     frozenset(["Toxic", "Dread"]): 0.85,
     frozenset(["Beast", "Aquatic"]): 0.65,
-    frozenset(["Ice", "Aquatic"]): 1.20,
+    frozenset(["Frost", "Aquatic"]): 1.20,
     frozenset(["Brawler", "Astral"]): 0.80,
     frozenset(["Mineral", "Brawler"]): 1.10,
     frozenset(["Inferno", "Dread"]): 1.10,
@@ -546,17 +568,17 @@ TYPE_SYNERGY_BOOSTS = {
 
 INCOMPATIBLE_TYPE_PAIRS = {
     frozenset(["Beast", "Sylvan"]),
-    frozenset(["Ice", "Electric"]),
+    frozenset(["Frost", "Electric"]),
     frozenset(["Astral", "Mythic"]),
     frozenset(["Inferno", "Aquatic"]),
-    frozenset(["Inferno", "Ice"]),
+    frozenset(["Inferno", "Frost"]),
     frozenset(["Electric", "Mineral"]),
     frozenset(["Toxic", "Mineral"]),
     frozenset(["Brawler", "Aquatic"]),
     frozenset(["Mythic", "Dread"]),
     frozenset(["Inferno", "Sylvan"]),
     frozenset(["Inferno", "Toxic"]),
-    frozenset(["Insect", "Ice"]),
+    frozenset(["Insect", "Frost"]),
 }
 
 MAJOR_MODS = {
@@ -572,7 +594,7 @@ MAJOR_MODS = {
         "mul": {"SPATK": 1.22, "ATK": 1.12, "SPD": 1.05},
         "add": {},
         "tags": ["Burn:Overtime", "Weak:Aquatic", "Cinderwake"],
-        "allowed_types": ["Inferno", "Aerial", "Electric"],
+        "allowed_types": ["Inferno", "Electric"],
         "rarity": 0.9,
         "synergy_bonus": {"Inferno": 1.5},
     },
@@ -620,7 +642,7 @@ MAJOR_MODS = {
         "mul": {"SPDEF": 1.15},
         "add": {"HP": 10},
         "tags": ["Resist:Mind", "Shatter:OnCrit"],
-        "allowed_types": ["Mineral", "Ice", "Astral"],
+        "allowed_types": ["Mineral", "Frost", "Astral"],
         "rarity": 1.0,
         "synergy_bonus": {},
     },
@@ -635,8 +657,8 @@ MAJOR_MODS = {
     "Arctic": {
         "mul": {"SPDEF": 1.1, "SPD": 1.08},
         "add": {},
-        "tags": ["Slide:Ice", "Resist:Ice"],
-        "allowed_types": ["Ice", "Aquatic"],
+        "tags": ["Slide:Frost", "Resist:Frost"],
+        "allowed_types": ["Frost", "Aquatic"],
         "rarity": 1.0,
         "synergy_bonus": {},
     },
@@ -739,8 +761,8 @@ MAJOR_MODS = {
     "DarkIce": {
         "mul": {"SPDEF": 1.12, "SPATK": 1.05},
         "add": {},
-        "tags": ["Slide:Ice", "Frostbite"],
-        "allowed_types": ["Ice", "Dread", "Astral"],
+        "tags": ["Slide:Frost", "Frostbite"],
+        "allowed_types": ["Frost", "Dread", "Astral"],
         "rarity": 1.0,
         "synergy_bonus": {},
     },
@@ -780,7 +802,7 @@ MAJOR_MODS = {
         "mul": {"SPDEF": 1.25, "HP": 1.20, "SPD": 0.90},
         "add": {"SPDEF": 10},
         "tags": ["Resist:Frostbound", "Weak:Tempest", "IceArmor"],
-        "allowed_types": ["Ice", "Aquatic", "Ancient"],
+        "allowed_types": ["Frost", "Aquatic", "Ancient"],
         "rarity": 1.0,
         "synergy_bonus": {},
     },
@@ -1145,295 +1167,18 @@ UTILITY_MODS = {
 
 ALL_MODS = [MAJOR_MODS, UTILITY_MODS]
 
-TRAITS_LIST = [
-    [
-        ("Multiple Tails", 1.0),
-        ("Trident", 1.0),
-        ("Steps Make Subtle Sparks", 0.7),
-    ],
-    [
-        ("Oversized Crown", 1.0),
-        ("Gills", 1.0),
-        ("Solar-Phobia", 1.0),
-    ],
-    [
-        ("Hovers When It Rains", 1.0),
-        ("Stamp Collection", 1.0),
-        ("Persistent Hallucinations", 0.9),
-    ],
-    [
-        ("High-Fashion", 0.9),
-        ("Herbivore", 1.0),
-        ("Receives Cosmic Messages", 1.0),
-    ],
-    [
-        ("Bipedal", 1.0),
-        ("Wears Heavy Amulets", 0.9),
-        ("Terrible Hay Fever", 1.0),
-    ],
-    [
-        ("Face Obsured By Pollution", 1.0),
-        ("Equipped With Satellite Dish", 1.0),
-        ("Amnesia", 1.0),
-    ],
-    [
-        ("Full Plate Armor", 1.0),
-        ("Builds Nest With Shells", 1.0),
-        ("Nocturnal", 1.0),
-    ],
-    [
-        ("Glowing Freckles", 0.9),
-        ("Compass That Hums", 1.0),
-        ("Allergic To Moonlight", 1.0),
-    ],
-    [
-        ("Translucent Skin", 0.9),
-        ("Pocket Sundial", 0.9),
-        ("Speaks In Echoes", 1.0),
-    ],
-    [
-        ("Feathered Arms", 1.0),
-        ("Ancient Coin Collection", 1.0),
-        ("Dreams Predict Rainfall", 0.9),
-    ],
-    [
-        ("Cracked Porcelain Mask", 1.0),
-        ("Pet Cloud", 1.0),
-        ("Forgets Own Reflection", 1.0),
-    ],
-    [
-        ("Luminescent Veins", 0.9),
-        ("Bone Flute", 0.9),
-        ("Haunted By Laughter", 1.0),
-    ],
-    [
-        ("One Glass Eye", 0.9),
-        ("Floating Lantern Companion", 1.0),
-        ("Immune To Cold", 1.0),
-    ],
-    [
-        ("Spiraled Horns", 1.0),
-        ("Mechanical Heart", 0.9),
-        ("Whispers To Stones", 1.0),
-    ],
-    [
-        ("Mismatched Eyes", 0.9),
-        ("Cursed Locket", 0.9),
-        ("Leaves Frost Footprints", 1.0),
-    ],
-    [
-        ("Tattooed Constellations", 1.0),
-        ("Hourglass Pendant", 1.0),
-        ("Never Casts A Shadow", 1.0),
-    ],
-    [
-        ("Metallic Hair", 1.0),
-        ("Pocket Full Of Sand", 1.0),
-        ("Understands Every Language But Their Own", 1.0),
-    ],
-    [
-        ("Webbed Fingers", 1.0),
-        ("Obsidian Dagger", 1.0),
-        ("Allergic To Sunlight", 1.0),
-    ],
-    [
-        ("Crystalline Spine", 0.9),
-        ("Enchanted Scarf", 1.0),
-        ("Remembers Other Lives", 1.0),
-    ],
-    [
-        ("Ashen Skin", 1.0),
-        ("Compass That Points To Danger", 0.9),
-        ("Hums When Nervous", 1.0),
-    ],
-    [
-        ("Cape Of Smoke", 1.0),
-        ("Cracked Monocle", 0.9),
-        ("Can’t Cross Running Water", 1.0),
-    ],
-    [
-        ("Glimmering Scales", 0.9),
-        ("Silver Whistle", 1.0),
-        ("Haunted By A Melody", 1.0),
-    ],
-    [
-        ("Turtle Shell Hat", 1.0),
-        ("Pocket Mirror That Lies", 0.9),
-        ("Collects Fallen Stars", 1.0),
-    ],
-    [
-        ("Antler Crown", 1.0),
-        ("Broken Pocket Watch", 0.9),
-        ("Voice Echoes Twice", 1.0),
-    ],
-    [
-        ("Moss-Covered Shoulders", 0.9),
-        ("Golden Key", 1.0),
-        ("Never Sleeps On Full Moons", 1.0),
-    ],
-    [
-        ("Glowing Pupils", 1.0),
-        ("Ancient Scroll", 0.9),
-        ("Sneezes Sparks", 0.9),
-    ],
-    [
-        ("Tinted Astronaut Helmet", 1.0),
-        ("Hourglass Tattoo", 1.0),
-        ("Can’t Be Photographed At Sunrise or Sunset", 0.9),
-    ],
-    [
-        ("Exagerrated Tail", 1.0),
-        ("Compass Of Bone", 1.0),
-        ("Allergic To Laughter", 0.9),
-    ],
-    [
-        ("Cracked Halo", 0.9),
-        ("Vial Of Mist", 0.9),
-        ("Speaks To Insects", 1.0),
-    ],
-    [
-        ("Stone Skin", 1.0),
-        ("Silver Ring That Hums", 1.0),
-        ("Forgetting Faces Instantly", 1.0),
-    ],
-    [
-        ("Shimmering Icy Breath", 1.0),
-        ("Always Reading Seer Bones", 1.0),
-        ("Dealing with a Mirror-phobia", 0.9),
-    ],
-    [
-        ("Branch-Like Fingers", 0.9),
-        ("Crystal Monocle", 1.0),
-        ("Dreams In Color Only", 1.0),
-    ],
-    [
-        ("Top Hat With Feather", 0.9),
-        ("Infinity Symbol Accessories", 0.9),
-        ("Can’t Lie", 0.9),
-    ],
-    [
-        ("Metal Jaw And Shoulderplates", 1.0),
-        ("Charm Bracelet Of Teeth", 1.0),
-        ("Floats When Calm", 0.9),
-    ],
-    [
-        ("Opal Eyes", 0.9),
-        ("Cursed Musical Instrument", 0.9),
-        ("Allergic To Salt", 1.0),
-    ],
-    [
-        ("Scaled Neck", 0.9),
-        ("Compass That Spins Wildly", 1.0),
-        ("Voice Attracts Moths", 0.9),
-    ],
-    [
-        ("Glowing Body Pattern", 1.0),
-        ("Broken Crown", 0.9),
-        ("Remembers Every Sound Ever Heard", 0.9),
-    ],
-    [
-        ("Smoke Hair", 1.0),
-        ("Hourglass Heart", 0.9),
-        ("Can’t Touch Iron", 1.0),
-    ],
-    [
-        ("Shadow Has Massive Wings", 0.9),
-        ("Silver Coin", 1.0),
-        ("Speaks To Reflections", 0.9),
-    ],
-    [
-        ("Glowing Fingertips", 1.0),
-        ("Pocket Inferno", 0.9),
-        ("Terrified Of Silence", 1.0),
-    ],
-    [
-        ("Horned Silhouette", 1.0),
-        ("Glass Bottle Of Whispers", 1.0),
-        ("Never Ages", 1.0),
-    ],
-    [
-        ("Oversized Beak", 1.0),
-        ("Holds Pouches Of Secret Contents", 0.9),
-        ("Allergic To Rain", 1.0),
-    ],
-    [
-        ("Crystal Antlers", 0.9),
-        ("Golden Thread", 1.0),
-        ("Can’t Dream", 1.0),
-    ],
-    [
-        ("4 Arms", 1.0),
-        ("Hourglass Of Sand", 1.0),
-        ("Longs To Be Back Among The Stars", 1.0),
-    ],
-    [
-        ("Glowing Scars", 1.0),
-        ("Silver Bell", 0.9),
-        ("Haunted By Footsteps", 1.0),
-    ],
-    [
-        ("Porcelain Mask", 1.0),
-        ("Compass That Hums Softly", 0.9),
-        ("Can’t Cry", 1.0),
-    ],
-    [
-        ("Feathered Cloak", 0.9),
-        ("Pocket Of Ashes", 1.0),
-        ("Reliably Full Of Joy", 1.0),
-    ],
-    [
-        ("Stone Horns", 0.9),
-        ("Hourglass Pendant", 1.0),
-        ("Speaks In Riddles", 1.0),
-    ],
-    [
-        ("Glowing Eyes", 0.9),
-        ("Silver Dagger", 1.0),
-        ("Can’t Remember Names", 1.0),
-    ],
-    [
-        ("Cracked Skin", 0.9),
-        ("Compass That Points Home", 0.9),
-        ("Laughs At Thunder", 1.0),
-    ],
-    [
-        ("Shadowed Face", 1.0),
-        ("Vial Of Tears", 1.0),
-        ("Allergic To Gold", 0.9),
-    ],
-    [
-        ("Glimmering Hair", 0.9),
-        ("Pocket Watch That Ticks Backward", 0.9),
-        ("Can’t Whistle", 1.0),
-    ],
-    [
-        ("Meditating Body Position", 1.0),
-        ("Silver Coin", 1.0),
-        ("Dreams Of Drowning", 1.0),
-    ],
-    [
-        ("Crystal Teeth And Claws", 1.0),
-        ("Tail Glows When In Danger", 0.9),
-        ("Sees Prophecy In Flames", 0.9),
-    ],
-    [
-        ("Unusually Long Tail", 1.0),
-        ("Hourglass Tattoo", 1.0),
-        ("Can’t See Stars", 1.0),
-    ],
-    [
-        ("Glowing Veins", 1.0),
-        ("Pocket Mirror", 0.9),
-        ("Speaks To Shadows", 1.0),
-    ],
-    [
-        ("Horned Brow", 0.9),
-        ("Oversized Bandit Mask", 0.9),
-        ("Can Be Lured By Music", 1.0),
-    ],
-]
+def _load_weighted_yaml(filename: str) -> Dict[str, float]:
+    """Loads a YAML file of {'name': str, 'weight': float} into a dict for weighted_choice."""
+    filepath = Path(__file__).parent / filename
+    if not filepath.exists():
+        raise FileNotFoundError(f"Data file not found: {filepath}")
+    with open(filepath, "r", encoding="utf-8") as f:
+        data = yaml.safe_load(f)
+    return {item['name']: item.get('weight', 1.0) for item in data if 'name' in item}
 
-COL_TRAITS = [list(col) for col in zip(*TRAITS_LIST)]
+PHYSICAL_TRAITS = _load_weighted_yaml("physical_traits.yaml")
+HELD_ITEMS = _load_weighted_yaml("held_items.yaml")
+KIN_WOUNDS = _load_weighted_yaml("kin_wounds.yaml")
 
 TEMPERS_COUPLED: Dict[str, Dict[str, float]] = {
     "mood": {
@@ -1578,7 +1323,7 @@ _ALL_HABITATS_RAW = [
     ("Concrete Jungle", 1.0),
     ("Rusted Plane Wreckage", 0.9),
     ("Wild Tundra", 1.0),
-    ("Ice Caps", 0.9),
+    ("Frost Caps", 0.9),
     ("Snowcapped Peaks", 1.0),
     ("Frigid Icefields", 0.8),
     ("Snowpacked Mountains", 0.9),
@@ -1725,9 +1470,9 @@ HABITATS_BY_TYPE: Dict[str, Dict[str, float]] = {
         "Condemned HydroPowerDam": 0.9,
         "Rusted Plane Wreckage": 0.9,
     },
-    "Ice": {
+    "Frost": {
         "Wild Tundra": 1.0,
-        "Ice Caps": 0.9,
+        "Frost Caps": 0.9,
         "Snowcapped Peaks": 1.0,
         "Frigid Icefields": 0.8,
         "Snowpacked Mountains": 0.9,

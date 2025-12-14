@@ -1,0 +1,56 @@
+# Physical traits for monsters.
+# 'weight' is a relative probability. Higher is more common.
+- name: Multiple Tails
+  weight: 1.0
+- name: Steps Make Subtle Sparks
+  weight: 0.7
+- name: Hovers When It Rains
+  weight: 1.0
+- name: High-Fashion
+  weight: 0.9
+- name: Bipedal
+  weight: 1.0
+- name: Face Obscured By Pollution
+  weight: 1.0
+- name: Full Plate Armor
+  weight: 1.0
+- name: Glowing Freckles
+  weight: 0.9
+- name: Translucent Skin
+  weight: 0.9
+- name: Glowing Runic Markings
+  weight: 0.8
+- name: Crystallized Tear Ducts
+  weight: 0.7
+- name: Skin has a Static-like Visual Distortion
+  weight: 0.6
+- name: A Halo of Broken Light
+  weight: 0.7
+- name: Small, Detached Floating Limbs
+  weight: 0.6
+- name: Body is Segmented and held by Lumen Threads
+  weight: 0.5
+- name: Constantly Shedding Glowing Spores
+  weight: 0.8
+- name: Eyes are Tiny, Constellated Starfields
+  weight: 0.7
+- name: Shadow seems to move on its own
+  weight: 0.8
+- name: Visible, pulsing Lumen Organ in chest
+  weight: 0.7
+- name: Feathers made of thin, colored glass
+  weight: 0.8
+- name: Asymmetrical Horns, one broken
+  weight: 1.0
+- name: Body appears as a shifting, glitching silhouette
+  weight: 0.6
+- name: Covered in tiny, moss-like growths
+  weight: 1.0
+- name: Fossilized bone plating on back
+  weight: 0.9
+- name: Always followed by a small, personal rain cloud
+  weight: 0.8
+- name: Leaves a trail of cooled ash
+  weight: 0.9
+- name: Faint, ghostly after-images follow its movements
+  weight: 0.7

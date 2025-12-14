@@ -1,0 +1,40 @@
+# Items monsters might be observed holding or wearing.
+# 'weight' is a relative probability. Higher is more common.
+- name: Oversized Crown
+  weight: 1.0
+- name: Stamp Collection
+  weight: 1.0
+- name: Wears Heavy Amulets
+  weight: 0.9
+- name: Equipped With Satellite Dish
+  weight: 1.0
+- name: Builds Nest With Shells
+  weight: 1.0
+- name: Compass That Hums
+  weight: 1.0
+- name: Pocket Sundial
+  weight: 0.9
+- name: Ancient Coin Collection
+  weight: 1.0
+- name: Pet Rock on a Leash
+  weight: 0.9
+- name: Tiny Bell that Doesn't Ring
+  weight: 0.9
+- name: A Map to Nowhere
+  weight: 0.9
+- name: Crown of Thorns
+  weight: 0.9
+- name: Shackles of Adornment
+  weight: 0.9
+- name: Glowing Orb of Unknown Origin
+  weight: 0.9
+- name: Broken Hourglass
+  weight: 0.9
+- name: Music Box Playing a Faint Melody
+  weight: 0.9
+- name: A Single, Polished Bone
+  weight: 0.9
+- name: Worn Leather-Bound Journal
+  weight: 0.9
+- name: Crystal Shard Humming with Energy
+  weight: 0.9

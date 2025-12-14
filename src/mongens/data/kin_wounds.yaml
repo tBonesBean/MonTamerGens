@@ -1,0 +1,44 @@
+# Narrative flaws or neuroses that can be assigned as a "Kin Wound".
+# These are the "quirks" from the old traits list, now with a clear purpose.
+- name: Persistent Hallucinations
+  weight: 0.9
+- name: Receives Cosmic Messages
+  weight: 1.0
+- name: Terrible Hay Fever
+  weight: 1.0
+- name: Amnesia
+  weight: 1.0
+- name: Allergic To Moonlight
+  weight: 1.0
+- name: Speaks In Echoes
+  weight: 1.0
+- name: Dreams Predict Rainfall
+  weight: 0.9
+- name: Forgets Own Reflection
+  weight: 1.0
+- name: Haunted By Laughter
+  weight: 1.0
+- name: Terrified Of Silence
+  weight: 1.0
+- name: Compulsive Hoarder of Shiny Objects
+  weight: 0.9
+- name: Afraid of Its Own Shadow
+  weight: 0.9
+- name: Believes It's a Different Species
+  weight: 0.9
+- name: Obsessed with Counting Things
+  weight: 0.9
+- name: Can Only Communicate Through Dance
+  weight: 0.9
+- name: Always Speaks in Riddles
+  weight: 0.9
+- name: Gets Lost Easily, Even Indoors
+  weight: 0.9
+- name: Cannot Stand Being Touched
+  weight: 0.9
+- name: Has a Fear of Open Doors
+  weight: 0.9
+- name: Only Eats Food Shaped Like Stars
+  weight: 0.9
+- name: Constantly Apologizes for Existing
+  weight: 0.9

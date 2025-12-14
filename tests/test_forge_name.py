@@ -23,7 +23,8 @@ def create_seed(
         habitat="test_habitat",
         stats={},
         mutagens=mutagens,
-        traits=[],
+        physical_traits=[],
+        held_item=None,
         tempers={},
         meta={},
     )

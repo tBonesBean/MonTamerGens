@@ -145,7 +145,7 @@ TYPE_VISUALS = {  # --- 3. BODY PLAN (60% Weight)
     "Mineral": "typically thicker physique, rock-hewn or crystallized structures and silhouettes, diverse mineral textures/colors",
     "Beast": "muscular build, hybrid quadruped-biped posture, fur textures",
     "Aquatic": "smooth textures, fins and gills, fluid posture, ornaments or accessories to increase diversity of common 'fish' shape",
-    "Ice": "sharp angular shapes, crystalline ice reflections, jagged silhouette",
+    "Frost": "sharp angular shapes, crystalline ice reflections, jagged silhouette",
     "Brawler": "athletic stance, emphasized fists or striking limbs, bipedal",
     "Insect": "segmented carapace, multiple limbs, antennae, alien posture",
     "Mythic": "majestic presence, flowing fur or feathers, intricate details, exotic anatomical ornaments or fancy clothing items",

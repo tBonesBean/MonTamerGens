@@ -34,3 +34,4 @@ ENV/
 MTG.code-workspace
 .gitignore
 mongen_dexentry.txt
+/.venv/

@@ -7,53 +7,66 @@ from typing import Type
 
 from .monsterseed import MonsterSeed
 
-CACHE_FILE = Path(__file__).parent / "assets" / "generated_monsters.json"
-OUTPUT_PATH = Path(__file__).parent / "assets" / "mongen_dexentry.txt"
+CACHE_FILE = Path(__file__).parent / "assets" / "generated_monsters.jsonl"
+OUTPUT_PATH = Path(__file__).parent / "assets" / "generated_monsters.txt"
 
 def generate_id(length: int = 10) -> str:
     """Generates a random alphanumeric ID."""
     characters = string.ascii_uppercase + string.digits
     return "".join(random.choice(characters) for _ in range(length))
 
-def _load_cache() -> dict:
-    """Loads the monster cache from the JSON file."""
+def _load_all_from_cache() -> dict:
+    """
+    Loads all monsters from the JSONL cache into a dictionary keyed by unique_id.
+    This is an expensive operation and should be used for tools, not for appending.
+    """
     if not CACHE_FILE.exists():
         return {}
-    with open(CACHE_FILE, "r") as f:
-        try:
-            return json.load(f)
-        except json.JSONDecodeError:
-            return {}
-
-def _save_cache(data: dict):
-    """Saves the monster cache to the JSON file."""
-    CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)
-    with open(CACHE_FILE, "w") as f:
-        json.dump(data, f, indent=2)
+    
+    cache = {}
+    with CACHE_FILE.open("r", encoding="utf-8") as f:
+        for line in f:
+            if line.strip():
+                try:
+                    data = json.loads(line)
+                    unique_id = data.get("meta", {}).get("unique_id")
+                    if unique_id:
+                        cache[unique_id] = data
+                except json.JSONDecodeError:
+                    print(f"Warning: Skipping malformed line in cache: {line.strip()}")
+    return cache
 
 def save_monster(seed: MonsterSeed) -> str:
-    """Saves a monster seed to the cache and returns its unique ID."""
+    """
+    Appends a monster seed to the JSONL cache file and returns its unique ID.
+    This is a fast and safe append-only operation.
+    """
     if not is_dataclass(seed):
         raise TypeError("Can only save dataclass objects like MonsterSeed.")
 
-    cache = _load_cache()
-    
-    unique_id = generate_id()
-    # Ensure the ID is truly unique
-    while unique_id in cache:
+    # If the seed doesn't have a unique_id yet, generate one.
+    unique_id = seed.meta.get('unique_id')
+    if not unique_id:
+        # To ensure the generated ID is unique, we need to check against existing ones.
+        # This is the only time we need to read the cache during a save.
+        existing_ids = _load_all_from_cache().keys()
         unique_id = generate_id()
-        
-    # Add the unique_id to the monster's meta block for traceability
-    seed.meta['unique_id'] = unique_id
+        while unique_id in existing_ids:
+            unique_id = generate_id()
+        seed.meta['unique_id'] = unique_id
     
-    cache[unique_id] = asdict(seed)
-    _save_cache(cache)
+    CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)
+    with CACHE_FILE.open("a", encoding="utf-8") as f:
+        f.write(json.dumps(asdict(seed), ensure_ascii=False))
+        f.write("\n")
     
     return unique_id
 
 def load_monster(unique_id: str) -> MonsterSeed:
     """Loads a monster seed from the cache by its unique ID."""
-    cache = _load_cache()
+    # This is now an expensive operation, but necessary for loading a specific monster.
+    # For game loading, you'd process this file into an optimized format once.
+    cache = _load_all_from_cache()
     monster_data = cache.get(unique_id)
     
     if not monster_data:

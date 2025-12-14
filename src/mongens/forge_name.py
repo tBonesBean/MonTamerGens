@@ -1,13 +1,10 @@
 from __future__ import annotations
-
-from collections.abc import Sequence
 import hashlib
-from operator import contains
 import random
 import re
 from typing import Iterable, List, Optional, Dict
-
-from mongens.monsterseed import MonsterSeed
+ 
+from .monsterseed import MonsterSeed
 
 """
 Deterministic name generator for MonsterGenerators — updated for:
@@ -157,7 +154,7 @@ _TYPE_FLAVORS = {
         "prefixes": ["Arch", "Paleo", "Saur", "Foss", "Mega"],
         "suffixes": ["lith", "don", "yx", "raptor"],
     },
-    "Ice": {
+    "Frost": {
         "prefixes": ["Cryo", "Glac", "Fri", "Rim", "Gel"],
         "suffixes": ["is", "ix", "eon", "frost"],
     },
@@ -170,6 +167,50 @@ _TYPE_FLAVORS = {
         "suffixes": ["us", "ex", "ion", "oid"],
     },
 }
+
+# Mapping of secondary types to adjectival forms for formatted dual-type names.
+TYPE_TO_ADJ: Dict[str, str] = {
+    "Frost": "Frost",
+    "Inferno": "Molten",
+    "Mineral": "Ore",
+    "Aquatic": "Aquatic",
+    "Electric": "Charged",
+    "Astral": "Astral",
+    "Toxic": "Toxic",
+    "Insect": "Chitinous",
+    "Aerial": "Sky",
+    "Mythic": "Mythic",
+    "Beast": "Beastly",
+    "Ancient": "Ancient",
+    "Dread": "Dread",
+    "Brawler": "Brawling",
+    "Anomalous": "Anomalous",
+    "Sylvan": "Sylvan",
+    "Inferno": "Molten",
+}
+
+def format_dual_type(primary: str, secondary: Optional[str], style: str = "adj-n") -> str:
+    """Format a dual-type label.
+
+    Styles:
+      - "adj-n": "SecondaryAdj PrimaryNoun" (default)
+      - "hyphen": "Secondary-Primary"
+      - "epithet": "Primary, the SecondaryAdj"
+
+    If secondary is falsy, returns the primary.
+    Falls back to using the raw secondary string when no adjective mapping exists.
+    """
+    if not secondary:
+        return primary
+    adj = TYPE_TO_ADJ.get(secondary, secondary)
+    if style == "adj-n":
+        return f"{adj} {primary}"
+    if style == "hyphen":
+        return f"{adj}-{primary}"
+    if style == "epithet":
+        return f"{primary}, the {adj}"
+    return f"{adj} {primary}"
+
 
 _MAJOR_EPITHETS = {
     "Starwarden": ["the Star-Blessed", "Celestial Guard"],
@@ -221,7 +262,7 @@ _MAJOR_EPITHETS = {
     "Fossilized": ["the Revived", "Fossil-Bound"],
     "BoltThrower": ["the Javelin-Hurler", "Bolt-Caster"],
     "Stormforged": ["the Storm-Bringer", "Tempest-Made"],
-    "Verdant": ["the Ever-Green", "Regrowing"],
+    "Sylvan": ["the Ever-Green", "Regrowing"],
     "Shrouded": ["the Shadow-Stepper", "Umbral"],
     "Fey-touched": ["the Mischievous", "Fey-Cursed"],
 }
@@ -316,15 +357,14 @@ def deterministic_name(
     """
     Generates a deterministic, pronounceable name using a weighted syllable chain.
     """
-    utility = mutagens.get("utility", [])
     seed_int = _stable_seed_int(
-        idnum, primary_type, secondary_type, ",".join(sorted(utility)), salt=salt
+        idnum,primary_type, secondary_type, ",".join(sorted(mutagens.get("utility", []) + sorted(mutagens.get("major", [])))), salt=salt
     )
     rng = random.Random(seed_int)
 
     # Determine syllable count
     if syllables is None:
-        syllables = rng.choices([2, 3, 4], weights=[0.2, 0.55, 0.45])[0]
+        syllables = rng.choices([2, 3, 4], weights=[0.1, 0.65, 0.45])[0]
 
     name = ""
     # Type-based name generation
@@ -378,24 +418,35 @@ def deterministic_name(
 
     # Epithet selection
     epithet = None
-    chance = rng.random()
-    if chance < epithet_prob:
+    if rng.random() < epithet_prob:
         candidates = []
-        for u in utility:
-            if u in _UTILITY_EPITHETS:
-                candidates.extend(_UTILITY_EPITHETS[u])
+        # Collect all possible epithets from both major and utility mutagens
+        for mutagen_key in mutagens.get("major", []):
+            if mutagen_key in _MAJOR_EPITHETS:
+                candidates.extend(_MAJOR_EPITHETS[mutagen_key])
+        
+        for mutagen_key in mutagens.get("utility", []):
+            if mutagen_key in _UTILITY_EPITHETS:
+                candidates.extend(_UTILITY_EPITHETS[mutagen_key])
+
+        # If we found any candidates, choose one
         if candidates:
             epithet = rng.choice(candidates)
+        # Fallback to a generic epithet if no specific ones were found
+        else:
+            epithet = rng.choice(_GENERIC_EPITHETS)
+    
+    
+    # canonical assembly: prefer ", the <Epithet>" unless epithet already looks like a suffix
+    def _epithet_needs_article(e):
+        return not re.search(r"[-\s]", e) or e.lower().startswith("the ")
 
-    # If no specific epithet was chosen, there's a small chance of a generic one.
-    if not epithet and chance > 0.9:
-        epithet = rng.choice(_GENERIC_EPITHETS)
-
-    if epithet and "the " not in epithet:
-        name = f"{name}, the {epithet}"
-    elif epithet:
-        name = f"{name}, {epithet}"
-
+    if epithet:
+        epithet_clean = re.sub(r"[^\w\s\-]", "", epithet).strip()
+        if "-" in epithet_clean or not _epithet_needs_article(epithet_clean):
+            name = f"{name} {epithet_clean}"
+        else:
+            name = f"{name}, the {epithet_clean}"
     return name
 
 

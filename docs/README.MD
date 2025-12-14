@@ -7,6 +7,7 @@ This project is a Python package for procedurally generating fantasy monster dat
 * **Dual-Type System**: Monsters are generated with a primary type and have a chance to gain a secondary type, creating complex and unique creatures.
 * **Stat Biasing**: Each monster's stats are intelligently biased based on its primary and secondary types, giving them a distinct feel.
 * **Mutagens**: Apply "mutagens" (major, minor, and utility) to generate unique "wild" instances with special stats, tags, and abilities.
+* **Re-roll Attributes**: Fine-tune generated monsters by re-rolling specific attributes like traits or major mutagens.
 * **Multiple Output Formats**:
   * **Canonical Dex Entries**: Generate Pokedex-style entries that describe the pure, base form of a species.
   * **Unique Instances**: Generate the raw data for a fully randomized "wild" monster, perfect for in-game encounters.
@@ -45,8 +46,8 @@ mongen dexentry
   # Generate 5 entries for Sylvan monsters and save them to a file
 mongen dexentry --primary_type Sylvan --count 5 --output ./sylvan_dex.txt
 
-  # Generate an entry for a monster that is primarily Mineral and secondarily Ice
-mongen dexentry --primary_type Mineral --secondary_type Ice
+  # Generate an entry for a monster that is primarily Mineral and secondarily Frost
+mongen dexentry --primary_type Mineral --secondary_type Frost
 ```
 
 ### `mongen unique`
@@ -65,6 +66,21 @@ mongen unique --primary_type Dread --secondary_type random
   # Generate a powerful unique monster with extra mutagens
 mongen unique --primary_type Inferno --majors 2 --utilities 1
 ```
+
+### `mongen reroll`
+
+Re-rolls attributes of a previously generated monster. This is useful for fine-tuning a monster you like without starting from scratch. Each re-roll creates a *new* monster with a new PIN.
+
+**Examples:**
+
+```shell
+  # Re-roll the traits of a monster with a given PIN
+  mongen reroll <PIN> --traits
+
+  # Re-roll the major mutagen of a monster with a given PIN
+  mongen reroll <PIN> --majors
+```
+*You can find a monster's PIN in the output of the `unique` command or in the cached data.*
 
 ### `mongen artprompt`
 

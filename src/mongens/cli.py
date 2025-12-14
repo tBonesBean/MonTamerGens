@@ -1,17 +1,18 @@
 import argparse
 from dataclasses import asdict
-import json
+import json, sys
 from pprint import pprint
 from random import choice, random
-import pathlib
+from pathlib import Path
 
 # The CLI should only need to import the high-level functions.
 from .data.data import *
 from .dex_entries import dex_formatter
 from .forge_name import *
 from .mon_forge import generate_monster
-from .monster_cache import CACHE_FILE, load_monster
+from .monster_cache import CACHE_FILE, OUTPUT_PATH, load_monster, save_monster
 from .prompt_engine import construct_mon_prompt
+from .monsterseed import MonsterSeed, choose_type_pair, weighted_choice
 
 
 def main():
@@ -46,14 +47,14 @@ def main():
     parser_dex.add_argument(
         "-maj",
         "--majors",
-        type=int,
+        type=int, # Corrected from str to int
         default=1,
         choices=range(3),
-        help="Number of major mutagens.",
+        help="Number of major mutagens."
     )
     parser_dex.add_argument(
         "-ut",
-        "--utils",
+        "--utils", # Corrected from str to int
         type=int,
         default=1,
         choices=range(2),
@@ -66,9 +67,16 @@ def main():
         "-o",
         "--output",
         type=str,
-        default="..\\src\\mongens\\assets\\mongen_dexentry.txt",
+        default=str(OUTPUT_PATH),
         help="Optional file path to save the generated dex entries.",
     )
+    parser_dex.add_argument(
+        "--json",
+        action="store_true",
+        # default=True, # Let default be False, more intuitive for a flag
+        help="Also save the raw seed JSON to '<output>.seed.json'.",
+    )
+
 
     # 'unique' command - Generates WILD/RANDOMIZED instances
     parser_unique = subparsers.add_parser(
@@ -207,7 +215,7 @@ def main():
     parser_prompt.add_argument(
         "--json",
         action="store_true",
-        default=True,
+        # default=True, # Let default be False
         help="Also save the raw seed JSON to '<output>.seed.json'.",
     )
 
@@ -227,34 +235,125 @@ def main():
         "--mutagens", action="store_true", help="List all available mutagens."
     )
 
+    # ===================================================================
+    # 'lumenkin' command - Generates a starter based on player resonance
+    # ===================================================================
+    parser_kin = subparsers.add_parser(
+        "lumenkin",
+        help="Generate a Lumen-Kin starter candidate based on player resonance values.",
+        description="Simulates the starter generation from the Lumen Mythos. Resonance values influence the monster's type, stats, and Kin properties."
+    )
+    parser_kin.add_argument("--courage", type=int, default=5, help="Player's Courage resonance (0-10).")
+    parser_kin.add_argument("--empathy", type=int, default=5, help="Player's Empathy resonance (0-10).")
+    parser_kin.add_argument("--instinct", type=int, default=5, help="Player's Instinct resonance (0-10).")
+    parser_kin.add_argument("--memory", type=int, default=5, help="Player's Memory resonance (0-10).")
+    parser_kin.add_argument("--curiosity", type=int, default=5, help="Player's Curiosity resonance (0-10).")
+    parser_kin.add_argument(
+        "--archetype",
+        type=str,
+        default="Strength Mirror",
+        choices=["Strength Mirror", "Flaw Mirror", "Deep Memory", "Hidden Desire", "Potential Form"],
+        help="The archetypal mirror to generate for."
+    )
+    parser_kin.add_argument(
+        "--json",
+        action="store_true",
+        help="Save the raw seed JSON to the cache file.",
+    )
+
+    # ===================================================================
+    # 'reroll' command - Re-rolls attributes of an existing monster
+    # ===================================================================
+    parser_reroll = subparsers.add_parser(
+        "reroll", help="Re-roll attributes of a cached monster."
+    )
+    parser_reroll.add_argument(
+        "pin", type=str, help="The 10-character ID of the monster to re-roll."
+    )
+    parser_reroll.add_argument(
+        "--traits", action="store_true", help="Re-roll the physical traits."
+    )
+    parser_reroll.add_argument(
+        "--majors", action="store_true", help="Re-roll the major mutagen."
+    )
+
+    # ===================================================================
+    # Helper function to generate Kin properties
+    # ===================================================================
+    def _generate_kin_properties(seed: MonsterSeed, resonance: dict) -> dict:
+        """Generates Kin properties based on the seed and player resonance."""
+        # This is a placeholder for more complex logic.
+        # In the future, this could be its own module.
+        kin_passives = ["Lumen Resonance: +5% healing received", "Kinetic Shield: +5% DEF when below 50% HP"]
+        kin_drives = ["ATK_bias", "DEF_bias", "SPD_bias"]
+        kin_sparks = [
+            "Evolves when witnessing a Lumen Storm.",
+            "Evolves when the player expresses Resolve.",
+            "Evolves when its own Wound is healed."
+        ]
+
+        # Example of resonance influencing the outcome
+        drive_choice = choice(kin_drives)
+        if resonance.get('courage', 0) > 7:
+            drive_choice = "ATK_bias"
+
+        return {
+            "kin_passive": choice(kin_passives),
+            "kin_drive": drive_choice,
+            "kin_wound": weighted_choice(KIN_WOUNDS),
+            "kin_spark": choice(kin_sparks)
+        }
+
     # --- Execution Logic ---
     args = parser.parse_args()
 
-    # --- Helper function for choosing types ---
-    def get_monster_types(primary_arg, secondary_arg):
+    # --- Helper functions ---
+    def _get_monster_types_from_args(primary_arg: str, secondary_arg: str) -> tuple[str, str | None]:
+        """Determines primary and secondary types from CLI args."""
+        # If both are random, use the new weighted function.
+        if primary_arg == "random" and secondary_arg == "random":
+            return choose_type_pair()
+
+        # Handle cases where one or both are specified.
+        p_type = weighted_choice(SEED_TYPES_WEIGHTED) if primary_arg == "random" else primary_arg
+
         s_type = None
-        if primary_arg == "random":
-            p_type = choice(SEED_TYPES)
-        else:
-            p_type = primary_arg
-
-        if secondary_arg == "none":
-            s_type = None
-        elif secondary_arg == "random" and random.random() <= 0.65:
-            possible_seconds = [t for t in SEED_TYPES if t != p_type]
-            if possible_seconds:
-                s_type = choice(possible_seconds)
-        elif secondary_arg in SEED_TYPES:
+        if secondary_arg == "random":
+            # Use the new function but force the primary type.
+            _, s_type = choose_type_pair(primary_type_override=p_type)
+        elif secondary_arg != "none":
             s_type = secondary_arg
-
         return p_type, s_type
+
+    def _get_or_generate_seed(args: argparse.Namespace, idnum: int = 1) -> MonsterSeed | None:
+        """Loads a monster by PIN or generates a new one based on args."""
+        try:
+            if hasattr(args, "pin") and args.pin:
+                print(f"Loading pinned monster '{args.pin}'...")
+                return load_monster(args.pin)
+            
+            print("Generating a temporary monster...")
+            p_type, s_type = _get_monster_types_from_args(args.primary_type, args.secondary_type)
+            return generate_monster(
+                idnum=idnum,
+                primary_type=p_type,
+                secondary_type=s_type,
+                major_count=args.majors,
+                util_count=args.utils,
+            )
+        except (ValueError, KeyError, FileNotFoundError) as e:
+            print(f"Error: {e}", file=sys.stderr)
+            return None
+
+
 
     # --- Command Logic ---
     if args.command == "dexentry":
         print(f"Generating {args.count} canonical dex entries...")
         output_lines = []
+        generated_seeds = []
         for i in range(args.count):
-            p_type, s_type = get_monster_types(args.primary_type, args.secondary_type)
+            p_type, s_type = _get_monster_types_from_args(args.primary_type, args.secondary_type)
             try:
                 monster_template = generate_monster(
                     idnum=i + 1,
@@ -265,27 +364,29 @@ def main():
                 )
                 entry_text = dex_formatter(monster_template)
                 output_lines.append(entry_text)
+                generated_seeds.append(monster_template)
             except ValueError as e:
                 print(f"Skipping combination {p_type}/{s_type}: {e}")
                 continue
 
         full_output = ("\n\n" + "-" * 60 + "\n\n").join(output_lines)
         if args.output:
+            # append textual dex entries (preserve existing file but allow overwrite option later)
             with open(args.output, "a", encoding="utf-8") as f:
-                f.write(full_output)
+                f.write(full_output + "\n")
             print(f"Successfully appended {len(output_lines)} entries to {args.output}")
         else:
             print(full_output)
+
+        # Save raw seed JSON: write the entire batch as a JSON array (append-safe)
         if args.json:
-            seed_out_path = CACHE_FILE
-            with open(seed_out_path, "a", encoding="utf-8") as sf:
-                # Use asdict on the fetched or generated seed
-                json.dump(asdict(monster_template), sf, indent=2)
-                sf.write("\n") # Add a newline for better formatting
-            print(f"Saved raw seed JSON to {CACHE_FILE}")
+            for seed in generated_seeds:
+                save_monster(seed)
+            print(f"Saved {len(generated_seeds)} seed object(s) to {CACHE_FILE}")
+
     elif args.command == "unique":
         print("Generating raw data for one unique monster instance...")
-        p_type, s_type = get_monster_types(args.primary_type, args.secondary_type)
+        p_type, s_type = _get_monster_types_from_args(args.primary_type, args.secondary_type)
         try:
             wild_monster = generate_monster(
                 idnum=1,
@@ -301,24 +402,8 @@ def main():
             print(f"Error generating monster: {e}")
 
     elif args.command == "alternatives":
-        base_seed = None
-        try:
-            if args.pin:
-                print(f"Loading pinned monster '{args.pin}'...")
-                base_seed = load_monster(args.pin)
-            else:
-                print("Generating a temporary monster...")
-                p_type, s_type = get_monster_types(
-                    args.primary_type, args.secondary_type
-                )
-                base_seed = generate_monster(
-                    idnum=1,  # Temporary monster, idnum is not critical
-                    primary_type=p_type,
-                    secondary_type=s_type,
-                    major_count=args.majors,
-                    util_count=args.utils,
-                )
-
+        base_seed = _get_or_generate_seed(args)
+        if base_seed:
             print(f"Generating {args.count} alternative names for '{base_seed.name}'...")
             
             alt_names = generate_alternative_names(base_seed, count=args.count)
@@ -331,32 +416,14 @@ def main():
             for name in alt_names:
                 print(f"- {name}")
 
-        except (ValueError, KeyError, FileNotFoundError) as e:
-            print(f"Error: {e}")
-
     elif args.command == "artprompt":
-        monster_seed = None
-        try:
-            if args.pin:
-                print(f"Loading pinned monster '{args.pin}' for art prompt...")
-                monster_seed = load_monster(args.pin)
-            else:
-                print("Generating a temporary monster for art prompt...")
-                p_type, s_type = get_monster_types(
-                    args.primary_type, args.secondary_type
-                )
-                monster_seed = generate_monster(
-                    idnum=1,
-                    primary_type=p_type,
-                    secondary_type=s_type,
-                    major_count=args.majors,
-                    util_count=args.utils,
-                )
-
+        monster_seed = _get_or_generate_seed(args)
+        if monster_seed:
             art_prompt = construct_mon_prompt(monster_seed)
             print("\n=== ART PROMPT ===\n")
             print(art_prompt)
             print("\n==================\n")
+
             if 'unique_id' in monster_seed.meta:
                 print(f"Monster Pin ID: {monster_seed.meta.get('unique_id')}")
 
@@ -364,16 +431,9 @@ def main():
                 with open(args.output, "a", encoding="utf-8") as f:
                     f.write(art_prompt + "\n\n" + ("-" * 60) + "\n\n")
                 print(f"Saved prompt to {args.output}")
-                if args.json:
-                    seed_out_path = CACHE_FILE
-                    with open(seed_out_path, "a", encoding="utf-8") as sf:
-                        # Use asdict on the fetched or generated seed
-                        json.dump(asdict(monster_seed), sf, indent=2)
-                        sf.write("\n") # Add a newline for better formatting
-                    print(f"Saved raw seed JSON to {CACHE_FILE}")
-
-        except (ValueError, KeyError, FileNotFoundError) as e:
-            print(f"Error: {e}")
+            if args.json:
+                save_monster(monster_seed)
+                print(f"Saved seed object to {CACHE_FILE}")
 
     elif args.command == "list":
         if args.types:
@@ -388,6 +448,51 @@ def main():
         if not any([args.types, args.habitats, args.mutagens]):
             parser_list.print_help()
 
+
+    elif args.command == "lumenkin":
+        print(f"Generating Lumen-Kin candidate for archetype: {args.archetype}...")
+
+        resonance_profile = {
+            "courage": args.courage,
+            "empathy": args.empathy,
+            "instinct": args.instinct,
+            "memory": args.memory,
+            "curiosity": args.curiosity,
+        }
+
+        # Future logic: Use resonance to pick types and mutagens.
+        # For now, we'll generate a random one and add the Kin properties.
+        p_type, s_type = choose_type_pair()
+        
+        try:
+            lumen_kin_seed = generate_monster(
+                idnum=1, primary_type=p_type, secondary_type=s_type, major_count=1, util_count=1
+            )
+            
+            # Generate and add the Kin properties to the monster's metadata
+            kin_props = _generate_kin_properties(lumen_kin_seed, resonance_profile)
+            lumen_kin_seed.meta.update(kin_props)
+
+            pprint(asdict(lumen_kin_seed))
+            if args.json:
+                save_monster(lumen_kin_seed)
+                print(f"Saved Lumen-Kin seed object to {CACHE_FILE}")
+        except Exception as e:
+            print(f"Error generating Lumen-Kin: {e}", file=sys.stderr)
+
+    elif args.command == "reroll":
+        if not args.traits and not args.majors:
+            print("Error: You must specify an attribute to re-roll (e.g., --traits, --majors).", file=sys.stderr)
+            print("Usage: mongen reroll <pin> [--traits] [--majors]")
+            sys.exit(1)
+
+        reroll_options = {
+            "traits": args.traits,
+            "majors": args.majors,
+        }
+        
+        from .reroll import reroll_monster_attributes
+        reroll_monster_attributes(args.pin, reroll_options)
 
 if __name__ == "__main__":
     main()

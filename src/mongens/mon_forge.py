@@ -2,10 +2,10 @@ from __future__ import annotations
 
 import os
 import random
-from typing import Any, Dict, List, Optional
+from typing import Any, List, Optional
 
-from .data.data import *  # MAJOR_MODS, UTILITY_MODS, etc.
 from . import monster_cache
+from .data.data import *  # MAJOR_MODS, UTILITY_MODS, etc.
 from .forge_name import forge_monster_name
 from .monsterseed import MonsterSeed
 
@@ -32,7 +32,7 @@ def rarity_to_weight(rarity_val: Any, alpha: float = RARITY_ALPHA) -> float:
     """
     try:
         r = float(rarity_val)
-    except Exception:
+    except Exception(BaseException):
         r = 1.0
     r = max(r, 1e-6)  # avoid 0 or negative
     return 1.0 / (r ** float(alpha))
@@ -127,23 +127,24 @@ def apply_mutagens(
     # --- Filter Available Mutagens (with synergy multiplier) ---
     available_majors: Dict[str, float] = {}
     for key, mod_def in MAJOR_MODS.items():
-        required = mod_def.get("required_types", []) or []
+        allowed = mod_def.get("allowed_types", []) or []
         incompatible = mod_def.get("incompatible_types", []) or []
 
-        # type gating: all required must be present, and none of incompatible present
-        if not all(t in monster_types for t in required):
+        # Type gating: if allowed_types are specified, monster must have at least one.
+        if allowed and monster_types.isdisjoint(allowed):
             continue
+        # Type gating: monster cannot have any incompatible types.
         if any(t in monster_types for t in incompatible):
             continue
 
         base_w = rarity_to_weight(mod_def.get("rarity", 1.0))
-        # multiplicative synergy stacking
+        # Multiplicative synergy stacking based on monster type
         synergy_mult = 1.0
-        for s in mod_def.get("synergy", []) or []:
-            if str(s) in seed_mutagen_set:
-                synergy_mult *= float(
-                    mod_def.get("synergy_factor", DEFAULT_SYNERGY_FACTOR)
-                )
+        synergy_bonuses = mod_def.get("synergy_bonus", {})
+        for monster_type in monster_types:
+            if monster_type in synergy_bonuses:
+                synergy_mult *= float(synergy_bonuses[monster_type])
+
         final_w = base_w * min(synergy_mult, MAX_SYNERGY_MULT)
         if final_w > 0.0:
             available_majors[key] = final_w
@@ -153,21 +154,24 @@ def apply_mutagens(
 
     available_utilities: Dict[str, float] = {}
     for key, mod_def in UTILITY_MODS.items():
-        required = mod_def.get("required_types", []) or []
+        allowed = mod_def.get("allowed_types", []) or []
         incompatible = mod_def.get("incompatible_types", []) or []
 
-        if not all(t in monster_types for t in required):
+        # Type gating: if allowed_types are specified, monster must have at least one.
+        if allowed and monster_types.isdisjoint(allowed):
             continue
+        # Type gating: monster cannot have any incompatible types.
         if any(t in monster_types for t in incompatible):
             continue
 
         base_w = rarity_to_weight(mod_def.get("rarity", 1.0))
+        # Multiplicative synergy stacking based on monster type
         synergy_mult = 1.0
-        for s in mod_def.get("synergy", []) or []:
-            if str(s) in seed_mutagen_set:
-                synergy_mult *= float(
-                    mod_def.get("synergy_factor", DEFAULT_SYNERGY_FACTOR)
-                )
+        synergy_bonuses = mod_def.get("synergy_bonus", {})
+        for monster_type in monster_types:
+            if monster_type in synergy_bonuses:
+                synergy_mult *= float(synergy_bonuses[monster_type])
+
         final_w = base_w * min(synergy_mult, MAX_SYNERGY_MULT)
         if final_w > 0.0:
             available_utilities[key] = final_w
@@ -191,17 +195,17 @@ def apply_mutagens(
     seed.mutagens["major"].extend(chosen_majors)
     seed.mutagens["utility"].extend(chosen_utilities)
 
-    def apply_one(mut_def: dict):
+    def apply_one(mod_def: dict):
         # multiplicative adjustments
-        for stat, mult in mut_def.get("mul", {}).items():
+        for stat, mult in mod_def.get("mul", {}).items():
             if stat in seed.stats:
                 seed.stats[stat] = int(round(seed.stats[stat] * mult))
         # additive adjustments
-        for stat, add in mut_def.get("add", {}).items():
+        for stat, add in mod_def.get("add", {}).items():
             if stat in seed.stats and isinstance(add, (int, float)):
                 seed.stats[stat] += int(round(add))
         # tags/resists/weaknesses
-        for tag in mut_def.get("tags", []):
+        for tag in mod_def.get("tags", []):
             if isinstance(tag, str) and tag.startswith("Resist:"):
                 seed.meta.setdefault("resist", []).append(tag.split(":", 1)[1])
             elif isinstance(tag, str) and tag.startswith("Weak:"):
@@ -232,8 +236,8 @@ def generate_monster(
     generic = forge_seed_monster(idnum, primary_type, secondary_type)
     seed_with_mutagens = apply_mutagens(generic, major_count, util_count)
     seed_with_name = forge_monster_name(seed_with_mutagens)
-    
+
     # Save the completed monster to the cache and embed the ID
     monster_cache.save_monster(seed_with_name)
-    
+
     return seed_with_name

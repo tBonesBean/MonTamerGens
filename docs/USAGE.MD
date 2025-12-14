@@ -116,4 +116,49 @@ mongens prompt [OPTIONS] [FLAGS]
 | :--- | :--- |
 | Generate a completely random monster prompt. | `mongens prompt` |
 | Generate a prompt for a **Plant/Aquatic** monster and save the prompt and the raw data. | `mongens prompt -t1 Plant -t2 Aquatic --output ./plant_prompt.txt --json` |
-| Generate a prompt for a **Verdant** species named "Bloom Beast." | `mongens prompt -t1 Verdant -n "Bloom Beast"` |
+| Generate a prompt for a **Sylvan** species named "Bloom Beast." | `mongens prompt -t1 Sylvan -n "Bloom Beast"` |
+
+-----
+
+## 4\. `reroll` Command 🎲
+
+Re-rolls attributes of a previously generated monster that has been saved in the cache. This is useful for fine-tuning a monster you like without starting from scratch.
+
+Each re-roll creates a *new* monster with a new PIN, preserving the original.
+
+### Syntax
+
+```bash
+mongen reroll <PIN> [FLAGS]
+```
+
+### Arguments
+
+| Argument | Description |
+| :--- | :--- |
+| `PIN` | The 10-character unique ID of the monster to use as a base. |
+
+### Flags
+
+| Flag | Description |
+| :--- | :--- |
+| `--traits` | Re-roll the monster's physical traits. |
+| `--majors` | Re-roll the monster's major mutagen. |
+
+### Examples
+
+| Goal | Command |
+| :--- | :--- |
+| Re-roll the traits of a monster with a given PIN. | `mongen reroll <PIN> --traits` |
+| Re-roll the major mutagen of a monster with a given PIN. | `mongen reroll <PIN> --majors` |
+| Re-roll both the traits and the major mutagen. | `mongen reroll <PIN> --traits --majors` |
+
+-----
+
+### Dual-Type Display Notes
+
+When a monster has a secondary type, the CLI and formatters will present a readable dual-type label in addition to the raw primary/secondary pair. Example output shown by `mongens dexentry`:
+
+	-Types: Ore Inferno (Inferno/Mineral)
+
+This uses an adjective-first style by default (e.g., "Ore Inferno") but can be switched to hyphenated or epithet styles in code for alternative presentation.

@@ -29,6 +29,74 @@ Think:
 | Portrait / Dex Entry  | 256 × 256 px |   highly detailed, iconically posed, habitat background, bordered, trading-card style |
 | Icon (UI)             | 32 × 32 px   |                                                       minimal but easily recognizable |
 
+
+## Section 1.5 — Canonical Silhouette Archetypes (v1)
+
+> **Purpose:**
+> Establish a constrained set of body plans that all monsters must adhere to before color, texture, or ornamentation is applied. This ensures visual clarity, animation reuse, production scalability, and strong creature readability at a glance.
+
+### Global Sprite Rules
+
+* **Base Resolution:** 48×48 pixels (overworld / primary sprite)
+* **Perspective:** Top-down with a slight front bias (head, chest, or face readable)
+* **Pose Philosophy:** Combat-ready, dynamic, or poised — never idle-neutral
+* **Negative Space:** Silhouette must read clearly against dark and mid-tone backgrounds
+* **Decoration Rule:** No silhouette may rely on surface detail to be identifiable
+
+---
+
+### Silhouette Archetypes
+
+These archetypes define *form only*. Types, mutagens, materials, and effects are layered on top.
+
+#### 1. Bipedal — Striker
+
+* Upright, athletic proportions with forward momentum
+* Leaning or coiled posture
+
+#### 2. Bipedal — Heavy
+
+* Broad torso, grounded stance
+* Visible mass and armor zones
+
+#### 3. Avian — Proud
+
+* Wings partially open
+* Head angled downward in dominance
+
+#### 4. Avian — Dynamic
+
+* Asymmetric wings implying motion
+* Banking or lunging posture
+
+#### 5. Amphibious — Crustacean
+
+* Shells, segmented limbs
+* Stable land stance
+
+#### 6. Amphibious — Cephal / Jelly
+
+* Tentacles or radial bodies
+* Hovering or semi-grounded
+
+#### 7. Quadruped — Bestial
+
+* Four-limbed animal forms
+* Alert or prowling stance
+
+---
+
+### Hard Constraints
+
+* No default fish silhouettes
+* Aquatic monsters must plausibly function on land
+* Silhouette chosen before palette or effects
+
+---
+
+*Consistency over novelty.*
+
+
 ## 2\. Palette Rules
 
 ### Base Palette
@@ -66,21 +134,21 @@ Use **primary\_type** and **secondary\_type**** to determine:
 | *Type*        | *Silhouette suggestive guideline; typical, but loosely regulated, visual commonalities between Monster types.*                                                     |
 |---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Dread         | unsettling elongated posture, asymmetrical shapes, shadowy presence, exotic anatomical figure, missing or extra physical features                                  |
-| Cryoform      | sharp angular shapes, crystalline ice reflections, jagged silhouette, frosty/ aura if an aura prompted                                                             |
-| Geomorph      | typically thicker physique, rock-hewn or crystallized structures and silhouettes,  diverse mineral textures/colors                                                 |
-| Avian         | upright aerodynamic posture, exaggerated feather forms and colors, enlarged physical attributes such as talons/beak/wingspan                                       |
+| Frost      | sharp angular shapes, crystalline ice reflections, jagged silhouette, frosty/ aura if an aura prompted                                                             |
+| Mineral      | typically thicker physique, rock-hewn or crystallized structures and silhouettes,  diverse mineral textures/colors                                                 |
+| Aerial         | upright aerodynamic posture, exaggerated feather forms and colors, enlarged physical attributes such as talons/beak/wingspan                                       |
 | Beast         | muscular, quadruped/biped hybrid possible; attempt bipedal form for quadrupeds if it allows more relevance in art style and/or game and battle functionality       |
-| Plant         | organic shapes and limbs, leaf/flower/root/petal clusters, often undergrowth or bark textured, rarely bipedal, can be creatively provided with limbs               |
+| Sylvan         | organic shapes and limbs, leaf/flower/root/petal clusters, often undergrowth or bark textured, rarely bipedal, can be creatively provided with limbs               |
 | Mythic        | majestic presence, flowing fur or feathers, intricate details, exotic anatomical ornaments or fancy clothing items                                                 |
-| Pugilist      | athletic stance, emphasized fists or striking limbs, bipedal with allowance of creative methods of arms/hands/legs/feet depiction                                  |
+| Brawler      | athletic stance, emphasized fists or striking limbs, bipedal with allowance of creative methods of arms/hands/legs/feet depiction                                  |
 | Inferno       | visual evidence of extreme heat but avoiding ‘fire related damage or trauma' feel, smoke tendrils, heat distortion                                                 |
 | Aquatic       | smooth textures, fins and gills, fluid posture, ornaments or accessories to increase diversity of typical 'fish' shape, an EXCEPTION to the 'prefer bipedal’ rule  |
 | Electric      | jagged aura, statically charged fur/armor/hair, expressions of magnetic fields/electric currents if possible                                                       |
-| Psychokinetic | floating elements, large eyes, glowing geometric patterns, species blurs toward humanoid form without losing identity                                              |
+| Astral | floating elements, large eyes, glowing geometric patterns, species blurs toward humanoid form without losing identity                                              |
 | Toxic         | bulbous glands, dripping textures, warning colors, exaggerated fangs/teeth and claws/talons, reptilian inspiration                                                 |
-| Insectoid     | segmented carapace, multiple limbs, antennae, alien posture, may present instances where  ‘worm/caterpillar’-like forms where bipedal depictions SHOULD be avoided |
+| Insect     | segmented carapace, multiple limbs, antennae, alien posture, may present instances where  ‘worm/caterpillar’-like forms where bipedal depictions SHOULD be avoided |
 | Ancient       | weathered flesh/armor, fossilized plating, prehistoric anatomy, think ‘revived’ NOT ‘undead’                                                                       |
-| N/A           | toss-up,  let AI image generation prove itself, who knows what species could emerge with "type: UNKNOWN"                                                           |
+| Anomalous           | toss-up,  let AI image generation prove itself, who knows what species could emerge with "type: UNKNOWN"                                                           |
 
 ###
 
@@ -115,7 +183,7 @@ Examples:
 - CosmicInterpreter → *small halos, runes, star particles*  
 - RuneReader → *glowing runic circles on body*
 
-#### D. Traits (Triplets)
+#### Traits (Triplets)
 
 These **ALWAYS** add visible flair:
 
@@ -156,7 +224,7 @@ Since generation is random, this art style guide provides balance and consistenc
  the following rules define such a balance:
 
 - Types + Traits = 60% of the monster's 'visual identity'  
-  - Major / Minor Mutagens = 25%  
+  - Major Mutagens = 25%  
   - Utility Mutagens = 15%
   
 - No sprite should feel “overloaded” → cap at:  
