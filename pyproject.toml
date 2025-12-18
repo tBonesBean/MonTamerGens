@@ -32,7 +32,7 @@ license = { text = "MIT" }
 mongen = "mongens.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/yourusername/monstergenerators"
+Homepage = "https://github.com/tBonesBean/monstergenerators"
 
 [project.optional-dependencies]
 # To install: pip install -e .[dev]

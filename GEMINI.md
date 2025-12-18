@@ -5,6 +5,7 @@
 This project, `MonTamerGens`, is a Python package designed for the procedural generation of fantasy monster data. It provides a command-line tool (`mongen`) and a library to create detailed and unique monsters. Key features include a dual-type system, stat biasing based on type, the application of "mutagens" for unique variations, and the ability to format the generated data into various outputs like Pokedex-style entries, raw data for game development, or prompts for AI image generators.
 
 The project is structured as a standard Python package with a `src` directory containing the `mongens` module. The core logic is split into several modules:
+
 - `cli.py`: Implements the command-line interface.
 - `mon_forge.py`: Contains the main monster generation logic.
 - `data/data.py`: Stores all the base data for generation, such as monster types, stats, and attributes.
