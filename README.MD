@@ -80,6 +80,7 @@ Re-rolls attributes of a previously generated monster. This is useful for fine-t
   # Re-roll the major mutagen of a monster with a given PIN
   mongen reroll <PIN> --majors
 ```
+
 *You can find a monster's PIN in the output of the `unique` command or in the cached data.*
 
 ### `mongen artprompt`

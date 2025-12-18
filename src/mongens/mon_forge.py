@@ -241,3 +241,23 @@ def generate_monster(
     monster_cache.save_monster(seed_with_name)
 
     return seed_with_name
+
+
+"""
+def choose_silhouette(seed: MonsterSeed) -> Silhouette:
+    weights: dict[Silhouette, float] = {}
+
+    # 1. primary type bias
+    apply_type_bias(weights, seed.primary_type)
+
+    # 2. secondary type bias
+    apply_type_bias(weights, seed.secondary_type, scale=0.5)
+
+    # 3. habitat bias
+    apply_habitat_bias(weights, seed.habitat)
+
+    # 4. stat shape tiebreaker
+    apply_stat_bias(weights, seed.stats)
+
+    return weighted_choice(weights, deterministic=True)
+"""
