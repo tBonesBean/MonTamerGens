@@ -185,7 +185,7 @@ TYPE_TO_ADJ: Dict[str, str] = {
     "Dread": "Dread",
     "Brawler": "Brawling",
     "Anomalous": "Anomalous",
-    "Sylvan": "Sylvan",
+    "Sylvan": "Organis",
     "Inferno": "Molten",
 }
 

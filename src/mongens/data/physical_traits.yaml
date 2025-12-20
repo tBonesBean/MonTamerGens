@@ -54,3 +54,59 @@
   weight: 0.9
 - name: Faint, ghostly after-images follow its movements
   weight: 0.7
+- name: Has a mane of crackling energy
+  weight: 1.0
+- name: Skin is patterned like a circuit board
+  weight: 1.0
+- name: Vines with small, metallic flowers grow from its back
+  weight: 1.0
+- name: One arm is made of solidified smoke
+  weight: 1.0
+- name: Leaves footprints that quickly fade into mist
+  weight: 1.0
+- name: Body is covered in smooth, river-worn stones
+  weight: 1.0
+- name: A small, orbiting ring of ice shards
+  weight: 1.0
+- name: Fur has the texture of iron filings
+  weight: 1.0
+- name: Wings are like stained glass, depicting a story
+  weight: 1.0
+- name: Its body is a walking terrarium of glowing fungi
+  weight: 1.0
+- name: Emits a low, constant hum like a power station
+  weight: 1.0
+- name: Has a single, large eye that shows weather patterns
+  weight: 1.0
+- name: Leaves a trail of fast-blooming, wilting flowers
+  weight: 1.0
+- name: Body is composed of tightly packed, living insects
+  weight: 1.0
+- name: Has horns that are shaped like tuning forks
+  weight: 1.0
+- name: Paws/feet are perpetually coated in shimmering dust
+  weight: 1.0
+- name: A visible, internal skeleton made of glowing lumen
+  weight: 1.0
+- name: Its roar sounds like dial-up modem static
+  weight: 1.0
+- name: Weeps a thick, ink-like substance
+  weight: 1.0
+- name: Covered in bark-like plating with glowing sap veins
+  weight: 1.0
+- name: Joints are articulated with ball-and-socket mechanisms
+  weight: 1.0
+- name: Has a tail that ends in a functioning lantern
+  weight: 1.0
+- name: Skin ripples and shifts like a heat haze
+  weight: 1.0
+- name: Constantly dripping a viscous, non-staining fluid
+  weight: 1.0
+- name: Adorned with naturally growing, crystalline structures
+  weight: 1.0
+- name: Excess energy vents from small exhaust ports on its shoulders
+  weight: 1.0
+- name: Small, holographic symbols flicker around its head
+  weight: 1.0
+- name: Its body is partially pixelated, as if not fully rendered
+  weight: 1.0

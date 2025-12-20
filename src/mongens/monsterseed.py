@@ -7,6 +7,7 @@ It also includes helper functions for creating and manipulating these seeds,
 such as `weighted_choice` for random selections and `choose_type_pair` for
 generating valid monster type combinations.
 """
+
 from dataclasses import dataclass
 import random
 from typing import Any, Iterable, List, Tuple, Union
@@ -18,20 +19,12 @@ ChoiceList = Union[Dict[Any, float], Iterable[Tuple[Any, float]]]
 
 
 def weighted_choice(choices_with_weights: ChoiceList):
-    """Select an item from a weighted list of choices.
-
-    Args:
-        choices_with_weights: A dictionary mapping choices to weights or an
-            iterable of (choice, weight) tuples.
-
-    Returns:
-        The selected item.
-
-    Raises:
-        ValueError: If the choice list is empty, a weight is non-numeric
-            or negative, or the total weight is not positive.
-        RuntimeError: If an item fails to be selected due to a floating
-            point edge case.
+    """
+    Select an item from a weighted list of choices.
+    Args: choices_with_weights: A dictionary mapping choices to weights or an iterable of (choice, weight) tuples.
+    Returns: The selected item.
+    Raises: ValueError: If the choice list is empty, a weight is non-numeric or negative, or the total weight is not positive.
+    RuntimeError: If an item fails to be selected due to a floating point edge case.
     """
     if isinstance(choices_with_weights, dict):
         items_weights = list(choices_with_weights.items())
@@ -69,6 +62,7 @@ def weighted_choice(choices_with_weights: ChoiceList):
         "weighted_choice: failed to select an item (floating point edge-case)"
     )
 
+
 def choose_type_pair(
     primary_type_override: str | None = None,
     secondary_chance: float = 0.65,
@@ -90,7 +84,9 @@ def choose_type_pair(
     """
     # 1. Choose the primary type based on its base weight or use the override.
     primary_type = (
-        primary_type_override if primary_type_override else weighted_choice(SEED_TYPES_WEIGHTED)
+        primary_type_override
+        if primary_type_override
+        else weighted_choice(SEED_TYPES_WEIGHTED)
     )
 
     # 2. Decide if we should even try to add a secondary type.
@@ -120,6 +116,7 @@ def choose_type_pair(
     secondary_type = weighted_choice(candidates)
     return primary_type, secondary_type
 
+
 @dataclass
 class MonsterSeed:
     """A snapshot of a monster's generated attributes before final calculations."""
@@ -128,14 +125,18 @@ class MonsterSeed:
     name: str  # The monster's generated name.
     species: str  # The monster's base form/species.
     primary_type: str  # The primary elemental type.
-    secondary_type: str | None # The optional secondary elemental type.
+    secondary_type: str | None  # The optional secondary elemental type.
     habitat: str  # The monster's natural habitat.
     stats: Dict[str, int]  # A dictionary of the monster's stats (e.g., HP, ATK).
-    mutagens: Dict[str, List[str]]  # Modifiers applied, categorized as 'major' or 'utility'.
+    mutagens: Dict[
+        str, List[str]
+    ]  # Modifiers applied, categorized as 'major' or 'utility'.
     physical_traits: List[str]  # A list of notable physical characteristics.
     held_item: str | None  # An item the monster might be holding.
     tempers: Dict[str, str]  # The monster's personality traits (mood and affinity).
-    meta: Dict[str, Any]  # A catch-all for other data like tags, resistances, and a unique pin.
+    meta: Dict[
+        str, Any
+    ]  # A catch-all for other data like tags, resistances, and a unique pin.
 
     @classmethod
     def forge(
@@ -182,20 +183,23 @@ class MonsterSeed:
         habitat = weighted_choice(HABITATS_BY_TYPE[primary_type])
 
         # Initialize all data structures
-        mutagens = {"major": [], "utility": []}
+        major = [weighted_choice(MAJOR_MODS)]
+        utility = [weighted_choice(UTILITY_MODS)]
+        mutagens = {"major": [major], "utility": [utility]}
         mood = weighted_choice(TEMPERS_COUPLED["mood"])
         affinity = weighted_choice(TEMPERS_COUPLED["affinity"])
         tempers = {"mood": mood, "affinity": affinity}
 
         # New, more flexible trait selection
         num_physical = 1 if random.random() < 0.75 else 2
-        physical_traits = [weighted_choice(PHYSICAL_TRAITS) for _ in range(num_physical)]
+        physical_traits = [
+            weighted_choice(PHYSICAL_TRAITS) for _ in range(num_physical)
+        ]
         held_item = weighted_choice(HELD_ITEMS) if random.random() < 0.4 else None
 
         stats = calculate_base_stats(primary_type, secondary_type)
         meta = get_base_meta(primary_type, secondary_type)
         meta["notes"] = []
-
 
         # --- 3. Create the Seed Instance ---
         seed = cls(
@@ -216,7 +220,9 @@ class MonsterSeed:
         return seed
 
 
-def calculate_base_stats(primary_type: str, secondary_type: str | None) -> dict[str, int]:
+def calculate_base_stats(
+    primary_type: str, secondary_type: str | None
+) -> dict[str, int]:
     """
     Calculates base stats for a monster given its primary and secondary types.
 
@@ -252,7 +258,9 @@ def calculate_base_stats(primary_type: str, secondary_type: str | None) -> dict[
     return stats
 
 
-def get_base_meta(primary_type: str, secondary_type: str | None) -> dict[str, list[str]]:
+def get_base_meta(
+    primary_type: str, secondary_type: str | None
+) -> dict[str, list[str]]:
     """
     Gets the base meta tags, resistances, and weaknesses from the monster's types.
 
@@ -281,4 +289,3 @@ def get_base_meta(primary_type: str, secondary_type: str | None) -> dict[str, li
         apply_type_meta(secondary_type, meta)
 
     return meta
-

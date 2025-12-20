@@ -42,3 +42,49 @@
   weight: 0.9
 - name: Constantly Apologizes for Existing
   weight: 0.9
+- name: Sees faces in inanimate objects
+  weight: 1.0
+- name: Must walk backwards when nervous
+  weight: 1.0
+- name: Leaves cryptic warnings for others
+  weight: 1.0
+- name: Loses small objects in its own fur/body
+  weight: 1.0
+- name: Its voice changes with the weather
+  weight: 1.0
+- name: Experiences time out of order
+  weight: 1.0
+- name: Falls asleep in moments of high excitement
+  weight: 1.0
+- name: Attracted to the color of danger
+  weight: 1.0
+- name: Tries to "fix" things that aren't broken
+  weight: 1.0
+- name: A pathological liar, even about small things
+  weight: 1.0
+- name: Believes it is being followed by ghosts
+  weight: 1.0
+- name: Mimics the last sound it heard
+  weight: 1.0
+- name: Fearful of perfectly symmetrical things
+  weight: 1.0
+- name: Sheds tears that crystallize into salt
+  weight: 1.0
+- name: Becomes temporarily invisible when embarrassed
+  weight: 1.0
+- name: Hums a tune it has never heard before
+  weight: 1.0
+- name: Its shadow moves with a slight delay
+  weight: 1.0
+- name: Cannot perceive the color green
+  weight: 1.0
+- name: Arranges pebbles into complex patterns
+  weight: 1.0
+- name: Overly protective of a specific, mundane rock
+  weight: 1.0
+- name: Has a name it refuses to share
+  weight: 1.0
+- name: Gets hiccups that release small sparks
+  weight: 1.0
+- name: Convinced it is slowly turning to glass
+  weight: 1.0
