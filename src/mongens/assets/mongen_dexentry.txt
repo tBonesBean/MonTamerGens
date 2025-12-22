@@ -1,0 +1,2822 @@
+------------------------------------------------------------
+
+#001: 'Tikknid' --- a(n) Unkcela monster
+
+  -Type: Insect
+
+Documented Near-Lumen Mutagen: ['Shrouded', 'Tempest'] | Known Utility: ['Alchemist']
+
+
+Base Profile: HP 90 • ATK 76 • DEF 60 • SPATK 50 • SPDEF 50 • SPD 89
+    -Intangibles: ACC 100 • EVA 22 • LUCK 10
+
+
+Habitat: Whispering Dunes
+
+
+Appearance: Multiple Tails
+Token: Ancient Coin Collection
+Recorded Quirk: Understands Every Language But Their Own.
+
+Tags: Stealth:Shadow, Shadowstep, MultiHit:Storm, GaleForce, Transmute, PotionMaster
+Weak To: Radiant, Crystalline
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#002: 'Megaraptor' --- a(n) Quetzalcoatl monster
+
+  -Types: Ancient/Aerial
+
+Documented Near-Lumen Mutagen: ['Bloodforge', 'Cavernborn'] | Known Utility: ['Empath']
+
+
+Base Profile: HP 209 • ATK 91 • DEF 72 • SPATK 50 • SPDEF 59 • SPD 48
+    -Intangibles: ACC 100 • EVA 10 • LUCK 10
+
+
+Habitat: Bewitched Glen
+
+
+Appearance: Stone Skin
+Token: Pocket Of Ashes
+Recorded Quirk: Dealing with a Mirror-phobia.
+
+Tags: Regen:OnHit, Hemofury, Accuracy:Dark, Echolocation, Soothing, HealPulse
+Weak To: Radiant
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#003: 'Pugox' --- a(n) Chimpanzee monster
+
+  -Type: Brawler
+
+Documented Near-Lumen Mutagen: ['Starwarden', 'SandCrawler'] | Known Utility: ['CosmicInterpreter']
+
+
+Base Profile: HP 110 • ATK 82 • DEF 52 • SPATK 40 • SPDEF 64 • SPD 76
+    -Intangibles: ACC 95 • EVA 5 • LUCK 12
+
+
+Habitat: Ancient Battlefield
+
+
+Appearance: High-Fashion
+Token: Hourglass Tattoo
+Recorded Quirk: Persistent Hallucinations.
+
+Tags: Barrier:Cosmic, CelestialGuard, Initiative:Sand, Burrow, Identify:Rare, StarChart
+Weak To: Obsidian
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#005: 'Galeix' --- a(n) Roc monster
+
+  -Type: Aerial
+
+Documented Near-Lumen Mutagen: ['Shadowshroud', 'DeepEarth'] | Known Utility: ['BornLeader']
+
+
+Base Profile: HP 125 • ATK 65 • DEF 60 • SPATK 50 • SPDEF 57 • SPD 67
+    -Intangibles: ACC 95 • EVA 17 • LUCK 10
+
+
+Habitat: Whispering Dunes
+
+
+Appearance: Hovers When It Rains
+Token: Silver Ring That Hums
+Recorded Quirk: Dealing with a Mirror-phobia.
+
+Tags: Veil:Dark, Stealth, Burrow:Deep, StoneSleep, VeteranPresence, BattleCry, Rally
+Weak To: Tempest
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#006: 'Tronatasu, the the Lonesome' --- a(n) Inland Taipan monster
+
+  -Type: Toxic
+
+Documented Near-Lumen Mutagen: ['ExoSkeleton', 'Nocturnal'] | Known Utility: ['Humanitarian']
+
+
+Base Profile: HP 127 • ATK 50 • DEF 67 • SPATK 68 • SPDEF 62 • SPD 57
+    -Intangibles: ACC 95 • EVA 7 • LUCK 10
+
+
+Habitat: Darkmist Chasm
+
+
+Appearance: Translucent Skin
+Token: Glass Bottle Of Whispers
+Recorded Quirk: Never Sleeps On Full Moons.
+
+Tags: Shell:Echo, Hollowbody, Regen:Night, Moonshield, ConvertLoot, FieldMedic
+Weak To: Tempest, Solar
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#007: 'Solar' --- a(n) Ash Drake monster
+
+  -Type: Inferno
+
+Documented Near-Lumen Mutagen: ['Riftwalker', 'Radiant'] | Known Utility: ['CosmicInterpreter']
+
+
+Base Profile: HP 100 • ATK 60 • DEF 50 • SPATK 87 • SPDEF 52 • SPD 61
+    -Intangibles: ACC 105 • EVA 10 • LUCK 12
+
+
+Habitat: Obsidian Labyrinth
+
+
+Appearance: Glowing Pupils
+Token: Hourglass Pendant
+Recorded Quirk: Can’t Cry.
+
+Tags: Teleport:Long, DimensionalSlip, Cure:Blind, HolyLight, Identify:Rare, StarChart
+Weak To: Metallic, Shrouded
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#008: 'Fornid, the Orbital' --- a(n) Mantis Shrimp monster
+
+  -Types: Brawler/Insect
+
+Documented Near-Lumen Mutagen: ['SuperOrbital', 'Riftwalker'] | Known Utility: ['Diviner']
+
+
+Base Profile: HP 95 • ATK 90 • DEF 55 • SPATK 52 • SPDEF 50 • SPD 93
+    -Intangibles: ACC 95 • EVA 13 • LUCK 12
+
+
+Habitat: Crumbling Ruins
+
+
+Appearance: Glowing Pupils
+Token: Hourglass Of Sand
+Recorded Quirk: Terrified Of Silence.
+
+Tags: Curse:Minor, GravityWell, Teleport:Long, DimensionalSlip, Reveal:Secrets, Dowsing
+Weak To: Metallic
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#009: 'Usaracan of the Dark Frost' --- a(n) Jotunn monster
+
+  -Types: Ice/Toxic
+
+Documented Near-Lumen Mutagen: ['DarkIce', 'SuperOrbital'] | Known Utility: ['Haggler']
+
+
+Base Profile: HP 124 • ATK 50 • DEF 56 • SPATK 83 • SPDEF 84 • SPD 41
+    -Intangibles: ACC 95 • EVA 5 • LUCK 10
+
+
+Habitat: Permafrost Highlands
+
+
+Appearance: Glowing Fingertips
+Token: Obsidian Dagger
+Recorded Quirk: Haunted By Footsteps.
+
+Tags: Slide:Ice, Frostbite, Curse:Minor, GravityWell, Barter, MerchantFriend
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#010: 'Taurfang, the the Hidden' --- a(n) Smilodon monster
+
+  -Types: Beast/Anomalous
+
+Documented Near-Lumen Mutagen: ['Radiant', 'Necromance'] | Known Utility: ['Ageless']
+
+
+Base Profile: HP 123 • ATK 64 • DEF 59 • SPATK 68 • SPDEF 62 • SPD 59
+    -Intangibles: ACC 108 • EVA 8 • LUCK 15
+
+
+Habitat: Ennoan Grasslands
+
+
+Appearance: Shadow Has Massive Wings
+Token: Hourglass Pendant
+Recorded Quirk: Allergic To Salt.
+
+Tags: Cure:Blind, HolyLight, Summon:Undead, SoulPact, Lore:Gates, AncientWisdom
+Weak To: Shrouded
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#011: 'Thallian' --- a(n) Ego-Death Spirit monster
+
+  -Types: Astral/Sylvan
+
+Documented Near-Lumen Mutagen: ['Solar', 'Farphase'] | Known Utility: ['Pathwarden']
+
+
+Base Profile: HP 119 • ATK 60 • DEF 50 • SPATK 97 • SPDEF 61 • SPD 70
+    -Intangibles: ACC 100 • EVA 5 • LUCK 12
+
+
+Habitat: Secret Lab
+
+
+Appearance: Unusually Long Tail
+Token: Herbivore
+Recorded Quirk: Receives Cosmic Messages.
+
+Tags: Regen:Day, Sunfire, Blink:Short, PhaseShift, Sure-footed, All-Terrain
+Weak To: Chaos, Obsidian
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#012: 'Vespyx' --- a(n) Hallucigenia monster
+
+  -Types: Ancient/Insect
+
+Documented Near-Lumen Mutagen: ['SandCrawler', 'Atmos'] | Known Utility: ['SuperPositioned']
+
+
+Base Profile: HP 147 • ATK 68 • DEF 78 • SPATK 50 • SPDEF 50 • SPD 60
+    -Intangibles: ACC 95 • EVA 20 • LUCK 10
+
+
+Habitat: Crumbling Ruins
+
+
+Appearance: High-Fashion
+Token: Charm Bracelet Of Teeth
+Recorded Quirk: Haunted By A Melody.
+
+Tags: Initiative:Sand, Burrow, Evade:Aerial, Updraft, Quantum, Uncertainty
+Weak To: Electric
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#013: 'Rillis Mind-Reader' --- a(n) Featureless Mannequin monster
+
+  -Types: Anomalous/Aquatic
+
+Documented Near-Lumen Mutagen: ['BrightFlare', 'Extrasensory'] | Known Utility: ['AntiExtinct']
+
+
+Base Profile: HP 124 • ATK 68 • DEF 57 • SPATK 80 • SPDEF 67 • SPD 64
+    -Intangibles: ACC 108 • EVA 10 • LUCK 20
+
+
+Habitat: Starfall Crater
+
+
+Appearance: Shadowed Face
+Token: Herbivore
+Recorded Quirk: Never Ages.
+
+Tags: Burn:Overtime, Cinderwake, Precognition, Mind-Reader, LastOfKind, Endangered
+Weak To: Aquatic
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#014: 'Celith' --- a(n) Precognitive Seer monster
+
+  -Types: Astral/Beast
+
+Documented Near-Lumen Mutagen: ['Starwarden', 'Vulcan'] | Known Utility: ['Transient']
+
+
+Base Profile: HP 109 • ATK 55 • DEF 60 • SPATK 99 • SPDEF 70 • SPD 68
+    -Intangibles: ACC 95 • EVA 5 • LUCK 12
+
+
+Habitat: Restricted Labratory
+
+
+Appearance: Turtle Shell Hat
+Token: Silver Dagger
+Recorded Quirk: Floats When Calm.
+
+Tags: Barrier:Cosmic, CelestialGuard, Burn:Contact, MagmaPlating, Wanderer, Survivalist
+Weak To: Obsidian, Tempest
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#015: 'Frifrost' --- a(n) Woolly Rhinoceros monster
+
+  -Types: Ice/Anomalous
+
+Documented Near-Lumen Mutagen: ['Shadowshroud', 'Abyssal'] | Known Utility: ['Ageless']
+
+
+Base Profile: HP 155 • ATK 54 • DEF 54 • SPATK 61 • SPDEF 97 • SPD 44
+    -Intangibles: ACC 98 • EVA 9 • LUCK 15
+
+
+Habitat: Snowpacked Mountains
+
+
+Appearance: Shadowed Face
+Token: Pocket Mirror That Lies
+Recorded Quirk: Speaks To Shadows.
+
+Tags: Veil:Dark, Stealth, FirstStrike:Water, Pressure, Lore:Gates, AncientWisdom
+Weak To: Solar
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#016: 'Ybaieku, the Unlikely' --- a(n) Crystal-Veined Basilisk monster
+
+  -Types: Mineral/Astral
+
+Documented Near-Lumen Mutagen: ['Voltaic', 'BioLuminous'] | Known Utility: ['Impossible']
+
+
+Base Profile: HP 95 • ATK 55 • DEF 80 • SPATK 85 • SPDEF 68 • SPD 70
+    -Intangibles: ACC 100 • EVA 11 • LUCK 10
+
+
+Habitat: Thriving Reefs
+
+
+Appearance: Turtle Shell Hat
+Token: Silver Whistle
+Recorded Quirk: Speaks To Insects.
+
+Tags: StaticField, Glow, Photosynthesis, WildProcs, ProbabilityBender
+Resists: Electric
+Weak To: Terra, Dread
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#017: 'Sauryx, the the Seeker' --- a(n) Progenitor Cell monster
+
+  -Type: Ancient
+
+Documented Near-Lumen Mutagen: ['BoltThrower', 'Telekinesis'] | Known Utility: ['Diviner']
+
+
+Base Profile: HP 155 • ATK 71 • DEF 67 • SPATK 60 • SPDEF 50 • SPD 40
+    -Intangibles: ACC 105 • EVA 5 • LUCK 12
+
+
+Habitat: Bewitched Glen
+
+
+Appearance: 4 Arms
+Token: Holds Pouches Of Secret Contents
+Recorded Quirk: Haunted By A Melody.
+
+Tags: Call:Storm, Jolt, Pierce:Mind, MindRead, Reveal:Secrets, Dowsing
+Weak To: Ironclad
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#018: 'Basox' --- a(n) Wrecking-Ball Ape monster
+
+  -Types: Brawler/Mineral
+
+Documented Near-Lumen Mutagen: ['Psychic', 'Paranormal'] | Known Utility: ['Diviner']
+
+
+Base Profile: HP 100 • ATK 86 • DEF 65 • SPATK 50 • SPDEF 72 • SPD 61
+    -Intangibles: ACC 95 • EVA 5 • LUCK 18
+
+
+Habitat: Origin<UNKNOWN>
+
+
+Appearance: Full Plate Armor
+Token: Crystal Monocle
+Recorded Quirk: Allergic To Salt.
+
+Tags: Pierce:Barrier, Phase, Incorporeal, Reveal:Secrets, Dowsing
+Resists: Anomalous
+Weak To: Obsidian
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#019: 'Omniion' --- a(n) Amorphous Blob monster
+
+  -Types: Anomalous/Electric
+
+Documented Near-Lumen Mutagen: ['Sensei', 'ArcheoAnomaly'] | Known Utility: ['Grinder']
+
+
+Base Profile: HP 115 • ATK 73 • DEF 57 • SPATK 74 • SPDEF 63 • SPD 68
+    -Intangibles: ACC 120 • EVA 13 • LUCK 23
+
+
+Habitat: Obsidian Labyrinth
+
+
+Appearance: Cracked Porcelain Mask
+Token: Hourglass Heart
+Recorded Quirk: Leaves Frost Footprints.
+
+Tags: Mentor, FlawlessTechnique, Sentience:Inconsistent, TemporalFlux, Determined, NoPainNoGain
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#020: 'Aeror' --- a(n) Parrot monster
+
+  -Type: Aerial
+
+Documented Near-Lumen Mutagen: ['Tempest', 'Shadowshroud'] | Known Utility: ['Empath']
+
+
+Base Profile: HP 100 • ATK 75 • DEF 50 • SPATK 50 • SPDEF 57 • SPD 95
+    -Intangibles: ACC 100 • EVA 17 • LUCK 10
+
+
+Habitat: Highlands
+
+
+Appearance: Cracked Porcelain Mask
+Token: Trident
+Recorded Quirk: Haunted By Footsteps.
+
+Tags: MultiHit:Storm, GaleForce, Veil:Dark, Stealth, Soothing, HealPulse
+Weak To: Crystalline
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#021: 'Divius' --- a(n) Selkie monster
+
+  -Types: Mythic/Ice
+
+Documented Near-Lumen Mutagen: ['BattleScarred', 'Starwarden'] | Known Utility: ['Symbiote']
+
+
+Base Profile: HP 156 • ATK 52 • DEF 52 • SPATK 67 • SPDEF 97 • SPD 46
+    -Intangibles: ACC 95 • EVA 5 • LUCK 24
+
+
+Habitat: Origin<UNKNOWN>
+
+
+Appearance: Feathered Cloak
+Token: Pocket Mirror
+Recorded Quirk: Reliably Full Of Joy.
+
+Tags: Grit, Endure, Barrier:Cosmic, CelestialGuard, HealingAura, Lifebond
+Weak To: Obsidian
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#022: 'Mycoian' --- a(n) Spriggan monster
+
+  -Types: Sylvan/Aquatic
+
+Documented Near-Lumen Mutagen: ['Shielded', 'Crystalline'] | Known Utility: ['Confidant']
+
+
+Base Profile: HP 160 • ATK 54 • DEF 80 • SPATK 57 • SPDEF 97 • SPD 37
+    -Intangibles: ACC 95 • EVA 5 • LUCK 10
+
+
+Habitat: Fungal Vales
+
+
+Appearance: One Glass Eye
+Token: Silver Dagger
+Recorded Quirk: Receives Cosmic Messages.
+
+Tags: Guard:Stagger, Ironclad, Shatter:OnCrit, Whispers, VeiledKnowledge
+Resists: Mind
+Weak To: Shrouded
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#023: 'Noctwraith' --- a(n) Mind-Devouring Horror monster
+
+  -Types: Dread/Electric
+
+Documented Near-Lumen Mutagen: ['Fey-touched', 'Feralkin'] | Known Utility: ['NaturalDetector']
+
+
+Base Profile: HP 100 • ATK 66 • DEF 60 • SPATK 68 • SPDEF 60 • SPD 73
+    -Intangibles: ACC 95 • EVA 5 • LUCK 28
+
+
+Habitat: Dread Catacombs
+
+
+Appearance: Hovers When It Rains
+Token: Herbivore
+Recorded Quirk: Dreams In Color Only.
+
+Tags: Fey-curse, Mischief, Howl:Pack, Tracker, Magnetism, ItemScavenger
+Weak To: Metallic
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#024: 'Umbrix' --- a(n) Terror Bird monster
+
+  -Types: Aerial/Dread
+
+Documented Near-Lumen Mutagen: ['Arctic', 'Solar'] | Known Utility: ['AntiExtinct']
+
+
+Base Profile: HP 110 • ATK 84 • DEF 55 • SPATK 60 • SPDEF 69 • SPD 76
+    -Intangibles: ACC 95 • EVA 15 • LUCK 10
+
+
+Habitat: Glass Desert
+
+
+Appearance: Stone Horns
+Token: Stamp Collection
+Recorded Quirk: Reliably Full Of Joy.
+
+Tags: Slide:Ice, Regen:Day, Sunfire, LastOfKind, Endangered
+Resists: Ice
+Weak To: Chaos
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#026: 'Maror' --- a(n) Dunkleosteus monster
+
+  -Types: Aquatic/Mineral
+
+Documented Near-Lumen Mutagen: ['Voltaic', 'Extrasensory'] | Known Utility: ['Historian']
+
+
+Base Profile: HP 115 • ATK 60 • DEF 65 • SPATK 69 • SPDEF 78 • SPD 64
+    -Intangibles: ACC 108 • EVA 5 • LUCK 10
+
+
+Habitat: Freshwater Springs
+
+
+Appearance: Metallic Hair
+Token: Floating Lantern Companion
+Recorded Quirk: Longs To Be Back Among The Stars.
+
+Tags: StaticField, Precognition, Mind-Reader, Diplomacy, Scribe, Lorekeeper
+Resists: Electric
+Weak To: Terra
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#027: 'Rimeon' --- a(n) Snow Kirin monster
+
+  -Type: Ice
+
+Documented Near-Lumen Mutagen: ['SuperOrbital', 'Fey-touched'] | Known Utility: ['Humanitarian']
+
+
+Base Profile: HP 115 • ATK 50 • DEF 50 • SPATK 77 • SPDEF 75 • SPD 46
+    -Intangibles: ACC 95 • EVA 5 • LUCK 28
+
+
+Habitat: Permafrost Highlands
+
+
+Appearance: Crystalline Spine
+Token: Silver Bell
+Recorded Quirk: Laughs At Thunder.
+
+Tags: Curse:Minor, GravityWell, Fey-curse, Mischief, ConvertLoot, FieldMedic
+Weak To: Metallic
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#028: 'Ioneon, the the Brute' --- a(n) Platypus monster
+
+  -Type: Electric
+
+Documented Near-Lumen Mutagen: ['Solar', 'DarkIce'] | Known Utility: ['Humanitarian']
+
+
+Base Profile: HP 110 • ATK 66 • DEF 50 • SPATK 86 • SPDEF 56 • SPD 70
+    -Intangibles: ACC 95 • EVA 5 • LUCK 10
+
+
+Habitat: Abandoned Village
+
+
+Appearance: Spiraled Horns
+Token: Herbivore
+Recorded Quirk: Longs To Be Back Among The Stars.
+
+Tags: Regen:Day, Sunfire, Slide:Ice, Frostbite, ConvertLoot, FieldMedic
+Weak To: Chaos
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#029: 'Arcark' --- a(n) Tesseract-Beast monster
+
+  -Types: Anomalous/Electric
+
+Documented Near-Lumen Mutagen: ['Tempest', 'ThunderClap'] | Known Utility: ['Chronomancer']
+
+
+Base Profile: HP 115 • ATK 76 • DEF 57 • SPATK 77 • SPDEF 57 • SPD 85
+    -Intangibles: ACC 105 • EVA 10 • LUCK 20
+
+
+Habitat: Rusted Plane Wreckage
+
+
+Appearance: Tattooed Constellations
+Token: Silver Bell
+Recorded Quirk: Never Casts A Shadow.
+
+Tags: MultiHit:Storm, GaleForce, Call:Storm, SonicBoom, TimeWarp, Haste, Slow
+Weak To: Crystalline
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#030: 'Bason, the the Wanderer' --- a(n) Giant Anteater monster
+
+  -Type: Mineral
+
+Documented Near-Lumen Mutagen: ['Feralkin', 'Sylvan'] | Known Utility: ['Impossible']
+
+
+Base Profile: HP 140 • ATK 61 • DEF 80 • SPATK 50 • SPDEF 78 • SPD 40
+    -Intangibles: ACC 95 • EVA 5 • LUCK 10
+
+
+Habitat: Crumbling Ruins
+
+
+Appearance: Scaled Neck
+Token: Oversized Bandit Mask
+Recorded Quirk: Speaks In Riddles.
+
+Tags: Howl:Pack, Tracker, Regen:Terrain, Photosynthesis, WildProcs, ProbabilityBender
+Weak To: Inferno
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#031: 'Noposha' --- a(n) Fire Jotunn monster
+
+  -Type: Inferno
+
+Documented Near-Lumen Mutagen: ['RuneReader', 'DarkIce'] | Known Utility: ['Alchemist']
+
+
+Base Profile: HP 100 • ATK 60 • DEF 50 • SPATK 87 • SPDEF 50 • SPD 50
+    -Intangibles: ACC 95 • EVA 5 • LUCK 10
+
+
+Habitat: Mt. Thermallia
+
+
+Appearance: Face Obsured By Pollution
+Token: Ancient Coin Collection
+Recorded Quirk: Haunted By Footsteps.
+
+Tags: RuneSlots:+1, Empower:Glyph, Slide:Ice, Frostbite, Transmute, PotionMaster
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#032: 'Bardon' --- a(n) Minotaur monster
+
+  -Types: Beast/Aquatic
+
+Documented Near-Lumen Mutagen: ['Sensei', 'Shielded'] | Known Utility: ['CombatController']
+
+
+Base Profile: HP 129 • ATK 70 • DEF 87 • SPATK 55 • SPDEF 71 • SPD 50
+    -Intangibles: ACC 115 • EVA 5 • LUCK 10
+
+
+Habitat: Glass Desert
+
+
+Appearance: Shimmering Icy Breath
+Token: Pocket Of Ashes
+Recorded Quirk: Haunted By A Melody.
+
+Tags: Mentor, FlawlessTechnique, Guard:Stagger, Ironclad, Disorient, Tactician
+Weak To: Shrouded
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#033: 'Noxius' --- a(n) Boomslang monster
+
+  -Types: Toxic/Ancient
+
+Documented Near-Lumen Mutagen: ['Riftwalker', 'Bloodforge'] | Known Utility: ['NaturalDetector']
+
+
+Base Profile: HP 161 • ATK 72 • DEF 78 • SPATK 75 • SPDEF 50 • SPD 52
+    -Intangibles: ACC 95 • EVA 10 • LUCK 12
+
+
+Habitat: Verdant Plains
+
+
+Appearance: Cape Of Smoke
+Token: Vial Of Mist
+Recorded Quirk: Nocturnal.
+
+Tags: Teleport:Long, DimensionalSlip, Regen:OnHit, Hemofury, Magnetism, ItemScavenger
+Weak To: Metallic, Radiant
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#034: 'Dojite' --- a(n) Sandstone Sphinx monster
+
+  -Types: Mineral/Brawler
+
+Documented Near-Lumen Mutagen: ['Sensei', 'Starwarden'] | Known Utility: ['Alchemist']
+
+
+Base Profile: HP 110 • ATK 79 • DEF 80 • SPATK 50 • SPDEF 83 • SPD 47
+    -Intangibles: ACC 115 • EVA 5 • LUCK 12
+
+
+Habitat: Ancient Lavaflows
+
+
+Appearance: Oversized Beak
+Token: Silver Dagger
+Recorded Quirk: Hums When Nervous.
+
+Tags: Mentor, FlawlessTechnique, Barrier:Cosmic, CelestialGuard, Transmute, PotionMaster
+Weak To: Obsidian
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#035: 'Stratoalon the Black-Iced' --- a(n) Kiwi monster
+
+  -Type: Aerial
+
+Documented Near-Lumen Mutagen: ['DarkIce', 'Stormforged'] | Known Utility: ['KeeperOfKeys']
+
+
+Base Profile: HP 100 • ATK 65 • DEF 50 • SPATK 65 • SPDEF 64 • SPD 84
+    -Intangibles: ACC 100 • EVA 15 • LUCK 10
+
+
+Habitat: Whispering Dunes
+
+
+Appearance: Webbed Fingers
+Token: Stamp Collection
+Recorded Quirk: Allergic To Sunlight.
+
+Tags: Slide:Ice, Frostbite, Stormbringer, Locksmith, MasterKey
+Resists: Tempest
+Weak To: Mineral
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#036: 'Knounch' --- a(n) Harpy monster
+
+  -Types: Brawler/Inferno
+
+Documented Near-Lumen Mutagen: ['Cultivated', 'Chaotic'] | Known Utility: ['Pathwarden']
+
+
+Base Profile: HP 117 • ATK 112 • DEF 50 • SPATK 62 • SPDEF 50 • SPD 68
+    -Intangibles: ACC 90 • EVA 5 • LUCK 12
+
+
+Habitat: Crumbling Ruins
+
+
+Appearance: Porcelain Mask
+Token: Compass That Points To Danger
+Recorded Quirk: Allergic To Salt.
+
+Tags: Heal:Terrain, Barkskin, Random:Proc, Unstable, Sure-footed, All-Terrain
+Weak To: Ironclad
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#037: 'Lugfang, the the Silent' --- a(n) Nandi Bear monster
+
+  -Types: Beast/Mineral
+
+Documented Near-Lumen Mutagen: ['Voltaic', 'SuperOrbital'] | Known Utility: ['Geomancer']
+
+
+Base Profile: HP 120 • ATK 63 • DEF 71 • SPATK 71 • SPDEF 57 • SPD 62
+    -Intangibles: ACC 100 • EVA 5 • LUCK 10
+
+
+Habitat: Glass Desert
+
+
+Appearance: Glowing Body Pattern
+Token: Enchanted Scarf
+Recorded Quirk: Allergic To Sunlight.
+
+Tags: StaticField, Curse:Minor, GravityWell, Earthshaper, LeylineReader
+Resists: Electric
+Weak To: Terra
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#038: 'Lugok' --- a(n) Volcanic Worm monster
+
+  -Types: Inferno/Beast
+
+Documented Near-Lumen Mutagen: ['Riftwalker', 'ThunderClap'] | Known Utility: ['Historian']
+
+
+Base Profile: HP 110 • ATK 73 • DEF 52 • SPATK 91 • SPDEF 45 • SPD 63
+    -Intangibles: ACC 95 • EVA 10 • LUCK 12
+
+
+Habitat: Smoldering Flats
+
+
+Appearance: Scaled Neck
+Token: Infinity Symbol Accessories
+Recorded Quirk: Never Sleeps On Full Moons.
+
+Tags: Teleport:Long, DimensionalSlip, Call:Storm, SonicBoom, Diplomacy, Scribe, Lorekeeper
+Weak To: Metallic
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#039: 'Ethoid Glyph-Bound' --- a(n) Null-Being monster
+
+  -Types: Anomalous/Insect
+
+Documented Near-Lumen Mutagen: ['RuneReader', 'Monolithic'] | Known Utility: ['Ageless']
+
+
+Base Profile: HP 120 • ATK 72 • DEF 76 • SPATK 66 • SPDEF 57 • SPD 64
+    -Intangibles: ACC 100 • EVA 12 • LUCK 21
+
+
+Habitat: Riverlands
+
+
+Appearance: Turtle Shell Hat
+Token: Bone Flute
+Recorded Quirk: Allergic To Rain.
+
+Tags: RuneSlots:+1, Empower:Glyph, Ambush:Burrow, Tremorsense, Lore:Gates, AncientWisdom
+Weak To: Astral
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#040: 'Kukothu, the the Hidden' --- a(n) Calydonian Boar monster
+
+  -Type: Beast
+
+Documented Near-Lumen Mutagen: ['Tectonic', 'DeepEarth'] | Known Utility: ['BornLeader']
+
+
+Base Profile: HP 172 • ATK 66 • DEF 95 • SPATK 50 • SPDEF 50 • SPD 48
+    -Intangibles: ACC 95 • EVA 5 • LUCK 10
+
+
+Habitat: Glass Desert
+
+
+Appearance: Cracked Porcelain Mask
+Token: Wears Heavy Amulets
+Recorded Quirk: Hums When Nervous.
+
+Tags: Terrain:Bonus, Terraform, Burrow:Deep, StoneSleep, VeteranPresence, BattleCry, Rally
+Resists: Stormforged
+Weak To: Tempest
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#042: 'Thallius Mind-Reader' --- a(n) Thorn Hydra monster
+
+  -Types: Sylvan/Toxic
+
+Documented Near-Lumen Mutagen: ['Stormforged', 'Extrasensory'] | Known Utility: ['NaturalDetector']
+
+
+Base Profile: HP 150 • ATK 50 • DEF 56 • SPATK 97 • SPDEF 60 • SPD 47
+    -Intangibles: ACC 108 • EVA 5 • LUCK 10
+
+
+Habitat: Misty Glades
+
+
+Appearance: 4 Arms
+Token: Floating Lantern Companion
+Recorded Quirk: Immune To Cold.
+
+Tags: Stormbringer, Precognition, Mind-Reader, Magnetism, ItemScavenger
+Resists: Tempest
+Weak To: Mineral
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#043: 'Zephyrwing' --- a(n) Bennu monster
+
+  -Type: Aerial
+
+Documented Near-Lumen Mutagen: ['ExoSkeleton', 'Brimstone'] | Known Utility: ['Scholar']
+
+
+Base Profile: HP 100 • ATK 65 • DEF 54 • SPATK 57 • SPDEF 57 • SPD 83
+    -Intangibles: ACC 95 • EVA 17 • LUCK 15
+
+
+Habitat: Wyrmscar Ridge
+
+
+Appearance: Feathered Cloak
+Token: Charm Bracelet Of Teeth
+Recorded Quirk: Whispers To Stones.
+
+Tags: Shell:Echo, Hollowbody, Ignite:Low, Kindle, Study, AnalyzeWeakness
+Weak To: Tempest
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#044: 'Noctgore' --- a(n) Shadow Lamia monster
+
+  -Types: Dread/Beast
+
+Documented Near-Lumen Mutagen: ['Sylvan', 'Fossilized'] | Known Utility: ['Ageless']
+
+
+Base Profile: HP 160 • ATK 77 • DEF 76 • SPATK 50 • SPDEF 81 • SPD 47
+    -Intangibles: ACC 95 • EVA 5 • LUCK 10
+
+
+Habitat: Netherbleak Hollow
+
+
+Appearance: Glowing Freckles
+Token: Herbivore
+Recorded Quirk: Can’t Cry.
+
+Tags: Regen:Terrain, Photosynthesis, Ability:Revive, Lore:Gates, AncientWisdom
+Resists: Mineral
+Weak To: Inferno
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#045: 'Taurius' --- a(n) Barong monster
+
+  -Types: Beast/Toxic
+
+Documented Near-Lumen Mutagen: ['Fossilized', 'ExoSkeleton'] | Known Utility: ['CosmicInterpreter']
+
+
+Base Profile: HP 135 • ATK 73 • DEF 80 • SPATK 59 • SPDEF 56 • SPD 64
+    -Intangibles: ACC 95 • EVA 6 • LUCK 10
+
+
+Habitat: Lunaglow Plateau
+
+
+Appearance: Porcelain Mask
+Token: Compass That Points To Danger
+Recorded Quirk: Nocturnal.
+
+Tags: Ability:Revive, Shell:Echo, Hollowbody, Identify:Rare, StarChart
+Resists: Mineral
+Weak To: Tempest
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#046: 'Ionark' --- a(n) Electrified Lynx monster
+
+  -Types: Electric/Anomalous
+
+Documented Near-Lumen Mutagen: ['SuperOrbital', 'Cavernborn'] | Known Utility: ['NaturalDetector']
+
+
+Base Profile: HP 130 • ATK 59 • DEF 54 • SPATK 86 • SPDEF 59 • SPD 75
+    -Intangibles: ACC 103 • EVA 8 • LUCK 15
+
+
+Habitat: Condemned HydroPowerDam
+
+
+Appearance: Stone Skin
+Token: Pet Cloud
+Recorded Quirk: Speaks To Shadows.
+
+Tags: Curse:Minor, GravityWell, Accuracy:Dark, Echolocation, Magnetism, ItemScavenger
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#047: 'Arcix' --- a(n) Electrified Lynx monster
+
+  -Types: Electric/Mythic
+
+Documented Near-Lumen Mutagen: ['SandCrawler', 'Atmos'] | Known Utility: ['Impossible']
+
+
+Base Profile: HP 110 • ATK 55 • DEF 52 • SPATK 76 • SPDEF 56 • SPD 94
+    -Intangibles: ACC 95 • EVA 16 • LUCK 15
+
+
+Habitat: Restricted Labratory
+
+
+Appearance: Cape Of Smoke
+Token: Pocket Of Ashes
+Recorded Quirk: Can’t Cry.
+
+Tags: Initiative:Sand, Burrow, Evade:Aerial, Updraft, WildProcs, ProbabilityBender
+Weak To: Electric
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#048: 'Barok' --- a(n) Savage Manticore monster
+
+  -Type: Beast
+
+Documented Near-Lumen Mutagen: ['Crystalline', 'ArcheoAnomaly'] | Known Utility: ['LongSeeker']
+
+
+Base Profile: HP 130 • ATK 66 • DEF 55 • SPATK 50 • SPDEF 63 • SPD 55
+    -Intangibles: ACC 95 • EVA 8 • LUCK 13
+
+
+Habitat: Still Tidepools
+
+
+Appearance: Stone Skin
+Token: Pocket Of Ashes
+Recorded Quirk: Speaks To Insects.
+
+Tags: Shatter:OnCrit, Sentience:Inconsistent, TemporalFlux, Tracker, TreasureHunter
+Resists: Mind
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#049: 'Rimfrost' --- a(n) Narwhal monster
+
+  -Type: Ice
+
+Documented Near-Lumen Mutagen: ['Farphase', 'Shielded'] | Known Utility: ['BornLeader']
+
+
+Base Profile: HP 115 • ATK 50 • DEF 80 • SPATK 57 • SPDEF 90 • SPD 42
+    -Intangibles: ACC 100 • EVA 5 • LUCK 12
+
+
+Habitat: Snowpacked Mountains
+
+
+Appearance: Cracked Skin
+Token: Compass That Spins Wildly
+Recorded Quirk: Can’t Lie.
+
+Tags: Blink:Short, PhaseShift, Guard:Stagger, Ironclad, VeteranPresence, BattleCry, Rally
+Weak To: Obsidian, Shrouded
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#050: 'Gruffang' --- a(n) Owlbear monster
+
+  -Types: Beast/Ancient
+
+Documented Near-Lumen Mutagen: ['Feralkin', 'Voltaic'] | Known Utility: ['Geomancer']
+
+
+Base Profile: HP 150 • ATK 75 • DEF 64 • SPATK 60 • SPDEF 50 • SPD 69
+    -Intangibles: ACC 100 • EVA 5 • LUCK 10
+
+
+Habitat: Lunaglow Plateau
+
+
+Appearance: Unusually Long Tail
+Token: Trident
+Recorded Quirk: Immune To Cold.
+
+Tags: Howl:Pack, Tracker, StaticField, Earthshaper, LeylineReader
+Resists: Electric
+Weak To: Terra
+------------------------------------------------------------
+
+#001: 'Gloomwraith' --- a(n) Shadow Lamia monster
+
+  -Type: Dread
+
+Documented Near-Lumen Mutagen: ['Extrasensory'] | Known Utility: ['AntiExtinct']
+
+
+Base Profile: HP 100 • ATK 57 • DEF 60 • SPATK 57 • SPDEF 60 • SPD 50
+    -Intangibles: ACC 103 • EVA 5 • LUCK 10
+
+
+Habitat: Darkmist Chasm
+
+
+Appearance: Metallic Hair
+Token: Enchanted Scarf
+Recorded Quirk: Leaves Frost Footprints.
+
+Tags: Precognition, Mind-Reader, LastOfKind, Endangered
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#002: 'Stratoor, the the Sentinel' --- a(n) Mastiff monster
+
+  -Types: Beast/Aerial
+
+Documented Near-Lumen Mutagen: ['SandCrawler'] | Known Utility: ['Transient']
+
+
+Base Profile: HP 120 • ATK 69 • DEF 58 • SPATK 50 • SPDEF 54 • SPD 74
+    -Intangibles: ACC 95 • EVA 10 • LUCK 10
+
+
+Habitat: Still Tidepools
+
+
+Appearance: Cracked Porcelain Mask
+Token: Broken Pocket Watch
+Recorded Quirk: Whispers To Stones.
+
+Tags: Initiative:Sand, Burrow, Wanderer, Survivalist
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#004: 'Volvolt, the Magnetic' --- a(n) Storm Elemental monster
+
+  -Type: Electric
+
+Documented Near-Lumen Mutagen: ['Crystalline'] | Known Utility: ['NaturalDetector']
+
+
+Base Profile: HP 110 • ATK 55 • DEF 50 • SPATK 68 • SPDEF 57 • SPD 70
+    -Intangibles: ACC 95 • EVA 5 • LUCK 10
+
+
+Habitat: Abandoned Village
+
+
+Appearance: Glowing Fingertips
+Token: Hourglass Pendant
+Recorded Quirk: Can Be Lured By Music.
+
+Tags: Shatter:OnCrit, Magnetism, ItemScavenger
+Resists: Mind
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#005: 'Terite' --- a(n) Geode-Backed Armadillo monster
+
+  -Type: Mineral
+
+Documented Near-Lumen Mutagen: ['Psychic'] | Known Utility: ['Chronomancer']
+
+
+Base Profile: HP 100 • ATK 55 • DEF 80 • SPATK 62 • SPDEF 72 • SPD 40
+    -Intangibles: ACC 95 • EVA 5 • LUCK 17
+
+
+Habitat: Whispering Dunes
+
+
+Appearance: Horned Silhouette
+Token: Silver Bell
+Recorded Quirk: Allergic To Laughter.
+
+Tags: Pierce:Barrier, TimeWarp, Haste, Slow
+Resists: Anomalous
+Weak To: Obsidian
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#006: 'Aeror, the the Forgotten' --- a(n) Harpy Eagle monster
+
+  -Types: Aerial/Ancient
+
+Documented Near-Lumen Mutagen: ['Paranormal'] | Known Utility: ['Scholar']
+
+
+Base Profile: HP 128 • ATK 73 • DEF 58 • SPATK 50 • SPDEF 66 • SPD 63
+    -Intangibles: ACC 95 • EVA 15 • LUCK 11
+
+
+Habitat: Verdant Plains
+
+
+Appearance: Glowing Scars
+Token: Hourglass Pendant
+Recorded Quirk: Voice Attracts Moths.
+
+Tags: Phase, Incorporeal, Study, AnalyzeWeakness
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#007: 'Gelfrost, the the Hollow' --- a(n) Wendigo monster
+
+  -Type: Ice
+
+Documented Near-Lumen Mutagen: ['Vedic'] | Known Utility: ['Alchemist']
+
+
+Base Profile: HP 115 • ATK 50 • DEF 50 • SPATK 57 • SPDEF 86 • SPD 48
+    -Intangibles: ACC 95 • EVA 11 • LUCK 10
+
+
+Habitat: Wild Tundra
+
+
+Appearance: Shadowed Face
+Token: Compass That Hums
+Recorded Quirk: Terrified Of Silence.
+
+Tags: Fog:Field, Ethereal, Transmute, PotionMaster
+Weak To: Radiant
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#008: 'Bryus' --- a(n) Capoeira-Dancer Sprite monster
+
+  -Types: Brawler/Sylvan
+
+Documented Near-Lumen Mutagen: ['Tempest'] | Known Utility: ['Symbiote']
+
+
+Base Profile: HP 120 • ATK 94 • DEF 50 • SPATK 43 • SPDEF 55 • SPD 76
+    -Intangibles: ACC 100 • EVA 5 • LUCK 10
+
+
+Habitat: Clockwork City
+
+
+Appearance: Metallic Hair
+Token: Charm Bracelet Of Teeth
+Recorded Quirk: Leaves Frost Footprints.
+
+Tags: MultiHit:Storm, GaleForce, HealingAura, Lifebond
+Weak To: Crystalline
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#009: 'Saurdon' --- a(n) Plesiosaur monster
+
+  -Type: Ancient
+
+Documented Near-Lumen Mutagen: ['BioLuminous'] | Known Utility: ['CosmicInterpreter']
+
+
+Base Profile: HP 155 • ATK 62 • DEF 67 • SPATK 57 • SPDEF 50 • SPD 48
+    -Intangibles: ACC 95 • EVA 11 • LUCK 10
+
+
+Habitat: Retired Military Base
+
+
+Appearance: Multiple Tails
+Token: Broken Crown
+Recorded Quirk: Voice Echoes Twice.
+
+Tags: Glow, Photosynthesis, Identify:Rare, StarChart
+Weak To: Dread
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#010: 'Fossyx' --- a(n) Anomalocaris monster
+
+  -Type: Ancient
+
+Documented Near-Lumen Mutagen: ['Arctic'] | Known Utility: ['Cartographer']
+
+
+Base Profile: HP 155 • ATK 62 • DEF 67 • SPATK 50 • SPDEF 55 • SPD 43
+    -Intangibles: ACC 95 • EVA 5 • LUCK 10
+
+
+Habitat: Crumbling Ruins
+
+
+Appearance: Moss-Covered Shoulders
+Token: Glass Bottle Of Whispers
+Recorded Quirk: Never Sleeps On Full Moons.
+
+Tags: Slide:Ice, Pathfinder, WorldMap
+Resists: Ice
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#011: 'Cosmeon' --- a(n) Astral Jelly monster
+
+  -Types: Astral/Ice
+
+Documented Near-Lumen Mutagen: ['Cultivated'] | Known Utility: ['Historian']
+
+
+Base Profile: HP 127 • ATK 50 • DEF 50 • SPATK 81 • SPDEF 71 • SPD 60
+    -Intangibles: ACC 95 • EVA 5 • LUCK 10
+
+
+Habitat: Origin<UNKNOWN>
+
+
+Appearance: Glimmering Hair
+Token: Crystal Monocle
+Recorded Quirk: Can’t Cry.
+
+Tags: Heal:Terrain, Barkskin, Diplomacy, Scribe, Lorekeeper
+
+------------------------------------------------------------
+
+#001: 'Nyxsoran' --- a(n) Tidal Leviathan monster
+
+  -Types: Aquatic/Ancient
+
+Documented Near-Lumen Mutagen: ['Riftwalker'] | Known Utility: ['Impossible']
+
+
+Base Profile: HP 144 • ATK 64 • DEF 58 • SPATK 55 • SPDEF 68 • SPD 62
+    -Intangibles: ACC 95 • EVA 10 • LUCK 12
+
+
+Habitat: Sunless Abyss
+
+
+Appearance: Stone Skin
+Token: Silver Ring That Hums
+Recorded Quirk: Whispers To Stones.
+
+Tags: Teleport:Long, DimensionalSlip, WildProcs, ProbabilityBender
+Weak To: Metallic
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#002: 'Gerbruashkelk' --- a(n) Tasmanian Devil monster
+
+  -Types: Beast/Inferno
+
+Documented Near-Lumen Mutagen: ['RuneReader'] | Known Utility: ['Alchemist']
+
+
+Base Profile: HP 120 • ATK 66 • DEF 55 • SPATK 70 • SPDEF 48 • SPD 55
+    -Intangibles: ACC 95 • EVA 5 • LUCK 10
+
+
+Habitat: Riverlands
+
+
+Appearance: Hovers When It Rains
+Token: Cursed Musical Instrument
+Recorded Quirk: Terrible Hay Fever.
+
+Tags: RuneSlots:+1, Empower:Glyph, Transmute, PotionMaster
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#003: 'Aeshtisdrole' --- a(n) Venom-Fanged Spider monster
+
+  -Type: Toxic
+
+Documented Near-Lumen Mutagen: ['Vedic'] | Known Utility: ['Diviner']
+
+
+Base Profile: HP 115 • ATK 50 • DEF 62 • SPATK 68 • SPDEF 57 • SPD 55
+    -Intangibles: ACC 95 • EVA 11 • LUCK 10
+
+
+Habitat: Still Tidepools
+
+
+Appearance: Porcelain Mask
+Token: Pocket Watch That Ticks Backward
+Recorded Quirk: Persistent Hallucinations.
+
+Tags: Fog:Field, Ethereal, Reveal:Secrets, Dowsing
+Weak To: Radiant
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#004: 'Pirtqux' --- a(n) Pangolin monster
+
+  -Types: Beast/Ancient
+
+Documented Near-Lumen Mutagen: ['Shadowshroud'] | Known Utility: ['SuperPositioned']
+
+
+Base Profile: HP 150 • ATK 68 • DEF 64 • SPATK 50 • SPDEF 50 • SPD 54
+    -Intangibles: ACC 95 • EVA 6 • LUCK 10
+
+
+Habitat: Blooming Valley
+
+
+Appearance: Cracked Halo
+Token: Compass That Points To Danger
+Recorded Quirk: Longs To Be Back Among The Stars.
+
+Tags: Veil:Dark, Stealth, Quantum, Uncertainty
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#005: 'Hail the Probability-Bender' --- a(n) Venom-Fanged Spider monster
+
+  -Type: Toxic
+
+Documented Near-Lumen Mutagen: ['Abyssal'] | Known Utility: ['Impossible']
+
+
+Base Profile: HP 144 • ATK 50 • DEF 62 • SPATK 68 • SPDEF 60 • SPD 43
+    -Intangibles: ACC 95 • EVA 5 • LUCK 10
+
+
+Habitat: Blooming Valley
+
+
+Appearance: Cracked Porcelain Mask
+Token: Cracked Monocle
+Recorded Quirk: Can’t Cry.
+
+Tags: FirstStrike:Water, Pressure, WildProcs, ProbabilityBender
+Weak To: Solar
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#006: 'Chyxasunhoura' --- a(n) Hallucigenia monster
+
+  -Type: Ancient
+
+Documented Near-Lumen Mutagen: ['Bloodforge'] | Known Utility: ['Humanitarian']
+
+
+Base Profile: HP 174 • ATK 79 • DEF 72 • SPATK 50 • SPDEF 50 • SPD 40
+    -Intangibles: ACC 95 • EVA 5 • LUCK 10
+
+
+Habitat: Wyrmscar Ridge
+
+
+Appearance: Horned Silhouette
+Token: Silver Whistle
+Recorded Quirk: Remembers Every Sound Ever Heard.
+
+Tags: Regen:OnHit, Hemofury, ConvertLoot, FieldMedic
+Weak To: Radiant
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#007: 'Vrouzrom the Black-Iced' --- a(n) Amorphous Blob monster
+
+  -Type: Anomalous
+
+Documented Near-Lumen Mutagen: ['DarkIce'] | Known Utility: ['CosmicInterpreter']
+
+
+Base Profile: HP 115 • ATK 57 • DEF 57 • SPATK 60 • SPDEF 64 • SPD 57
+    -Intangibles: ACC 100 • EVA 10 • LUCK 20
+
+
+Habitat: Alpine Lakes
+
+
+Appearance: Glowing Pupils
+Token: Stamp Collection
+Recorded Quirk: Receives Cosmic Messages.
+
+Tags: Slide:Ice, Frostbite, Identify:Rare, StarChart
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#008: 'Aixnocty' --- a(n) Wildfire-Horse monster
+
+  -Types: Inferno/Dread
+
+Documented Near-Lumen Mutagen: ['Crystalline'] | Known Utility: ['LongSeeker']
+
+
+Base Profile: HP 110 • ATK 64 • DEF 55 • SPATK 72 • SPDEF 57 • SPD 50
+    -Intangibles: ACC 95 • EVA 5 • LUCK 10
+
+
+Habitat: Ancient Lavaflows
+
+
+Appearance: One Glass Eye
+Token: Obsidian Dagger
+Recorded Quirk: Can’t Touch Iron.
+
+Tags: Shatter:OnCrit, Tracker, TreasureHunter
+Resists: Mind
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#009: 'Cramwausdalk' --- a(n) Terror Bird monster
+
+  -Types: Aerial/Astral
+
+Documented Near-Lumen Mutagen: ['Sensei'] | Known Utility: ['Ageless']
+
+
+Base Profile: HP 95 • ATK 72 • DEF 50 • SPATK 68 • SPDEF 60 • SPD 80
+    -Intangibles: ACC 115 • EVA 15 • LUCK 10
+
+
+Habitat: Skybridge Peaks
+
+
+Appearance: Meditating Body Position
+Token: Crystal Monocle
+Recorded Quirk: Understands Every Language But Their Own.
+
+Tags: Mentor, FlawlessTechnique, Lore:Gates, AncientWisdom
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#010: 'Kombarith' --- a(n) Owlbear monster
+
+  -Types: Beast/Anomalous
+
+Documented Near-Lumen Mutagen: ['Tempest'] | Known Utility: ['InnateGuard']
+
+
+Base Profile: HP 129 • ATK 74 • DEF 59 • SPATK 54 • SPDEF 54 • SPD 74
+    -Intangibles: ACC 103 • EVA 8 • LUCK 15
+
+
+Habitat: Fungal Vales
+
+
+Appearance: Top Hat With Feather
+Token: Pet Cloud
+Recorded Quirk: Speaks In Echoes.
+
+Tags: MultiHit:Storm, GaleForce, Bodyguard, ShieldAlly
+Weak To: Crystalline
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#011: 'Tredonsaurylax the Master' --- a(n) Titanoboa monster
+
+  -Type: Ancient
+
+Documented Near-Lumen Mutagen: ['Sensei'] | Known Utility: ['NaturalDetector']
+
+
+Base Profile: HP 155 • ATK 68 • DEF 67 • SPATK 55 • SPDEF 50 • SPD 40
+    -Intangibles: ACC 115 • EVA 5 • LUCK 10
+
+
+Habitat: Darkmist Chasm
+
+
+Appearance: Stone Skin
+Token: Compass Of Bone
+Recorded Quirk: Voice Echoes Twice.
+
+Tags: Mentor, FlawlessTechnique, Magnetism, ItemScavenger
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#012: 'Leamstild the Wanderer' --- a(n) Obsidian-Carapace Scorpion monster
+
+  -Type: Insect
+
+Documented Near-Lumen Mutagen: ['SuperOrbital'] | Known Utility: ['Transient']
+
+
+Base Profile: HP 90 • ATK 60 • DEF 60 • SPATK 59 • SPDEF 50 • SPD 62
+    -Intangibles: ACC 95 • EVA 10 • LUCK 10
+
+
+Habitat: Petrified Forest
+
+
+Appearance: Oversized Crown
+Token: Cursed Musical Instrument
+Recorded Quirk: Terrified Of Silence.
+
+Tags: Curse:Minor, GravityWell, Wanderer, Survivalist
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#013: 'Cryoertgelioz' --- a(n) Takahē monster
+
+  -Types: Aerial/Ice
+
+Documented Near-Lumen Mutagen: ['Metallic'] | Known Utility: ['Impossible']
+
+
+Base Profile: HP 108 • ATK 75 • DEF 83 • SPATK 54 • SPDEF 70 • SPD 65
+    -Intangibles: ACC 95 • EVA 15 • LUCK 10
+
+
+Habitat: Yittrosian Forest
+
+
+Appearance: Glowing Fingertips
+Token: Trident
+Recorded Quirk: Dreams Predict Rainfall.
+
+Tags: MetalCoat, WildProcs, ProbabilityBender
+Resists: Toxic
+Weak To: Electric
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#014: 'Eonaear' --- a(n) Unicorn monster
+
+  -Type: Mythic
+
+Documented Near-Lumen Mutagen: ['FullBloom'] | Known Utility: ['Grinder']
+
+
+Base Profile: HP 120 • ATK 50 • DEF 55 • SPATK 68 • SPDEF 62 • SPD 46
+    -Intangibles: ACC 95 • EVA 5 • LUCK 20
+
+
+Habitat: Synthetic Biosphere
+
+
+Appearance: Metal Jaw And Shoulderplates
+Token: Broken Pocket Watch
+Recorded Quirk: Forgets Own Reflection.
+
+Tags: Leech:Minor, Grasp, Determined, NoPainNoGain
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#015: 'Grufiousmaxouus' --- a(n) Calydonian Boar monster
+
+  -Types: Beast/Mythic
+
+Documented Near-Lumen Mutagen: ['Shadowshroud'] | Known Utility: ['InnateGuard']
+
+
+Base Profile: HP 132 • ATK 60 • DEF 55 • SPATK 56 • SPDEF 56 • SPD 59
+    -Intangibles: ACC 95 • EVA 6 • LUCK 15
+
+
+Habitat: Thornveil Thicket
+
+
+Appearance: Hovers When It Rains
+Token: Floating Lantern Companion
+Recorded Quirk: Can’t Be Photographed At Sunrise or Sunset.
+
+Tags: Veil:Dark, Stealth, Bodyguard, ShieldAlly
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#016: 'Graelkkuthsoud' --- a(n) Corpse-Candle Wisp monster
+
+  -Types: Dread/Insect
+
+Documented Near-Lumen Mutagen: ['SuperOrbital'] | Known Utility: ['Historian']
+
+
+Base Profile: HP 95 • ATK 63 • DEF 66 • SPATK 59 • SPDEF 60 • SPD 56
+    -Intangibles: ACC 95 • EVA 8 • LUCK 10
+
+
+Habitat: Dread Catacombs
+
+
+Appearance: High-Fashion
+Token: Silver Ring That Hums
+Recorded Quirk: Can Be Lured By Music.
+
+Tags: Curse:Minor, GravityWell, Diplomacy, Scribe, Lorekeeper
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#017: 'Voulkhaes' --- a(n) Narwhal monster
+
+  -Type: Ice
+
+Documented Near-Lumen Mutagen: ['Obsidian'] | Known Utility: ['Ageless']
+
+
+Base Profile: HP 115 • ATK 50 • DEF 64 • SPATK 57 • SPDEF 88 • SPD 39
+    -Intangibles: ACC 95 • EVA 5 • LUCK 10
+
+
+Habitat: Snowpacked Mountains
+
+
+Appearance: Luminescent Veins
+Token: Golden Thread
+Recorded Quirk: Speaks To Shadows.
+
+Tags: VolcanicGlass, Lore:Gates, AncientWisdom
+Resists: Astral
+Weak To: Tempest
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#018: 'Fryzaim' --- a(n) Praying Mantis monster
+
+  -Types: Insect/Mythic
+
+Documented Near-Lumen Mutagen: ['Vedic'] | Known Utility: ['Diviner']
+
+
+Base Profile: HP 99 • ATK 60 • DEF 60 • SPATK 56 • SPDEF 64 • SPD 71
+    -Intangibles: ACC 95 • EVA 16 • LUCK 15
+
+
+Habitat: Alpine Lakes
+
+
+Appearance: Horned Silhouette
+Token: Pocket Full Of Sand
+Recorded Quirk: Haunted By A Melody.
+
+Tags: Fog:Field, Ethereal, Reveal:Secrets, Dowsing
+Weak To: Radiant
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#019: 'Preakaex' --- a(n) Shadow Hound monster
+
+  -Type: Dread
+
+Documented Near-Lumen Mutagen: ['Shrouded'] | Known Utility: ['Haggler']
+
+
+Base Profile: HP 100 • ATK 63 • DEF 60 • SPATK 50 • SPDEF 60 • SPD 57
+    -Intangibles: ACC 95 • EVA 16 • LUCK 10
+
+
+Habitat: Darkmist Chasm
+
+
+Appearance: Hovers When It Rains
+Token: Vial Of Mist
+Recorded Quirk: Voice Echoes Twice.
+
+Tags: Stealth:Shadow, Shadowstep, Barter, MerchantFriend
+Weak To: Radiant
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#020: 'Raixgaen' --- a(n) SunCrested Eagle monster
+
+  -Types: Aerial/Anomalous
+
+Documented Near-Lumen Mutagen: ['Shrouded'] | Known Utility: ['Cartographer']
+
+
+Base Profile: HP 108 • ATK 77 • DEF 54 • SPATK 54 • SPDEF 61 • SPD 86
+    -Intangibles: ACC 98 • EVA 32 • LUCK 15
+
+
+Habitat: Skybridge Peaks
+
+
+Appearance: Glowing Pupils
+Token: Holds Pouches Of Secret Contents
+Recorded Quirk: Remembers Other Lives.
+
+Tags: Stealth:Shadow, Shadowstep, Pathfinder, WorldMap
+Weak To: Radiant------------------------------------------------------------
+
+#003: 'Ulkseax' --- a(n) MirageWing Hummingbird monster
+
+  -Types: Aerial/Brawler
+
+Documented Near-Lumen Mutagen: ['BrightFlare'] | Known Utility: ['CosmicInterpreter']
+
+
+Base Profile: HP 100 • ATK 95 • DEF 50 • SPATK 55 • SPDEF 57 • SPD 86
+    -Intangibles: ACC 95 • EVA 15 • LUCK 10
+
+
+Habitat: Frozen Steppe
+
+
+Appearance: Horned Brow
+Token: Silver Ring That Hums
+Recorded Quirk: Can’t Touch Iron.
+
+Tags: Burn:Overtime, Cinderwake, Identify:Rare, StarChart
+Weak To: Aquatic
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#004: 'Relphuart the Ancient' --- a(n) Parrot monster
+
+  -Types: Aerial/Beast
+
+Documented Near-Lumen Mutagen: ['Tempest'] | Known Utility: ['Ageless']
+
+
+Base Profile: HP 110 • ATK 83 • DEF 52 • SPATK 50 • SPDEF 57 • SPD 92
+    -Intangibles: ACC 100 • EVA 15 • LUCK 10
+
+
+Habitat: Yittrosian Forest
+
+
+Appearance: Glowing Fingertips
+Token: Ancient Coin Collection
+Recorded Quirk: Floats When Calm.
+
+Tags: MultiHit:Storm, GaleForce, Lore:Gates, AncientWisdom
+Weak To: Crystalline
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#005: 'Grishvect Symbiotic' --- a(n) Glass-Winged Wasp monster
+
+  -Type: Insect
+
+Documented Near-Lumen Mutagen: ['BattleScarred'] | Known Utility: ['Symbiote']
+
+
+Base Profile: HP 99 • ATK 63 • DEF 63 • SPATK 50 • SPDEF 50 • SPD 62
+    -Intangibles: ACC 95 • EVA 10 • LUCK 10
+
+
+Habitat: Oldgrowth Marsh
+
+
+Appearance: Shimmering Icy Breath
+Token: Compass That Hums
+Recorded Quirk: Leaves Frost Footprints.
+
+Tags: Grit, Endure, HealingAura, Lifebond
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#006: 'Croa the Moon-Shielded' --- a(n) Fear-Monger monster
+
+  -Types: Dread/Mineral
+
+Documented Near-Lumen Mutagen: ['Nocturnal'] | Known Utility: ['Cartographer']
+
+
+Base Profile: HP 110 • ATK 60 • DEF 77 • SPATK 50 • SPDEF 86 • SPD 45
+    -Intangibles: ACC 95 • EVA 6 • LUCK 10
+
+
+Habitat: Netherbleak Hollow
+
+
+Appearance: Bipedal
+Token: Hourglass Heart
+Recorded Quirk: Speaks To Shadows.
+
+Tags: Regen:Night, Moonshield, Pathfinder, WorldMap
+Weak To: Solar
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#007: 'Gouxkerqo' --- a(n) Jotunn monster
+
+  -Types: Ice/Brawler
+
+Documented Near-Lumen Mutagen: ['Abyssal'] | Known Utility: ['CombatController']
+
+
+Base Profile: HP 144 • ATK 66 • DEF 50 • SPATK 51 • SPDEF 90 • SPD 44
+    -Intangibles: ACC 95 • EVA 5 • LUCK 10
+
+
+Habitat: Ice Caps
+
+
+Appearance: Luminescent Veins
+Token: Hourglass Pendant
+Recorded Quirk: Speaks In Riddles.
+
+Tags: FirstStrike:Water, Pressure, Disorient, Tactician
+Weak To: Solar
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#008: 'Kroshcaerum' --- a(n) Marble Titan monster
+
+  -Type: Mineral
+
+Documented Near-Lumen Mutagen: ['Starwarden'] | Known Utility: ['Cartographer']
+
+
+Base Profile: HP 110 • ATK 55 • DEF 80 • SPATK 50 • SPDEF 83 • SPD 40
+    -Intangibles: ACC 95 • EVA 5 • LUCK 12
+
+
+Habitat: Crumbling Ruins
+
+
+Appearance: Metallic Hair
+Token: Golden Key
+Recorded Quirk: Allergic To Gold.
+
+Tags: Barrier:Cosmic, CelestialGuard, Pathfinder, WorldMap
+Weak To: Obsidian
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#009: 'Srankrirwix' --- a(n) Astral Jelly monster
+
+  -Types: Astral/Aquatic
+
+Documented Near-Lumen Mutagen: ['Feralkin'] | Known Utility: ['Diviner']
+
+
+Base Profile: HP 97 • ATK 59 • DEF 50 • SPATK 75 • SPDEF 65 • SPD 77
+    -Intangibles: ACC 95 • EVA 5 • LUCK 10
+
+
+Habitat: Retired Military Base
+
+
+Appearance: Ashen Skin
+Token: Hourglass Pendant
+Recorded Quirk: Allergic To Gold.
+
+Tags: Howl:Pack, Tracker, Reveal:Secrets, Dowsing
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#010: 'Pearrum' --- a(n) Basilisk Lizard monster
+
+  -Types: Mineral/Aerial
+
+Documented Near-Lumen Mutagen: ['Farphase'] | Known Utility: ['LongSeeker']
+
+
+Base Profile: HP 100 • ATK 63 • DEF 80 • SPATK 50 • SPDEF 70 • SPD 58
+    -Intangibles: ACC 100 • EVA 10 • LUCK 12
+
+
+Habitat: Archaeological Dig
+
+
+Appearance: Mismatched Eyes
+Token: Compass Of Bone
+Recorded Quirk: Amnesia.
+
+Tags: Blink:Short, PhaseShift, Tracker, TreasureHunter
+Weak To: Obsidian
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#011: 'Zaemvri the Magma-Plated' --- a(n) Andrewsarchus monster
+
+  -Type: Ancient
+
+Documented Near-Lumen Mutagen: ['Vulcan'] | Known Utility: ['Impossible']
+
+
+Base Profile: HP 155 • ATK 62 • DEF 77 • SPATK 67 • SPDEF 50 • SPD 40
+    -Intangibles: ACC 95 • EVA 5 • LUCK 10
+
+
+Habitat: Wyrmscar Ridge
+
+
+Appearance: Feathered Arms
+Token: Pocket Of Ashes
+Recorded Quirk: Voice Echoes Twice.
+
+Tags: Burn:Contact, MagmaPlating, WildProcs, ProbabilityBender
+Weak To: Tempest
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#012: 'Croruashdolaesh' --- a(n) Moai-Stone Colossus monster
+
+  -Type: Mineral
+
+Documented Near-Lumen Mutagen: ['Atmos'] | Known Utility: ['Ageless']
+
+
+Base Profile: HP 100 • ATK 55 • DEF 80 • SPATK 50 • SPDEF 65 • SPD 48
+    -Intangibles: ACC 95 • EVA 16 • LUCK 10
+
+
+Habitat: Whispering Dunes
+
+
+Appearance: Ashen Skin
+Token: Golden Key
+Recorded Quirk: Never Casts A Shadow.
+
+Tags: Evade:Aerial, Updraft, Lore:Gates, AncientWisdom
+Weak To: Electric
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#013: 'Zokgaex the Studious' --- a(n) Canopy Arborcat monster
+
+  -Type: Sylvan
+
+Documented Near-Lumen Mutagen: ['Crystalline'] | Known Utility: ['Scholar']
+
+
+Base Profile: HP 150 • ATK 50 • DEF 50 • SPATK 57 • SPDEF 69 • SPD 40
+    -Intangibles: ACC 95 • EVA 5 • LUCK 10
+
+
+Habitat: Misty Glades
+
+
+Appearance: Cracked Porcelain Mask
+Token: Oversized Bandit Mask
+Recorded Quirk: Haunted By Footsteps.
+
+Tags: Shatter:OnCrit, Study, AnalyzeWeakness
+Resists: Mind
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#014: 'Trilkradies' --- a(n) Crocodylian monster
+
+  -Types: Aquatic/Mythic
+
+Documented Near-Lumen Mutagen: ['Cavernborn'] | Known Utility: ['Symbiote']
+
+
+Base Profile: HP 152 • ATK 57 • DEF 50 • SPATK 56 • SPDEF 84 • SPD 57
+    -Intangibles: ACC 100 • EVA 5 • LUCK 15
+
+
+Habitat: Freshwater Springs
+
+
+Appearance: Meditating Body Position
+Token: Silver Whistle
+Recorded Quirk: Allergic To Gold.
+
+Tags: Accuracy:Dark, Echolocation, HealingAura, Lifebond
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#015: 'Blouzs the Tracker' --- a(n) Corpse-Candle Wisp monster
+
+  -Type: Dread
+
+Documented Near-Lumen Mutagen: ['Glacial'] | Known Utility: ['LongSeeker']
+
+
+Base Profile: HP 120 • ATK 57 • DEF 60 • SPATK 50 • SPDEF 85 • SPD 45
+    -Intangibles: ACC 95 • EVA 5 • LUCK 10
+
+
+Habitat: Retired Military Base
+
+
+Appearance: Top Hat With Feather
+Token: Silver Dagger
+Recorded Quirk: Haunted By Laughter.
+
+Tags: IceArmor, Tracker, TreasureHunter
+Resists: Frostbound
+Weak To: Tempest
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#017: 'Driosgikcrouk the Lonesome' --- a(n) Kraken monster
+
+  -Type: Aquatic
+
+Documented Near-Lumen Mutagen: ['Necromance'] | Known Utility: ['Forager']
+
+
+Base Profile: HP 109 • ATK 57 • DEF 50 • SPATK 57 • SPDEF 68 • SPD 57
+    -Intangibles: ACC 95 • EVA 5 • LUCK 10
+
+
+Habitat: Thriving Reefs
+
+
+Appearance: Glowing Pupils
+Token: Hourglass Pendant
+Recorded Quirk: Allergic To Laughter.
+
+Tags: Summon:Undead, SoulPact, Finds:Herbs, Finds:Mushrooms, Resourceful
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#018: 'Vaslumiyx' --- a(n) Sphinx monster
+
+  -Types: Mythic/Toxic
+
+Documented Near-Lumen Mutagen: ['Radiant'] | Known Utility: ['Ageless']
+
+
+Base Profile: HP 129 • ATK 50 • DEF 56 • SPATK 80 • SPDEF 71 • SPD 49
+    -Intangibles: ACC 105 • EVA 5 • LUCK 20
+
+
+Habitat: Origin<UNKNOWN>
+
+
+Appearance: Bipedal
+Token: Oversized Bandit Mask
+Recorded Quirk: Terrified Of Silence.
+
+Tags: Cure:Blind, HolyLight, Lore:Gates, AncientWisdom
+Weak To: Shrouded
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#019: 'Iongr the Black-Iced' --- a(n) Obsidian Owl monster
+
+  -Types: Aerial/Electric
+
+Documented Near-Lumen Mutagen: ['DarkIce'] | Known Utility: ['KeeperOfKeys']
+
+
+Base Profile: HP 100 • ATK 68 • DEF 50 • SPATK 62 • SPDEF 64 • SPD 84
+    -Intangibles: ACC 95 • EVA 15 • LUCK 10
+
+
+Habitat: Whispering Dunes
+
+
+Appearance: Crystalline Spine
+Token: Obsidian Dagger
+Recorded Quirk: Floats When Calm.
+
+Tags: Slide:Ice, Frostbite, Locksmith, MasterKey
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#020: 'Azaik' --- a(n) Marble Titan monster
+
+  -Type: Mineral
+
+Documented Near-Lumen Mutagen: ['ExoSkeleton'] | Known Utility: ['Scholar']
+
+
+Base Profile: HP 100 • ATK 55 • DEF 86 • SPATK 50 • SPDEF 65 • SPD 47
+    -Intangibles: ACC 95 • EVA 6 • LUCK 10
+
+
+Habitat: Crumbling Ruins
+
+
+Appearance: Metal Jaw And Shoulderplates
+Token: Mechanical Heart
+Recorded Quirk: Can’t Lie.
+
+Tags: Shell:Echo, Hollowbody, Study, AnalyzeWeakness
+Weak To: Tempest
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#021: 'Vatruak' --- a(n) Featureless Mannequin monster
+
+  -Types: Anomalous/Mythic
+
+Documented Near-Lumen Mutagen: ['Feralkin'] | Known Utility: ['KeeperOfKeys']
+
+
+Base Profile: HP 127 • ATK 63 • DEF 57 • SPATK 64 • SPDEF 64 • SPD 63
+    -Intangibles: ACC 100 • EVA 10 • LUCK 25
+
+
+Habitat: Alpine Slopes
+
+
+Appearance: Shimmering Icy Breath
+Token: Compass That Spins Wildly
+Recorded Quirk: Allergic To Rain.
+
+Tags: Howl:Pack, Tracker, Locksmith, MasterKey
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#022: 'Aethco the Field-Medic' --- a(n) Volcanic Worm monster
+
+  -Types: Inferno/Brawler
+
+Documented Near-Lumen Mutagen: ['Shielded'] | Known Utility: ['Humanitarian']
+
+
+Base Profile: HP 100 • ATK 79 • DEF 80 • SPATK 65 • SPDEF 54 • SPD 50
+    -Intangibles: ACC 95 • EVA 5 • LUCK 10
+
+
+Habitat: Obsidian Labyrinth
+
+
+Appearance: Crystal Teeth And Claws
+Token: Compass That Hums Softly
+Recorded Quirk: Speaks To Insects.
+
+Tags: Guard:Stagger, Ironclad, ConvertLoot, FieldMedic
+Weak To: Shrouded
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#023: 'Zeakcliort' --- a(n) DKingfisher monster
+
+  -Types: Aerial/Astral
+
+Documented Near-Lumen Mutagen: ['Vulcan'] | Known Utility: ['Humanitarian']
+
+
+Base Profile: HP 95 • ATK 65 • DEF 57 • SPATK 83 • SPDEF 60 • SPD 80
+    -Intangibles: ACC 95 • EVA 15 • LUCK 10
+
+
+Habitat: Glass Desert
+
+
+Appearance: Shadowed Face
+Token: Compass That Hums Softly
+Recorded Quirk: Dreams Of Drowning.
+
+Tags: Burn:Contact, MagmaPlating, ConvertLoot, FieldMedic
+Weak To: Tempest
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#024: 'Ebrish' --- a(n) Acid-Blood Drake monster
+
+  -Type: Toxic
+
+Documented Near-Lumen Mutagen: ['Cavernborn'] | Known Utility: ['Chronomancer']
+
+
+Base Profile: HP 138 • ATK 50 • DEF 62 • SPATK 68 • SPDEF 55 • SPD 48
+    -Intangibles: ACC 100 • EVA 5 • LUCK 10
+
+
+Habitat: Fungal Vales
+
+
+Appearance: Smoke Hair
+Token: Broken Crown
+Recorded Quirk: Allergic To Salt.
+
+Tags: Accuracy:Dark, Echolocation, TimeWarp, Haste, Slow
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#025: 'Boruthgion Wild-Card' --- a(n) Narwhal monster
+
+  -Types: Ice/Ancient
+
+Documented Near-Lumen Mutagen: ['Chaotic'] | Known Utility: ['Diviner']
+
+
+Base Profile: HP 130 • ATK 70 • DEF 58 • SPATK 71 • SPDEF 75 • SPD 38
+    -Intangibles: ACC 90 • EVA 5 • LUCK 12
+
+
+Habitat: Snowcapped Peaks
+
+
+Appearance: Stone Skin
+Token: Enchanted Scarf
+Recorded Quirk: Laughs At Thunder.
+
+Tags: Random:Proc, Unstable, Reveal:Secrets, Dowsing
+Weak To: Ironclad
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#026: 'Bukhea' --- a(n) Giant Ground Sloth monster
+
+  -Types: Ancient/Electric
+
+Documented Near-Lumen Mutagen: ['Nocturnal'] | Known Utility: ['Forager']
+
+
+Base Profile: HP 170 • ATK 65 • DEF 67 • SPATK 59 • SPDEF 62 • SPD 48
+    -Intangibles: ACC 95 • EVA 6 • LUCK 10
+
+
+Habitat: Dayless Mosswood
+
+
+Appearance: Oversized Crown
+Token: Compass That Hums
+Recorded Quirk: Longs To Be Back Among The Stars.
+
+Tags: Regen:Night, Moonshield, Finds:Herbs, Finds:Mushrooms, Resourceful
+Weak To: Solar
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#027: 'Zoroumleath the Last-of-Kind' --- a(n) Tarsier monster
+
+  -Types: Astral/Insect
+
+Documented Near-Lumen Mutagen: ['BrightFlare'] | Known Utility: ['AntiExtinct']
+
+
+Base Profile: HP 86 • ATK 62 • DEF 55 • SPATK 92 • SPDEF 55 • SPD 77
+    -Intangibles: ACC 95 • EVA 8 • LUCK 10
+
+
+Habitat: Dayless Mosswood
+
+
+Appearance: Glowing Body Pattern
+Token: Cursed Locket
+Recorded Quirk: Speaks To Insects.
+
+Tags: Burn:Overtime, Cinderwake, LastOfKind, Endangered
+Weak To: Aquatic
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#028: 'Cousrurpyoa Orbital' --- a(n) Magma Salamander monster
+
+  -Types: Inferno/Dread
+
+Documented Near-Lumen Mutagen: ['SuperOrbital'] | Known Utility: ['Historian']
+
+
+Base Profile: HP 100 • ATK 64 • DEF 55 • SPATK 85 • SPDEF 50 • SPD 50
+    -Intangibles: ACC 95 • EVA 5 • LUCK 10
+
+
+Habitat: Glass Caverns
+
+
+Appearance: Multiple Tails
+Token: Pocket Mirror That Lies
+Recorded Quirk: Speaks In Echoes.
+
+Tags: Curse:Minor, GravityWell, Diplomacy, Scribe, Lorekeeper
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#029: 'Grorussy' --- a(n) Axolotl monster
+
+  -Type: Aquatic
+
+Documented Near-Lumen Mutagen: ['LoreGuardian'] | Known Utility: ['KeeperOfKeys']
+
+
+Base Profile: HP 115 • ATK 57 • DEF 50 • SPATK 50 • SPDEF 78 • SPD 57
+    -Intangibles: ACC 95 • EVA 5 • LUCK 10
+
+
+Habitat: Thriving Reefs
+
+
+Appearance: Oversized Beak
+Token: Pocket Watch That Ticks Backward
+Recorded Quirk: Understands Every Language But Their Own.
+
+Tags: Action:Flow, AncientKnowledge, Locksmith, MasterKey
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#030: 'Dreelcleael' --- a(n) Narwhal monster
+
+  -Types: Ice/Mythic
+
+Documented Near-Lumen Mutagen: ['Starwarden'] | Known Utility: ['Ageless']
+
+
+Base Profile: HP 140 • ATK 50 • DEF 50 • SPATK 64 • SPDEF 108 • SPD 42
+    -Intangibles: ACC 95 • EVA 5 • LUCK 18
+
+
+Habitat: Frigid Icefields
+
+
+Appearance: Oversized Beak
+Token: Enchanted Scarf
+Recorded Quirk: Laughs At Thunder.
+
+Tags: Barrier:Cosmic, CelestialGuard, Lore:Gates, AncientWisdom
+Weak To: Obsidian
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#031: 'Pummus Gate-Keeper' --- a(n) Hungering Void monster
+
+  -Type: Dread
+
+Documented Near-Lumen Mutagen: ['ExoSkeleton'] | Known Utility: ['KeeperOfKeys']
+
+
+Base Profile: HP 100 • ATK 57 • DEF 65 • SPATK 50 • SPDEF 60 • SPD 59
+    -Intangibles: ACC 95 • EVA 6 • LUCK 10
+
+
+Habitat: AshGlass Tombs
+
+
+Appearance: Scaled Neck
+Token: Pocket Mirror That Lies
+Recorded Quirk: Whispers To Stones.
+
+Tags: Shell:Echo, Hollowbody, Locksmith, MasterKey
+Weak To: Tempest
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#032: 'Larcliozaeth' --- a(n) Electrified Lynx monster
+
+  -Types: Electric/Aerial
+
+Documented Near-Lumen Mutagen: ['ArcheoAnomaly'] | Known Utility: ['Ageless']
+
+
+Base Profile: HP 100 • ATK 69 • DEF 50 • SPATK 68 • SPDEF 59 • SPD 84
+    -Intangibles: ACC 95 • EVA 13 • LUCK 13
+
+
+Habitat: Rusted Plane Wreckage
+
+
+Appearance: Oversized Beak
+Token: Cursed Musical Instrument
+Recorded Quirk: Amnesia.
+
+Tags: Sentience:Inconsistent, TemporalFlux, Lore:Gates, AncientWisdom
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#033: 'Noxorts' --- a(n) Hooded Pitohui monster
+
+  -Type: Toxic
+
+Documented Near-Lumen Mutagen: ['ArcheoAnomaly'] | Known Utility: ['Geomancer']
+
+
+Base Profile: HP 115 • ATK 55 • DEF 62 • SPATK 68 • SPDEF 55 • SPD 48
+    -Intangibles: ACC 95 • EVA 8 • LUCK 13
+
+
+Habitat: Ironwood Deep
+
+
+Appearance: Shimmering Icy Breath
+Token: Silver Whistle
+Recorded Quirk: Never Sleeps On Full Moons.
+
+Tags: Sentience:Inconsistent, TemporalFlux, Earthshaper, LeylineReader
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#034: 'Qurhair' --- a(n) Hooded Pitohui monster
+
+  -Types: Toxic/Beast
+
+Documented Near-Lumen Mutagen: ['Sylvan'] | Known Utility: ['Confidant']
+
+
+Base Profile: HP 172 • ATK 55 • DEF 65 • SPATK 68 • SPDEF 60 • SPD 45
+    -Intangibles: ACC 95 • EVA 5 • LUCK 10
+
+
+Habitat: Blooming Valley
+
+
+Appearance: Glimmering Scales
+Token: Silver Bell
+Recorded Quirk: Remembers Other Lives.
+
+Tags: Regen:Terrain, Photosynthesis, Whispers, VeiledKnowledge
+Weak To: Fire
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#035: 'Grerariyn Mind-Reader' --- a(n) Adaro monster
+
+  -Types: Aquatic/Sylvan
+
+Documented Near-Lumen Mutagen: ['Extrasensory'] | Known Utility: ['Grinder']
+
+
+Base Profile: HP 138 • ATK 57 • DEF 50 • SPATK 62 • SPDEF 75 • SPD 51
+    -Intangibles: ACC 103 • EVA 5 • LUCK 10
+
+
+Habitat: Moonlit Atolls
+
+
+Appearance: Antler Crown
+Token: Mechanical Heart
+Recorded Quirk: Allergic To Laughter.
+
+Tags: Precognition, Mind-Reader, Determined, NoPainNoGain
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#036: 'Goruld Kinetic-Force' --- a(n) Ash Drake monster
+
+  -Type: Inferno
+
+Documented Near-Lumen Mutagen: ['Telekinesis'] | Known Utility: ['Chronomancer']
+
+
+Base Profile: HP 100 • ATK 60 • DEF 50 • SPATK 86 • SPDEF 45 • SPD 50
+    -Intangibles: ACC 100 • EVA 5 • LUCK 12
+
+
+Habitat: Whispering Dunes
+
+
+Appearance: Mismatched Eyes
+Token: Glass Bottle Of Whispers
+Recorded Quirk: Can’t Dream.
+
+Tags: Pierce:Mind, MindRead, TimeWarp, Haste, Slow
+Weak To: Ironclad
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#037: 'Richunfo the Smoldering' --- a(n) Fire Jinn monster
+
+  -Type: Inferno
+
+Documented Near-Lumen Mutagen: ['Brimstone'] | Known Utility: ['Pathwarden']
+
+
+Base Profile: HP 100 • ATK 60 • DEF 50 • SPATK 83 • SPDEF 45 • SPD 50
+    -Intangibles: ACC 95 • EVA 5 • LUCK 15
+
+
+Habitat: Strikken Ashlands
+
+
+Appearance: Top Hat With Feather
+Token: Holds Pouches Of Secret Contents
+Recorded Quirk: Persistent Hallucinations.
+
+Tags: Ignite:Low, Kindle, Sure-footed, All-Terrain
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#038: 'Ulkartbori' --- a(n) Horn-Crested Grazer monster
+
+  -Types: Beast/Ice
+
+Documented Near-Lumen Mutagen: ['Paranormal'] | Known Utility: ['Impossible']
+
+
+Base Profile: HP 129 • ATK 60 • DEF 55 • SPATK 54 • SPDEF 71 • SPD 51
+    -Intangibles: ACC 95 • EVA 5 • LUCK 11
+
+
+Habitat: Blooming Valley
+
+
+Appearance: Glowing Veins
+Token: Silver Coin
+Recorded Quirk: Sneezes Sparks.
+
+Tags: Phase, Incorporeal, WildProcs, ProbabilityBender
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#039: 'Graiflareraeflare' --- a(n) Wildfire-Horse monster
+
+  -Types: Inferno/Astral
+
+Documented Near-Lumen Mutagen: ['Nocturnal'] | Known Utility: ['InnateGuard']
+
+
+Base Profile: HP 105 • ATK 60 • DEF 50 • SPATK 88 • SPDEF 59 • SPD 57
+    -Intangibles: ACC 95 • EVA 6 • LUCK 10
+
+
+Habitat: Smoldering Flats
+
+
+Appearance: Branch-Like Fingers
+Token: Compass That Spins Wildly
+Recorded Quirk: Hums When Nervous.
+
+Tags: Regen:Night, Moonshield, Bodyguard, ShieldAlly
+Weak To: Solar
+
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+#040: 'Fraithaeshweas' --- a(n) Cyclops monster
+
+  -Type: Brawler
+
+Documented Near-Lumen Mutagen: ['Paranormal'] | Known Utility: ['Pathwarden']
+
+
+Base Profile: HP 100 • ATK 82 • DEF 50 • SPATK 40 • SPDEF 57 • SPD 68
+    -Intangibles: ACC 95 • EVA 5 • LUCK 11
+
+
+Habitat: Synthetic Biosphere
+
+
+Appearance: Glowing Body Pattern
+Token: Pocket Mirror That Lies
+Recorded Quirk: Can Be Lured By Music.
+
+Tags: Phase, Incorporeal, Sure-footed, All-Terrain

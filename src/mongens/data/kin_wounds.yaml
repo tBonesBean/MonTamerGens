@@ -82,7 +82,7 @@
   weight: 1.0
 - name: Overly protective of a specific, mundane rock
   weight: 1.0
-- name: Has a name it refuses to share
+- name: Has a nickname it refuses to share
   weight: 1.0
 - name: Gets hiccups that release small sparks
   weight: 1.0

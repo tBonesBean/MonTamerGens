@@ -6,11 +6,11 @@
   weight: 0.7
 - name: Hovers When It Rains
   weight: 1.0
-- name: High-Fashion
+- name: Highly Fashionable
   weight: 0.9
 - name: Bipedal
   weight: 1.0
-- name: Face Obscured By Pollution
+- name: Face Obscured By Mist
   weight: 1.0
 - name: Full Plate Armor
   weight: 1.0

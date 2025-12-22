@@ -4537,3 +4537,6 @@ Observed carrying: Crown of Thorns
 Tags: HighVoltage, Poisonous, Corrosive, Blink:Short, PhaseShift, Barter, MerchantFriend
 Resists: Aerial
 Weak To: Mineral, Mineral, Sylvan, Obsidian
+
+
+

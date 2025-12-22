@@ -1,6 +1,5 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
-*.py[cod]
 *$py.class
 a
 .pytest_cache/
@@ -8,6 +7,7 @@ a
 # C extensions
 *.so
 .tmp.driveupload/
+.tmp.drivedownload/
 
 # Distribution / packaging
 .Python
@@ -16,7 +16,6 @@ develop-eggs/
 lib/
 lib64/
 parts/
-dist/
 var/
 wheels/
 *.egg-info/
@@ -30,8 +29,6 @@ ENV/
 
 # IDE-specific files
 .idea/
-.vscode/
 MTG.code-workspace
 .gitignore
-mongen_dexentry.txt
 
