@@ -1,16 +1,16 @@
 # Narrative flaws or neuroses that can be assigned as a "Kin Wound".
 # These are the "quirks" from the old traits list, now with a clear purpose.
-- name: Persistent Hallucinations
+- name: Plagued by Persistent Hallucinations
   weight: 0.9
 - name: Receives Cosmic Messages
   weight: 1.0
-- name: Terrible Hay Fever
+- name: Afflicted with Terrible Hay Fever
   weight: 1.0
-- name: Amnesia
+- name: Can't Remember if it Suffers from Amnesia
   weight: 1.0
-- name: Allergic To Moonlight
+- name: Allergic to Moonlight
   weight: 1.0
-- name: Speaks In Echoes
+- name: Speaks in Echoes
   weight: 1.0
 - name: Dreams Predict Rainfall
   weight: 0.9
@@ -18,17 +18,17 @@
   weight: 1.0
 - name: Haunted By Laughter
   weight: 1.0
-- name: Terrified Of Silence
+- name: Terrified of Silence
   weight: 1.0
 - name: Compulsive Hoarder of Shiny Objects
   weight: 0.9
 - name: Afraid of Its Own Shadow
   weight: 0.9
-- name: Believes It's a Different Species
+- name: Believes it's a Different Species
   weight: 0.9
 - name: Obsessed with Counting Things
   weight: 0.9
-- name: Can Only Communicate Through Dance
+- name: Can Only Communicate Through Movement
   weight: 0.9
 - name: Always Speaks in Riddles
   weight: 0.9
@@ -38,53 +38,53 @@
   weight: 0.9
 - name: Has a Fear of Open Doors
   weight: 0.9
-- name: Only Eats Food Shaped Like Stars
+- name: Only Eats Symmetrically Shaped Food
   weight: 0.9
-- name: Constantly Apologizes for Existing
+- name: Constantly Apologizes for Staring
   weight: 0.9
-- name: Sees faces in inanimate objects
+- name: Sees Faces in Inanimate Objects
   weight: 1.0
-- name: Must walk backwards when nervous
+- name: Must Walk Backwards When Nervous
   weight: 1.0
-- name: Leaves cryptic warnings for others
+- name: Leaves Cryptic Warnings for Others
   weight: 1.0
-- name: Loses small objects in its own fur/body
+- name: Loses Small Objects in Its Own Fur/Body
   weight: 1.0
-- name: Its voice changes with the weather
+- name: Its Call Changes With the Weather
   weight: 1.0
-- name: Experiences time out of order
+- name: Experiences Time Out of Order
   weight: 1.0
-- name: Falls asleep in moments of high excitement
+- name: Falls Asleep in Moments of High Excitement
   weight: 1.0
-- name: Attracted to the color of danger
+- name: Attracted to the Color of Danger
   weight: 1.0
-- name: Tries to "fix" things that aren't broken
+- name: Tries to "Fix" Things That Aren't Broken
   weight: 1.0
-- name: A pathological liar, even about small things
+- name: A Pathological Liar, Even About Small Things
   weight: 1.0
-- name: Believes it is being followed by ghosts
+- name: Believes it is Being Followed by Ghosts
   weight: 1.0
-- name: Mimics the last sound it heard
+- name: Mimics the Last Sound it Heard
   weight: 1.0
-- name: Fearful of perfectly symmetrical things
+- name: Fearful of Perfectly Symmetrical Things
   weight: 1.0
-- name: Sheds tears that crystallize into salt
+- name: Sheds Tears That Crystallize into Salt
   weight: 1.0
-- name: Becomes temporarily invisible when embarrassed
+- name: Becomes Temporarily Invisible when Embarrassed
   weight: 1.0
-- name: Hums a tune it has never heard before
+- name: Hums a Tune it has Never Heard Before
   weight: 1.0
-- name: Its shadow moves with a slight delay
+- name: Its Shadow Moves With a Slight Delay
   weight: 1.0
-- name: Cannot perceive the color green
+- name: Cannot Perceive the Color Green
   weight: 1.0
-- name: Arranges pebbles into complex patterns
+- name: Arranges Pebbles into Complex Patterns
   weight: 1.0
-- name: Overly protective of a specific, mundane rock
+- name: Overly Protective of a Specific, Mundane Rock
   weight: 1.0
-- name: Has a nickname it refuses to share
+- name: Has a Nickname it Refuses to Share
   weight: 1.0
-- name: Gets hiccups that release small sparks
+- name: Gets Hiccups That Release Small Sparks
   weight: 1.0
-- name: Convinced it is slowly turning to glass
+- name: Convinced it is Slowly Turning to Glass
   weight: 1.0

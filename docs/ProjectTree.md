@@ -16,7 +16,8 @@
 │
 ├─ docs\
 │  ├─ LumenStoryNotes.md
-│  ├─ PixelArtStyleGuide.md
+│  ├─ LogicArchitecture.md
+│  ├─ PixelArtStyleGuide.md
 │  └─ ProjectManifesto.md
 │
 ├─ src\

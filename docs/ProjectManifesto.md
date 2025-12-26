@@ -15,19 +15,13 @@ AND
 
 ## 2. What are the major subsystems?
 
-* **Creature Generation**: The core factory (`MonsterSeed.forge`) that instantiates base monster data, assigning species, habitats, and initial attributes based
-  on type.
-* **Stat Pipelines**: A layered system that derives stats from base types, applies "mutagen" modifiers (with synergy bonuses), and ensures balanced
-  distributions.
-* **Naming Logic**: A deterministic, syllable-based generator (`forge_name.py`) that constructs names reflecting the creature's type, traits, and mutagens (
-  e.g., "Inferno" types get fire-themed prefixes).
-* **Silhouettes & Visuals**: A visual classification system that determines physical forms (e.g., "Serpentine", "Quadruped") and translates abstract data into
-  concrete AI art prompts (`prompt_engine.py`).
-* **Biomes**: Contextual logic that places monsters in appropriate environments (e.g., "Volcanic", "Deep Sea"), influencing their traits and descriptions.
-* **RNG Orchestration**: A controlled random number generation layer that allows for deterministic recreation of monsters via seeds, ensuring the same ID always
-  yields the same monster.
-* **Dex Formatter**: A module (`dex_entries.py`) that synthesizes all generated data into human-readable, Pokedex-style entries, including flavor text and stat
-  summaries.
+* **Creature Generation**: The core factory (`MonsterSeed.forge`) that instantiates base monster data, assigning species, habitats, and initial attributes 	based on type.
+* **Stat Pipelines**: A layered system that derives stats from base types, applies "mutagen" modifiers (with synergy bonuses), and ensures balanced distributions.
+* **Naming Logic**: A deterministic, syllable-based generator (`forge_name.py`) that constructs names reflecting the creature's type, traits, and mutagens (e.g., "Inferno" types get fire-themed prefixes).
+* **Silhouettes & Visuals**: A visual classification system that determines physical forms (e.g., "Serpentine", "Quadruped") and translates abstract data into concrete AI art prompts (`prompt_engine.py`).
+* **Biomes (Habitats)**: Contextual logic that places monsters in appropriate environments (e.g., "Volcanic", "Deep Sea"), influencing their traits and descriptions.
+* **RNG Orchestration**: A controlled random number generation layer that allows for deterministic recreation of monsters via seeds, ensuring the same ID always yields the same monster.
+* **Dex Formatter**: A module (`dex_entries.py`) that synthesizes all generated data into human-readable, Pokedex-style entries, including flavor text and stat summaries.
 
 ## 3. What are the non-negotiable rules?
 
@@ -64,7 +58,7 @@ The tools built here serve a specific creative vision:
 
 #### + TODO list (as of latest version of this document)
 
-	{} A HIGH priority should be assigned to populating the existing data sets that source MonsterSeed attributes.
+	{} A HIGH priority should be assigned to populating the existing .py data sets and YAML content that sources MonsterSeed attributes.
 	{} Continue defining any game-wide visuals, stylistic aspects that make sense being serialized.
 	{} Tweak the generation to produce far fewer cases of Mons with empty or lopsided attribute fields.
 
