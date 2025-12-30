@@ -1,4 +1,6 @@
+# DEV_BIBLE.MD: Master Instructions for AI Contributors
 
+## ❗ ATTENTION AI AGENT
 ---
 
 # 🌑 **MonTamerGens — Unified Design Bible (v1.0)**  
@@ -266,8 +268,13 @@ Tests must cover:
 
 ---
 
-# **9. Versioning**
-This document is **v1.0** and intended to evolve alongside the project.  
-All changes should be additive, clarifying, or canon‑strengthening.
+## **9. Versioning**
+This document is **v1.1** — updated to reflect the current canonical type taxonomy, YAML-first content model, and recent data migration.  
+Changes in this release:
+- Migrated core types to YAML (`seed_types.yaml` / `type_forms.yaml`).
+- Reconciled major mutagens and utility mods to canonical type names.
+- Adjusted generation code paths to use `SEED_TYPE_DATA` and `MonsterSeed.forge()` improvements.
+
+All future edits should continue the principle: changes must be additive, clarifying, or canon‑strengthening.
 
 ---

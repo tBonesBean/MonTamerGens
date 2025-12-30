@@ -10,7 +10,6 @@ a
 .tmp.drivedownload/
 
 # Distribution / packaging
-.Python
 build/
 develop-eggs/
 lib/
@@ -30,5 +29,5 @@ ENV/
 # IDE-specific files
 .idea/
 MTG.code-workspace
-.gitignore
+
 

@@ -1,0 +1,167 @@
+Axiom:
+  Lattice:
+    weight: 1.0
+    notes: Ordered, repeating structure; geometry-forward bodies
+  Pillar:
+    weight: 0.8
+    notes: Upright, rigid, load-bearing presence
+  Mechanism:
+    weight: 0.6
+    notes: Interlocking parts, visible logic, precise motion
+  Constellation:
+    weight: 0.5
+    notes: Distributed form; body defined by relation, not mass
+
+Spur:
+  Surge:
+    weight: 1.0
+    notes: Explosive posture, forward momentum, no restraint
+  Talon:
+    weight: 0.8
+    notes: Grasping, striking extremities emphasized
+  Breaker:
+    weight: 0.6
+    notes: Body shaped for impact and collision
+  Flareframe:
+    weight: 0.5
+    notes: Sharp angles, aggressive silhouette deformation
+
+Echo:
+  Relic:
+    weight: 1.0
+    notes: Worn, layered, time-scarred physicality
+  Loop:
+    weight: 0.8
+    notes: Repeating anatomy, mirrored or recursive features
+  Imprint:
+    weight: 0.6
+    notes: Presence defined by marks left behind
+  Ossuary:
+    weight: 0.5
+    notes: Hollowed mass, internal voids, memory-weighted form
+
+Flow:
+  Current:
+    weight: 1.0
+    notes: Streamlined, adaptive, motion-defined shape
+  Weave:
+    weight: 0.8
+    notes: Interconnected limbs or tendrils, cooperative geometry
+  Symbiosis:
+    weight: 0.6
+    notes: Multiple components functioning as one
+  Driftframe:
+    weight: 0.5
+    notes: Light, buoyant posture; effortless transitions
+
+Bastion:
+  Bulwark:
+    weight: 1.0
+    notes: Heavy plating, defensive mass, grounded stance
+  Citadel:
+    weight: 0.8
+    notes: Vertical fortification, immovable presence
+  Anchor:
+    weight: 0.6
+    notes: Low center of gravity, stability-first anatomy
+  Rampart:
+    weight: 0.5
+    notes: Broad silhouette, shield-like proportions
+
+Rift:
+  Fracture:
+    weight: 1.0
+    notes: Asymmetry, broken lines, unstable geometry
+  Shard:
+    weight: 0.8
+    notes: Jagged extensions, protrusions, sudden edges
+  Paradox:
+    weight: 0.6
+    notes: Conflicting body logic; parts disagree
+  Slipform:
+    weight: 0.5
+    notes: Misaligned posture, spatial disobedience
+
+Mire:
+  Husk:
+    weight: 1.0
+    notes: Degraded exterior, sagging or eroded form
+  Sink:
+    weight: 0.8
+    notes: Slumped posture, gravity-dominated mass
+  Tangle:
+    weight: 0.6
+    notes: Knotted limbs, obstructed motion
+  Residuum:
+    weight: 0.5
+    notes: Clinging textures, unresolved buildup
+
+Idol:
+  Icon:
+    weight: 1.0
+    notes: Visually striking, symbolic proportions
+  Beacon:
+    weight: 0.8
+    notes: Upward-reaching, attention-drawing form
+  Mantle:
+    weight: 0.6
+    notes: Draped layers, ceremonial framing
+  Crestform:
+    weight: 0.5
+    notes: Emblematic shapes, exaggerated features
+
+Geist:
+  Wisp:
+    weight: 1.0
+    notes: Minimal mass, translucent or implied body
+  Phantasm:
+    weight: 0.8
+    notes: Semi-coherent shape, shifting edges
+  Liminal:
+    weight: 0.6
+    notes: Between-states anatomy; incomplete definition
+  Driftshade:
+    weight: 0.5
+    notes: Shadow-first presence, form follows aura
+
+Bloom:
+  Shoot:
+    weight: 1.0
+    notes: Upward growth, youthful proportions
+  Canopy:
+    weight: 0.8
+    notes: Spreading limbs, protective reach
+  Flourish:
+    weight: 0.6
+    notes: Expressive extensions, creative excess
+  Seedframe:
+    weight: 0.5
+    notes: Compact core with latent expansion
+
+Vessel:
+  Hollow:
+    weight: 1.0
+    notes: Emptiness-forward body, cavities and voids
+  Frame:
+    weight: 0.8
+    notes: Structural outline more important than surface
+  Receptacle:
+    weight: 0.6
+    notes: Inward-facing geometry, containment logic
+  Shellform:
+    weight: 0.5
+    notes: Protective exterior around absence
+
+Dread:
+  Maw:
+    weight: 1.0
+    notes: Consumption-forward anatomy, looming threat
+  Stalker:
+    weight: 0.8
+    notes: Low profile, predatory posture
+  Omen:
+    weight: 0.6
+    notes: Presence precedes form; anticipation-based fear
+  Gloomframe:
+    weight: 0.5
+    notes: Shape obscured by shadow and implication

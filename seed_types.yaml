@@ -1,0 +1,168 @@
+ - name: Axiom
+   weight: 1.0
+   habitats:
+     - Clockwork City
+     - Classified Research Facilities
+   attributes:
+     mul:
+       ACC: 1.10
+       SPDEF: 1.05
+     add:
+       LUCK: 2
+     tags:
+       - Discipline
+       - Logical
+ - name: Spur
+   weight: 1.0
+   habitats:
+     - Ennoan Grasslands
+     - Verdant Plains
+   attributes:
+     mul:
+       ATK: 1.15
+       SPD: 1.12
+     add:
+       HP: 5
+     tags:
+       - Impulse
+       - Aggressive
+ - name: Echo
+   weight: 1.0
+   habitats:
+     - Echoing Grotto
+     - Archive Stone
+   attributes:
+     mul:
+       SPATK: 1.10
+       ACC: 1.05
+     add:
+       LUCK: 3
+     tags:
+       - Resonance
+       - Memory
+ - name: Flow
+   weight: 1.0
+   habitats:
+     - Freshwater Springs
+     - Riverlands
+   attributes:
+     mul:
+       SPDEF: 1.12
+       SPD: 1.05
+     add:
+       HP: 10
+     tags:
+       - Empathic
+       - Adaptive
+ - name: Bastion
+   weight: 1.0
+   habitats:
+     - Monolithic Structures
+     - Ancient Battlefield
+   attributes:
+     mul:
+       DEF: 1.20
+       HP: 1.15
+     add:
+       DEF: 10
+     tags:
+       - Resilient
+       - Stalwart
+ - name: Rift
+   weight: 1.0
+   habitats:
+     - Starfall Crater
+     - Astral Terrace
+   attributes:
+     mul:
+       SPD: 1.08
+       LUCK: 1.10
+     add:
+       EVA: 5
+     tags:
+       - Curious
+       - Chaotic
+ - name: Mire
+   weight: 1.0
+   habitats:
+     - Gloomfen Bogs
+     - Oldgrowth Marsh
+   attributes:
+     mul:
+       HP: 1.12
+       DEF: 1.05
+       SPD: 0.90
+     add:
+       SPDEF: 5
+     tags:
+       - Stagnant
+       - Corrupting
+ - name: Idol
+   weight: 1.0
+   habitats:
+     - Smoldering Flats
+     - Mt. Thermallia
+   attributes:
+     mul:
+       ATK: 1.18
+       SPATK: 1.12
+     add:
+       LUCK: 2
+     tags:
+       - Passionate
+       - Radiant
+ - name: Geist
+   weight: 1.0
+   habitats:
+     - Sunless Abyss
+     - Ghost Town
+   attributes:
+     mul:
+       SPATK: 1.18
+       SPDEF: 1.10
+     add:
+       EVA: 5
+     tags:
+       - Spiritual
+       - Incorporeal
+ - name: Bloom
+   weight: 1.0
+   habitats:
+     - Blooming Valley
+     - Verdant Plains
+   attributes:
+     mul:
+       HP: 1.10
+       SPDEF: 1.12
+     add:
+       HP: 15
+     tags:
+       - Growth
+       - Regenerative
+ - name: Vessel
+   weight: 1.0
+   habitats:
+     - Secret Lab
+     - Cocoon Sentinel
+   attributes:
+     mul:
+       LUCK: 1.10
+     add:
+       ACC: 5
+     tags:
+       - Empty
+       - Potential
+ - name: Dread
+   weight: 1.0
+   habitats:
+     - Dread Catacombs
+     - Darkmist Chasm
+   attributes:
+     mul:
+       SPATK: 1.15
+       HP: 1.10
+     add:
+       ACC: -5
+     tags:
+       - Fear
+       - Primal
