@@ -1,12 +1,21 @@
 # MonsterGenerators
 
+Last updated: 2026-01-13 04:56:41 -07:00
+
 This project is a Python package for procedurally generating fantasy monster data. It includes a command-line tool and a library to create monster "seeds" with unique stats, traits, dual-types, and abilities. It can format this data into Pokedex-style catalog entries, raw data for game development, and detailed prompts for AI image generators.
+
+## Changelog
+
+### 2026-01-13
+- Updated documentation and examples to use the canonical type taxonomy.
+- Clarified mutagen categories and CLI flag usage.
+- Added documentation update stamps across core project docs.
 
 ## Features
 
 * **Dual-Type System**: Monsters are generated with a primary type and have a chance to gain a secondary type, creating complex and unique creatures.
 * **Stat Biasing**: Each monster's stats are intelligently biased based on its primary and secondary types, giving them a distinct feel.
-* **Mutagens**: Apply "mutagens" (major, minor, and utility) to generate unique "wild" instances with special stats, tags, and abilities.
+* **Mutagens**: Apply "mutagens" (major and utility) to generate unique "wild" instances with special stats, tags, and abilities.
 * **Re-roll Attributes**: Fine-tune generated monsters by re-rolling specific attributes like traits or major mutagens.
 * **Multiple Output Formats**:
   * **Canonical Dex Entries**: Generate Pokedex-style entries that describe the pure, base form of a species.
@@ -43,11 +52,11 @@ Generates the "canonical" Pokedex-style entry for a species (base stats + type b
   # Generate a single dex entry for a random monster
 mongen dexentry
 
-  # Generate 5 entries for Sylvan monsters and save them to a file
-mongen dexentry --primary_type Sylvan --count 5 --output ./sylvan_dex.txt
+  # Generate 5 entries for Bloom monsters and save them to a file
+mongen dexentry --primary_type Bloom --count 5 --output ./bloom_dex.txt
 
-  # Generate an entry for a monster that is primarily Mineral and secondarily Frost
-mongen dexentry --primary_type Mineral --secondary_type Frost
+  # Generate an entry for a monster that is primarily Axiom and secondarily Flow
+mongen dexentry --primary_type Axiom --secondary_type Flow
 ```
 
 ### `mongen unique`
@@ -64,7 +73,7 @@ mongen unique
 mongen unique --primary_type Dread --secondary_type random
 
   # Generate a powerful unique monster with extra mutagens
-mongen unique --primary_type Inferno --majors 2 --utilities 1
+mongen unique --primary_type Idol --majors 2 --utils 1
 ```
 
 ### `mongen reroll`
@@ -93,8 +102,8 @@ Generates a detailed prompt for an AI image generator based on a fully realized 
   # Generate a prompt for a random monster
 mongen artprompt
 
-  # Generate a prompt for a Mythic/Electric monster and save it
-mongen artprompt -t1 Mythic -t2 Electric -o ./prompts.txt --json
+  # Generate a prompt for a Geist/Spur monster and save it
+mongen artprompt -t1 Geist -t2 Spur -o ./prompts.txt --json
 ```
 
 *The `--json` flag will also save the monster's raw data, which is useful for regenerating the same image later.*
@@ -127,8 +136,8 @@ from mongens.mon_forge import generate_monster
   # Generate a complete monster with a primary type and a few mutagens
 monster = generate_monster(
     idnum=1,
-    primary_type="Brawler",
-    secondary_type="Mineral",
+    primary_type="Bastion",
+    secondary_type="Axiom",
     major_count=1,
     util_count=1,
 )
@@ -150,7 +159,7 @@ from mongens.dex_entries import dex_formatter
   # First, generate a monster
 monster = generate_monster(
     idnum=1,
-    primary_type="Astral",
+    primary_type="Geist",
     major_count=1,
     util_count=0
 )
@@ -171,8 +180,8 @@ from mongens.prompt_engine import construct_mon_prompt
   # Generate a visually interesting monster
 monster = generate_monster(
     idnum=42,
-    primary_type="Toxic",
-    secondary_type="Ancient",
+    primary_type="Mire",
+    secondary_type="Rift",
     major_count=1,
     util_count=1
 )

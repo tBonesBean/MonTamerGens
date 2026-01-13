@@ -1,7 +1,286 @@
-from typing import Dict
+from typing import Dict, Any, Tuple, Iterable
 from pathlib import Path
 import yaml
 
+
+def _load_yaml(filename: str) -> Any:
+    """
+    Load a YAML file located next to this module.
+    Args:
+            filename: Relative filename (in the same directory as this module).
+    Returns:
+            The Python object produced by yaml.safe_load() for the file contents.
+    Raises:
+            FileNotFoundError: If the target file does not exist.
+            yaml.YAMLError: If the file exists but cannot be parsed as valid YAML.
+    """
+
+    filepath = Path(__file__).parent / filename
+    if not filepath.exists():
+        raise FileNotFoundError(f"Data file not found: {filepath}")
+    with open(filepath, "r", encoding="utf-8") as f:
+        return yaml.safe_load(f)
+
+
+def _load_seed_types_data(filename: str) -> Tuple[Dict[str, Any], Dict[str, float]]:
+    """
+            Load seed type definitions from a YAML file.
+            The YAML file should contain a sequence (list) of mappings, each with a
+    required "name" key. This function returns a tuple of two dictionaries:
+    - types_data: mapping of name -> full item dict
+    - types_weighted: mapping of name -> weight (float)
+    Args:
+        filename: Relative filename (in the same directory as this module).
+    Returns:
+        A tuple (types_data, types_weighted).
+    Raises:
+        FileNotFoundError: If the target file does not exist.
+        ValueError: If the parsed YAML is not a list, contains entries that are
+            not mappings, or if any entry is missing the required 'name' key.
+        yaml.YAMLError: If the YAML cannot be parsed (propagated from yaml.safe_load).
+    """
+
+    filepath = Path(__file__).parent / filename
+    if not filepath.exists():
+        raise FileNotFoundError(f"Data file not found: {filepath}")
+    with open(filepath, "r", encoding="utf-8") as f:
+        data = yaml.safe_load(f)
+
+    if not isinstance(data, list):
+        raise ValueError(f"Expected a list of seed type definitions in {filepath}")
+
+    types_data: Dict[str, Any] = {}
+    types_weighted: Dict[str, float] = {}
+
+    for item in data:
+        if not isinstance(item, dict) or "name" not in item:
+            raise ValueError(
+                f"Each seed type entry must be a mapping with a 'name' key: {item}"
+            )
+        name = item["name"]
+
+        types_data[name] = item
+
+        # ensure weight is a float (default 1.0)
+        types_weighted[name] = float(item.get("weight", 1.0))
+
+    return types_data, types_weighted
+
+
+def _load_mods_yaml(filename: str) -> Dict[str, Dict[str, Any]]:
+    """
+    Load a mutagen definitions file from YAML.
+    Expected shape: {mod_name: { ... mod fields ... }}.
+    """
+
+    data = _load_yaml(filename)
+    if not isinstance(data, dict):
+        raise ValueError(f"Expected a mapping of mod definitions in {filename}")
+    return data
+
+
+def _load_weighted_yaml(filename: str) -> Dict[str, float]:
+
+    data = _load_yaml(filename)
+    return {item["name"]: item.get("weight", 1.0) for item in data if "name" in item}
+
+
+def _validate_seed_type_data(
+    seed_type_data: Dict[str, Any],
+    base_stats: Dict[str, Any],
+) -> None:
+    """
+    Validate the structural contract for seed type definitions.
+    Args:
+            seed_type_data: The loaded seed type data.
+            base_stats: The base stats dictionary.
+    Raises:
+            ValueError: If any seed type definition is invalid.
+    """
+
+    for name, entry in seed_type_data.items():
+        if not isinstance(name, str) or not name:
+            raise ValueError(f"Invalid seed type name: {name!r}")
+
+        attributes = entry.get("attributes", {})
+        if not isinstance(attributes, dict):
+            raise ValueError(f"'attributes' must be a dict for seed type '{name}'")
+
+        mul = attributes.get("mul", {})
+        add = attributes.get("add", {})
+
+        if not isinstance(mul, dict) or not isinstance(add, dict):
+            raise ValueError(f"'mul' and 'add' must be dicts for seed type '{name}'")
+
+        for stat, value in mul.items():
+            if stat not in base_stats:
+                raise ValueError(
+                    f"Unknown stat '{stat}' in attributes.mul for seed type '{name}'"
+                )
+            if not isinstance(value, (int, float)) or value <= 0:
+                raise ValueError(
+                    f"Invalid multiplier for stat '{stat}' in seed type '{name}': {value}"
+                )
+
+        for stat, value in add.items():
+            if stat not in base_stats:
+                raise ValueError(
+                    f"Unknown stat '{stat}' in attributes.add for seed type '{name}'"
+                )
+            if not isinstance(value, (int, float)):
+                raise ValueError(
+                    f"Invalid additive value for stat '{stat}' in seed type '{name}': {value}"
+                )
+
+        habitats = entry.get("habitats", [])
+        if habitats is not None:
+            if not isinstance(habitats, list) or not all(
+                isinstance(h, str) for h in habitats
+            ):
+                raise ValueError(
+                    f"'habitats' must be a list of strings for seed type '{name}'"
+                )
+
+
+def _validate_type_forms(
+    forms_by_type: Dict[str, Any],
+    seed_type_data: Dict[str, Any],
+) -> None:
+    """
+    Validate type_forms.yaml structure and ensure alignment with seed types.
+    Raises ValueError if any violation is found.
+    """
+
+    if not isinstance(forms_by_type, dict):
+        raise ValueError("type_forms.yaml must be a mapping of type -> forms")
+
+    for type_name, forms in forms_by_type.items():
+        if type_name not in seed_type_data:
+            raise ValueError(
+                f"Type '{type_name}' in type_forms.yaml is not defined in seed_types.yaml"
+            )
+
+        if not isinstance(forms, dict):
+            raise ValueError(
+                f"Forms for type '{type_name}' must be a mapping of form_name -> data"
+            )
+
+        for form_name, form_data in forms.items():
+            if not isinstance(form_name, str) or not form_name:
+                raise ValueError(
+                    f"Invalid form name under type '{type_name}': {form_name!r}"
+                )
+
+            if not isinstance(form_data, dict):
+                raise ValueError(
+                    f"Form '{form_name}' under type '{type_name}' must be a mapping"
+                )
+
+            weight = form_data.get("weight", 1.0)
+            if not isinstance(weight, (int, float)) or weight <= 0:
+                raise ValueError(
+                    f"Invalid weight for form '{form_name}' under type '{type_name}': {weight}"
+                )
+
+            notes = form_data.get("notes")
+            if notes is not None and not isinstance(notes, str):
+                raise ValueError(
+                    f"'notes' for form '{form_name}' under type '{type_name}' must be a string"
+                )
+
+
+def _validate_mods(
+    mods: Dict[str, Any],
+    base_stats: Dict[str, Any],
+    seed_types: Iterable[str],
+    label: str,
+) -> None:
+    """
+    Validate mutagen dictionaries against the mutagen schema contract.
+    """
+
+    if not isinstance(mods, dict):
+        raise ValueError(f"{label} must be a mapping of mod_name -> mod definition")
+
+    seed_type_set = set(seed_types)
+    for mod_name, mod in mods.items():
+        if not isinstance(mod_name, str) or not mod_name:
+            raise ValueError(f"{label} has invalid mod name: {mod_name!r}")
+        if not isinstance(mod, dict):
+            raise ValueError(f"{label} mod '{mod_name}' must be a mapping")
+
+        mul = mod.get("mul", {})
+        if mul is not None:
+            if not isinstance(mul, dict):
+                raise ValueError(f"{label} mod '{mod_name}' mul must be a dict")
+            for stat, value in mul.items():
+                if stat not in base_stats:
+                    raise ValueError(
+                        f"{label} mod '{mod_name}' uses unknown stat in mul: {stat}"
+                    )
+                if not isinstance(value, (int, float)) or value <= 0:
+                    raise ValueError(
+                        f"{label} mod '{mod_name}' has invalid mul for {stat}: {value}"
+                    )
+
+        add = mod.get("add", {})
+        if add is not None:
+            if not isinstance(add, dict):
+                raise ValueError(f"{label} mod '{mod_name}' add must be a dict")
+            for stat, value in add.items():
+                if stat not in base_stats:
+                    raise ValueError(
+                        f"{label} mod '{mod_name}' uses unknown stat in add: {stat}"
+                    )
+                if not isinstance(value, (int, float)):
+                    raise ValueError(
+                        f"{label} mod '{mod_name}' has invalid add for {stat}: {value}"
+                    )
+
+        tags = mod.get("tags", [])
+        if tags is not None:
+            if not isinstance(tags, list) or not all(
+                isinstance(tag, str) for tag in tags
+            ):
+                raise ValueError(f"{label} mod '{mod_name}' tags must be a list")
+
+        for list_key in ("allowed_types", "incompatible_types"):
+            types_list = mod.get(list_key, [])
+            if types_list is not None:
+                if not isinstance(types_list, list) or not all(
+                    isinstance(t, str) for t in types_list
+                ):
+                    raise ValueError(
+                        f"{label} mod '{mod_name}' {list_key} must be a list of strings"
+                    )
+                unknown = [t for t in types_list if t not in seed_type_set]
+                if unknown:
+                    raise ValueError(
+                        f"{label} mod '{mod_name}' has unknown {list_key}: {unknown}"
+                    )
+
+        rarity = mod.get("rarity")
+        if rarity is not None:
+            if not isinstance(rarity, (int, float)) or float(rarity) <= 0:
+                raise ValueError(
+                    f"{label} mod '{mod_name}' has invalid rarity: {rarity}"
+                )
+
+        synergy_bonus = mod.get("synergy_bonus", {})
+        if synergy_bonus is not None:
+            if not isinstance(synergy_bonus, dict):
+                raise ValueError(
+                    f"{label} mod '{mod_name}' synergy_bonus must be a dict"
+                )
+            for type_name, value in synergy_bonus.items():
+                if type_name not in seed_type_set:
+                    raise ValueError(
+                        f"{label} mod '{mod_name}' has unknown synergy type: {type_name}"
+                    )
+                if not isinstance(value, (int, float)) or float(value) <= 0:
+                    raise ValueError(
+                        f"{label} mod '{mod_name}' has invalid synergy for {type_name}: {value}"
+                    )
 
 # -- Baseline stats (can override per species later, after mutagens do # there thing and populate stat boxes)
 BASE_STATS: Dict[str, int] = {
@@ -16,1165 +295,199 @@ BASE_STATS: Dict[str, int] = {
     "LUCK": 10,
 }
 
-SEED_TYPES = [
-    "Mineral",
-    "Beast",
-    "Aquatic",
-    "Frost",
-    "Brawler",
-    "Insect",
-    "Mythic",
-    "Electric",
-    "Sylvan",
-    "Aerial",
-    "Dread",
-    "Inferno",
-    "Toxic",
-    "Ancient",
-    "Astral",
-    "Anomalous",
-]
-# Base rarity weights for each type. Higher is more common.
-SEED_TYPES_WEIGHTED = {
-    "Mineral": 1.0,
-    "Beast": 1.0,
-    "Aquatic": 1.0,
-    "Frost": 0.8,
-    "Brawler": 0.8,
-    "Insect": 1.0,
-    "Mythic": 0.7,
-    "Electric": 0.9,
-    "Sylvan": 1.0,
-    "Aerial": 0.8,
-    "Dread": 0.7,
-    "Inferno": 0.9,
-    "Toxic": 0.9,
-    "Ancient": 0.7,
-    "Astral": 0.7,
-    "Anomalous": 0.3,
-}
 
+def _normalize_seed_type_data(
+    seed_type_data: Dict[str, Any],
+) -> Dict[str, Any]:
+    """ """
+    normalized: Dict[str, Any] = {}
+
+    for type_name, entry in seed_type_data.items():
+        attributes = entry.get("attributes", {}) or {}
+        mul = attributes.get("mul", {}) or {}
+        add = attributes.get("add", {}) or {}
+
+        normalized[type_name] = {
+            "weight": float(entry.get("weight", 1.0)),
+            "habitats": list(entry.get("habitats", []) or []),
+            "attributes": {
+                "mul": dict(mul),
+                "add": dict(add),
+                "tags": list(attributes.get("tags", []) or []),
+            },
+        }
+
+    return normalized
+
+
+# -- Loader
+SEED_TYPE_DATA, SEED_TYPES_WEIGHTED = _load_seed_types_data("seed_types.yaml")
+FORMS_BY_TYPE = _load_yaml("type_forms.yaml")
+
+# -- Normalizer
 SEED_TYPES = sorted(list(SEED_TYPES_WEIGHTED.keys()))
+SEED_TYPE_DATA = _normalize_seed_type_data(SEED_TYPE_DATA)
 
-FORMS_BY_TYPE = {
-    "Mineral": {
-        "Gorgonopsid": 0.5,
-        "Stone Golem": 0.5,
-        "Earth Elemental": 0.5,
-        "Rock Hyrax": 0.5,
-        "Basilisk Lizard": 0.5,
-        "Gargoyle": 0.5,
-        "Moai Colossus": 0.5,
-        "Giant Anteater": 0.5,
-        "Trilobite": 0.5,
-        "Komodo Dragon": 0.5,
-        "Khalkotauroi": 0.5,
-        "Stoneback Tortoise Beast": 0.5,
-        "Obsidian Sandwyrm": 0.5,
-        "Basalt CragWalker": 0.5,
-        "Sandstone Sphinx": 0.5,
-        "Geode Armadillo": 0.5,
-        "Avalanche King": 0.5,
-        "Shale Wyrm": 0.5,
-        "Marble Titan": 0.5,
-        "GravelHide Rhino": 0.5,
-        "Petrified Wood Ent": 0.5,
-        "Cavernous Maw": 0.5,
-        "Crystal Basilisk": 0.5,
-    },
-    "Beast": {
-        "Smilodon": 0.5,
-        "Minotaur": 0.5,
-        "Wolverine": 0.5,
-        "Wild Boar": 0.5,
-        "Dire Hound": 0.5,
-        "Pangolin": 0.5,
-        "Tasmanian Tiger": 0.5,
-        "Tasmanian Devil": 0.5,
-        "Hellhound": 0.5,
-        "Baboon": 0.5,
-        "Barong": 0.5,
-        "Nandi Bear": 0.5,
-        "Calydonian Boar": 0.5,
-        "Dire Wolf Alpha": 0.5,
-        "Grizzly King": 0.5,
-        "Shadowpelt Panther": 0.5,
-        "Charging Auroch": 0.5,
-        "Razor Felldrake": 0.5,
-        "Alpha Chimera": 0.5,
-        "Savage Manticore": 0.5,
-        "Horn-Crested Grazer": 0.5,
-        "Owlbear": 0.5,
-        "Canyon Howler": 0.5,
-    },
-    "Aquatic": {
-        "Dugong": 0.5,
-        "Giant Oarfish": 0.5,
-        "Dunkleosteus": 0.5,
-        "Kraken": 0.5,
-        "Axolotl": 0.5,
-        "BlueDragon Sea Slug": 0.5,
-        "Mosasaur": 0.5,
-        "Naiad": 0.5,
-        "Sailfish": 0.5,
-        "Coelacanth": 0.5,
-        "Kelpie": 0.5,
-        "Adaro": 0.5,
-        "Cetus": 0.5,
-        "Abyssal Angler": 0.5,
-        "Tidal Leviathan": 0.5,
-        "Reef Hydra": 0.5,
-        "Swamp Boa": 0.5,
-        "Bioluminescent Jellyfish": 0.5,
-        "DeepSea Viper": 0.5,
-        "Armored Nautiloid": 0.5,
-        "Crocodylian": 0.5,
-        "PearlShell Turtle": 0.5,
-        "Vortex Eel": 0.5,
-    },
-    "Frost": {
-        "Polar Bear": 0.5,
-        "Woolly Rhinoceros": 0.5,
-        "Wendigo": 0.5,
-        "Snowy Owl": 0.5,
-        "Frost Elemental": 0.5,
-        "Caribou": 0.5,
-        "Yeti": 0.5,
-        "Sabertooth": 0.5,
-        "Megaloceros": 0.5,
-        "Narwhal": 0.5,
-        "Jotunn": 0.5,
-        "Snow Kirin": 0.5,
-        "Frost Wyrmling Drake": 0.5,
-        "Glacial Behemoth": 0.5,
-        "Frost Wyvern": 0.5,
-        "Mammoth": 0.5,
-        "Snow Lynx": 0.5,
-        "Avalanche Spirit": 0.5,
-        "Hoarfrost Gryphon": 0.5,
-        "Tundra Stalker": 0.5,
-        "Regal Caribou": 0.5,
-        "Frozen SoulEater": 0.5,
-    },
-    "Brawler": {
-        "Kangaroo": 0.5,
-        "Mantis Shrimp": 0.5,
-        "Gorilla": 0.5,
-        "Boxing Beetle": 0.5,
-        "Red Kangaroo Rat": 0.5,
-        "Secretary Bird": 0.5,
-        "Harpy": 0.5,
-        "Cassowary": 0.5,
-        "Thylacoleo": 0.5,
-        "Chimpanzee": 0.5,
-        "Quartz Gargant": 0.5,
-        "Pummeler Homunculus": 0.5,
-        "Oni Boxer": 0.5,
-        "Asura": 0.5,
-        "Ogre": 0.5,
-        "Brawling Centaur": 0.5,
-        "Capoeira-Dancer Sprite": 0.5,
-        "PressurePoint Monk": 0.5,
-        "Fist Golem": 0.5,
-        "Cyclops": 0.5,
-        "Satyr": 0.5,
-        "Bladed-Tonfa Mantis": 0.5,
-        "Wrecking-Ball Ape": 0.5,
-    },
-    "Insect": {
-        "Tarantula Hawk": 0.5,
-        "Titan Beetle": 0.5,
-        "Meganeura": 0.5,
-        "Antlion": 0.5,
-        "Mothman": 0.5,
-        "Horseshoe Crab": 0.5,
-        "Coconut Crab": 0.5,
-        "Grylloblattid": 0.5,
-        "Giant Isopod": 0.5,
-        "Praying Mantis": 0.5,
-        "Scarab Guardian": 0.5,
-        "Unkcela": 0.5,
-        "Trilobite Colossus": 0.5,
-        "Hive Tyrant": 0.5,
-        "Acid Bombardier": 0.5,
-        "Glass Wasp": 0.5,
-        "Phased Spider": 0.5,
-        "Mycelial Centipede": 0.5,
-        "Obsidian Scorpion": 0.5,
-        "Resin Weaver": 0.5,
-        "Seeker Hornet": 0.5,
-        "Swarm Lord": 0.5,
-        "Quicksand Scarab": 0.5,
-    },
-    "Mythic": {
-        "Griffin": 0.5,
-        "Kitsune": 0.5,
-        "Banshee": 0.5,
-        "Thunderbird": 0.5,
-        "Nemean Lion": 0.5,
-        "Leviathan": 0.5,
-        "Qilin": 0.5,
-        "Selkie": 0.5,
-        "Jorōgumo": 0.5,
-        "Phoenix": 0.5,
-        "Mapinguari": 0.5,
-        "Hippogriff": 0.5,
-        "Tikbalang": 0.5,
-        "Celestial Dragon": 0.5,
-        "Terra Tortoise": 0.5,
-        "Norn": 0.5,
-        "Dreameater Baku": 0.5,
-        "Storm Roc": 0.5,
-        "SunEating Fenrir": 0.5,
-        "Unpredictable Djinn": 0.5,
-        "Sphinx": 0.5,
-        "Unicorn": 0.5,
-        "Hephaestus": 0.5,
-    },
-    "Electric": {
-        "Electric Eel": 0.5,
-        "Storm Elemental": 0.5,
-        "Thundering Roc": 0.5,
-        "Platypus": 0.5,
-        "Torpedo Ray": 0.5,
-        "Ball Lightning Sprite": 0.5,
-        "Electric Catfish": 0.5,
-        "Scintillating Serpent": 0.5,
-        "Thunderbird Whelp": 0.5,
-        "Raiju": 0.5,
-        "Volt Seraph": 0.5,
-        "Living Tesla Coil": 0.5,
-        "Field Distorter": 0.5,
-        "Ionized Drake": 0.5,
-        "Ancestor Jellyfish": 0.5,
-        "Arc Spider": 0.5,
-        "Lightning Hound": 0.5,
-        "Electrified Lynx": 0.5,
-        "Zap Condor": 0.5,
-        "Ball-Lightning Elemental": 0.5,
-        "Railgun Beetle": 0.5,
-    },
-    "Sylvan": {
-        "Dryad": 0.5,
-        "Nepenthes Pitcher Beast": 0.5,
-        "Ent": 0.5,
-        "Yew Tree Spirit": 0.5,
-        "Mandrake": 0.5,
-        "Venus Flytrap": 0.5,
-        "Wollemi Pine Dryosaur": 0.5,
-        "Bramble Golem": 0.5,
-        "Baobab Tortoise": 0.5,
-        "Moss Sprite": 0.5,
-        "Kodama": 0.5,
-        "Thorn Hydra": 0.5,
-        "Spriggan": 0.5,
-        "Canopy Arborcat": 0.5,
-        "Fungal-Hulk": 0.5,
-        "Floral Behemoth": 0.5,
-        "Amber Treant": 0.5,
-        "Photosynthetic Drake": 0.5,
-        "Bee-Lord": 0.5,
-        "Deep Earth-Shaker": 0.5,
-        "Razor-Leaf Tiger": 0.5,
-        "Mycelial Plant": 0.5,
-        "Willow-Wisp Matron": 0.5,
-    },
-    "Aerial": {
-        "Shoebill": 0.5,
-        "Archaeopteryx": 0.5,
-        "Roc": 0.5,
-        "Harpy Eagle": 0.5,
-        "Kiwi": 0.5,
-        "Hoatzin": 0.5,
-        "Takahē": 0.5,
-        "Terror Bird": 0.5,
-        "Lyrebird": 0.5,
-        "Redcrowned Crane": 0.5,
-        "Firefoot Heron": 0.5,
-        "Bennu": 0.5,
-        "Storm Petrel Titan": 0.5,
-        "GaleForce Falcon": 0.5,
-        "SunCrested Eagle": 0.5,
-        "MirageWing Hummingbird": 0.5,
-        "Obsidian Owl": 0.5,
-        "Sonic Screecher": 0.5,
-        "Kingfisher": 0.5,
-        "Apex Condor": 0.5,
-        "Albatross": 0.5,
-        "Parrot": 0.5,
-        "Plagued Vulture": 0.5,
-    },
-    "Dread": {
-        "Wraith": 0.5,
-        "Shadow Hound": 0.5,
-        "Nightgaunt": 0.5,
-        "Chupacabra": 0.5,
-        "Ghoul": 0.5,
-        "Barghest": 0.5,
-        "Lurking Mirefiend": 0.5,
-        "Blemmyes": 0.5,
-        "Mare": 0.5,
-        "Dullahan": 0.5,
-        "Draugr": 0.5,
-        "Nachtkrapp": 0.5,
-        "Shadow Lamia": 0.5,
-        "Grave-Robber Lich": 0.5,
-        "Fear-Monger": 0.5,
-        "Soul-Cage Phantom": 0.5,
-        "Weeping-Angel Statue": 0.5,
-        "Chain-Rattling Specter": 0.5,
-        "Mind-Devouring Horror": 0.5,
-        "Flesh-Stitched Abomination": 0.5,
-        "Whispering Shadow": 0.5,
-        "Corpse-Candle Wisp": 0.5,
-        "Hungering Void": 0.5,
-    },
-    "Inferno": {
-        "Salamander": 0.5,
-        "Fire Jinn": 0.5,
-        "Ifrit": 0.5,
-        "Ash Drake": 0.5,
-        "Volcanic Worm": 0.5,
-        "Fire Beetle": 0.5,
-        "Ember Lion": 0.5,
-        "Solifuge": 0.5,
-        "Pyrosaurus": 0.5,
-        "Firebird": 0.5,
-        "Magma Salamander": 0.5,
-        "Zhurong Beast": 0.5,
-        "Fire Jotunn": 0.5,
-        "Obsidian-Glass Elemental": 0.5,
-        "Blue-Flame Spirit": 0.5,
-        "Coal-Hearted Golem": 0.5,
-        "Wildfire-Horse": 0.5,
-        "Ash-Cloud Djinn": 0.5,
-        "Solar-Flare Phoenix": 0.5,
-        "Geyser-Burst Tortoise": 0.5,
-        "Scorched-Earth Wyrm": 0.5,
-        "Forge-Fire Cyclops": 0.5,
-        "Living Conflagration": 0.5,
-    },
-    "Toxic": {
-        "Blue-ringed Octopus": 0.5,
-        "Stonefish": 0.5,
-        "Inland Taipan": 0.5,
-        "Poison Dart Frog": 0.5,
-        "Gila Monster": 0.5,
-        "Boomslang": 0.5,
-        "Box Jellyfish": 0.5,
-        "Deathstalker Scorpion": 0.5,
-        "Portuguese Man o’ War": 0.5,
-        "Hooded Pitohui": 0.5,
-        "Wyvern Basilisk": 0.5,
-        "Tatzelwurm": 0.5,
-        "Nagual Serpent Shade": 0.5,
-        "Acid-Blood Drake": 0.5,
-        "Neurotoxin-Gland Jelly": 0.5,
-        "Corrosive-Slime Elemental": 0.5,
-        "Plague-Bearing Rat-King": 0.5,
-        "Venom-Fanged Spider": 0.5,
-        "Polluted-Water Naiad": 0.5,
-        "Blight-Spreader Fungus": 0.5,
-        "Paralytic-Sting Wasp": 0.5,
-        "Miasma-Cloud": 0.5,
-        "Black-Mold Horror": 0.5,
-    },
-    "Ancient": {
-        "Anomalocaris": 0.5,
-        "Titanoboa": 0.5,
-        "Andrewsarchus": 0.5,
-        "Plesiosaur": 0.5,
-        "Ammonite": 0.5,
-        "Saurosuchus": 0.5,
-        "Hallucigenia": 0.5,
-        "Protostega": 0.5,
-        "Giant Ground Sloth": 0.5,
-        "Quetzalcoatl": 0.5,
-        "Diprotodon": 0.5,
-        "Dunkleoceratid": 0.5,
-        "Uintatherium": 0.5,
-        "Primordial Ooze": 0.5,
-        "AmberEncased Insect": 0.5,
-        "Living Fossil Coelacanth": 0.5,
-        "Tar-Pit Sloth": 0.5,
-        "First-Forest Treant": 0.5,
-        "Unchanged-Gator": 0.5,
-        "Pre-Vertebrate Worm": 0.5,
-        "Megafauna Mammoth": 0.5,
-        "Sabertooth": 0.5,
-        "Progenitor Cell": 0.5,
-    },
-    "Astral": {
-        "Cerebellid Wisp": 0.5,
-        "Astral Jelly": 0.5,
-        "Homunculus": 0.5,
-        "Tarsier": 0.5,
-        "Mind Flayer": 0.5,
-        "Dream-Eater Tapir Spirit": 0.5,
-        "Spectral Owl": 0.5,
-        "Neurophage Shade": 0.5,
-        "Deep-Thought Squid": 0.5,
-        "Oracle Serpent": 0.5,
-        "Alkonost": 0.5,
-        "Astral Lynx": 0.5,
-        "Baku": 0.5,
-        "Thought-Form Golem": 0.5,
-        "Collective-Unconscious Entity": 0.5,
-        "Ego-Death Spirit": 0.5,
-        "Id-Monster": 0.5,
-        "Memory-Thief": 0.5,
-        "Telekinetic-Blade Dancer": 0.5,
-        "Precognitive Seer": 0.5,
-        "Emotion-Leech": 0.5,
-        "Astral-Projecting Monk": 0.5,
-        "Sentient-Idea": 0.5,
-    },
-    "Anomalous": {
-        "Sphinx": 0.5,
-        "Doppelganger": 0.5,
-        "Mimic": 0.5,
-        "Amorphous Blob": 0.5,
-        "Featureless Mannequin": 0.5,
-        "Echoing Shade": 0.5,
-        "Glitching Anomaly": 0.5,
-        "Null-Being": 0.5,
-        "Conceptual Entity": 0.5,
-        "Tesseract-Beast": 0.5,
-        "Forgotten God": 0.5,
-    },
-}
+# -- Validator
+_validate_seed_type_data(SEED_TYPE_DATA, BASE_STATS)
+_validate_type_forms(FORMS_BY_TYPE, SEED_TYPE_DATA)
 
-SEEDTYPE_ATTR = {
-    "Mineral": {
-        "mul": {"DEF": 1.40, "SPDEF": 1.30, "ATK": 1.10, "SPD": 0.80},
-        "add": {"DEF": 10},
-        "tags": ["Grounded", "Resist:Electric", "Weak:Brawler", "Weak:Aquatic"],
-    },
-    "Beast": {
-        "mul": {"ATK": 1.20, "SPD": 1.10, "HP": 1.20, "DEF": 1.10},
-        "add": {},
-        "tags": ["Feral", "Intimidate", "Weak:Toxic"],
-    },
-    "Aquatic": {
-        "mul": {"SPDEF": 1.35, "SPD": 1.15, "HP": 1.15, "ATK": 1.15},
-        "add": {},
-        "tags": ["Amphibious", "Resist:Inferno", "Weak:Electric"],
-    },
-    "Frost": {
-        "mul": {"SPDEF": 1.40, "HP": 1.15, "SPATK": 1.15, "SPD": 0.85},
-        "add": {"SPDEF": 5},
-        "tags": ["FrostAura", "Resist:Aquatic", "Weak:Inferno"],
-    },
-    "Brawler": {
-        "mul": {"ATK": 1.45, "SPD": 1.35, "SPATK": 0.80},
-        "add": {"ATK": 10},
-        "tags": ["Combo", "Resist:Dread", "Weak:Astral"],
-    },
-    "Insect": {
-        "mul": {"SPD": 1.25, "ATK": 1.20, "DEF": 1.20, "HP": 0.90},
-        "add": {"EVA": 5},
-        "tags": ["Swarm", "Exoskeleton", "Weak:Aerial", "Weak:Inferno"],
-    },
-    "Mythic": {
-        "mul": {"SPATK": 1.25, "SPDEF": 1.25, "HP": 1.20},
-        "add": {"LUCK": 10},
-        "tags": ["Fated", "CannotBeCursed", "Weak:Ancient"],
-    },
-    "Electric": {
-        "mul": {"SPD": 1.40, "SPATK": 1.35, "ATK": 1.10},
-        "add": {},
-        "tags": ["HighVoltage", "Resist:Aerial", "Weak:Mineral"],
-    },
-    "Sylvan": {
-        "mul": {"HP": 1.40, "SPDEF": 1.2, "SPATK": 1.15, "SPD": 0.80},
-        "add": {},
-        "tags": ["Regrowth", "Weak:Toxic", "Resist:Aquatic", "Weak:Inferno"],
-    },
-    "Aerial": {
-        "mul": {"SPD": 1.40, "ATK": 1.30, "SPDEF": 1.15},
-        "add": {"EVA": 10},
-        "tags": ["Flying", "Acrobatic", "Weak:Electric"],
-    },
-    "Dread": {
-        "mul": {"ATK": 1.15, "SPDEF": 1.20, "DEF": 1.20},
-        "add": {},
-        "tags": ["Fear", "LifeSteal", "Weak:Mythic", "Weak:Radiant"],
-    },
-    "Inferno": {
-        "mul": {"SPATK": 1.25, "ATK": 1.20, "SPDEF": 0.90},
-        "add": {"SPATK": 10},
-        "tags": ["Ignite", "Resist:Frost", "Weak:Aquatic"],
-    },
-    "Toxic": {
-        "mul": {"SPATK": 1.35, "DEF": 1.25, "HP": 1.15, "SPD": 0.95},
-        "add": {},
-        "tags": ["Poisonous", "Corrosive", "Weak:Mineral", "Weak:Sylvan"],
-    },
-    "Ancient": {
-        "mul": {"HP": 1.30, "DEF": 1.25, "ATK": 1.25, "SPD": 0.80},
-        "add": {"HP": 25, "DEF": 5},
-        "tags": ["Primordial", "Resist:Mythic", "Weak:Chaos"],
-    },
-    "Astral": {
-        "mul": {"SPATK": 1.40, "SPD": 1.30, "SPDEF": 1.10, "HP": 0.90},
-        "add": {"SPATK": 5},
-        "tags": ["Telekinesis", "Clairvoyant", "Weak:Dread"],
-    },
-    "Anomalous": {
-        "mul": {
-            "HP": 1.15,
-            "DEF": 1.15,
-            "ATK": 1.15,
-            "SPDEF": 1.15,
-            "SPATK": 1.15,
-            "SPD": 1.15,
-        },
-        "add": {"ACC": 5, "EVA": 5, "LUCK": 10},
-        "tags": [],
-    },
-}
-
-# TYPE_SYNERGY_BOOSTS
-# Maps frozenset({primary, secondary}) -> multiplicative boost to apply
-# when that pair is being considered. Values >1.0 = positive synergy,
-# values <1.0 = penalty (but use INCOMPATIBLE_TYPE_PAIRS for hard forbids).
+""" Maps frozenset({primary, secondary}) -> multiplicative boost to apply when that pair is being considered. Values >1.0 = positive synergy, values <1.0 = penalty (but use INCOMPATIBLE_TYPE_PAIRS for hard forbids). """
 TYPE_SYNERGY_BOOSTS = {
-    frozenset(["Insect", "Toxic"]): 1.15,
-    frozenset(["Mineral", "Ancient"]): 0.90,
-    frozenset(["Sylvan", "Aquatic"]): 0.80,
-    frozenset(["Frost", "Ancient"]): 1.00,
-    frozenset(["Inferno", "Mineral"]): 0.70,
-    frozenset(["Aquatic", "Electric"]): 0.60,
-    frozenset(["Brawler", "Beast"]): 1.15,
-    frozenset(["Dread", "Astral"]): 0.80,
-    frozenset(["Toxic", "Sylvan"]): 1.10,
-    frozenset(["Aquatic", "Ancient"]): 1.10,
-    frozenset(["Astral", "Electric"]): 1.10,
-    frozenset(["Inferno", "Aerial"]): 0.75,
-    frozenset(["Mineral", "Sylvan"]): 0.75,
-    frozenset(["Mythic", "Ancient"]): 0.60,
-    frozenset(["Toxic", "Dread"]): 0.85,
-    frozenset(["Beast", "Aquatic"]): 0.65,
-    frozenset(["Frost", "Aquatic"]): 1.20,
-    frozenset(["Brawler", "Astral"]): 0.80,
-    frozenset(["Mineral", "Brawler"]): 1.10,
-    frozenset(["Inferno", "Dread"]): 1.10,
-    frozenset(["Aerial", "Beast"]): 1.10,
-    frozenset(["Insect", "Mineral"]): 1.15,
-    frozenset(["Sylvan", "Dread"]): 1.00,
-    frozenset(["Insect", "Ancient"]): 1.15,
-    frozenset(["Aerial", "Electric"]): 0.60,
+    frozenset(["Spur", "Axiom"]): 1.2,  # (Kinetic, Argent)
+    frozenset(["Bloom", "Flow"]): 0.7,  # (Gaian, Azure)
+    frozenset(["Idol", "Bloom"]): 1.1,  # (Vermillion, Veridian)
+    frozenset(["Geist", "Axiom"]): 1.2,  # (Aether, Arcane)
+    frozenset(["Dread", "Echo"]): 0.8,  # (Abyssal, Echo)
+    frozenset(["Rift", "Spur"]): 0.7,  # (Chrono, Kinetic)
+    frozenset(["Bastion", "Bloom"]): 1.1,  # (Apex, Gaian)
 }
 
 INCOMPATIBLE_TYPE_PAIRS = {
-    frozenset(["Beast", "Sylvan"]),
-    frozenset(["Frost", "Electric"]),
-    frozenset(["Astral", "Mythic"]),
-    frozenset(["Inferno", "Aquatic"]),
-    frozenset(["Inferno", "Frost"]),
-    frozenset(["Electric", "Mineral"]),
-    frozenset(["Toxic", "Mineral"]),
-    frozenset(["Brawler", "Aquatic"]),
-    frozenset(["Mythic", "Dread"]),
-    frozenset(["Inferno", "Sylvan"]),
-    frozenset(["Inferno", "Toxic"]),
-    frozenset(["Insect", "Frost"]),
+    frozenset(["Idol", "Flow"]),  # (Vermillion, Azure)
+    frozenset(["Bloom", "Geist"]),  # (Gaian, Aether)
+    frozenset(["Bastion", "Dread"]),  # (Apex, Abyssal)
+    frozenset(["Axiom", "Idol"]),  # (Argent, Vermillion)
+    frozenset(["Rift", "Axiom"]),  # (Chrono, Arcane)
 }
 
-MAJOR_MODS = {
-    "Starwarden": {
-        "mul": {"SPDEF": 1.28, "LUCK": 1.20, "HP": 1.10},
-        "add": {},
-        "tags": ["Barrier:Cosmic", "Weak:Obsidian", "CelestialGuard"],
-        "allowed_types": ["Mythic", "Astral", "Anomalous"],
-        "rarity": 1.3,
-        "synergy_bonus": {"Mythic": 1.4},
-    },
-    "BrightFlare": {
-        "mul": {"SPATK": 1.22, "ATK": 1.12, "SPD": 1.05},
-        "add": {},
-        "tags": ["Burn:Overtime", "Weak:Aquatic", "Cinderwake"],
-        "allowed_types": ["Inferno", "Electric"],
-        "rarity": 0.9,
-        "synergy_bonus": {"Inferno": 1.5},
-    },
-    "ExoSkeleton": {
-        "mul": {"SPD": 1.18, "EVA": 1.15, "DEF": 1.08},
-        "add": {},
-        "tags": ["Shell:Echo", "Weak:Tempest", "Hollowbody"],
-        "allowed_types": ["Insect", "Dread", "Ancient"],
-        "rarity": 0.85,
-        "synergy_bonus": {"Insect": 1.3},
-    },
-    "DeepEarth": {
-        "mul": {"HP": 1.25, "DEF": 1.20, "SPD": 0.88},
-        "add": {},
-        "tags": ["Burrow:Deep", "Weak:Tempest", "StoneSleep"],
-        "allowed_types": ["Mineral", "Ancient", "Dread"],
-        "rarity": 0.9,
-        "synergy_bonus": {"Ancient": 1.3},
-    },
-    "Riftwalker": {
-        "mul": {"SPD": 1.22, "LUCK": 1.15, "SPATK": 1.10},
-        "add": {"EVA": 5},
-        "tags": ["Teleport:Long", "Weak:Metallic", "DimensionalSlip"],
-        "allowed_types": ["Astral", "Dread", "Anomalous"],
-        "rarity": 1.2,
-        "synergy_bonus": {"Astral": 1.2},
-    },
-    "Obsidian": {
-        "mul": {"DEF": 1.28, "SPDEF": 1.18, "SPD": 0.92},
-        "add": {},
-        "tags": ["Resist:Astral", "Weak:Tempest", "VolcanicGlass"],
-        "allowed_types": ["Mineral", "Inferno", "Ancient"],
-        "rarity": 1.0,
-        "synergy_bonus": {"Inferno": 1.2},
-    },
-    "Bloodforge": {
-        "mul": {"ATK": 1.28, "HP": 1.12, "DEF": 1.08},
-        "add": {},
-        "tags": ["Regen:OnHit", "Weak:Radiant", "Hemofury"],
-        "allowed_types": ["Mineral", "Dread", "Brawler", "Inferno"],
-        "rarity": 1.4,
-        "synergy_bonus": {"Mineral": 1.2, "Inferno": 1.2},
-    },
-    "Crystalline": {
-        "mul": {"SPDEF": 1.15},
-        "add": {"HP": 10},
-        "tags": ["Resist:Mind", "Shatter:OnCrit"],
-        "allowed_types": ["Mineral", "Frost", "Astral"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "Cavernborn": {
-        "mul": {"SPDEF": 1.1, "HP": 1.2},
-        "add": {"ACC": 5},
-        "tags": ["Accuracy:Dark", "Echolocation"],
-        "allowed_types": ["Mineral", "Beast", "Dread", "Insect"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "Arctic": {
-        "mul": {"SPDEF": 1.1, "SPD": 1.08},
-        "add": {},
-        "tags": ["Slide:Frost", "Resist:Frost"],
-        "allowed_types": ["Frost", "Aquatic"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "BattleScarred": {
-        "mul": {"HP": 1.1, "ATK": 1.05, "DEF": 1.05},
-        "add": {},
-        "tags": ["Grit", "Endure"],
-        "allowed_types": SEED_TYPES,
-        "rarity": 1.0,
-        "synergy_bonus": {"Brawler": 1.2},
-    },
-    "FullBloom": {
-        "mul": {"SPATK": 1.1, "SPD": 0.92},
-        "add": {"DEF": 5},
-        "tags": ["Leech:Minor", "Grasp"],
-        "allowed_types": ["Sylvan", "Toxic"],
-        "rarity": 1.0,
-        "synergy_bonus": {"Sylvan": 1.2},
-    },
-    "RuneReader": {
-        "mul": {"SPATK": 1.15, "LUCK": 1.05},
-        "add": {},
-        "tags": ["RuneSlots:+1", "Empower:Glyph"],
-        "allowed_types": ["Mythic", "Ancient", "Astral"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "Cultivated": {
-        "mul": {"HP": 1.15, "SPDEF": 1.05},
-        "add": {"HP": 15},
-        "tags": ["Heal:Terrain", "Barkskin"],
-        "allowed_types": ["Sylvan", "Toxic"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "SuperOrbital": {
-        "mul": {"SPATK": 1.18},
-        "add": {},
-        "tags": ["Curse:Minor", "GravityWell"],
-        "allowed_types": ["Ancient", "Anomalous", "Astral", "Mythic", "Dread"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "SandCrawler": {
-        "mul": {"SPD": 1.12, "DEF": 1.05},
-        "add": {},
-        "tags": ["Initiative:Sand", "Burrow"],
-        "allowed_types": ["Mineral", "Beast", "Insect"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "Brimstone": {
-        "mul": {"SPATK": 1.15},
-        "add": {"LUCK": 5},
-        "tags": ["Ignite:Low", "Kindle"],
-        "allowed_types": ["Inferno", "Mineral", "Dread"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "LoreGuardian": {
-        "mul": {"SPDEF": 1.15, "LUCK": 1.05},
-        "add": {},
-        "tags": ["Action:Flow", "AncientKnowledge"],
-        "allowed_types": ["Mythic", "Ancient", "Astral"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "Necromance": {
-        "mul": {"SPATK": 1.15, "HP": 0.95},
-        "add": {},
-        "tags": ["Summon:Undead", "SoulPact"],
-        "allowed_types": ["Dread", "Astral"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "Paranormal": {
-        "mul": {"SPDEF": 1.15, "LUCK": 1.08},
-        "add": {},
-        "tags": ["Phase", "Incorporeal"],
-        "allowed_types": ["Dread", "Astral", "Mythic", "Anomalous"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "Feralkin": {
-        "mul": {"SPD": 1.1, "ATK": 1.1},
-        "add": {},
-        "tags": ["Howl:Pack", "Tracker"],
-        "allowed_types": ["Beast", "Aerial"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "Shadowshroud": {
-        "mul": {"SPD": 1.08, "EVA": 1.12},
-        "add": {},
-        "tags": ["Veil:Dark", "Stealth"],
-        "allowed_types": ["Dread", "Beast"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "DarkIce": {
-        "mul": {"SPDEF": 1.12, "SPATK": 1.05},
-        "add": {},
-        "tags": ["Slide:Frost", "Frostbite"],
-        "allowed_types": ["Frost", "Dread", "Astral"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "Extrasensory": {
-        "mul": {"SPATK": 1.15, "ACC": 1.08},
-        "add": {},
-        "tags": ["Precognition", "Mind-Reader"],
-        "allowed_types": ["Astral", "Mythic"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "ThunderClap": {
-        "mul": {"SPATK": 1.15, "ATK": 1.1},
-        "add": {},
-        "tags": ["Call:Storm", "SonicBoom"],
-        "allowed_types": ["Electric", "Aerial", "Brawler"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "ArcheoAnomaly": {
-        "mul": {"ATK": 1.1, "SPDEF": 1.1},
-        "add": {"EVA": 3, "LUCK": 3},
-        "tags": ["Sentience:Inconsistent", "TemporalFlux"],
-        "allowed_types": ["Ancient", "Astral", "Anomalous"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "Tectonic": {
-        "mul": {"DEF": 1.25, "HP": 1.15, "ATK": 1.10},
-        "add": {"DEF": 10},
-        "tags": ["Resist:Stormforged", "Terrain:Bonus", "Terraform"],
-        "allowed_types": ["Mineral", "Ancient"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "Glacial": {
-        "mul": {"SPDEF": 1.25, "HP": 1.20, "SPD": 0.90},
-        "add": {"SPDEF": 10},
-        "tags": ["Resist:Frostbound", "Weak:Tempest", "IceArmor"],
-        "allowed_types": ["Frost", "Aquatic", "Ancient"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "Voltaic": {
-        "mul": {"SPD": 1.25, "SPATK": 1.20},
-        "add": {"ACC": 5},
-        "tags": ["Resist:Electric", "Weak:Terra", "StaticField"],
-        "allowed_types": ["Electric", "Brawler", "Aerial"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "Noxious": {
-        "mul": {"DEF": 1.20, "SPDEF": 1.15, "LUCK": 1.10},
-        "add": {},
-        "tags": ["DOT:Poison", "Weak:Radiant", "Neurotoxin"],
-        "allowed_types": ["Toxic", "Insect", "Dread"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "Radiant": {
-        "mul": {"SPATK": 1.10, "SPDEF": 1.15},
-        "add": {"ACC": 10},
-        "tags": ["Cure:Blind", "Weak:Shrouded", "HolyLight"],
-        "allowed_types": ["Mythic", "Astral", "Anomalous"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "BioLuminous": {
-        "mul": {"SPD": 1.20, "SPATK": 1.15, "EVA": 1.10},
-        "add": {"EVA": 5},
-        "tags": ["Glow", "Weak:Dread", "Photosynthesis"],
-        "allowed_types": ["Sylvan", "Aquatic", "Insect"],
-        "rarity": 1.0,
-        "synergy_bonus": {"Aquatic": 1.2},
-    },
-    "Psychic": {
-        "mul": {"SPATK": 1.25, "LUCK": 1.20, "SPDEF": 1.10},
-        "add": {"LUCK": 5},
-        "tags": ["Pierce:Barrier", "Weak:Obsidian", "Resist:Anomalous"],
-        "allowed_types": ["Mythic", "Astral", "Anomalous", "Dread"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "Solar": {
-        "mul": {"ATK": 1.20, "SPATK": 1.20, "HP": 1.10},
-        "add": {},
-        "tags": ["Regen:Day", "Weak:Chaos", "Sunfire"],
-        "allowed_types": ["Inferno", "Aerial", "Mythic", "Sylvan"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "Nocturnal": {
-        "mul": {"SPDEF": 1.25, "EVA": 1.15, "HP": 1.10},
-        "add": {},
-        "tags": ["Regen:Night", "Weak:Solar", "Moonshield"],
-        "allowed_types": ["Dread", "Beast", "Astral"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "Chaotic": {
-        "mul": {"ATK": 1.25, "SPATK": 1.25, "LUCK": 1.25, "HP": 0.90, "ACC": 0.95},
-        "add": {},
-        "tags": ["Random:Proc", "Weak:Ironclad", "Unstable"],
-        "allowed_types": ["Dread", "Astral", "Anomalous"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "Monolithic": {
-        "mul": {"DEF": 1.20, "ATK": 1.15, "HP": 1.10},
-        "add": {},
-        "tags": ["Ambush:Burrow", "Weak:Astral", "Tremorsense"],
-        "allowed_types": ["Mineral", "Ancient", "Beast"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "Tempest": {
-        "mul": {"SPD": 1.25, "ATK": 1.15},
-        "add": {"ACC": 5},
-        "tags": ["MultiHit:Storm", "Weak:Crystalline", "GaleForce"],
-        "allowed_types": ["Aerial", "Electric", "Aquatic"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "Shielded": {
-        "mul": {"DEF": 1.30, "SPDEF": 1.20, "SPD": 0.85},
-        "add": {"DEF": 15},
-        "tags": ["Guard:Stagger", "Weak:Shrouded", "Ironclad"],
-        "allowed_types": ["Brawler", "Mineral", "Ancient", "Beast"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "Vulcan": {
-        "mul": {"SPATK": 1.25, "DEF": 1.15},
-        "add": {"SPATK": 5},
-        "tags": ["Burn:Contact", "Weak:Tempest", "MagmaPlating"],
-        "allowed_types": ["Inferno", "Mineral"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "Atmos": {
-        "mul": {"SPD": 1.20, "EVA": 1.20},
-        "add": {"EVA": 10},
-        "tags": ["Evade:Aerial", "Weak:Electric", "Updraft"],
-        "allowed_types": ["Aerial", "Insect", "Mythic"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "Abyssal": {
-        "mul": {"HP": 1.25, "SPDEF": 1.20, "SPD": 0.90},
-        "add": {},
-        "tags": ["FirstStrike:Water", "Weak:Solar", "Pressure"],
-        "allowed_types": ["Aquatic", "Dread", "Ancient"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "Telekinesis": {
-        "mul": {"SPATK": 1.20, "LUCK": 1.15},
-        "add": {"ACC": 5},
-        "tags": ["Pierce:Mind", "Weak:Ironclad", "MindRead"],
-        "allowed_types": ["Astral", "Mythic", "Dread"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "Vedic": {
-        "mul": {"SPD": 1.15, "SPDEF": 1.15, "EVA": 1.10},
-        "add": {"EVA": 5},
-        "tags": ["Fog:Field", "Weak:Radiant", "Ethereal"],
-        "allowed_types": ["Dread", "Astral", "Anomalous"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "Farphase": {
-        "mul": {"SPD": 1.20, "LUCK": 1.15},
-        "add": {"ACC": 5},
-        "tags": ["Blink:Short", "Weak:Obsidian", "PhaseShift"],
-        "allowed_types": ["Astral", "Electric", "Dread"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "Metallic": {
-        "mul": {"DEF": 1.35, "ATK": 1.15},
-        "add": {"DEF": 15},
-        "tags": ["Resist:Toxic", "Weak:Electric", "MetalCoat"],
-        "allowed_types": ["Mineral", "Insect"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "Sensei": {
-        "mul": {"ATK": 1.10, "SPATK": 1.10, "ACC": 1.10},
-        "add": {"ACC": 10},
-        "tags": ["Mentor", "FlawlessTechnique"],
-        "allowed_types": ["Brawler", "Mythic", "Astral"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "Fossilized": {
-        "mul": {"HP": 1.05, "ATK": 1.22, "DEF": 1.20, "SPDEF": 1.12},
-        "add": {},
-        "tags": ["Ability:Revive", "Resist:Mineral"],
-        "allowed_types": ["Ancient", "Mineral", "Beast"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "BoltThrower": {
-        "mul": {"ATK": 1.15, "ACC": 1.05},
-        "add": {},
-        "tags": ["Call:Storm", "Jolt"],
-        "allowed_types": ["Electric", "Brawler", "Aerial"],
-        "rarity": 1.0,
-        "synergy_bonus": {},
-    },
-    "Stormforged": {
-        "mul": {"SPD": 1.20, "SPATK": 1.25, "ACC": 1.05},
-        "add": {},
-        "tags": ["Resist:Tempest", "Weak:Mineral", "Stormbringer"],
-        "allowed_types": ["Electric", "Aerial", "Mythic"],
-        "rarity": 1.1,
-        "synergy_bonus": {"Electric": 1.2, "Aerial": 1.1},
-    },
-    "Sylvan": {
-        "mul": {"HP": 1.20, "SPDEF": 1.20, "SPD": 0.9},
-        "add": {"HP": 20},
-        "tags": ["Regen:Terrain", "Weak:Inferno", "Photosynthesis"],
-        "allowed_types": ["Sylvan", "Toxic", "Aquatic"],
-        "rarity": 0.9,
-        "synergy_bonus": {"Sylvan": 1.1},
-    },
-    "Shrouded": {
-        "mul": {"EVA": 1.25, "SPD": 1.15, "ATK": 1.10},
-        "add": {"EVA": 10},
-        "tags": ["Stealth:Shadow", "Weak:Radiant", "Shadowstep"],
-        "allowed_types": ["Dread", "Astral", "Insect"],
-        "rarity": 1.2,
-        "synergy_bonus": {"Dread": 1.4},
-    },
-    "Fey-touched": {
-        "mul": {"LUCK": 1.30, "SPATK": 1.15, "SPD": 1.10},
-        "add": {"LUCK": 15},
-        "tags": ["Fey-curse", "Weak:Metallic", "Mischief"],
-        "allowed_types": ["Mythic", "Sylvan", "Insect", "Astral"],
-        "rarity": 1.3,
-        "synergy_bonus": {"Mythic": 1.4},
-    },
-}
-
-UTILITY_MODS = {
-    "CosmicInterpreter": {
-        "identify_rates": 0.30,
-        "quest_bonus": 0.1,
-        "tags": ["Identify:Rare", "StarChart"],
-        "rarity": 1,
-        "allowed_types": ["Mythic", "Astral", "Anomalous"],
-    },
-    "Symbiote": {
-        "field_heal_ticks": 0.08,
-        "ally_heal_ticks": 0.04,
-        "tags": ["HealingAura", "Lifebond"],
-        "rarity": 1,
-        "allowed_types": ["Sylvan", "Insect", "Aquatic"],
-    },
-    "Ageless": {
-        "exp_mult": 1.15,
-        "loot_mult": 1.20,
-        "tags": ["Lore:Gates", "AncientWisdom"],
-    },
-    "BornLeader": {
-        "ally_buff": {"ATK": 1.15, "DEF": 1.1},
-        "exp_share_bonus": 0.25,
-        "tags": ["VeteranPresence", "BattleCry", "Rally"],
-    },
-    "Diviner": {
-        "minimap_reveal": True,
-        "loot_mult": 1.1,
-        "tags": ["Reveal:Secrets", "Dowsing"],
-    },
-    "InnateGuard": {
-        "ally_buff": {"DEF": 1.15, "SPDEF": 1.15},
-        "aggro_redirect": True,
-        "tags": ["Bodyguard", "ShieldAlly"],
-    },
-    "Empath": {
-        "ally_heal_on_crit": 0.15,
-        "npc_dialog_plus": True,
-        "tags": ["Soothing", "HealPulse"],
-    },
-    "KeeperOfKeys": {
-        "unlock_tags": ["Gate:Runic", "Door:Sealed", "Chest:Ancient"],
-        "tags": ["Locksmith", "MasterKey"],
-    },
-    "Historian": {
-        "npc_dialog_plus": True,
-        "exp_mult": 1.05,
-        "tags": ["Diplomacy", "Scribe", "Lorekeeper"],
-    },
-    "Impossible": {
-        "rng_luck_bias": 0.15,
-        "double_rolls": ["Crit"],
-        "tags": ["WildProcs", "ProbabilityBender"],
-        "allowed_types": ["Mythic", "Astral", "Anomalous"],
-    },
-    "LongSeeker": {
-        "track_rare_spawns": True,
-        "track_rare_loot": True,
-        "minimap_reveal": True,
-        "tags": ["Tracker", "TreasureHunter"],
-    },
-    "Transient": {
-        "camp_bonus": {"Heal%": 0.10, "exp_mult": 1.20},
-        "shop_discount": 0.05,
-        "tags": ["Wanderer", "Survivalist"],
-    },
-    "Cartographer": {
-        "fast_travel_nodes": True,
-        "map_reveal_radius": 1.5,
-        "tags": ["Pathfinder", "WorldMap"],
-    },
-    "SuperPositioned": {
-        "double_rolls": ["Loot", "Crit", "Evasion"],
-        "rng_luck_bias": 0.1,
-        "tags": ["Quantum", "Uncertainty"],
-        "allowed_types": ["Astral", "Electric", "Anomalous"],
-    },
-    "CombatController": {
-        "enemy_opening_debuff": {"SPD": 0.85, "ACC": -10},
-        "ally_buff": {"SPD": 1.1},
-        "tags": ["Disorient", "Tactician"],
-    },
-    "Scholar": {
-        "ally_exp_mult": 1.20,
-        "identify_rates": 0.15,
-        "tags": ["Study", "AnalyzeWeakness"],
-    },
-    "Humanitarian": {
-        "loot_to_supplies": 0.25,
-        "ally_heal_on_kill": 0.05,
-        "tags": ["ConvertLoot", "FieldMedic"],
-    },
-    "Grinder": {
-        "spar_exp_bonus": 0.25,
-        "stat_gain_bonus": 0.05,
-        "tags": ["Determined", "NoPainNoGain"],
-    },
-    "NaturalDetector": {
-        "pull_items_radius": 15,
-        "pull_hidden_radius": 10,
-        "tags": ["Magnetism", "ItemScavenger"],
-        "allowed_types": ["Electric", "Mineral", "Brawler"],
-    },
-    "Confidant": {
-        "npc_dialog_plus": True,
-        "minimap_reveal": True,
-        "unlock_tags": ["Path:Hidden"],
-        "tags": ["Whispers", "VeiledKnowledge"],
-    },
-    "AntiExtinct": {
-        "self_revive": True,
-        "identify_fossils": True,
-        "identify_eggs": True,
-        "tags": ["LastOfKind", "Endangered"],
-        "allowed_types": ["Ancient", "Mythic"],
-    },
-    "Alchemist": {
-        "loot_to_supplies": 0.15,
-        "crafting_bonus": 0.1,
-        "tags": ["Transmute", "PotionMaster"],
-        "allowed_types": ["Toxic", "Sylvan", "Astral"],
-    },
-    "Geomancer": {
-        "field_buff": {"DEF": 1.1},
-        "unlock_tags": ["Terrain:Blocked"],
-        "tags": ["Earthshaper", "LeylineReader"],
-        "allowed_types": ["Mineral", "Sylvan", "Ancient"],
-    },
-    "Chronomancer": {
-        "rng_luck_bias": 0.1,
-        "enemy_opening_debuff": {"SPD": 0.95},
-        "tags": ["TimeWarp", "Haste", "Slow"],
-        "allowed_types": ["Astral", "Mythic", "Anomalous"],
-    },
-    "Forager": {
-        "loot_mult_consumable": 1.5,
-        "tags": ["Finds:Herbs", "Finds:Mushrooms", "Resourceful"],
-        "allowed_types": ["Sylvan", "Beast", "Insect"],
-    },
-    "Haggler": {
-        "shop_discount": 0.30,
-        "shop_sell_bonus": 0.15,
-        "tags": ["Barter", "MerchantFriend"],
-    },
-    "Pathwarden": {
-        "terrain_neg_resist": 0.5,
-        "tags": ["Sure-footed", "All-Terrain"],
-        "allowed_types": ["Mineral", "Beast", "Aerial", "Ancient"],
-    },
-    "MasterCrafter": {
-        "crafting_bonus": 0.25,
-        "crafting_speed_mult": 1.5,
-        "tags": ["Artisan", "Tinkerer", "Masterwork"],
-        "allowed_types": ["Brawler", "Astral", "Mineral", "Ancient"],
-    },
-}
-
+MAJOR_MODS = _load_mods_yaml("major_mods.yaml")
+UTILITY_MODS = _load_mods_yaml("utility_mods.yaml")
 ALL_MODS = [MAJOR_MODS, UTILITY_MODS]
 
+
+LEGACY_TYPE_MAP: Dict[str, str] = {
+    # Legacy -> new type mapping to help migrate existing mod and habitat data. Keys that are not present in this map will be left unchanged
+    "Argent": "Axiom",
+    "Kinetic": "Spur",
+    "Chrono": "Rift",
+    "Gaian": "Bloom",
+    "Vermillion": "Idol",
+    "Veridian": "Bloom",
+    "Azure": "Flow",
+    "Aether": "Geist",
+    "Arcane": "Axiom",
+    "Abyssal": "Dread",
+    "Apex": "Bastion",
+    "Sylvan": "Bloom",
+    "Inferno": "Idol",
+    "Mineral": "Axiom",
+    "Aerial": "Bastion",
+    "Beast": "Bastion",
+    "Toxic": "Mire",
+    "Electric": "Spur",
+    "Frost": "Flow",
+    "Brawler": "Bastion",
+    "Ancient": "Rift",
+    "Mythic": "Geist",
+    "Insect": "Bloom",
+    "Astral": "Geist",
+    "Anomalous": "Rift",
+}
+
+
+def _remap_type(name: str) -> str:
+    return LEGACY_TYPE_MAP.get(name, name)
+
+
+def _normalize_mods(mods: Dict[str, Dict[str, Any]]) -> None:
+    """
+    Summary:
+            Standardizes existing mod datasets to use the new type names.
+
+    Args:
+            mods: Dictionary mapping mod names to their configuration dictionaries.
+
+    Returns:
+            None. The input 'mods' dictionary is modified in place.
+    """
+
+    for mod_name, mod in mods.items():
+        if not isinstance(mod, dict):
+            continue
+        if "allowed_types" in mod and isinstance(mod["allowed_types"], list):
+            mod["allowed_types"] = [_remap_type(t) for t in mod["allowed_types"]]
+        if "incompatible_types" in mod and isinstance(mod["incompatible_types"], list):
+            mod["incompatible_types"] = [
+                _remap_type(t) for t in mod["incompatible_types"]
+            ]
+        if "synergy_bonus" in mod and isinstance(mod["synergy_bonus"], dict):
+            new_sb: Dict[str, float] = {}
+            for k, v in mod["synergy_bonus"].items():
+                new_sb[_remap_type(k)] = v
+            mod["synergy_bonus"] = new_sb
+
+
+def _normalize_habitats(
+    habitats_by_type: Dict[str, Dict[str, float]],
+) -> Dict[str, Dict[str, float]]:
+
+    new_map: Dict[str, Dict[str, float]] = {}
+    for old_type, habs in habitats_by_type.items():
+        new_type = _remap_type(old_type)
+        if new_type not in new_map:
+            new_map[new_type] = {}
+        for hab, w in habs.items():
+            new_map[new_type][hab] = new_map[new_type].get(hab, 0.0) + float(w)
+    return new_map
+
+
+# Normalize existing mod datasets and habitats to the new canonical types.
+_normalize_mods(MAJOR_MODS)
+_normalize_mods(UTILITY_MODS)
+
+# Migrate legacy HABITATS_BY_TYPE to remapped keys (safe fallback for old code).
+try:
+    HABITATS_BY_TYPE = _normalize_habitats(HABITATS_BY_TYPE)
+except NameError:
+    # If HABITATS_BY_TYPE is not defined (moved earlier), skip silently.
+    pass
+
+
+# Final cleanup: deduplicate and sort allowed_types lists and synergy_bonus keys
+def _cleanup_mods(mods: Dict[str, Dict[str, Any]]) -> None:
+    for mod in mods.values():
+        if "allowed_types" in mod and isinstance(mod["allowed_types"], list):
+            seen = []
+            for t in mod["allowed_types"]:
+                tnorm = _remap_type(t)
+                if tnorm not in seen:
+                    seen.append(tnorm)
+            mod["allowed_types"] = sorted(seen)
+        if "incompatible_types" in mod and isinstance(mod["incompatible_types"], list):
+            seen = []
+            for t in mod["incompatible_types"]:
+                tnorm = _remap_type(t)
+                if tnorm not in seen:
+                    seen.append(tnorm)
+            mod["incompatible_types"] = sorted(seen)
+        if "synergy_bonus" in mod and isinstance(mod["synergy_bonus"], dict):
+            new_sb = {}
+            for k, v in mod["synergy_bonus"].items():
+                nk = _remap_type(k)
+                if nk in new_sb:
+                    new_sb[nk] = max(new_sb[nk], v)
+                else:
+                    new_sb[nk] = v
+            mod["synergy_bonus"] = dict(sorted(new_sb.items()))
+
+
+_cleanup_mods(MAJOR_MODS)
+_cleanup_mods(UTILITY_MODS)
+
+_validate_mods(MAJOR_MODS, BASE_STATS, SEED_TYPES, "major_mods.yaml")
+_validate_mods(UTILITY_MODS, BASE_STATS, SEED_TYPES, "utility_mods.yaml")
+
+
 def _load_weighted_yaml(filename: str) -> Dict[str, float]:
-    """Loads a YAML file of {'name': str, 'weight': float} into a dict for weighted_choice."""
+
     filepath = Path(__file__).parent / filename
     if not filepath.exists():
         raise FileNotFoundError(f"Data file not found: {filepath}")
     with open(filepath, "r", encoding="utf-8") as f:
         data = yaml.safe_load(f)
-    return {item['name']: item.get('weight', 1.0) for item in data if 'name' in item}
+    return {item["name"]: item.get("weight", 1.0) for item in data if "name" in item}
+
 
 PHYSICAL_TRAITS = _load_weighted_yaml("physical_traits.yaml")
 HELD_ITEMS = _load_weighted_yaml("held_items.yaml")

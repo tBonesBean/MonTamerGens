@@ -1,18 +1,6 @@
-# AGENTS.MD: Master Instructions for both AI and Stupid Human Contributors
+# DEV_BIBLE.MD: Master Instructions for both AI and Stupid Human Contributors
 
-# !!! ATTENTION AI AGENTS !!!
-
-## MANDATORY PREREQUISITE: Full Context Review
-
-Before making any contribution, you **MUST** recursively read, understand, and adhere to the entire contents of the [`ai_context`](./docs/ai_context/) directory. This is not an optional step.
-
-**Failure to comply will result in the immediate rejection of your contribution.**
-
-The documents within `ai_context/` define the project's architecture, data schemas, naming conventions, and core principles. Any contribution made without this foundational knowledge will be considered misaligned and incorrect.
-
-**By proceeding with any contribution, you affirm that you have fully reviewed and understood the complete contents of the `./ai_context/` directory.**
-
-# 🌑 **MonTamerGens — Unified Design Bible (v1.1)**
+# 🌑 **MonTamerGens — Unified Design Bible (v1.2)**
 
 _A living canon for the MonTamerGens universe, systems, aesthetics, and architecture._
 
@@ -203,9 +191,9 @@ The generation of a monster is a multi-stage process that transforms raw data in
 
 4. **`monster_cache.py`**: The completed `MonsterSeed` is serialized and saved to a cache, typically a JSONL file, with a unique ID.
 
-5. **`prompt_engine.py`**: (Presumed) This module will use the final `MonsterSeed` to construct a detailed prompt for a visual generation model.
+5. **`prompt_engine.py`**: This module will use the final `MonsterSeed` to construct a detailed prompt for a visual generation model.
 
-6. **`dex_entries.py`**: (Presumed) This module will use the final `MonsterSeed` to generate formatted, narrative-rich text for a bestiary or "Dex."
+6. **`dex_entries.py`**: This module will use the final `MonsterSeed` to generate formatted, narrative-rich text for a bestiary or "Dex."
 
 ## **4.3 Determinism Rules**
 
@@ -323,15 +311,17 @@ Tests must cover:
 
 ## **9. Versioning**
 
-This document is **v1.1** — updated to reflect the current canonical type taxonomy, YAML-first content model, and recent data migration.  
+This document is **v1.2** - updated to reflect the current canonical type taxonomy, YAML-first content model, and recent data migration.
 Changes in this release:
 
--   Migrated core types to YAML (`seed_types.yaml` / `type_forms.yaml`).
--   Reconciled major mutagens and utility mods to canonical type names.
--   Adjusted generation code paths to use `SEED_TYPE_DATA` and `MonsterSeed.forge()` improvements.
--   Clarified the roles of `monsterseed.py` and `mon_forge.py` in the generation pipeline.
--   Updated the "Technical Architecture" and "Systems Design" sections to match the current implementation.
+-   Normalized `seed_types.yaml` to the schema shape (list habitats, explicit tags).
+-   Clarified that `seed_types_schema.md` requires `attributes.notes`.
+-   Added schema and module-purpose documentation updates (including module_purposes and schemas readmes).
+-   Documented current pipeline behavior based on the refactor state.
+-   Confirmed `prompt_engine.py` and `dex_entries.py` are implemented (removed presumed labels).
 
-All future edits should continue the principle: changes must be additive, clarifying, or canon‑strengthening.
+All future edits should continue the principle: changes must be additive, clarifying, or canon-strengthening.
+
+Last updated: 2026-01-13 04:56:41 -07:00
 
 ---

@@ -62,7 +62,9 @@ VISUAL_TRANSLATION = {
         "CanopyProtected": "covered in broad camouflage leaves",
         "TurbulentFlow": "surrounded by swirling water currents",
         "BergSurfer": "standing on a small ice floe, frosty breath",
-        "SuperOrbital": "tiny orbiting celestial bodies",
+        "HelioCentric": "tiny orbiting solar motes and a subtle sunflare aura",
+        # legacy alias (kept for compatibility with older assets)
+        "SuperOrbital": "tiny orbiting solar motes and a subtle sunflare aura",
         "Stormborn": "sparks jumping between limbs, static hair",
         "VineGatherer": "entangled in flowering vines",
         "Runestone": "glowing runic carving on forehead or chest",
@@ -142,24 +144,35 @@ VISUAL_TRANSLATION = {
 }
 
 TYPE_VISUALS = {  # --- 3. BODY PLAN (60% Weight)
-    "Mineral": "typically thicker physique, rock-hewn or crystallized structures and silhouettes, diverse mineral textures/colors",
-    "Beast": "muscular build, hybrid quadruped-biped posture, fur textures",
-    "Aquatic": "smooth textures, fins and gills, fluid posture, ornaments or accessories to increase diversity of common 'fish' shape",
-    "Frost": "sharp angular shapes, crystalline ice reflections, jagged silhouette",
-    "Brawler": "athletic stance, emphasized fists or striking limbs, bipedal",
-    "Insect": "segmented carapace, multiple limbs, antennae, alien posture",
-    "Mythic": "majestic presence, flowing fur or feathers, intricate details, exotic anatomical ornaments or fancy clothing items",
-    "Electric": "jagged aura, static fur or plating, glowing nodes, expressions of magnetic fields if possible",
-    "Sylvan": "organic shapes and limbs, leaf/flower/root/petal clusters, often undergrowth or bark textured, rarely bipedal",
-    "Aerial": "upright aerodynamic posture, exagerrated feather forms and colors, enlarged physical attribute such as "
-    "talons/beak/wingspan",
-    "Dread": "unsettling elongated posture, asymmetrical shapes, shadowy presence, exotic anatomical figure, missing or extra "
-    "physical features",
-    "Inferno": "visible evidence of extreme heat without implying 'fire related damage or trauma', smoke tendrils, heat distortion",
-    "Toxic": "bulbous glands, dripping textures, warning colors, exaggerated fangs/teeth and claws/talons, reptilian inspiration",
-    "Ancient": "weathered scales, fossilized plating, prehistoric anatomy",
-    "Astral": "floating elements, large eyes, glowing geometric patterns, species blurs toward humanoid form without losing identity",
-    "Anomalous": "desaturated palette, ghostly transparency, minimalist features",
+    # Canonical types (Lumen Mythos) — body plan guidance
+    "Axiom": "ordered, lattice-like silhouettes; geometry-forward bodies with metallic or polished facets",
+    "Spur": "compact, kinetic posture; emphasis on striking limbs and angular motion lines",
+    "Echo": "repetitive or mirrored anatomy; elements that suggest memory (scars, echoes, layered plating)",
+    "Flow": "streamlined, adaptive shapes; tendrils or fin-like elements suggesting fluid motion",
+    "Bastion": "massive, grounded silhouettes with broad plates or natural armor; stable posture",
+    "Rift": "asymmetry and displaced geometry; parts that seem out-of-phase or split by space",
+    "Mire": "sagging, waterlogged forms with clinging textures, moss and residue; slow-moving silhouette",
+    "Idol": "ornamental, attention-drawing forms with radiant ornaments and ceremonial shapes",
+    "Geist": "ethereal, semi-translucent presence; floating components and soft glowing nodes",
+    "Bloom": "organic growth-driven shapes: petals, shoots, canopies, and symbiotic appendages",
+    "Vessel": "hollow-forward anatomy with cavities, receptacles, and inward-facing geometry",
+    "Dread": "unnerving elongation, shadow-first shapes, jagged or extra appendages that hint at predation",
+}
+
+# Palette guidance by canonical type — primary palette, accent suggestions, shadow tint guidance
+PALETTE_BY_TYPE = {
+    "Axiom": {"primary": "steel-gray", "accent": "pale-cyan", "shadow_tint": "purple"},
+    "Spur": {"primary": "crimson", "accent": "amber", "shadow_tint": "deep-purple"},
+    "Echo": {"primary": "dusky-lavender", "accent": "silver", "shadow_tint": "indigo"},
+    "Flow": {"primary": "teal", "accent": "sea-green", "shadow_tint": "blue-purple"},
+    "Bastion": {"primary": "stone-gray", "accent": "moss-green", "shadow_tint": "brown-purple"},
+    "Rift": {"primary": "midnight-blue", "accent": "violet", "shadow_tint": "indigo"},
+    "Mire": {"primary": "mud-brown", "accent": "sickly-green", "shadow_tint": "olive-purple"},
+    "Idol": {"primary": "golden-ochre", "accent": "vermilion", "shadow_tint": "sepia-purple"},
+    "Geist": {"primary": "pale-cerulean", "accent": "ghost-white", "shadow_tint": "lavender"},
+    "Bloom": {"primary": "leaf-green", "accent": "veridian", "shadow_tint": "purple"},
+    "Vessel": {"primary": "hollow-ivory", "accent": "muted-amber", "shadow_tint": "plum"},
+    "Dread": {"primary": "obsidian", "accent": "blood-red", "shadow_tint": "deep-purple"},
 }
 # --- Specific Species Visual Override... because they really are mega abstract ---
 SPECIES_VISUAL_OVERRIDES = {

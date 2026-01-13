@@ -19,19 +19,25 @@ mutation_context = "species" | "instance" | "encounter"
 
 
 def _choose_physical_traits() -> list[str]:
-    """
-    Selects one or two random physical traits based on weighted choices.
-    Returns: A list containing one or two randomly selected physical traits.
-    """
+    '''
+    Summary:
+        Selects one or two random physical traits based on weighted choices.
+
+    Returns:
+        A list containing one or two randomly selected physical traits.
+    '''
     num_physical = 1 if random.random() < 0.75 else 2
     return [weighted_choice(PHYSICAL_TRAITS) for _ in range(num_physical)]
 
 
 def _choose_held_item() -> str | None:
-    """
-    Selects a random held item with a 40% probability.
-    Returns: A string representing the chosen held item, or None if no item is chosen.
-    """
+    '''
+    Summary:
+        Selects a random held item with a 40% probability.
+
+    Returns:
+        A string representing the chosen held item, or None if no item is chosen.
+    '''
     return weighted_choice(HELD_ITEMS) if random.random() < 0.4 else None
 
 

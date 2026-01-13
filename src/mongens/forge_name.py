@@ -3,7 +3,7 @@ import hashlib
 import random
 import re
 from typing import Iterable, List, Optional, Dict
- 
+
 from .monsterseed import MonsterSeed
 
 """
@@ -102,23 +102,70 @@ _SYLLABLE_CHAIN = {
 
 # Type-biased syllables - simplified to prefixes and suffixes
 _TYPE_FLAVORS = {
-    "Insect": {
-        "prefixes": ["Vesp", "Myr", "For", "Tikk", "Skor"],
-        "suffixes": ["ix", "ula", "opter", "nid"],
+    "Bloom": {
+        "prefixes": [
+            "Verd",
+            "Fol",
+            "Bry",
+            "Thall",
+            "Myco",
+            "Vesp",
+            "Myr",
+            "For",
+            "Tikk",
+            "Skor",
+        ],
+        "suffixes": ["ian", "us", "flora", "root", "ix", "ula", "opter", "nid"],
     },
-    "Aerial": {
-        "prefixes": ["Zephyr", "Aer", "Gale", "Corv", "Strato"],
-        "suffixes": ["ix", "alon", "or", "wing"],
+    "Bastion": {
+        "prefixes": [
+            "Urs",
+            "Taur",
+            "Lug",
+            "Gruf",
+            "Bar",
+            "Zephyr",
+            "Aer",
+            "Gale",
+            "Corv",
+            "Strato",
+            "Pug",
+            "Brut",
+            "Kno",
+            "Doj",
+            "Fen",
+        ],
+        "suffixes": [
+            "os",
+            "ok",
+            "don",
+            "fang",
+            "ix",
+            "alon",
+            "or",
+            "wing",
+            "ox",
+            "unch",
+            "ite",
+            "fist",
+        ],
     },
-    "Sylvan": {
-        "prefixes": ["Verd", "Fol", "Bry", "Thall", "Myco"],
-        "suffixes": ["ian", "us", "flora", "root"],
+    "Geist": {
+        "prefixes": [
+            "Luc",
+            "Sol",
+            "Rad",
+            "Div",
+            "Theo",
+            "Ast",
+            "Zor",
+            "Cel",
+            "Cosm",
+            "Psion",
+        ],
+        "suffixes": ["ius", "eon", "os", "el", "on", "ith", "ius", "aeon"],
     },
-    "Astral": {
-        "prefixes": ["Ast", "Zor", "Cel", "Cosm", "Psion"],
-        "suffixes": ["on", "ith", "ius", "aeon"],
-    },
-    "Inferno": {
+    "Idol": {
         "prefixes": ["Pyr", "Cyn", "Brax", "Ign", "Sol"],
         "suffixes": ["ar", "is", "flare", "blaze"],
     },
@@ -126,79 +173,82 @@ _TYPE_FLAVORS = {
         "prefixes": ["Noct", "Umbr", "Gloom", "Murk", "Mal"],
         "suffixes": ["oth", "usk", "gore", "wraith"],
     },
-    "Mineral": {
+    "Axiom": {
         "prefixes": ["Ter", "Dol", "Gran", "Bas", "Geo"],
         "suffixes": ["on", "ite", "lith", "odon"],
     },
-    "Aquatic": {
-        "prefixes": ["Aqu", "Mar", "Rill", "Naut", "Thal"],
-        "suffixes": ["is", "or", "fin", "tide"],
+    "Flow": {
+        "prefixes": [
+            "Cryo",
+            "Glac",
+            "Fri",
+            "Rim",
+            "Gel",
+            "Aqu",
+            "Mar",
+            "Rill",
+            "Naut",
+            "Thal",
+        ],
+        "suffixes": ["is", "or", "fin", "tide", "is", "ix", "eon", "frost"],
     },
-    "Electric": {
+    "Spur": {
         "prefixes": ["Vol", "Ion", "Arc", "Tes", "Zil"],
         "suffixes": ["ix", "ark", "eon", "volt"],
     },
-    "Mythic": {
-        "prefixes": ["Luc", "Sol", "Rad", "Div", "Theo"],
-        "suffixes": ["ius", "eon", "os", "el"],
-    },
-    "Toxic": {
+    "Mire": {
         "prefixes": ["Nox", "Vir", "Bligh", "Tox", "Vek"],
         "suffixes": ["ex", "ius", "ile", "spore"],
     },
-    "Beast": {
-        "prefixes": ["Urs", "Taur", "Lug", "Gruf", "Bar"],
-        "suffixes": ["os", "ok", "don", "fang"],
-    },
-    "Ancient": {
-        "prefixes": ["Arch", "Paleo", "Saur", "Foss", "Mega"],
-        "suffixes": ["lith", "don", "yx", "raptor"],
-    },
-    "Frost": {
-        "prefixes": ["Cryo", "Glac", "Fri", "Rim", "Gel"],
-        "suffixes": ["is", "ix", "eon", "frost"],
-    },
-    "Brawler": {
-        "prefixes": ["Pug", "Brut", "Kno", "Doj", "Fen"],
-        "suffixes": ["ox", "unch", "ite", "fist"],
-    },
-    "Anomalous": {
-        "prefixes": ["Omni", "Null", "Eth", "Anom"],
-        "suffixes": ["us", "ex", "ion", "oid"],
+    "Rift": {
+        "prefixes": [
+            "Arch",
+            "Paleo",
+            "Saur",
+            "Foss",
+            "Mega",
+            "Omni",
+            "Null",
+            "Eth",
+            "Anom",
+        ],
+        "suffixes": ["lith", "don", "yx", "raptor", "us", "ex", "ion", "oid"],
     },
 }
 
 # Mapping of secondary types to adjectival forms for formatted dual-type names.
 TYPE_TO_ADJ: Dict[str, str] = {
-    "Frost": "Frost",
-    "Inferno": "Molten",
-    "Mineral": "Ore",
-    "Aquatic": "Aquatic",
-    "Electric": "Charged",
-    "Astral": "Astral",
-    "Toxic": "Toxic",
-    "Insect": "Chitinous",
-    "Aerial": "Sky",
-    "Mythic": "Mythic",
-    "Beast": "Beastly",
-    "Ancient": "Ancient",
+    "Flow": "Flowing",
+    "Idol": "Radiant",
+    "Axiom": "Ordered",
+    "Bloom": "Verdant",
+    "Spur": "Charged",
+    "Geist": "Ethereal",
+    "Bastion": "Stalwart",
+    "Rift": "Temporal",
+    "Mire": "Miry",
+    "Vessel": "Hollow",
     "Dread": "Dread",
-    "Brawler": "Brawling",
-    "Anomalous": "Anomalous",
-    "Sylvan": "Organis",
-    "Inferno": "Molten",
+    "Echo": "Echoing",
 }
 
-def format_dual_type(primary: str, secondary: Optional[str], style: str = "adj-n") -> str:
-    """Format a dual-type label.
 
-    Styles:
-      - "adj-n": "SecondaryAdj PrimaryNoun" (default)
-      - "hyphen": "Secondary-Primary"
-      - "epithet": "Primary, the SecondaryAdj"
+def format_dual_type(
+    primary: str, secondary: Optional[str], style: str = "adj-n"
+) -> str:
+    """
+    Summary:
+        Formats a dual-type label into a human-readable string.
 
-    If secondary is falsy, returns the primary.
-    Falls back to using the raw secondary string when no adjective mapping exists.
+    Args:
+        primary: The primary type of the monster.
+        secondary: The optional secondary type.
+        style: The formatting style to use ('adj-n', 'hyphen', or 'epithet').
+
+    Returns:
+        A formatted string for the dual-type. If secondary is not provided,
+        it returns the primary type. It falls back to the raw secondary
+        string if no adjective mapping exists.
     """
     if not secondary:
         return primary
@@ -226,8 +276,7 @@ _MAJOR_EPITHETS = {
     "BattleScarred": ["the Veteran", "Scar-Covered"],
     "RuneReader": ["the Rune-Carved", "Glyph-Bound"],
     "Cultivated": ["the Domestic", "Garden-Grown"],
-    "SuperOrbital": ["the Gravity-Well", "Orbital"],
-    "SandCrawler": ["the Dune-Dweller", "Sand-Swept"],
+    "HelioCentric": ["the Helio-Blessed", "Solar-Driven"],
     "Brimstone": ["the Smoldering", "of the Ash"],
     "LoreGuardian": ["the Lore-Keeper", "Scroll-Warden"],
     "Necromance": ["the Soul-Pacted", "Death-Caller"],
@@ -261,8 +310,7 @@ _MAJOR_EPITHETS = {
     "Sensei": ["the Master", "Flawless"],
     "Fossilized": ["the Revived", "Fossil-Bound"],
     "BoltThrower": ["the Javelin-Hurler", "Bolt-Caster"],
-    "Stormforged": ["the Storm-Bringer", "Tempest-Made"],
-    "Sylvan": ["the Ever-Green", "Regrowing"],
+    "Bloom": ["the Ever-Green", "Regrowing"],
     "Shrouded": ["the Shadow-Stepper", "Umbral"],
     "Fey-touched": ["the Mischievous", "Fey-Cursed"],
 }
@@ -317,12 +365,34 @@ _GENERIC_EPITHETS = [
 # Helpers
 # -----------------------
 def _stable_seed_int(*parts: object, salt: str = "") -> int:
+    """
+    Summary:
+        Creates a deterministic integer seed from a variable number of parts and an optional salt.
+
+    Args:
+        *parts: Any number of objects to be converted to strings and included in the seed.
+        salt: An optional string to be added to the seed.
+
+    Returns:
+        A deterministic integer derived from the hashed input parts.
+    """
     joined = "|".join([str(p) for p in parts]) + "|" + salt
     h = hashlib.sha256(joined.encode("utf-8")).hexdigest()
     return int(h[:16], 16)
 
 
 def _weighted_choice(rng: random.Random, choices: dict) -> str:
+    """
+    Summary:
+        Selects a choice from a dictionary of choices with associated weights.
+
+    Args:
+        rng: A random.Random object to use for the selection.
+        choices: A dictionary where keys are the choices and values are their weights.
+
+    Returns:
+        The selected choice as a string.
+    """
     total = sum(choices.values())
     r = rng.uniform(0, total)
     upto = 0
@@ -334,6 +404,16 @@ def _weighted_choice(rng: random.Random, choices: dict) -> str:
 
 
 def slugify(name: str) -> str:
+    """
+    Summary:
+        Converts a string into a slug-like format.
+
+    Args:
+        name: The string to be slugified.
+
+    Returns:
+        The slugified string, with spaces and hyphens replaced by underscores.
+    """
     s = name.lower().strip()
     s = re.sub(r"[^\w\s-]", "", s)
     s = re.sub(r"[\s\-]+", "_", s)
@@ -355,10 +435,31 @@ def deterministic_name(
     epithet_prob: float = 0.25,
 ) -> str:
     """
-    Generates a deterministic, pronounceable name using a weighted syllable chain.
+    Summary:
+        Generates a deterministic, pronounceable name using a weighted syllable chain.
+
+    Args:
+        idnum: The monster's ID number.
+        primary_type: The primary type of the monster.
+        secondary_type: The optional secondary type of the monster.
+        mutagens: A dictionary of mutagens applied to the monster.
+        style: The naming style to use (e.g., 'fantasy').
+        syllables: The number of syllables in the name. If None, it's determined randomly.
+        salt: An optional salt to add to the seeding hash.
+        max_name_chars: The maximum number of characters for the name.
+        epithet_prob: The probability of adding an epithet to the name.
+
+    Returns:
+        The generated name as a string.
     """
     seed_int = _stable_seed_int(
-        idnum,primary_type, secondary_type, ",".join(sorted(mutagens.get("utility", []) + sorted(mutagens.get("major", [])))), salt=salt
+        idnum,
+        primary_type,
+        secondary_type,
+        ",".join(
+            sorted(mutagens.get("utility", []) + sorted(mutagens.get("major", [])))
+        ),
+        salt=salt,
     )
     rng = random.Random(seed_int)
 
@@ -424,7 +525,7 @@ def deterministic_name(
         for mutagen_key in mutagens.get("major", []):
             if mutagen_key in _MAJOR_EPITHETS:
                 candidates.extend(_MAJOR_EPITHETS[mutagen_key])
-        
+
         for mutagen_key in mutagens.get("utility", []):
             if mutagen_key in _UTILITY_EPITHETS:
                 candidates.extend(_UTILITY_EPITHETS[mutagen_key])
@@ -435,8 +536,7 @@ def deterministic_name(
         # Fallback to a generic epithet if no specific ones were found
         else:
             epithet = rng.choice(_GENERIC_EPITHETS)
-    
-    
+
     # canonical assembly: prefer ", the <Epithet>" unless epithet already looks like a suffix
     def _epithet_needs_article(e):
         return not re.search(r"[-\s]", e) or e.lower().startswith("the ")
@@ -454,8 +554,17 @@ def forge_monster_name(
     seed: MonsterSeed, style: str = "fantasy", salt: str = ""
 ) -> MonsterSeed:
     """
-    Generates a name for a monster and assigns it to the `name` attribute.
-    This function modifies the seed object in-place.
+    Summary:
+        Generates a name for a monster and assigns it to the `name` attribute.
+        This function modifies the seed object in-place.
+
+    Args:
+        seed: The MonsterSeed object to name.
+        style: The naming style to use.
+        salt: An optional salt for the name generation.
+
+    Returns:
+        The modified MonsterSeed object with the new name.
     """
     seed.name = _generate_name_from_seed(seed, style, salt)
     return seed
@@ -465,8 +574,17 @@ def generate_alternative_names(
     seed: MonsterSeed, count: int = 5, style: str = "fantasy"
 ) -> List[str]:
     """
-    Generates a list of alternative names for a given monster seed.
-    This is non-deterministic by design, using a changing salt to get variations.
+    Summary:
+        Generates a list of alternative names for a given monster seed.
+        This is non-deterministic by design, using a changing salt to get variations.
+
+    Args:
+        seed: The MonsterSeed object to generate names for.
+        count: The number of alternative names to generate.
+        style: The naming style to use.
+
+    Returns:
+        A list of unique alternative names.
     """
     names = set()
     # Keep generating until we have the desired number of unique names
@@ -480,10 +598,16 @@ def generate_alternative_names(
 
 def _generate_name_from_seed(seed_obj, style: str = "fantasy", salt: str = "") -> str:
     """
-    Accepts a MonsterSeed-like object. Looks for:
-      - id or idnum
-      - primary_type / secondary_type
-      - mutagens dict
+    Summary:
+        Accepts a MonsterSeed-like object and generates a name from it.
+
+    Args:
+        seed_obj: The MonsterSeed object to generate a name for.
+        style: The naming style to use.
+        salt: An optional salt for the name generation.
+
+    Returns:
+        The generated name as a string.
     """
     idnum = (
         getattr(seed_obj, "id", None)

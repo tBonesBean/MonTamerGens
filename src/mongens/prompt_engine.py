@@ -3,16 +3,32 @@ from .forge_name import format_dual_type
 
 
 def translate_term(term: str) -> str:
-    """Helper to translate a term if mapped, else return it as-is."""
+    '''
+    Summary:
+        A helper function that translates a given term using the VISUAL_TRANSLATION map.
+        If the term is not found in the map, it is returned as-is.
+
+    Args:
+        term: The term to be translated.
+
+    Returns:
+        The translated term, or the original term if no translation is available.
+    '''
     return VISUAL_TRANSLATION.get(term, term)
 
 
 def construct_mon_prompt(seed) -> str:
-    """
-    Constructs a rigid, style-compliant image prompt for Stable Diffusion/DALL-E
-    based on the 'Pixel Art Style Guide' and 'mon_forge' output.
-    Uses VISUAL_TRANSLATION to convert abstract concepts into concrete prompts.
-    """
+    '''
+    Summary:
+        Constructs a rigid, style-compliant image prompt for Stable Diffusion/DALL-E
+        based on the 'Pixel Art Style Guide' and 'mon_forge' output.
+
+    Args:
+        seed: The MonsterSeed object to construct the prompt from.
+
+    Returns:
+        A formatted string containing the full image prompt.
+    '''
     # --- 1. DECONSTRUCT SEED DATA (Corrected Access) ---
     # Use direct attribute access for the object's fields
     species = seed.species

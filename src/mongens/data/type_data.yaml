@@ -1,0 +1,356 @@
+# This file defines the base monster types, their attributes, and habitats.
+# It is the single source of truth for all type-related data.
+- name: Echo
+  weight: 3
+  attributes:
+    mul:
+      SPD: 1.3
+      SPATK: 1.2
+      EVA: 1.1
+    tags:
+    - Sound-Based
+    - Resist:Aether
+    - Weak:Argent
+  habitats:
+    Skybridge Peaks: 0.8
+    Frozen Steppe: 0.9
+    Whispering Dunes: 0.9
+    Glass Desert: 0.8
+    Verdant Plains: 1.0
+    Highlands: 1.0
+    Shattered Plateau: 0.8
+    Wyrmscar Ridge: 0.8
+    Yittrosian Forest: 0.8
+- name: Argent
+  weight: 2
+  attributes:
+    mul:
+      DEF: 1.4
+      SPDEF: 1.3
+      ATK: 1.1
+      SPD: 0.8
+    tags:
+    - Metallic
+    - Resist:Kinetic
+    - Weak:Vermillion
+  habitats:
+    Crystalline Cave: 0.8
+    Petrified Forest: 0.8
+    Ancient Lavaflows: 0.8
+    Whispering Dunes: 0.9
+    Glass Caverns: 0.8
+    Thriving Reefs: 1.0
+    Crumbling Ruins: 1.0
+    Forgotten Temple: 0.8
+    Archaeological Dig: 0.9
+- name: Kinetic
+  weight: 3
+  attributes:
+    mul:
+      ATK: 1.3
+      SPD: 1.4
+      SPATK: 0.8
+    tags:
+    - Momentum
+    - Resist:Gaian
+    - Weak:Chrono
+  habitats:
+    Clockwork City: 0.8
+    Bioforge Basin: 0.8
+    Crumbling Ruins: 1.0
+    Forgotten Temple: 0.8
+    Ancient Battlefield: 0.8
+    Archaeological Dig: 0.9
+    Secret Lab: 0.8
+    Agency Black Site: 0.8
+    Synthetic Biosphere: 0.8
+    Origin<UNKNOWN>: 0.8
+    Power Plant: 0.9
+    Eroding Shipwreck: 1.0
+    Ghost Town: 0.8
+    Abandoned Village: 1.0
+    Restricted Labratory: 0.8
+    Concrete Jungle: 1.0
+    Retired Military Base: 0.9
+    Condemned HydroPowerDam: 0.9
+    Rusted Plane Wreckage: 0.9
+- name: Chrono
+  weight: 2
+  attributes:
+    mul:
+      SPD: 1.2
+      SPDEF: 1.2
+      LUCK: 1.2
+    tags:
+    - Time-Warp
+    - Resist:Abyssal
+    - Weak:Aether
+  habitats:
+    Bewitched Glen: 0.8
+    Darkmist Chasm: 0.8
+    Netherbleak Hollow: 0.8
+    Crumbling Ruins: 1.0
+    Forgotten Temple: 0.8
+    Synthetic Biosphere: 0.8
+    Abandoned Wastes: 0.8
+    Retired Military Base: 0.9
+    Monolithic Structures: 0.8
+    Dayless Mosswood: 0.8
+    Wyrmscar Ridge: 0.8
+- name: Gaian
+  weight: 4
+  attributes:
+    mul:
+      HP: 1.4
+      DEF: 1.2
+      ATK: 1.1
+      SPD: 0.9
+    tags:
+    - Earthen
+    - Resist:Azure
+    - Weak:Veridian
+  habitats:
+    Oldgrowth Marsh: 1.0
+    Misty Glades: 1.0
+    Bewitched Glen: 0.8
+    Verdant Plains: 1.0
+    Blooming Valley: 1.0
+    Ironwood Deep: 0.8
+    Fungal Vales: 0.9
+    Thornveil Thicket: 0.9
+    Dayless Mosswood: 0.8
+    Shattered Plateau: 0.8
+    Wyrmscar Ridge: 0.8
+- name: Arcane
+  weight: 3
+  attributes:
+    mul:
+      SPATK: 1.4
+      SPDEF: 1.2
+      HP: 1.1
+    tags:
+    - Mystical
+    - Resist:Chrono
+    - Weak:Abyssal
+  habitats:
+    Abandoned Village: 1.0
+    Restricted Labratory: 0.8
+    Secret Lab: 0.8
+    Crumbling Ruins: 1.0
+    Forgotten Temple: 0.8
+    Origin<UNKNOWN>: 0.8
+    Retired Military Base: 0.9
+    Condemned HydroPowerDam: 0.9
+    Ironwood Deep: 0.8
+    Monolithic Structures: 0.8
+    Dayless Mosswood: 0.8
+    Ghost Town: 0.8
+    Classified Research Facilities: 0.8
+    Oldgrowth Marsh: 1.0
+    Misty Glades: 1.0
+    Thornveil Thicket: 0.9
+    Highlands: 1.0
+    Smoldering Flats: 0.9
+    Collapsed Magma Tubes: 0.8
+    Ancient Lavaflows: 0.8
+    Whispering Dunes: 0.9
+    Glass Caverns: 0.8
+    Obsidian Labyrinth: 0.8
+    Strikken Ashlands: 0.8
+    Mt. Thermallia: 0.8
+    Crystalline Cave: 0.8
+    Petrified Forest: 0.8
+    Glassy Caverns: 0.8
+    Skybridge Peaks: 0.8
+    Frozen Steppe: 0.9
+    Glass Desert: 0.8
+    Shattered Plateau: 0.8
+    Yittrosian Forest: 0.8
+    Thriving Reefs: 1.0
+    Sunless Abyss: 0.9
+    Alpine Lakes: 0.9
+    Moonlit Atolls: 0.8
+    Bioluminous Currents: 0.8
+    Violent Rapids: 0.9
+    Freshwater Springs: 1.0
+    Unyielding Cascades: 0.8
+    Ennoan Grasslands: 1.0
+    Alpine Slopes: 0.9
+    Lunaglow Plateau: 0.8
+    Riverlands: 1.0
+    Still Tidepools: 1.0
+    Starfall Crater: 0.8
+    Celestial Spire: 0.8
+    Aurora Fields: 0.9
+    Echoing Grotto: 0.8
+    Astral Terrace: 0.8
+    Dread Catacombs: 0.9
+    Gloomfen Bogs: 0.9
+    AshGlass Tombs: 0.8
+    Darkmist Chasm: 0.8
+    Abandoned Wastes: 0.8
+    Power Plant: 0.9
+    Eroding Shipwreck: 1.0
+    Concrete Jungle: 1.0
+    Rusted Plane Wreckage: 0.9
+    Wild Tundra: 1.0
+    Frost Caps: 0.9
+    Snowcapped Peaks: 1.0
+    Frigid Icefields: 0.8
+    Snowpacked Mountains: 0.9
+    Permafrost Highlands: 0.8
+    Clockwork City: 0.8
+    Bioforge Basin: 0.8
+    Ancient Battlefield: 0.8
+    Archaeological Dig: 0.9
+    Agency Black Site: 0.8
+    Synthetic Biosphere: 0.8
+    Verdant Plains: 1.0
+    Blooming Valley: 1.0
+    Fungal Vales: 0.9
+    Bewitched Glen: 0.8
+    Netherbleak Hollow: 0.8
+    Wyrmscar Ridge: 0.8
+- name: Abyssal
+  weight: 2
+  attributes:
+    mul:
+      SPATK: 1.3
+      HP: 1.2
+      ATK: 1.1
+    tags:
+    - Void
+    - Resist:Arcane
+    - Weak:Apex
+  habitats:
+    Dread Catacombs: 0.8
+    Gloomfen Bogs: 0.9
+    AshGlass Tombs: 0.8
+    Darkmist Chasm: 0.8
+    Netherbleak Hollow: 0.8
+    Abandoned Wastes: 0.8
+    Retired Military Base: 0.9
+    Monolithic Structures: 0.8
+    Dayless Mosswood: 0.8
+- name: Aether
+  weight: 1
+  attributes:
+    mul:
+      SPDEF: 1.3
+      SPD: 1.3
+      SPATK: 1.1
+    tags:
+    - Celestial
+    - Resist:Echo
+    - Weak:Gaian
+  habitats:
+    Starfall Crater: 0.8
+    Celestial Spire: 0.8
+    Aurora Fields: 0.8
+    Echoing Grotto: 0.8
+    Astral Terrace: 0.8
+    Synthetic Biosphere: 0.8
+    Origin<UNKNOWN>: 0.8
+- name: Apex
+  weight: 4
+  attributes:
+    mul:
+      ATK: 1.3
+      HP: 1.3
+      DEF: 1.1
+    tags:
+    - Predator
+    - Resist:Veridian
+    - Weak:Kinetic
+  habitats:
+    Crystalline Cave: 0.8
+    Ennoan Grasslands: 1.0
+    Alpine Slopes: 0.9
+    Lunaglow Plateau: 0.8
+    Riverlands: 1.0
+    Dayless Mosswood: 0.8
+    Still Tidepools: 1.0
+    Glass Desert: 0.8
+    Blooming Valley: 1.0
+    Ironwood Deep: 0.8
+    Fungal Vales: 0.9
+    Thornveil Thicket: 0.9
+- name: Vermillion
+  weight: 3
+  attributes:
+    mul:
+      ATK: 1.2
+      SPATK: 1.4
+      SPD: 1.1
+    tags:
+    - Fire
+    - Resist:Argent
+    - Weak:Azure
+  habitats:
+    Smoldering Flats: 0.9
+    Collapsed Magma Tubes: 0.8
+    Ancient Lavaflows: 0.8
+    Whispering Dunes: 0.9
+    Glass Caverns: 0.8
+    Obsidian Labyrinth: 0.8
+    Petrified Forest: 0.8
+    Strikken Ashlands: 0.8
+    Mt. Thermallia: 0.8
+- name: Veridian
+  weight: 3
+  attributes:
+    mul:
+      SPATK: 1.3
+      DEF: 1.2
+      HP: 1.1
+    tags:
+    - Poison/Life
+    - Resist:Gaian
+    - Weak:Apex
+  habitats:
+    Still Tidepools: 1.0
+    Thriving Reefs: 1.0
+    Secret Lab: 0.8
+    Restricted Labratory: 0.8
+    Bewitched Glen: 0.8
+    Verdant Plains: 1.0
+    Blooming Valley: 1.0
+    Ironwood Deep: 0.8
+    Fungal Vales: 0.9
+    Darkmist Chasm: 0.8
+    Netherbleak Hollow: 0.8
+    Echoing Grotto: 0.8
+    Whispering Dunes: 0.9
+    Alpine Lakes: 0.9
+    Petrified Forest: 0.8
+    Oldgrowth Marsh: 1.0
+    Misty Glades: 1.0
+    Dayless Mosswood: 0.8
+    Bioluminous Currents: 0.8
+- name: Azure
+  weight: 3
+  attributes:
+    mul:
+      SPDEF: 1.4
+      HP: 1.2
+      SPD: 1.1
+    tags:
+    - Water/Ice
+    - Resist:Vermillion
+    - Weak:Gaian
+  habitats:
+    Still Tidepools: 1.0
+    Thriving Reefs: 1.0
+    Sunless Abyss: 0.9
+    Alpine Lakes: 0.9
+    Moonlit Atolls: 0.8
+    Bioluminous Currents: 0.8
+    Violent Rapids: 0.9
+    Freshwater Springs: 1.0
+    Unyielding Cascades: 0.8
+    Wild Tundra: 1.0
+    Frost Caps: 0.9
+    Snowcapped Peaks: 1.0
+    Frigid Icefields: 0.8
+    Snowpacked Mountains: 0.9
+    Permafrost Highlands: 0.8

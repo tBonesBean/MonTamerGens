@@ -1,16 +1,24 @@
 from pathlib import Path
-from random import choice, random
 
-from .data.data import *
-from .forge_name import *
+from .forge_name import format_dual_type
+from typing import List
+
 from .mon_forge import apply_mutagens, forge_seed_monster
 from .monster_cache import OUTPUT_PATH, save_monster
 from .monsterseed import MonsterSeed, choose_type_pair
 
+
 def _summarize_stats(stats: dict) -> str:
     """
-    Turn the raw stats dictionary into a compact 'stat line' string.
-    Example: 'HP 62 • ATK 54 • DEF 60 • SPATK 55 • SPDEF 58 • SPD 49'
+    Summary:
+        Turns the raw stats dictionary into a compact 'stat line' string.
+
+    Args:
+        stats: A dictionary of monster stats.
+
+    Returns:
+        A formatted string summarizing the monster's stats.
+        Example: 'HP 62 • ATK 54 • DEF 60 • SPATK 55 • SPDEF 58 • SPD 49'
     """
     order = ["HP", "ATK", "DEF", "SPATK", "SPDEF", "SPD", "ACC", "EVA", "LUCK"]
     pieces = []
@@ -22,25 +30,44 @@ def _summarize_stats(stats: dict) -> str:
     return stat_summary
 
 
-def _summarize_physical_details(physical_traits: List[str], held_item: str | None) -> str:
+def _summarize_physical_details(
+    physical_traits: List[str], held_item: str | None
+) -> str:
     """
-    Formats the physical traits and held item into a readable block.
+    Summary:
+        Formats the physical traits and held item into a readable block.
+
+    Args:
+        physical_traits: A list of strings describing the monster's physical traits.
+        held_item: An optional string for the item the monster is holding.
+
+    Returns:
+        A formatted string detailing the physical traits and held item, or a default
+        message if no details are available.
     """
     parts = []
     if physical_traits:
         parts.append(f"Physical Traits: {', '.join(physical_traits)}")
     if held_item:
         parts.append(f"Observed carrying: {held_item}")
-    
+
     if not parts:
         return "Distinctive features have not yet been documented."
-        
+
     return "\n".join(parts)
 
 
 def dex_formatter(seed: MonsterSeed) -> str:
     """
-    Main formatter: takes a fully prepared MonsterSeed and returns a Pokédex-style text block.
+    Summary:
+        Main formatter that takes a fully prepared MonsterSeed and returns a
+        Pokédex-style text block.
+
+    Args:
+        seed: The MonsterSeed object to format.
+
+    Returns:
+        A string containing the formatted Pokédex-style entry.
     """
     num = seed.idnum
     name = seed.name
@@ -116,8 +143,18 @@ def generate_dex_batch(
     count: int, major_count: int, util_count: int, output_path: str
 ) -> list[str]:
     """
-    Forge a batch of monsters, format each as a Dex entry, and optionally write them to a text file.
-      Returns the list of entry strings either way.
+    Summary:
+        Forges a batch of monsters, formats each as a Dex entry, and optionally
+        writes them to a text file.
+
+    Args:
+        count: The number of monsters to generate.
+        major_count: The number of major mutagens for each monster.
+        util_count: The number of utility mutagens for each monster.
+        output_path: The path to the file to save the entries to.
+
+    Returns:
+        A list of strings, where each string is a formatted dex entry.
     """
     entries: list[str] = []
 
@@ -144,7 +181,7 @@ def generate_dex_batch(
 
         # Turn the fully-forged seed into Dex text
         entry_text = dex_formatter(full_seed)
-        save_monster(full_seed) # Also save the generated seed to the JSONL cache
+        save_monster(full_seed)  # Also save the generated seed to the JSONL cache
         entries.append(entry_text)
 
     # If the caller gave us a path, write everything to disk
@@ -167,10 +204,7 @@ if __name__ == "__main__":
     # Example: generate 50 entries, each with 1 major and 1 bonus mutagen,
     # and save them to a text file.
     dexstack = generate_dex_batch(
-        count=75,
-        major_count=1,
-        util_count=1,
-        output_path=str(OUTPUT_PATH)
+        count=75, major_count=1, util_count=1, output_path=str(OUTPUT_PATH)
     )
 
     # Also echo the first one so you can sanity check in the console

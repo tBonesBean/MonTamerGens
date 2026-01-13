@@ -11,15 +11,28 @@ CACHE_FILE = Path(__file__).parent / "assets" / "generated_monsters.jsonl"
 OUTPUT_PATH = Path(__file__).parent / "assets" / "generated_monsters.txt"
 
 def generate_id(length: int = 10) -> str:
-    """Generates a random alphanumeric ID."""
+    '''
+    Summary:
+        Generates a random alphanumeric ID of a given length.
+
+    Args:
+        length: The desired length of the ID.
+
+    Returns:
+        A random alphanumeric string of the specified length.
+    '''
     characters = string.ascii_uppercase + string.digits
     return "".join(random.choice(characters) for _ in range(length))
 
 def _load_all_from_cache() -> dict:
-    """
-    Loads all monsters from the JSONL cache into a dictionary keyed by unique_id.
-    This is an expensive operation and should be used for tools, not for appending.
-    """
+    '''
+    Summary:
+        Loads all monsters from the JSONL cache into a dictionary keyed by unique_id.
+        This is an expensive operation and should be used for tools, not for appending.
+        
+    Returns:
+        A dictionary of all monsters in the cache, keyed by their unique_id.
+    '''
     if not CACHE_FILE.exists():
         return {}
     
@@ -37,10 +50,17 @@ def _load_all_from_cache() -> dict:
     return cache
 
 def save_monster(seed: MonsterSeed) -> str:
-    """
-    Appends a monster seed to the JSONL cache file and returns its unique ID.
-    This is a fast and safe append-only operation.
-    """
+    '''
+    Summary:
+        Appends a monster seed to the JSONL cache file and returns its unique ID.
+        This is a fast and safe append-only operation.
+
+    Args:
+        seed: The MonsterSeed object to save.
+
+    Returns:
+        The unique ID of the saved monster.
+    '''
     if not is_dataclass(seed):
         raise TypeError("Can only save dataclass objects like MonsterSeed.")
 
@@ -63,7 +83,20 @@ def save_monster(seed: MonsterSeed) -> str:
     return unique_id
 
 def load_monster(unique_id: str) -> MonsterSeed:
-    """Loads a monster seed from the cache by its unique ID."""
+    '''
+    Summary:
+        Loads a monster seed from the cache by its unique ID.
+        
+    Args:
+        unique_id: The unique ID of the monster to load.
+        
+    Returns:
+        A MonsterSeed object for the specified monster.
+        
+    Raises:
+        KeyError: If no monster with the given ID is found in the cache.
+        ValueError: If the cached data cannot be reconstructed into a MonsterSeed object.
+    '''
     # This is now an expensive operation, but necessary for loading a specific monster.
     # For game loading, you'd process this file into an optimized format once.
     cache = _load_all_from_cache()

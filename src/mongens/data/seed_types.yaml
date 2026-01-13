@@ -1,0 +1,251 @@
+- name: Axiom
+  weight: 1.0
+  habitats:
+    - Clockwork City
+    - Classified Research Facilities
+  attributes:
+    mul:
+      ACC: 1.10
+      SPDEF: 1.05
+    add:
+      LUCK: 2
+    notes:
+      - Discipline
+      - Logical
+- name: Apex
+  weight: 4
+  habitats:
+    - Crystalline Cave
+    - Ennoan Grasslands
+    - Alpine Slopes
+    - Lunaglow Plateau
+    - Riverlands
+  attributes:
+    mul:
+      ATK: 1.3
+      HP: 1.3
+      DEF: 1.1
+    tags:
+      - Predator
+      - Resist:Veridian
+      - Weak:Kinetic
+    notes:
+      - Predator
+      - Focus
+- name: Chrono
+  weight: 2
+  habitats:
+    - Bewitched Glen
+    - Darkmist Chasm
+    - Netherbleak Hollow
+    - Crumbling Ruins
+    - Forgotten Temple
+    - Monolithic Structures
+    - Dayless Mosswood
+  attributes:
+    mul:
+      SPD: 1.2
+      SPDEF: 1.2
+      LUCK: 1.2
+    tags:
+      - Time-Warp
+      - Resist:Abyssal
+      - Weak:Aether
+    notes:
+      - Eternal
+      - Temporal
+- name: Gaian
+  weight: 1.0
+  attributes:
+    mul:
+      HP: 1.4
+      DEF: 1.2
+      ATK: 1.1
+      SPD: 0.9
+    tags:
+      - Earthen
+      - Resist:Azure
+      - Weak:Veridian
+  habitats:
+    - Oldgrowth Marsh
+    - Misty Glades
+    - Bewitched Glen
+    - Verdant Plains
+    - Blooming Valley
+    - Ironwood Deep
+    - Fungal Vales
+    - Thornveil Thicket
+    - Dayless Mosswood
+    - Shattered Plateau
+    - Wyrmscar Ridge
+- name: Arcane
+  weight: 3
+  habitats:
+    - Abandoned Village
+    - Restricted Labratory
+    - Secret Lab
+    - Crumbling Ruins
+    - Forgotten Temple
+  attributes:
+    mul:
+      SPATK: 1.4
+      SPDEF: 1.2
+      HP: 1.1
+    tags:
+      - Mystical
+      - Resist:Chrono
+      - Weak:Abyssal
+- name: Spur
+  weight: 1.0
+  habitats:
+    - Ennoan Grasslands
+    - Verdant Plains
+  attributes:
+    mul:
+      ATK: 1.15
+      SPD: 1.12
+    add:
+      HP: 5
+    notes:
+      - Impulse
+      - Aggressive
+- name: Echo
+  weight: 1.0
+  habitats:
+    - Echoing Grotto
+    - Archive Stone
+  attributes:
+    mul:
+      SPATK: 1.10
+      ACC: 1.05
+    add:
+      LUCK: 3
+    notes:
+      - Resonance
+      - Memory
+- name: Flow
+  weight: 1.0
+  habitats:
+    - Freshwater Springs
+    - Riverlands
+  attributes:
+    mul:
+      SPDEF: 1.12
+      SPD: 1.05
+    add:
+      HP: 10
+    notes:
+      - Empathic
+      - Adaptive
+- name: Bastion
+  weight: 1.0
+  habitats:
+    - Monolithic Structures
+    - Ancient Battlefield
+  attributes:
+    mul:
+      DEF: 1.20
+      HP: 1.15
+    add:
+      DEF: 10
+    notes:
+      - Resilient
+      - Stalwart
+- name: Rift
+  weight: 1.0
+  habitats:
+    - Starfall Crater
+    - Astral Terrace
+  attributes:
+    mul:
+      SPD: 1.08
+      LUCK: 1.10
+    add:
+      EVA: 5
+    notes:
+      - Curious
+      - Chaotic
+- name: Mire
+  weight: 1.0
+  habitats:
+    - Gloomfen Bogs
+    - Oldgrowth Marsh
+  attributes:
+    mul:
+      HP: 1.12
+      DEF: 1.05
+      SPD: 0.90
+    add:
+      SPDEF: 5
+    notes:
+      - Stagnant
+      - Corrupting
+- name: Idol
+  weight: 1.0
+  habitats:
+    - Smoldering Flats
+    - Mt. Thermallia
+  attributes:
+    mul:
+      ATK: 1.18
+      SPATK: 1.12
+    add:
+      LUCK: 2
+    notes:
+      - Passionate
+      - Radiant
+- name: Geist
+  weight: 1.0
+  habitats:
+    - Sunless Abyss
+    - Ghost Town
+  attributes:
+    mul:
+      SPATK: 1.18
+      SPDEF: 1.10
+    add:
+      EVA: 5
+    notes:
+      - Spiritual
+      - Incorporeal
+- name: Bloom
+  weight: 1.0
+  habitats:
+    - Blooming Valley
+    - Verdant Plains
+  attributes:
+    mul:
+      HP: 1.10
+      SPDEF: 1.12
+    add:
+      HP: 15
+    notes:
+      - Growth
+      - Regenerative
+- name: Vessel
+  weight: 1.0
+  habitats:
+    - Secret Lab
+    - Cocoon Sentinel
+  attributes:
+    mul:
+      LUCK: 1.10
+    add:
+      ACC: 5
+    notes:
+      - Empty
+      - Potential
+- name: Dread
+  weight: 1.0
+  habitats:
+    - Dread Catacombs
+    - Darkmist Chasm
+  attributes:
+    mul:
+      SPATK: 1.15
+      HP: 1.10
+    add:
+      ACC: -5
+    notes:
+      - Fear
+      - Primal

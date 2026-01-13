@@ -1,0 +1,213 @@
+"Kinweave Meditation":
+  ally_buff:
+    SPDEF: 1.15
+    LUCK: 1.1
+  tags:
+    - "Meditation:Kin"
+    - "Pulse:Calm"
+  rarity: 1.0
+  allowed_types:
+    - Geist
+    - Flow
+"Echoing Ledger":
+  identify_rates: 0.2
+  tags:
+    - "Recall:Data"
+    - "Clarity"
+  rarity: 0.9
+  allowed_types:
+    - Axiom
+    - Echo
+"Flowfield Botanica":
+  field_heal_ticks: 0.1
+  ally_heal_on_kill: 0.05
+  tags:
+    - "Lumen:Bloom"
+    - "Harvest:Calm"
+  rarity: 1.0
+  allowed_types:
+    - Bloom
+    - Flow
+"Sparkward Tendril":
+  unlock_tags:
+    - "Path:LumenStorm"
+    - "Door:Resonant"
+  tags:
+    - "Tether:Lumen"
+    - "AnchorBreak"
+  rarity: 1.1
+  allowed_types:
+    - Rift
+    - Geist
+"Pulseforged Mentor":
+  npc_dialog_plus: true
+  tags:
+    - "Guide:Pulse"
+    - "KindredAdvice"
+  rarity: 1.0
+  allowed_types:
+    - Bastion
+    - Bloom
+    - Idol
+"Cohort Harmony":
+  ally_buff:
+    ATK: 1.1
+    SPD: 1.1
+  tags:
+    - "ResonantLink"
+    - "Choir"
+  rarity: 1.0
+  allowed_types:
+    - Idol
+    - Flow
+"Lantern of Echo":
+  minimap_reveal: true
+  tags:
+    - "Beacon"
+    - "MemoryLight"
+  rarity: 1.2
+  allowed_types:
+    - Echo
+    - Geist
+"Lumenic Steward":
+  crafting_bonus: 0.15
+  tags:
+    - "LumenCraft"
+    - "Attunement"
+  rarity: 1.0
+  allowed_types:
+    - Axiom
+    - Bastion
+"Resonant Cartographer":
+  map_reveal_radius: 1.3
+  fast_travel_nodes: true
+  tags:
+    - "Trail:Resound"
+    - "LoreMapped"
+  rarity: 1.0
+  allowed_types:
+    - Flow
+    - Bloom
+"Stormborn Scribe":
+  exp_mult: 1.1
+  loot_mult: 1.1
+  tags:
+    - "Record:Storm"
+    - "SparkNotes"
+  rarity: 1.0
+  allowed_types:
+    - Rift
+    - Idol
+"Quiet Resolve":
+  camp_bonus:
+    "Heal%": 0.1
+    exp_mult: 1.05
+  tags:
+    - "Stillness"
+    - "Resolve"
+  rarity: 1.1
+  allowed_types:
+    - Geist
+    - Bastion
+"Sagewarden Beacon":
+  ally_buff:
+    SPATK: 1.1
+    SPD: 1.05
+  tags:
+    - "Sage:Beacon"
+    - "MentorGlow"
+  rarity: 1.0
+  allowed_types:
+    - Idol
+    - Axiom
+"Flux Chronicle":
+  identify_rates: 0.18
+  tags:
+    - "Record:Flux"
+    - "FlowingNotes"
+  rarity: 1.0
+  allowed_types:
+    - Flow
+    - Rift
+"Harmonic Field":
+  field_buff:
+    LUCK: 1.2
+  tags:
+    - "Balance:Field"
+    - "Cohesion"
+  rarity: 1.1
+  allowed_types:
+    - Geist
+    - Bloom
+"Truthbinder Ledger":
+  npc_dialog_plus: true
+  tags:
+    - "Truthbind"
+    - "Clarity"
+    - "Record:Oath"
+  rarity: 1.0
+  allowed_types:
+    - Axiom
+    - Echo
+"Siren's Accord":
+  ally_heal_on_kill: 0.04
+  tags:
+    - "SirenSong"
+    - "Harmony:Strike"
+  rarity: 1.1
+  allowed_types:
+    - Idol
+    - Bloom
+"Stillwater Refuge":
+  camp_bonus:
+    "Heal%": 0.15
+    exp_mult: 1.1
+  tags:
+    - "Refuge"
+    - "Still:Watered"
+  rarity: 1.0
+  allowed_types:
+    - Flow
+    - Bloom
+"Starpath Compass":
+  map_reveal_radius: 1.4
+  fast_travel_nodes: true
+  tags:
+    - "Compass:Star"
+    - "AstralGuide"
+  rarity: 1.0
+  allowed_types:
+    - Rift
+    - Flow
+"Boundless Chorus":
+  ally_buff:
+    SPATK: 1.12
+  tags:
+    - "Chorus:Boundless"
+    - "Lumen:Choir"
+  rarity: 1.0
+  allowed_types:
+    - Idol
+    - Echo
+"Prismatic Bulwark":
+  ally_buff:
+    DEF: 1.1
+    SPDEF: 1.1
+  tags:
+    - "PrismGuard"
+    - "Spectrum"
+  rarity: 1.2
+  allowed_types:
+    - Bastion
+    - Geist
+"Resonance Surveyor":
+  minimap_reveal: true
+  unlock_tags:
+    - "Gate:Resonant"
+  tags:
+    - "Survey:Resonance"
+    - "LumenGuide"
+  rarity: 1.15
+  allowed_types:
+    - Rift
+    - Axiom

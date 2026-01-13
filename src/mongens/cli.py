@@ -16,6 +16,15 @@ from .monsterseed import MonsterSeed, choose_type_pair, weighted_choice
 
 
 def main():
+    '''
+    Summary:
+        The main entry point for the monster generator command-line interface.
+        This function parses command-line arguments and calls the appropriate
+        functions to generate monsters, dex entries, and other related data.
+
+    Returns:
+        None.
+    '''
     parser = argparse.ArgumentParser(
         description="A command-line tool for generating fantasy monsters.",
         epilog="Use 'mongen <command> --help' for more information on a specific command.",
@@ -281,7 +290,17 @@ def main():
     # Helper function to generate Kin properties
     # ===================================================================
     def _generate_kin_properties(seed: MonsterSeed, resonance: dict) -> dict:
-        """Generates Kin properties based on the seed and player resonance."""
+        '''
+        Summary:
+            Generates Kin properties for a monster based on its seed and the player's resonance values.
+        
+        Args:
+            seed: The MonsterSeed object for the monster.
+            resonance: A dictionary of player resonance values (e.g., courage, empathy).
+
+        Returns:
+            A dictionary containing the generated Kin properties (passive, drive, wound, spark).
+        '''
         # This is a placeholder for more complex logic.
         # In the future, this could be its own module.
         kin_passives = ["Lumen Resonance: +5% healing received", "Kinetic Shield: +5% DEF when below 50% HP"]
@@ -309,7 +328,18 @@ def main():
 
     # --- Helper functions ---
     def _get_monster_types_from_args(primary_arg: str, secondary_arg: str) -> tuple[str, str | None]:
-        """Determines primary and secondary types from CLI args."""
+        '''
+        Summary:
+            Determines the primary and secondary monster types based on command-line arguments.
+            It handles cases where types are specified directly or chosen randomly.
+
+        Args:
+            primary_arg: The value of the primary_type argument.
+            secondary_arg: The value of the secondary_type argument.
+
+        Returns:
+            A tuple containing the determined primary type (str) and an optional secondary type (str | None).
+        '''
         # If both are random, use the new weighted function.
         if primary_arg == "random" and secondary_arg == "random":
             return choose_type_pair()
@@ -326,7 +356,18 @@ def main():
         return p_type, s_type
 
     def _get_or_generate_seed(args: argparse.Namespace, idnum: int = 1) -> MonsterSeed | None:
-        """Loads a monster by PIN or generates a new one based on args."""
+        '''
+        Summary:
+            Loads a monster seed using a provided PIN or generates a new one
+            based on the command-line arguments.
+
+        Args:
+            args: The namespace object from argparse containing the parsed command-line arguments.
+            idnum: The ID number to use if generating a new monster.
+
+        Returns:
+            A MonsterSeed object if successfully loaded or generated, otherwise None.
+        '''
         try:
             if hasattr(args, "pin") and args.pin:
                 print(f"Loading pinned monster '{args.pin}'...")
