@@ -27,14 +27,7 @@ dist/
 
 # Virtual Environments
 .tox/
-.venv/
 ENV/
 
 # IDE-specific files
 .idea/
-MTG.code-workspace
-*/desktop.ini
-!/src/desktop.ini
-!/src/mongens/desktop.ini
-.vscode/
-.gemini/

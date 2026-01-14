@@ -1,0 +1,10 @@
+{
+  "servers": {
+    "intellihub": {
+      "command": "C:\\services\\IntelliHubMCP\\intellihub_tool\\.venv\\Scripts\\python.exe",
+      "args": [
+        "C:\\services\\IntelliHubMCP\\intellihub_tool\\stdio_server.py"
+      ]
+    }
+  }
+}
