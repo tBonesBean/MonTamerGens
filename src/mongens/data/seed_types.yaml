@@ -1,251 +1,372 @@
 - name: Axiom
-  weight: 1.0
+  weight: 3.0
   habitats:
-    - Clockwork City
-    - Classified Research Facilities
+      - Clockwork City
+      - Classified Research Facilities
+      - Crystalline Cave
+      - Petrified Forest
+      - Ancient Lavaflows
+      - Whispering Dunes
+      - Glass Caverns
+      - Thriving Reefs
+      - Crumbling Ruins
+      - Forgotten Temple
+      - Archaeological Dig
   attributes:
-    mul:
-      ACC: 1.10
-      SPDEF: 1.05
-    add:
-      LUCK: 2
-    notes:
-      - Discipline
-      - Logical
-- name: Apex
-  weight: 4
-  habitats:
-    - Crystalline Cave
-    - Ennoan Grasslands
-    - Alpine Slopes
-    - Lunaglow Plateau
-    - Riverlands
-  attributes:
-    mul:
-      ATK: 1.3
-      HP: 1.3
-      DEF: 1.1
-    tags:
-      - Predator
-      - Resist:Veridian
-      - Weak:Kinetic
-    notes:
-      - Predator
-      - Focus
-- name: Chrono
-  weight: 2
-  habitats:
-    - Bewitched Glen
-    - Darkmist Chasm
-    - Netherbleak Hollow
-    - Crumbling Ruins
-    - Forgotten Temple
-    - Monolithic Structures
-    - Dayless Mosswood
-  attributes:
-    mul:
-      SPD: 1.2
-      SPDEF: 1.2
-      LUCK: 1.2
-    tags:
-      - Time-Warp
-      - Resist:Abyssal
-      - Weak:Aether
-    notes:
-      - Eternal
-      - Temporal
-- name: Gaian
-  weight: 1.0
-  attributes:
-    mul:
-      HP: 1.4
-      DEF: 1.2
-      ATK: 1.1
-      SPD: 0.9
-    tags:
-      - Earthen
-      - Resist:Azure
-      - Weak:Veridian
-  habitats:
-    - Oldgrowth Marsh
-    - Misty Glades
-    - Bewitched Glen
-    - Verdant Plains
-    - Blooming Valley
-    - Ironwood Deep
-    - Fungal Vales
-    - Thornveil Thicket
-    - Dayless Mosswood
-    - Shattered Plateau
-    - Wyrmscar Ridge
-- name: Arcane
-  weight: 3
-  habitats:
-    - Abandoned Village
-    - Restricted Labratory
-    - Secret Lab
-    - Crumbling Ruins
-    - Forgotten Temple
-  attributes:
-    mul:
-      SPATK: 1.4
-      SPDEF: 1.2
-      HP: 1.1
-    tags:
-      - Mystical
-      - Resist:Chrono
-      - Weak:Abyssal
+      mul:
+          DEF: 1.20
+          SPDEF: 1.20
+          ATK: 1.10
+          SPATK: 1.20
+          HP: 1.10
+          ACC: 1.15
+      add:
+          LUCK: 2
+      tags:
+          - Metallic
+          - Mystical
+          - Resist:Spur
+          - Weak:Idol
+          - Resist:Rift
+          - Weak:Dread
+      notes:
+          - Discipline
+          - Logical
+          - Ordered
+          - Geometric
 - name: Spur
-  weight: 1.0
+  weight: 3.0
   habitats:
-    - Ennoan Grasslands
-    - Verdant Plains
+      - Ennoan Grasslands
+      - Verdant Plains
+      - Clockwork City
+      - Bioforge Basin
+      - Crumbling Ruins
+      - Forgotten Temple
+      - Ancient Battlefield
+      - Archaeological Dig
+      - Secret Lab
+      - Agency Black Site
+      - Synthetic Biosphere
+      - Power Plant
+      - Eroding Shipwreck
+      - Ghost Town
+      - Abandoned Village
+      - Restricted Labratory
+      - Concrete Jungle
+      - Retired Military Base
+      - Condemned HydroPowerDam
+      - Rusted Plane Wreckage
   attributes:
-    mul:
-      ATK: 1.15
-      SPD: 1.12
-    add:
-      HP: 5
-    notes:
-      - Impulse
-      - Aggressive
+      mul:
+          ATK: 1.20
+          SPD: 1.25
+          SPATK: 0.90
+      add:
+          HP: 5
+      tags:
+          - Momentum
+          - Resist:Bloom
+          - Weak:Rift
+      notes:
+          - Impulse
+          - Aggressive
+          - Kinetic
+          - Explosive
 - name: Echo
-  weight: 1.0
+  weight: 3.0
   habitats:
-    - Echoing Grotto
-    - Archive Stone
+      - Echoing Grotto
+      - Archive Stone
+      - Skybridge Peaks
+      - Frozen Steppe
+      - Whispering Dunes
+      - Glass Desert
+      - Verdant Plains
+      - Highlands
+      - Shattered Plateau
+      - Wyrmscar Ridge
+      - Yittrosian Forest
   attributes:
-    mul:
-      SPATK: 1.10
-      ACC: 1.05
-    add:
-      LUCK: 3
-    notes:
-      - Resonance
-      - Memory
+      mul:
+          SPD: 1.20
+          SPATK: 1.20
+          EVA: 1.10
+          ACC: 1.10
+      add:
+          LUCK: 3
+      tags:
+          - Sound-Based
+          - Resist:Geist
+          - Weak:Axiom
+      notes:
+          - Resonance
+          - Memory
+          - Recursive
+          - Harmonic
 - name: Flow
-  weight: 1.0
+  weight: 3.0
   habitats:
-    - Freshwater Springs
-    - Riverlands
+      - Freshwater Springs
+      - Riverlands
+      - Still Tidepools
+      - Thriving Reefs
+      - Sunless Abyss
+      - Alpine Lakes
+      - Moonlit Atolls
+      - Bioluminous Currents
+      - Violent Rapids
+      - Unyielding Cascades
+      - Wild Tundra
+      - Frost Caps
+      - Snowcapped Peaks
+      - Frigid Icefields
+      - Snowpacked Mountains
+      - Permafrost Highlands
   attributes:
-    mul:
-      SPDEF: 1.12
-      SPD: 1.05
-    add:
-      HP: 10
-    notes:
-      - Empathic
-      - Adaptive
+      mul:
+          SPDEF: 1.25
+          HP: 1.20
+          SPD: 1.10
+      add:
+          HP: 10
+      tags:
+          - Resist:Idol
+          - Weak:Bloom
+      notes:
+          - Empathic
+          - Adaptive
+          - Fluid
+          - Current
 - name: Bastion
-  weight: 1.0
+  weight: 4.0
   habitats:
-    - Monolithic Structures
-    - Ancient Battlefield
+      - Monolithic Structures
+      - Ancient Battlefield
+      - Crystalline Cave
+      - Ennoan Grasslands
+      - Alpine Slopes
+      - Lunaglow Plateau
+      - Riverlands
+      - Dayless Mosswood
+      - Still Tidepools
+      - Glass Desert
+      - Blooming Valley
+      - Ironwood Deep
+      - Fungal Vales
+      - Thornveil Thicket
   attributes:
-    mul:
-      DEF: 1.20
-      HP: 1.15
-    add:
-      DEF: 10
-    notes:
-      - Resilient
-      - Stalwart
+      mul:
+          ATK: 1.20
+          HP: 1.25
+          DEF: 1.20
+      add:
+          DEF: 10
+      tags:
+          - Ability:Guard
+          - Resist:Bloom
+          - Weak:Spur
+      notes:
+          - Resilient
+          - Stalwart
+          - Fortified
+          - Unyielding
 - name: Rift
-  weight: 1.0
+  weight: 2.0
   habitats:
-    - Starfall Crater
-    - Astral Terrace
+      - Starfall Crater
+      - Astral Terrace
+      - Bewitched Glen
+      - Darkmist Chasm
+      - Netherbleak Hollow
+      - Crumbling Ruins
+      - Forgotten Temple
+      - Synthetic Biosphere
+      - Abandoned Wastes
+      - Retired Military Base
+      - Monolithic Structures
+      - Dayless Mosswood
+      - Wyrmscar Ridge
   attributes:
-    mul:
-      SPD: 1.08
-      LUCK: 1.10
-    add:
-      EVA: 5
-    notes:
-      - Curious
-      - Chaotic
+      mul:
+          SPD: 1.20
+          SPDEF: 1.15
+          LUCK: 1.20
+      add:
+          EVA: 5
+      tags:
+          - Time-Warp
+          - Resist:Dread
+          - Weak:Geist
+      notes:
+          - Curious
+          - Chaotic
+          - Temporal
+          - Paradox
 - name: Mire
   weight: 1.0
   habitats:
-    - Gloomfen Bogs
-    - Oldgrowth Marsh
+      - Gloomfen Bogs
+      - Oldgrowth Marsh
   attributes:
-    mul:
-      HP: 1.12
-      DEF: 1.05
-      SPD: 0.90
-    add:
-      SPDEF: 5
-    notes:
-      - Stagnant
-      - Corrupting
+      mul:
+          HP: 1.12
+          DEF: 1.05
+          SPD: 0.90
+      add:
+          SPDEF: 5
+      tags:
+          - Eroded
+          - Clinging
+      notes:
+          - Stagnant
+          - Corrupting
+          - Viscous
+          - Decay
 - name: Idol
-  weight: 1.0
+  weight: 3.0
   habitats:
-    - Smoldering Flats
-    - Mt. Thermallia
+      - Smoldering Flats
+      - Mt. Thermallia
+      - Collapsed Magma Tubes
+      - Ancient Lavaflows
+      - Whispering Dunes
+      - Glass Caverns
+      - Obsidian Labyrinth
+      - Petrified Forest
+      - Strikken Ashlands
   attributes:
-    mul:
-      ATK: 1.18
-      SPATK: 1.12
-    add:
-      LUCK: 2
-    notes:
-      - Passionate
-      - Radiant
+      mul:
+          ATK: 1.15
+          SPATK: 1.25
+          SPD: 1.10
+      add:
+          LUCK: 2
+      tags:
+          - Legendary
+          - Resist:Axiom
+          - Weak:Flow
+      notes:
+          - Passionate
+          - Radiant
+          - Symbolic
+          - Flare
 - name: Geist
   weight: 1.0
   habitats:
-    - Sunless Abyss
-    - Ghost Town
+      - Sunless Abyss
+      - Ghost Town
+      - Starfall Crater
+      - Celestial Spire
+      - Aurora Fields
+      - Echoing Grotto
+      - Astral Terrace
+      - Synthetic Biosphere
+      - Origin<UNKNOWN>
   attributes:
-    mul:
-      SPATK: 1.18
-      SPDEF: 1.10
-    add:
-      EVA: 5
-    notes:
-      - Spiritual
-      - Incorporeal
+      mul:
+          SPATK: 1.20
+          SPDEF: 1.25
+          SPD: 1.20
+      add:
+          EVA: 5
+      tags:
+          - Celestial
+          - Resist:Echo
+          - Weak:Bloom
+      notes:
+          - Spiritual
+          - Incorporeal
+          - Ethereal
+          - Phantasm
 - name: Bloom
-  weight: 1.0
+  weight: 4.0
   habitats:
-    - Blooming Valley
-    - Verdant Plains
+      - Blooming Valley
+      - Verdant Plains
+      - Oldgrowth Marsh
+      - Misty Glades
+      - Bewitched Glen
+      - Ironwood Deep
+      - Fungal Vales
+      - Thornveil Thicket
+      - Dayless Mosswood
+      - Shattered Plateau
+      - Wyrmscar Ridge
+      - Still Tidepools
+      - Thriving Reefs
+      - Secret Lab
+      - Restricted Labratory
+      - Darkmist Chasm
+      - Netherbleak Hollow
+      - Echoing Grotto
+      - Whispering Dunes
+      - Alpine Lakes
+      - Petrified Forest
+      - Bioluminous Currents
   attributes:
-    mul:
-      HP: 1.10
-      SPDEF: 1.12
-    add:
-      HP: 15
-    notes:
-      - Growth
-      - Regenerative
+      mul:
+          HP: 1.25
+          DEF: 1.15
+          ATK: 1.10
+          SPATK: 1.15
+          SPDEF: 1.15
+      add:
+          HP: 15
+      tags:
+          - Earthen
+          - Poison
+          - Life
+          - Resist:Flow
+          - Weak:Bastion
+      notes:
+          - Growth
+          - Regenerative
+          - Organic
+          - Flourish
 - name: Vessel
   weight: 1.0
   habitats:
-    - Secret Lab
-    - Cocoon Sentinel
+      - Secret Lab
+      - Cocoon Sentinel
   attributes:
-    mul:
-      LUCK: 1.10
-    add:
-      ACC: 5
-    notes:
-      - Empty
-      - Potential
+      mul:
+          LUCK: 1.10
+      add:
+          ACC: 5
+      tags:
+          - Hollow
+          - Receptacle
+      notes:
+          - Empty
+          - Potential
+          - Latent
+          - Structural
 - name: Dread
-  weight: 1.0
+  weight: 2.0
   habitats:
-    - Dread Catacombs
-    - Darkmist Chasm
+      - Dread Catacombs
+      - Darkmist Chasm
+      - Gloomfen Bogs
+      - AshGlass Tombs
+      - Netherbleak Hollow
+      - Abandoned Wastes
+      - Retired Military Base
+      - Monolithic Structures
+      - Dayless Mosswood
   attributes:
-    mul:
-      SPATK: 1.15
-      HP: 1.10
-    add:
-      ACC: -5
-    notes:
-      - Fear
-      - Primal
+      mul:
+          SPATK: 1.25
+          HP: 1.15
+          ATK: 1.10
+      add:
+          ACC: -5
+      tags:
+          - Void
+          - Resist:Axiom
+          - Weak:Bastion
+      notes:
+          - Fear
+          - Primal
+          - Consumption
+          - Gloom

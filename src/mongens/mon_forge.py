@@ -5,10 +5,7 @@ import random
 from typing import Any, List, Optional, Dict
 
 from . import monster_cache
-from .data.data import (
-	MAJOR_MODS,
-    UTILITY_MODS
-)
+from .data.data import MAJOR_MODS, UTILITY_MODS
 from .forge_name import forge_monster_name
 from .monsterseed import MonsterSeed
 
@@ -23,20 +20,20 @@ DEBUG = bool(
 
 
 def dbg(*args, **kwargs):
-    '''
+    """
     Summary:
         Prints debug messages if the DEX_DEBUG environment variable is set.
-    
+
     Args:
         *args: Positional arguments to be printed.
         **kwargs: Keyword arguments to be printed.
-    '''
+    """
     if DEBUG:
         print("[mon_forge DEBUG]", *args, **kwargs)
 
 
 def rarity_to_weight(rarity_val: Any, alpha: float = RARITY_ALPHA) -> float:
-    '''
+    """
     Summary:
         Converts a 'rarity' numeric value into a sampling weight.
 
@@ -48,7 +45,7 @@ def rarity_to_weight(rarity_val: Any, alpha: float = RARITY_ALPHA) -> float:
         The calculated sampling weight. The default behavior is
         weight = 1.0 / (rarity ** alpha). It guards against
         non-numeric and zero/negative rarities.
-    '''
+    """
     try:
         r = float(rarity_val)
     except Exception(BaseException):
@@ -60,7 +57,7 @@ def rarity_to_weight(rarity_val: Any, alpha: float = RARITY_ALPHA) -> float:
 def forge_seed_monster(
     idnum: int, primary_type: str, secondary_type: Any
 ) -> MonsterSeed:
-    '''
+    """
     Summary:
         A factory function that uses the MonsterSeed's own forge method to create a new monster seed.
 
@@ -71,7 +68,7 @@ def forge_seed_monster(
 
     Returns:
         A new MonsterSeed object.
-    '''
+    """
     seed = MonsterSeed.forge(idnum, primary_type, secondary_type)
     return seed
 
@@ -79,7 +76,7 @@ def forge_seed_monster(
 def weighted_sample_without_replacement(
     weight_dict: Dict[str, float], k: int
 ) -> List[str]:
-    '''
+    """
     Summary:
         Draws up to k unique keys from a dictionary of weights without replacement,
         respecting the weights of each key.
@@ -91,7 +88,7 @@ def weighted_sample_without_replacement(
     Returns:
         A list of the selected keys. The length of the list may be less than k
         if the pool of available items is smaller than k.
-    '''
+    """
     population = list(weight_dict.keys())
     weights = [float(weight_dict[p]) for p in population]
     selected: List[str] = []
@@ -134,7 +131,7 @@ def apply_mutagens(
     major_count: int = 0,
     util_count: int = 0,
 ) -> MonsterSeed:
-    '''
+    """
     Summary:
         Applies a specified number of major and utility mutagens to a given MonsterSeed.
         This function modifies the seed by selecting and applying mutagens based on
@@ -147,7 +144,7 @@ def apply_mutagens(
 
     Returns:
         The modified MonsterSeed object with the new mutagens applied.
-    '''
+    """
     # Ensure seed buckets exist for synergy checks (safe even if forge didn't create them)
     seed.mutagens.setdefault("major", [])
     seed.mutagens.setdefault("utility", [])
@@ -277,7 +274,7 @@ def generate_monster(
     major_count: int = 0,
     util_count: int = 0,
 ) -> MonsterSeed:
-    '''
+    """
     Summary:
         Combines monster seed forging, mutagen application, and naming into a single function call.
 
@@ -290,7 +287,7 @@ def generate_monster(
 
     Returns:
         A fully generated MonsterSeed object, including a name and applied mutagens.
-    '''
+    """
     generic = forge_seed_monster(idnum, primary_type, secondary_type)
     seed_with_mutagens = apply_mutagens(generic, major_count, util_count)
     seed_with_name = forge_monster_name(seed_with_mutagens)

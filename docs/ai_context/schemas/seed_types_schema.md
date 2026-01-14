@@ -148,7 +148,7 @@ add:
 
 ```yaml
 tags:
-    - Resist:Apex
+    - Resist:Bastion
     - Weak:Echo
     - Ability:TimeShift
 ```
@@ -251,8 +251,10 @@ This normalized dictionary is what `monsterseed.py` uses for generation.
 When you are asked to generate or modify entries in `seed_types.yaml`:
 
 -   **Do not invent new top-level fields.** The allowed fields are `name`, `weight`, `habitats`, and `attributes`.
--   Ensure `name` is a unique, descriptive, single-word concept.
--   Stat modifications in `mul` and `add` should be subtle. Large changes are typically handled by `type_data.yaml` or mutagens.
--   The `tags` should be appropriately formatted `PREFIX:VALUE` strings that maintain coherence when processed by downstream systems.
--   The `notes` should be high-level thematic keywords, not detailed sentences. Intended to guide narrative, as well as AI image generation.
--   The habitats should align with the theme of the seed.
+-   Ensure `name` is a unique, descriptive, single-word concept, and when each `name` is viewed collectively, there is no ambiguity.
+-   Stat modifications in `mul` and `add` should be subtle. Large changes are typically handled by mutagens (`utility_mods.yaml` and `major_mods.yaml`).
+-   The `tags` should always be formatted with `PREFIX:VALUE` strings that maintain coherence when processed by downstream systems (`Weak:<type>`, `Resist:<type>`, `Ability:TimeShift`, `Trigger:NPC_event`, etc.).
+-   The `notes` should be high-level thematic keywords, not phrases or sentences. Intended to guide narrative generation, as well as AI image generation.
+-   The `habitats` should align with the theme of the seed `type` and potential forms from `type_forms.yaml`. Possibly influencing or triggering in-game events (future systems).
+
+---

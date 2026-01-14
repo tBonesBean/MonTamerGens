@@ -1,0 +1,41 @@
+{
+	"gemini": {
+		"version": "3.1.0",
+		"settings": {
+			"theme": "dark",
+			"fontSize": 14,
+			"showLineNumbers": true,
+			"autoSaveInterval": 5,
+			"tabSize": 4,
+			"enableLinting": true,
+			"defaultLanguage": "en-US",
+			"backupEnabled": true,
+			"mcpsync": {
+				"enabled": true,
+				"interval": 10,
+				"lastSync": "2024-06-15T12:00:00Z",
+				"conflictResolution": "prompt",
+				"servers": [
+					{
+						"name": "PrimaryServer",
+						"url": "https://sync.geminiapp.com",
+						"authToken": "abcd1234efgh5678"
+					},
+					{
+						"name": "IntelliHub",
+						"url": "",
+					}
+				]
+			}
+		},
+		{"plugins": [
+			"spellChecker": true,
+			"autoComplete": true,
+			"codeFormatter": true,
+			"intelligentSuggestions": true,
+			"serverSync": true,
+			"versionControl": true
+		]
+	}
+	}
+}

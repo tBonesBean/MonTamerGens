@@ -1,0 +1,18 @@
+{
+	"chat.mcp.serverSampling": {
+		"MonTamerGens/.vscode/mcp.json: intellihub": {
+			"allowedModels": [
+				"copilot/auto",
+				"gemini/models/gemini-2.5-flash",
+				"gemini/models/gemini-2.5-pro",
+				"gemini/models/gemini-3-flash-preview",
+				"gemini/models/gemini-3-pro-preview",
+				"openai/gpt-4.1",
+				"openai/gpt-4.1-nano",
+				"openai/gpt-5",
+				"openai/gpt-5-mini",
+				"openai/gpt-5-nano"
+			]
+		}
+	}
+}
