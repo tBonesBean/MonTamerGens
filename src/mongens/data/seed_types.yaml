@@ -1,6 +1,18 @@
 - name: Axiom
   weight: 3.0
+  weight: 3.0
   habitats:
+      - Clockwork City
+      - Classified Research Facilities
+      - Crystalline Cave
+      - Petrified Forest
+      - Ancient Lavaflows
+      - Whispering Dunes
+      - Glass Caverns
+      - Thriving Reefs
+      - Crumbling Ruins
+      - Forgotten Temple
+      - Archaeological Dig
       - Clockwork City
       - Classified Research Facilities
       - Crystalline Cave
@@ -34,9 +46,51 @@
           - Logical
           - Ordered
           - Geometric
+      mul:
+          DEF: 1.20
+          SPDEF: 1.20
+          ATK: 1.10
+          SPATK: 1.20
+          HP: 1.10
+          ACC: 1.15
+      add:
+          LUCK: 2
+      tags:
+          - Metallic
+          - Mystical
+          - Resist:Spur
+          - Weak:Idol
+          - Resist:Rift
+          - Weak:Dread
+      notes:
+          - Discipline
+          - Logical
+          - Ordered
+          - Geometric
 - name: Spur
   weight: 3.0
+  weight: 3.0
   habitats:
+      - Ennoan Grasslands
+      - Verdant Plains
+      - Clockwork City
+      - Bioforge Basin
+      - Crumbling Ruins
+      - Forgotten Temple
+      - Ancient Battlefield
+      - Archaeological Dig
+      - Secret Lab
+      - Agency Black Site
+      - Synthetic Biosphere
+      - Power Plant
+      - Eroding Shipwreck
+      - Ghost Town
+      - Abandoned Village
+      - Restricted Labratory
+      - Concrete Jungle
+      - Retired Military Base
+      - Condemned HydroPowerDam
+      - Rusted Plane Wreckage
       - Ennoan Grasslands
       - Verdant Plains
       - Clockwork City
@@ -73,9 +127,36 @@
           - Aggressive
           - Kinetic
           - Explosive
+      mul:
+          ATK: 1.20
+          SPD: 1.25
+          SPATK: 0.90
+      add:
+          HP: 5
+      tags:
+          - Momentum
+          - Resist:Bloom
+          - Weak:Rift
+      notes:
+          - Impulse
+          - Aggressive
+          - Kinetic
+          - Explosive
 - name: Echo
   weight: 3.0
+  weight: 3.0
   habitats:
+      - Echoing Grotto
+      - Archive Stone
+      - Skybridge Peaks
+      - Frozen Steppe
+      - Whispering Dunes
+      - Glass Desert
+      - Verdant Plains
+      - Highlands
+      - Shattered Plateau
+      - Wyrmscar Ridge
+      - Yittrosian Forest
       - Echoing Grotto
       - Archive Stone
       - Skybridge Peaks
@@ -104,9 +185,42 @@
           - Memory
           - Recursive
           - Harmonic
+      mul:
+          SPD: 1.20
+          SPATK: 1.20
+          EVA: 1.10
+          ACC: 1.10
+      add:
+          LUCK: 3
+      tags:
+          - Sound-Based
+          - Resist:Geist
+          - Weak:Axiom
+      notes:
+          - Resonance
+          - Memory
+          - Recursive
+          - Harmonic
 - name: Flow
   weight: 3.0
+  weight: 3.0
   habitats:
+      - Freshwater Springs
+      - Riverlands
+      - Still Tidepools
+      - Thriving Reefs
+      - Sunless Abyss
+      - Alpine Lakes
+      - Moonlit Atolls
+      - Bioluminous Currents
+      - Violent Rapids
+      - Unyielding Cascades
+      - Wild Tundra
+      - Frost Caps
+      - Snowcapped Peaks
+      - Frigid Icefields
+      - Snowpacked Mountains
+      - Permafrost Highlands
       - Freshwater Springs
       - Riverlands
       - Still Tidepools
@@ -140,7 +254,22 @@
           - Current
 - name: Bastion
   weight: 4.0
+  weight: 4.0
   habitats:
+      - Monolithic Structures
+      - Ancient Battlefield
+      - Crystalline Cave
+      - Ennoan Grasslands
+      - Alpine Slopes
+      - Lunaglow Plateau
+      - Riverlands
+      - Dayless Mosswood
+      - Still Tidepools
+      - Glass Desert
+      - Blooming Valley
+      - Ironwood Deep
+      - Fungal Vales
+      - Thornveil Thicket
       - Monolithic Structures
       - Ancient Battlefield
       - Crystalline Cave
@@ -173,7 +302,21 @@
           - Unyielding
 - name: Rift
   weight: 2.0
+  weight: 2.0
   habitats:
+      - Starfall Crater
+      - Astral Terrace
+      - Bewitched Glen
+      - Darkmist Chasm
+      - Netherbleak Hollow
+      - Crumbling Ruins
+      - Forgotten Temple
+      - Synthetic Biosphere
+      - Abandoned Wastes
+      - Retired Military Base
+      - Monolithic Structures
+      - Dayless Mosswood
+      - Wyrmscar Ridge
       - Starfall Crater
       - Astral Terrace
       - Bewitched Glen
@@ -203,9 +346,26 @@
           - Chaotic
           - Temporal
           - Paradox
+      mul:
+          SPD: 1.20
+          SPDEF: 1.15
+          LUCK: 1.20
+      add:
+          EVA: 5
+      tags:
+          - Time-Warp
+          - Resist:Dread
+          - Weak:Geist
+      notes:
+          - Curious
+          - Chaotic
+          - Temporal
+          - Paradox
 - name: Mire
   weight: 1.0
   habitats:
+      - Gloomfen Bogs
+      - Oldgrowth Marsh
       - Gloomfen Bogs
       - Oldgrowth Marsh
   attributes:
@@ -223,9 +383,32 @@
           - Corrupting
           - Viscous
           - Decay
+      mul:
+          HP: 1.12
+          DEF: 1.05
+          SPD: 0.90
+      add:
+          SPDEF: 5
+      tags:
+          - Eroded
+          - Clinging
+      notes:
+          - Stagnant
+          - Corrupting
+          - Viscous
+          - Decay
 - name: Idol
   weight: 3.0
   habitats:
+      - Smoldering Flats
+      - Mt. Thermallia
+      - Collapsed Magma Tubes
+      - Ancient Lavaflows
+      - Whispering Dunes
+      - Glass Caverns
+      - Obsidian Labyrinth
+      - Petrified Forest
+      - Strikken Ashlands
       - Smoldering Flats
       - Mt. Thermallia
       - Collapsed Magma Tubes
@@ -263,7 +446,31 @@
       - Astral Terrace
       - Synthetic Biosphere
       - Origin<UNKNOWN>
+      - Sunless Abyss
+      - Ghost Town
+      - Starfall Crater
+      - Celestial Spire
+      - Aurora Fields
+      - Echoing Grotto
+      - Astral Terrace
+      - Synthetic Biosphere
+      - Origin<UNKNOWN>
   attributes:
+      mul:
+          SPATK: 1.20
+          SPDEF: 1.25
+          SPD: 1.20
+      add:
+          EVA: 5
+      tags:
+          - Celestial
+          - Resist:Echo
+          - Weak:Bloom
+      notes:
+          - Spiritual
+          - Incorporeal
+          - Ethereal
+          - Phantasm
       mul:
           SPATK: 1.20
           SPDEF: 1.25
@@ -281,7 +488,30 @@
           - Phantasm
 - name: Bloom
   weight: 4.0
+  weight: 4.0
   habitats:
+      - Blooming Valley
+      - Verdant Plains
+      - Oldgrowth Marsh
+      - Misty Glades
+      - Bewitched Glen
+      - Ironwood Deep
+      - Fungal Vales
+      - Thornveil Thicket
+      - Dayless Mosswood
+      - Shattered Plateau
+      - Wyrmscar Ridge
+      - Still Tidepools
+      - Thriving Reefs
+      - Secret Lab
+      - Restricted Labratory
+      - Darkmist Chasm
+      - Netherbleak Hollow
+      - Echoing Grotto
+      - Whispering Dunes
+      - Alpine Lakes
+      - Petrified Forest
+      - Bioluminous Currents
       - Blooming Valley
       - Verdant Plains
       - Oldgrowth Marsh
@@ -329,7 +559,21 @@
   habitats:
       - Secret Lab
       - Cocoon Sentinel
+      - Secret Lab
+      - Cocoon Sentinel
   attributes:
+      mul:
+          LUCK: 1.10
+      add:
+          ACC: 5
+      tags:
+          - Hollow
+          - Receptacle
+      notes:
+          - Empty
+          - Potential
+          - Latent
+          - Structural
       mul:
           LUCK: 1.10
       add:
@@ -344,6 +588,7 @@
           - Structural
 - name: Dread
   weight: 2.0
+  weight: 2.0
   habitats:
       - Dread Catacombs
       - Darkmist Chasm
@@ -354,7 +599,31 @@
       - Retired Military Base
       - Monolithic Structures
       - Dayless Mosswood
+      - Dread Catacombs
+      - Darkmist Chasm
+      - Gloomfen Bogs
+      - AshGlass Tombs
+      - Netherbleak Hollow
+      - Abandoned Wastes
+      - Retired Military Base
+      - Monolithic Structures
+      - Dayless Mosswood
   attributes:
+      mul:
+          SPATK: 1.25
+          HP: 1.15
+          ATK: 1.10
+      add:
+          ACC: -5
+      tags:
+          - Void
+          - Resist:Axiom
+          - Weak:Bastion
+      notes:
+          - Fear
+          - Primal
+          - Consumption
+          - Gloom
       mul:
           SPATK: 1.25
           HP: 1.15

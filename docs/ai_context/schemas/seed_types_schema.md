@@ -131,18 +131,20 @@ add:
     DEF: 10
 ```
 
-### **3.4.3 attributes.tags (OPTIONAL)**
+### **3.4.3 attributes.tags (REQUIRED)**
 
-**Type:** list[string]
-**Purpose:** Identify 'type-specific' strengths, weaknesses, abilities, synergies, etc.
+**Type:** list[string] 
+**Purpose:** Identify 'type-specific' and 'lore-building' strengths, weaknesses, abilities, synergies, etc.
 
 **Constraints:**
 
--   Must be a list of strings.
--   Special prefixes: (**examples**)
+-   Must be a list of `Prefix:Value` strings.
+-   Acceptable prefixes include _(but not limited to)_:
     -   `Resist:X` → adds to `meta.resist`
     -   `Weak:X` → adds to `meta.weak`
     -   `Ability:X` → adds to `meta.abilities`
+	-   `Trigger:X` → adds to `meta.triggers`
+
 
 **Example:**
 
@@ -160,14 +162,16 @@ tags:
 
 **Constraints:**
 
--   Must be a list of strings.
+-   Must be a list of *at least* 3 strings. 
 
 **Example:**
 
 ```yaml
 notes:
-    - Resilient
-    - Stalwart
+  - Resilient
+  - Stalwart
+  - Unyielding
+  - Headstrong
 ```
 
 ---
@@ -178,21 +182,22 @@ notes:
 - name: Flow
   weight: 1.0
   habitats:
-      - Freshwater Springs
-      - Riverlands
+    - Freshwater Springs
+    - Riverlands
   attributes:
-      mul:
-          SPDEF: 1.12
-          SPD: 1.05
-      add:
-          HP: 10
-	  tags:
-	  	- Resist:Dread
-	  	- Weak:Vessel
-		- Ability:HealAlly
-      notes:
-          - Empathic
-          - Adaptive
+    mul:
+      SPDEF: 1.12
+      SPD: 1.05
+    add:
+      HP: 10
+	tags:
+	  - Resist:Dread
+	  - Weak:Vessel
+	  - Ability:HealAlly
+    notes:
+      - Empathic
+      - Adaptable
+	  - Intuitive
 ```
 
 ---
@@ -253,7 +258,7 @@ When you are asked to generate or modify entries in `seed_types.yaml`:
 -   **Do not invent new top-level fields.** The allowed fields are `name`, `weight`, `habitats`, and `attributes`.
 -   Ensure `name` is a unique, descriptive, single-word concept, and when each `name` is viewed collectively, there is no ambiguity.
 -   Stat modifications in `mul` and `add` should be subtle. Large changes are typically handled by mutagens (`utility_mods.yaml` and `major_mods.yaml`).
--   The `tags` should always be formatted with `PREFIX:VALUE` strings that maintain coherence when processed by downstream systems (`Weak:<type>`, `Resist:<type>`, `Ability:TimeShift`, `Trigger:NPC_event`, etc.).
+-   The `tags` should _*ONLY*_ be formatted with `PREFIX:VALUE` strings that maintain coherence when processed by downstream systems (`Weak:<type>`, `Resist:<type>`, `Ability:TimeShift`, `Trigger:NPC_event`, etc.).
 -   The `notes` should be high-level thematic keywords, not phrases or sentences. Intended to guide narrative generation, as well as AI image generation.
 -   The `habitats` should align with the theme of the seed `type` and potential forms from `type_forms.yaml`. Possibly influencing or triggering in-game events (future systems).
 
