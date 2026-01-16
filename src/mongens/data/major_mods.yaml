@@ -372,3 +372,59 @@
   synergy_bonus:
     Flow: 1.2
     Rift: 1.15
+
+"Dreadmaw Eclipse":
+  mul:
+    ATK: 1.2
+    SPATK: 1.2
+    HP: 1.1
+  add:
+    LUCK: 2
+  tags:
+    - "Umbral:Keen"
+    - "Resist:Fear"
+    - "Weak:Radiant"
+  allowed_types:
+    - Dread
+    - Geist
+    - Rift
+  rarity: 1.2
+  synergy_bonus:
+    Dread: 1.35
+"Mirebound Rot":
+  mul:
+    HP: 1.18
+    DEF: 1.15
+    SPD: 0.92
+  add:
+    SPDEF: 4
+  tags:
+    - "Rot:Veil"
+    - "Resist:Decay"
+    - "Weak:Purity"
+  allowed_types:
+    - Mire
+    - Bloom
+    - Flow
+  rarity: 1.1
+  synergy_bonus:
+    Mire: 1.35
+"Vesselcore Hollow":
+  mul:
+    LUCK: 1.2
+    SPDEF: 1.1
+    ACC: 1.05
+  add:
+    EVA: 3
+  tags:
+    - "Hollow:Core"
+    - "Resist:Void"
+    - "Weak:Anchor"
+  allowed_types:
+    - Vessel
+    - Axiom
+    - Geist
+  rarity: 1.15
+  synergy_bonus:
+    Vessel: 1.35
+

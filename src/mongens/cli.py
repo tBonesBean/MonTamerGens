@@ -9,7 +9,7 @@ from pathlib import Path
 from .data.data import *
 from .dex_entries import dex_formatter
 from .forge_name import *
-from .mon_forge import generate_monster
+from .mon_forge import apply_mutagens
 from .monster_cache import CACHE_FILE, OUTPUT_PATH, load_monster, save_monster
 from .prompt_engine import construct_mon_prompt
 from .monsterseed import MonsterSeed, choose_type_pair, weighted_choice
@@ -123,6 +123,12 @@ def main():
         help="Number of utility mutagens.",
     )
 
+    parser_unique.add_argument(
+        "--json",
+        action="store_true",
+        help="Save the raw seed JSON to the cache file.",
+    )
+
     # 'alternatives' command - Generates a list of names for a monster
     parser_alt = subparsers.add_parser(
         "alternatives",
@@ -169,6 +175,12 @@ def main():
         type=int,
         default=10,
         help="Number of alternative names to generate.",
+    )
+
+    parser_alt.add_argument(
+        "--json",
+        action="store_true",
+        help="Save the raw seed JSON to the cache file.",
     )
 
     # ===================================================================
@@ -218,7 +230,7 @@ def main():
         "-o",
         "--output",
         type=str,
-        default="C:/Users/Bean/Desktop/PokeDex/art_prompts.txt",
+        default=str(Path(__file__).parent / "assets" / "art_prompts.txt"),
         help="Optional path to append the prompt to a file.",
     )
     parser_prompt.add_argument(
@@ -355,6 +367,27 @@ def main():
             s_type = secondary_arg
         return p_type, s_type
 
+    def _forge_seed_no_cache(idnum: int, primary_type: str, secondary_type: str | None, major_count: int, util_count: int) -> MonsterSeed:
+        """
+        Summary:
+            Creates a fully forged MonsterSeed without writing to the cache.
+        """
+        seed = MonsterSeed.forge(idnum, primary_type, secondary_type)
+        seed = apply_mutagens(seed, major_count=major_count, util_count=util_count)
+        seed = forge_monster_name(seed)
+        return seed
+
+    def _write_seed_json(output_path: str, seeds: list[MonsterSeed]) -> None:
+        """
+        Summary:
+            Writes seed JSON alongside an output file path as '<output>.seed.json'.
+        """
+        out = Path(output_path)
+        json_path = out.with_suffix(out.suffix + '.seed.json')
+        payload = [asdict(s) for s in seeds]
+        with json_path.open('w', encoding='utf-8') as f:
+            json.dump(payload, f, ensure_ascii=False, indent=2)
+
     def _get_or_generate_seed(args: argparse.Namespace, idnum: int = 1) -> MonsterSeed | None:
         '''
         Summary:
@@ -375,7 +408,7 @@ def main():
             
             print("Generating a temporary monster...")
             p_type, s_type = _get_monster_types_from_args(args.primary_type, args.secondary_type)
-            return generate_monster(
+            return _forge_seed_no_cache(
                 idnum=idnum,
                 primary_type=p_type,
                 secondary_type=s_type,
@@ -396,7 +429,7 @@ def main():
         for i in range(args.count):
             p_type, s_type = _get_monster_types_from_args(args.primary_type, args.secondary_type)
             try:
-                monster_template = generate_monster(
+                monster_template = _forge_seed_no_cache(
                     idnum=i + 1,
                     primary_type=p_type,
                     secondary_type=s_type,
@@ -413,7 +446,9 @@ def main():
         full_output = ("\n\n" + "-" * 60 + "\n\n").join(output_lines)
         if args.output:
             # append textual dex entries (preserve existing file but allow overwrite option later)
-            with open(args.output, "a", encoding="utf-8") as f:
+            out_path = Path(args.output)
+            out_path.parent.mkdir(parents=True, exist_ok=True)
+            with out_path.open("a", encoding="utf-8") as f:
                 f.write(full_output + "\n")
             print(f"Successfully appended {len(output_lines)} entries to {args.output}")
         else:
@@ -423,13 +458,15 @@ def main():
         if args.json:
             for seed in generated_seeds:
                 save_monster(seed)
+            if args.output:
+                _write_seed_json(args.output, generated_seeds)
             print(f"Saved {len(generated_seeds)} seed object(s) to {CACHE_FILE}")
 
     elif args.command == "unique":
         print("Generating raw data for one unique monster instance...")
         p_type, s_type = _get_monster_types_from_args(args.primary_type, args.secondary_type)
         try:
-            wild_monster = generate_monster(
+            wild_monster = _forge_seed_no_cache(
                 idnum=1,
                 primary_type=p_type,
                 secondary_type=s_type,
@@ -439,6 +476,9 @@ def main():
 
             pprint(asdict(wild_monster))
             print(f"\nMonster Pin ID: {wild_monster.meta.get('unique_id')}")
+            if args.json:
+                save_monster(wild_monster)
+                print(f"Saved seed object to {CACHE_FILE}")
         except ValueError as e:
             print(f"Error generating monster: {e}")
 
@@ -469,11 +509,15 @@ def main():
                 print(f"Monster Pin ID: {monster_seed.meta.get('unique_id')}")
 
             if args.output:
-                with open(args.output, "a", encoding="utf-8") as f:
+                out_path = Path(args.output)
+                out_path.parent.mkdir(parents=True, exist_ok=True)
+                with out_path.open("a", encoding="utf-8") as f:
                     f.write(art_prompt + "\n\n" + ("-" * 60) + "\n\n")
                 print(f"Saved prompt to {args.output}")
             if args.json:
                 save_monster(monster_seed)
+                if args.output:
+                    _write_seed_json(args.output, [monster_seed])
                 print(f"Saved seed object to {CACHE_FILE}")
 
     elif args.command == "list":
@@ -506,7 +550,7 @@ def main():
         p_type, s_type = choose_type_pair()
         
         try:
-            lumen_kin_seed = generate_monster(
+            lumen_kin_seed = _forge_seed_no_cache(
                 idnum=1, primary_type=p_type, secondary_type=s_type, major_count=1, util_count=1
             )
             

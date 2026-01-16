@@ -14,7 +14,11 @@ def translate_term(term: str) -> str:
     Returns:
         The translated term, or the original term if no translation is available.
     '''
-    return VISUAL_TRANSLATION.get(term, term)
+    for bucket in ("mutagens", "traits"):
+        bucket_map = VISUAL_TRANSLATION.get(bucket, {})
+        if term in bucket_map:
+            return bucket_map[term]
+    return term
 
 
 def construct_mon_prompt(seed) -> str:

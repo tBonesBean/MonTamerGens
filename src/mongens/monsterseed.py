@@ -29,7 +29,7 @@ ChoiceList = Union[Mapping[Any, float], Iterable[Tuple[Any, float]]]
 
 
 def weighted_choice(choices_with_weights: ChoiceList):
-    """ Selects an item from a weighted list of choices.
+    """Selects an item from a weighted list of choices.
 
     Args:
         choices_with_weights: A dictionary mapping choices to weights or an iterable
@@ -89,11 +89,21 @@ def weighted_choice(choices_with_weights: ChoiceList):
     )
 
 
+def rarity_to_weight(rarity_val: Any, alpha: float = 1.0) -> float:
+    """Convert a rarity value into a sampling weight (rarer -> lower weight)."""
+    try:
+        r = float(rarity_val)
+    except Exception:
+        r = 1.0
+    r = max(r, 1e-6)
+    return 1.0 / (r ** float(alpha))
+
+
 def choose_type_pair(
     primary_type_override: Optional[str] = None,
     secondary_chance: float = 0.65,
 ) -> Tuple[str, Optional[str]]:
-    """ Selects a primary and optional secondary type, respecting weights and rules.
+    """Selects a primary and optional secondary type, respecting weights and rules.
 
     Args:
         primary_type_override: If provided, this primary type is used instead of a random one.
@@ -134,7 +144,7 @@ def choose_type_pair(
 
 @dataclass
 class MonsterSeed:
-    """ A deterministic intent snapshot used to generate a monster.
+    """A deterministic intent snapshot used to generate a monster.
         Contains biases, constraints, and semantic identity — not final results.
 
     Attributes:
@@ -173,7 +183,7 @@ class MonsterSeed:
         secondary_type: Optional[str] = None,
         secondary_chance: float = 0.65,
     ) -> "MonsterSeed":
-        """ Factory method to create a new, properly biased MonsterSeed.
+        """Factory method to create a new, properly biased MonsterSeed.
             This method orchestrates the initial creation of a monster, including
             selecting its species, habitat, traits, and calculating its base stats
             and meta attributes based on its types.
@@ -242,30 +252,43 @@ class MonsterSeed:
         # Filter mods by allowed_types (if present) so selected mods are thematically appropriate.
         def _mod_allowed(mod: dict, primary: str, secondary: Optional[str]) -> bool:
             allowed = mod.get("allowed_types")
-            if allowed is None:
-                return True
-            return (primary in allowed) or (
-                secondary in allowed if secondary else False
-            )
+            if allowed is None or len(allowed) == 0:
+                allowed_ok = True
+            else:
+                allowed_ok = (primary in allowed) or (
+                    secondary in allowed if secondary else False
+                )
+            if not allowed_ok:
+                return False
+
+            incompatible = mod.get("incompatible_types", []) or []
+            if primary in incompatible:
+                return False
+            if secondary and secondary in incompatible:
+                return False
+
+            return True
 
         major_weights = {
-            name: mod.get("rarity", 1.0)
+            name: rarity_to_weight(mod.get("rarity", 1.0))
             for name, mod in MAJOR_MODS.items()
             if _mod_allowed(mod, primary_type, secondary_type)
         }
         utility_weights = {
-            name: mod.get("rarity", 1.0)
+            name: rarity_to_weight(mod.get("rarity", 1.0))
             for name, mod in UTILITY_MODS.items()
             if _mod_allowed(mod, primary_type, secondary_type)
         }
 
         if not major_weights:
             major_weights = {
-                name: mod.get("rarity", 1.0) for name, mod in MAJOR_MODS.items()
+                name: rarity_to_weight(mod.get("rarity", 1.0))
+                for name, mod in MAJOR_MODS.items()
             }
         if not utility_weights:
             utility_weights = {
-                name: mod.get("rarity", 1.0) for name, mod in UTILITY_MODS.items()
+                name: rarity_to_weight(mod.get("rarity", 1.0))
+                for name, mod in UTILITY_MODS.items()
             }
 
         major_choice = weighted_choice(major_weights)
@@ -311,7 +334,7 @@ class MonsterSeed:
 def calculate_base_stats(
     primary_type: str, secondary_type: Optional[str]
 ) -> Dict[str, int]:
-    """ Calculates base stats for a monster given its primary and secondary types.
+    """Calculates base stats for a monster given its primary and secondary types.
 
     Args:
         primary_type: The primary type of the monster.
@@ -346,7 +369,7 @@ def calculate_base_stats(
 def get_base_meta(
     primary_type: str, secondary_type: Optional[str]
 ) -> Dict[str, List[str]]:
-    """ Gets the base meta tags, resistances, and weaknesses from the monster's types.
+    """Gets the base meta tags, resistances, and weaknesses from the monster's types.
     Args:
         primary_type: The primary type of the monster.
         secondary_type: The optional secondary type of the monster.
@@ -354,7 +377,13 @@ def get_base_meta(
     Returns:
         A dictionary containing the base meta information (tags, resistances, weaknesses).
     """
-    meta: Dict[str, List[str]] = {"tags": [], "resist": [], "weak": []}
+    meta: Dict[str, List[str]] = {
+        "tags": [],
+        "resist": [],
+        "weak": [],
+        "abilities": [],
+        "triggers": [],
+    }
 
     def apply_type_meta(type_name: str, meta_dict: Dict[str, List[str]]):
         type_entry = SEED_TYPE_DATA.get(type_name, {})
@@ -370,6 +399,10 @@ def get_base_meta(
                 meta_dict["resist"].append(tag.split(":", 1)[1])
             elif isinstance(tag, str) and tag.startswith("Weak:"):
                 meta_dict["weak"].append(tag.split(":", 1)[1])
+            elif isinstance(tag, str) and tag.startswith("Ability:"):
+                meta_dict["abilities"].append(tag.split(":", 1)[1])
+            elif isinstance(tag, str) and tag.startswith("Trigger:"):
+                meta_dict["triggers"].append(tag.split(":", 1)[1])
             else:
                 meta_dict["tags"].append(tag)
 
@@ -381,7 +414,7 @@ def get_base_meta(
 
     @property
     def species(self) -> str:
-        """ A backward-compatible alias for the `form` attribute.
+        """A backward-compatible alias for the `form` attribute.
 
         Returns:
             The canonical form name of the monster.

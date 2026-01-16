@@ -211,3 +211,36 @@
   allowed_types:
     - Rift
     - Axiom
+
+"Dreadbound Sigil":
+  npc_dialog_plus: true
+  tags:
+    - "Omen:Mark"
+    - "Night:Guide"
+  rarity: 1.05
+  allowed_types:
+    - Dread
+    - Echo
+    - Geist
+"Mirewick Talisman":
+  field_heal_ticks: 0.06
+  tags:
+    - "Bog:Ward"
+    - "Muck:Trail"
+  rarity: 1.0
+  allowed_types:
+    - Mire
+    - Bloom
+    - Flow
+"Vesselborne Reliquary":
+  unlock_tags:
+    - "Vault:Signal"
+  tags:
+    - "Hollow:Carry"
+    - "Signal:Call"
+  rarity: 1.05
+  allowed_types:
+    - Vessel
+    - Axiom
+    - Geist
+

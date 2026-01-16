@@ -169,6 +169,9 @@ def apply_mutagens(
     # --- Filter Available Mutagens (with synergy multiplier) ---
     available_majors: Dict[str, float] = {}
     for key, mod_def in MAJOR_MODS.items():
+        if key in seed_mutagen_set:
+            continue
+
         allowed = mod_def.get("allowed_types", []) or []
         incompatible = mod_def.get("incompatible_types", []) or []
 
@@ -196,6 +199,9 @@ def apply_mutagens(
 
     available_utilities = {}
     for key, mod_def in UTILITY_MODS.items():
+        if key in seed_mutagen_set:
+            continue
+
         allowed = mod_def.get("allowed_types", []) or []
         incompatible = mod_def.get("incompatible_types", []) or []
 

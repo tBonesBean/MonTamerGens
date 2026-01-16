@@ -212,8 +212,8 @@ These rules guide the naming pipeline:
 ### **8.1 Deterministic**
 Names must be reproducible from:
 
-- type  
-- species  
+- types 
+- forms  
 - mutagens  
 - traits  
 - stats  

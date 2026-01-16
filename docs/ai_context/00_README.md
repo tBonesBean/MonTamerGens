@@ -46,7 +46,7 @@ ai_context/
 │   ├── mon_forge.md
 │   ├── forge_name.md
 │   ├── dex_entries.md
-│   ├── prompt_engine.md  <- yet to be written
+│   ├── prompt_engine.md
 │   ├── monster_cache.md
 │   └── reroll.md
 └── schemas/
