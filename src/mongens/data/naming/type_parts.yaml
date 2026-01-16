@@ -1,0 +1,60 @@
+Axiom:
+    prefix: []
+    core: []
+    suffix: []
+Azimuth:
+    prefix: []
+    core: []
+    suffix: []
+Bastion:
+    prefix: [Stone, Iron, Ward, Bulw]
+    core: [hold, anchor, stand]
+    suffix: [guard, wall, citadel]
+Bloom:
+    prefix: []
+    core: []
+    suffix: []
+Echo:
+    prefix: [Re, Grave, Pale, Hush]
+    core: [mem, loop, trace]
+    suffix: [hollow, remnant, veil]
+Flow:
+    prefix: [Wave, Tide, Stream, Drift]
+    core: [curr, flux, surge]
+    suffix: [rush, glide, cascade]
+Geist:
+    prefix: []
+    core: []
+    suffix: []
+Idol:
+    prefix: []
+    core: []
+    suffix: []
+Mire:
+    prefix: []
+    core: []
+    suffix: []
+Nadir:
+    prefix: []
+    core: []
+    suffix: []
+Oracle:
+    prefix: []
+    core: []
+    suffix: []
+Rift:
+    prefix: []
+    core: []
+    suffix: []
+Spur:
+    prefix: []
+    core: []
+    suffix: []
+Vessel:
+    prefix: []
+    core: []
+    suffix: []
+Zenith:
+    prefix: []
+    core: []
+    suffix: []

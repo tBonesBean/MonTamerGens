@@ -6,10 +6,10 @@ Types are **not elements** and **not species**. They are _ontological forces_ �
 
 Use this glossary as:
 
--   a reference for **name generation** (prefixes, suffixes, roots)
--   guidance for **mutagen compatibility**
--   constraints for **Dex entry tone**
--   alignment checks for future systems (evolution, resonance, emotion)
+- a reference for **name generation** (prefixes, suffixes, roots)
+- guidance for **mutagen compatibility**
+- constraints for **Dex entry tone**
+- alignment checks for future systems (evolution, resonance, emotion)
 
 ---
 
@@ -21,8 +21,8 @@ Use this glossary as:
 
 **Naming Language:**
 
--   Prefixes: _Lex-_, _Ordo-_, _Prime-_, _Rule-_, _Null-_
--   Suffixes: _-core_, _-frame_, _-sentinel_, _-bound_
+- Prefixes: _Lex-_, _Ordo-_, _Prime-_, _Rule-_, _Null-_
+- Suffixes: _-core_, _-frame_, _-sentinel_, _-bound_
 
 **Narrative Flavor:** Archivists, sentinels, constructs of truth, living laws.
 
@@ -36,8 +36,8 @@ Use this glossary as:
 
 **Naming Language:**
 
--   Prefixes: _Rend-_, _Bolt-_, _Rush-_, _Fang-_
--   Suffixes: _-lash_, _-strike_, _-flare_, _-drive_
+- Prefixes: _Rend-_, _Bolt-_, _Rush-_, _Fang-_
+- Suffixes: _-lash_, _-strike_, _-flare_, _-drive_
 
 **Narrative Flavor:** Shock troops, hunters, berserkers, living accelerants.
 
@@ -51,8 +51,8 @@ Use this glossary as:
 
 **Naming Language:**
 
--   Prefixes: _Re-_, _Pale-_, _Grave-_, _Recall-_
--   Suffixes: _-remnant_, _-hollow_, _-trace_, _-loop_
+- Prefixes: _Re-_, _Pale-_, _Grave-_, _Recall-_
+- Suffixes: _-remnant_, _-hollow_, _-trace_, _-loop_
 
 **Narrative Flavor:** Relics, revenants, living histories, mnemonic entities.
 
@@ -66,8 +66,8 @@ Use this glossary as:
 
 **Naming Language:**
 
--   Prefixes: _Current-_, _Drift-_, _Weave-_, _Soft-_
--   Suffixes: _-tide_, _-bend_, _-stream_, _-veil_
+- Prefixes: _Current-_, _Drift-_, _Weave-_, _Soft-_
+- Suffixes: _-tide_, _-bend_, _-stream_, _-veil_
 
 **Narrative Flavor:** Guides, healers, symbiotes, environmental responders.
 
@@ -81,8 +81,8 @@ Use this glossary as:
 
 **Naming Language:**
 
--   Prefixes: _Iron-_, _Stone-_, _Ward-_, _Bulwark-_
--   Suffixes: _-wall_, _-anchor_, _-guard_, _-citadel_
+- Prefixes: _Iron-_, _Stone-_, _Ward-_, _Bulwark-_
+- Suffixes: _-wall_, _-anchor_, _-guard_, _-citadel_
 
 **Narrative Flavor:** Guardians, shields, last stands, living fortresses.
 
@@ -96,8 +96,8 @@ Use this glossary as:
 
 **Naming Language:**
 
--   Prefixes: _Void-_, _Split-_, _Warp-_, _Phase-_
--   Suffixes: _-fracture_, _-rift_, _-tear_, _-anomaly_
+- Prefixes: _Void-_, _Split-_, _Warp-_, _Phase-_
+- Suffixes: _-fracture_, _-rift_, _-tear_, _-anomaly_
 
 **Narrative Flavor:** Anomalies, experiment failures, dimensional walkers.
 
@@ -111,8 +111,8 @@ Use this glossary as:
 
 **Naming Language:**
 
--   Prefixes: _Bog-_, _Sludge-_, _Rot-_, _Murk-_
--   Suffixes: _-husk_, _-ooze_, _-residue_, _-clot_
+- Prefixes: _Bog-_, _Sludge-_, _Rot-_, _Murk-_
+- Suffixes: _-husk_, _-ooze_, _-residue_, _-clot_
 
 **Narrative Flavor:** Polluters, survivors of collapse, toxic ecosystems.
 
@@ -126,8 +126,8 @@ Use this glossary as:
 
 **Naming Language:**
 
--   Prefixes: _Flare-_, _Crest-_, _Halo-_, _Crown-_
--   Suffixes: _-icon_, _-beacon_, _-mantle_, _-radiant_
+- Prefixes: _Flare-_, _Crest-_, _Halo-_, _Crown-_
+- Suffixes: _-icon_, _-beacon_, _-mantle_, _-radiant_
 
 **Narrative Flavor:** Champions, cult icons, living myths.
 
@@ -141,8 +141,8 @@ Use this glossary as:
 
 **Naming Language:**
 
--   Prefixes: _Wisp-_, _Pale-_, _Shade-_, _Null-_
--   Suffixes: _-phantom_, _-veil_, _-liminal_, _-echo_
+- Prefixes: _Wisp-_, _Pale-_, _Shade-_, _Null-_
+- Suffixes: _-phantom_, _-veil_, _-liminal_, _-echo_
 
 **Narrative Flavor:** Ghosts, watchers, liminal entities.
 
@@ -156,8 +156,8 @@ Use this glossary as:
 
 **Naming Language:**
 
--   Prefixes: _Sprout-_, _Green-_, _Bloom-_, _Verdant-_
--   Suffixes: _-canopy_, _-vine_, _-seed_, _-flourish_
+- Prefixes: _Sprout-_, _Green-_, _Bloom-_, _Verdant-_
+- Suffixes: _-canopy_, _-vine_, _-seed_, _-flourish_
 
 **Narrative Flavor:** Gardeners, overgrowth, life reclaiming space.
 
@@ -171,8 +171,8 @@ Use this glossary as:
 
 **Naming Language:**
 
--   Prefixes: _Hollow-_, _Frame-_, _Null-_, _Shell-_
--   Suffixes: _-vessel_, _-recept_, _-core_, _-ward_
+- Prefixes: _Hollow-_, _Frame-_, _Null-_, _Shell-_
+- Suffixes: _-vessel_, _-recept_, _-core_, _-ward_
 
 **Narrative Flavor:** Experiments, avatars, catalysts for change.
 
@@ -186,11 +186,86 @@ Use this glossary as:
 
 **Naming Language:**
 
--   Prefixes: _Grim-_, _Maw-_, _Night-_, _Dread-_
--   Suffixes: _-stalker_, _-omen_, _-gloom_, _-devourer_
+- Prefixes: _Grim-_, _Maw-_, _Night-_, _Dread-_
+- Suffixes: _-stalker_, _-omen_, _-gloom_, _-devourer_
 
 **Narrative Flavor:** Apex predators, living nightmares, suppressive forces.
 
 ---
 
-**End of TYPE Glossary**
+# IMMEDIATE CHANGES TO BE MADE!!!!
+
+_REVISE DOCUMENT TO REFLECT 4 DISTINCT TYPE CLUSTERS and CORRESPONDING TYPES_
+_(NOW 16 TOTAL PRIMARY TYPES)_
+
+- 4 Distinct Type Clusters (Non-mechanical, Canonical):
+    - 4 Types in Each Cluster
+
+                  1.  **Structural**Commonality:
+                  	- Axiom
+                  	- Bastion
+                  	- Vessel
+                  	- Nadir
+
+              		Commonality:
+              		These types define limits — what cannot be exceeded, escaped, or ignored.
+
+              		Interference idea:
+              			Lumen in this cluster resists change.
+              			World events might feel heavy, static, or oppressive when these types co-locate.
+
+
+                  2.  **Vector**
+                  	- Spur
+                  	- Flow
+                  	- Rift
+                  	- Azimuth
+
+              		Commonality:
+              		These types define motion, not results.
+
+              		Interference idea:
+              		When multiple of these coexist:
+              		- paths open and close
+              		- terrain shifts
+              		- monsters migrate
+              		- evolution triggers via movement, not combat
+
+
+                  3.  **Residual**
+                  	- Echo
+                  	- Mire
+                  	- Geist
+                  	- Fracture
+
+              		Commonality:
+              		These types define aftermath — the world after something happened.
+
+              		Interference idea:
+              		Zones dominated by this cluster could:
+              		- repeat encounters
+              		- spawn variants
+              		- blur time or identity
+              		- alter naming / Dex tone automatically
+
+
+                  4.  **Expressive**
+                  	- Zenith
+                  	- Oracle
+                  	- Idol
+                  	- Bloom
+
+
+              		Commonality:
+              		These types define interpretation — not mechanics, but meaning.
+
+              		Interference idea:
+              		High concentrations could:
+              		- attract attention
+              		- trigger cult behavior
+              		- bias narrative outcomes
+              		- alter player choice framing
+
+## IMMEDIATELY APPLY THESE CHANGES TO ALL RELEVANT DOCUMENTATION!!!!
+
+---
