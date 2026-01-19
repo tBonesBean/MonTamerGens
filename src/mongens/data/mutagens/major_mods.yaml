@@ -24,9 +24,8 @@
   add:
     EVA: 5
   tags:
-    - "TideRip"
-    - "Heal:Current"
-    - "Weak:Crystalline"
+    - "Ability:Heal"
+    - "Weak:Bastion"
   allowed_types:
     - Flow
     - Bloom

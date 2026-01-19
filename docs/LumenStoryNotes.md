@@ -197,10 +197,9 @@ If they refuse:
 
 - The creature’s Lumen “detunes” and it becomes an ordinary early-game mon.
 - The player forges a **solo-Lumen identity**, gaining access to:
-
-	- mastery classes,
-	- artificer-style augmentations,
-	- self-forged Lumen powers.
+    - mastery classes,
+    - artificer-style augmentations,
+    - self-forged Lumen powers.
 
 **This is a playstyle divergence, not a morality split.**
 
@@ -223,18 +222,9 @@ These represent the player’s psychological and emotional profile.
 
 ---
 
-### **Step 2 — Resonance Maps to the Starters**
+### **Step 2 — Resonance Maps to the Starters** ((in progress))
 
 Each of the **_starters_**\*\* embodies a core emotional archetype:
-
-| Starter                                                                                                  | Type     | Archetype | Glow Source    | Gameplay Role       |
-|----------------------------------------------------------------------------------------------------------|----------|-----------|----------------|---------------------|
-| Sprigbulb                                                                                                | Verdant  | Empathy   | Nectar / Twig  | Support / Sustain   |
-| Boxling                                                                                                  | Pugilist | Courage   | Coin flare     | Physical Striker    |
-| Rippletide                                                                                               | Aquatic  | Memory    | Rune-tide core | Evasion / Casting   |
-| Flickermoth                                                                                              | Dread    | Curiosity | Wing-lumen     | Status / Perception |
-| **…**                                                                                                    | **…**    | **…**     | **…**          | **…**               |
-| _\*\*Specific Starter names/types/glow are all in initial design phase. Any specifics are placeholders._ |          |           |                |                     |
 
 Each starter has a **harmonic profile**, describing how strongly it responds to each resonance expression.
 
