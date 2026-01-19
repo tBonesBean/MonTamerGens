@@ -9,24 +9,24 @@ _Describes the required structure, allowed fields, constraints, and validation r
 Mutagens are high‑impact modifiers that shape a monster’s mechanical identity.  
 This schema defines the **canonical shape** of both:
 
--   **Major Mutagens** (`MAJOR_MODS`)
--   **Utility Mutagens** (`UTILITY_MODS`)
+- [**Major Mutagens**](../../../src/mongens/data/mutagens/major_mods.yaml)
+- [**Utility Mutagens**](../../../src/mongens/data/mutagens/utility_mods.yaml)
 
 It ensures:
 
--   consistent structure
--   valid stat modifiers
--   predictable tag behavior
--   correct type gating
--   safe synergy logic
--   compatibility with the mutagen forge
+- consistent structure
+- valid stat modifiers
+- predictable tag behavior
+- correct type gating
+- safe synergy logic
+- compatibility with the mutagen forge
 
 This schema is enforced by:
 
--   `apply_mutagens()` in `mon_forge.py`
--   mutagen filtering logic
--   synergy multiplier logic
--   stat application logic
+- `apply_mutagens()` in [(`mon_forge.py`)]
+- mutagen filtering logic
+- synergy multiplier logic
+- stat application logic
 
 ---
 
@@ -48,10 +48,7 @@ add: # OPTIONAL
     <STAT>: <number>
 
 tags: # OPTIONAL
-    - <string>
-
-allowed_types: # OPTIONAL
-    - <string>
+    - <string:string>
 
 incompatible_types: # OPTIONAL
     - <string>
@@ -87,9 +84,9 @@ Mutagens are intentionally flexible, but the **core fields** must follow strict 
 
 **Constraints:**
 
--   keys must be valid stats from `BASE_STATS`
--   values must be numeric
--   values must be > 0
+- keys must be valid stats from `BASE_STATS`
+- values must be numeric
+- values must be > 0
 
 **Example:**
 
@@ -108,8 +105,8 @@ mul:
 
 **Constraints:**
 
--   keys must be valid stats
--   values must be numeric
+- keys must be valid stats
+- values must be numeric
 
 **Example:**
 
@@ -128,12 +125,12 @@ add:
 
 **Constraints:**
 
--   list may be empty
--   entries must be strings
--   special prefixes:
-    -   `Resist:X` → adds to `meta.resist`
-    -   `Weak:X` → adds to `meta.weak`
-    -   everything else → `meta.tags`
+- list may be empty
+- entries must be strings
+- special prefixes:
+    - `Resist:X` → adds to `meta.resist`
+    - `Weak:X` → adds to `meta.weak`
+    - everything else → `meta.tags`
 
 **Example:**
 
@@ -141,51 +138,30 @@ add:
 tags:
     - Resist:Astral
     - Weak:Tempest
-    - VolcanicGlass
+    - Ability:Erupt
 ```
 
 ---
 
-## **3.4 allowed_types (OPTIONAL)**
-
-**Type:** list of strings  
-**Purpose:** type gating for mutagen eligibility.
-
-**Constraints:**
-
--   empty list means “allowed for all types”
--   if non-empty, monster must have at least one matching type
-
-**Example:**
-
-```yaml
-allowed_types:
-    - Axiom
-    - Geist
-```
-
----
-
-## **3.5 incompatible_types (OPTIONAL)**
+## **3.4 incompatible_types (OPTIONAL)**
 
 **Type:** list of strings  
 **Purpose:** hard exclusion for certain types.
 
 **Constraints:**
 
--   if monster has ANY listed type → mutagen is rejected
+- if monster has ANY listed type → mutagen is rejected
 
 **Example:**
 
 ```yaml
 incompatible_types:
     - Bloom
-    - Flow
 ```
 
 ---
 
-## **3.6 rarity (OPTIONAL)**
+## **3.5 rarity (OPTIONAL)**
 
 **Type:** float  
 **Default:** `1.0`  
@@ -193,9 +169,9 @@ incompatible_types:
 
 **Constraints:**
 
--   must be numeric
--   must be > 0
--   weight = `1 / rarity^alpha`
+- must be numeric
+- must be > 0
+- weight = `1 / rarity^alpha`
 
 **Example:**
 
@@ -205,16 +181,16 @@ rarity: 1.3
 
 ---
 
-## **3.7 synergy_bonus (OPTIONAL)**
+## **3.6 synergy_bonus (OPTIONAL)**
 
 **Type:** mapping of `<TYPE_NAME>: <float>`  
 **Purpose:** multiplicative weight bonus when monster has matching type.
 
 **Constraints:**
 
--   values must be numeric
--   values must be > 0
--   final synergy multiplier is clamped by `MAX_SYNERGY_MULT`
+- values must be numeric
+- values must be > 0
+- final synergy multiplier is clamped by `MAX_SYNERGY_MULT`
 
 **Example:**
 
@@ -232,32 +208,31 @@ Utility mutagens may include additional fields that do **not** affect stats dire
 
 These fields are optional and may include:
 
--   `identify_rates`
--   `quest_bonus`
--   `exp_mult`
--   `loot_mult`
--   `ally_buff`
--   `enemy_opening_debuff`
--   `double_rolls`
--   `unlock_tags`
--   `field_heal_ticks`
--   `ally_heal_ticks`
--   `shop_discount`
--   `crafting_bonus`
--   `map_reveal_radius`
--   etc.
+- `identify_rates`
+- `quest_bonus`
+- `exp_mult`
+- `loot_mult`
+- `ally_buff`
+- `enemy_opening_debuff`
+- `double_rolls`
+- `unlock_tags`
+- `field_heal_ticks`
+- `ally_heal_ticks`
+- `shop_discount`
+- `crafting_bonus`
+- `map_reveal_radius`
+- `NPC_event_trigger`
+- etc.
 
 **Constraints:**
 
--   must be JSON‑serializable
--   must not conflict with core fields
--   must not require special logic unless implemented in future systems
+- must be JSON‑serializable
+- must not conflict with core fields
+- must not require special logic unless implemented in future systems
 
 ---
 
 # 🧪 **5. Validation Rules (as enforced by mon_forge.py)**
-
-### ✔ Allowed types must match monster types
 
 ### ✔ Incompatible types must not overlap
 
@@ -267,7 +242,7 @@ These fields are optional and may include:
 
 ### ✔ Stat keys must be valid
 
-### ✔ Tags must be strings
+### ✔ Tags must be "X:Y" strings
 
 ### ✔ No negative multipliers
 
@@ -288,7 +263,6 @@ After loading, each mutagen is treated as:
   "mul": {...},
   "add": {...},
   "tags": [...],
-  "allowed_types": [...],
   "incompatible_types": [...],
   "rarity": <float>,
   "synergy_bonus": {...},
@@ -298,30 +272,36 @@ After loading, each mutagen is treated as:
 
 This is the shape consumed by:
 
--   mutagen filtering
--   synergy calculation
--   stat application
--   meta enrichment
+- mutagen filtering
+- synergy calculation
+- stat application
+- meta enrichment
 
 ---
 
 # 🚀 **7. Full Valid Example (Major Mutagen)**
 
 ```yaml
-Starwarden:
+"Starwarden":
     mul:
         SPDEF: 1.28
         LUCK: 1.20
         HP: 1.10
-    add: {}
-    allowed_types:
-        - Axiom
-        - Geist
-        - Echo
-    rarity: 1.3
+    add:
+		SPD: 10
+	tags:
+		- "Resist:Nadir"
+		- "Passive:Navigator"
+	incompatible_types:
+        - Nadir
+		- Spur
     synergy_bonus:
-        Mythic: 1.4
-    tags: []
+    	Zenith: 1.4
+		Azimuth: 1.3
+		Echo: 1.1
+		Geist: 1.2
+	rarity: 1.3
+
 ```
 
 ---
@@ -330,15 +310,25 @@ Starwarden:
 
 ```yaml
 Symbiote:
-    field_heal_ticks: 0.08
+	mul:
+		HP: 1.15
+		SPD: 1.12
+	add:
+		ATK: 10
+	tags:
+        - "Passive:Aura"
+        - "Ally:PairBond"
+	incompatible_types:
+		- Geist
+		- Azimuth
+		- Nadir
+	rarity: 1.1
+
+	field_heal_ticks: 0.08
     ally_heal_ticks: 0.04
-    tags:
-        - HealingAura
-        - Lifebond
-    rarity: 1
-    allowed_types:
-        - Bloom
-        - Flow
+
+
+
 ```
 
 ---
@@ -347,12 +337,12 @@ Symbiote:
 
 When generating or modifying mutagens, an AI agent must:
 
--   never invent new core fields
--   always validate stat names
--   always ensure multipliers are > 0
--   always ensure rarity is numeric
--   always ensure synergy bonuses are numeric
--   never assume tags have mechanical effects unless documented
--   never add fields requiring new logic unless requested
+- never invent new core fields
+- always validate stat names
+- always ensure multipliers are > 0
+- always ensure rarity is numeric
+- always ensure synergy bonuses are numeric
+- never assume tags have mechanical effects unless documented
+- never add fields requiring new logic unless requested
 
 ---

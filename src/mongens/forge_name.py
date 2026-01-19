@@ -848,6 +848,7 @@ _GENERIC_EPITHETS = [
     "the Unseen",
 ]
 
+
 # -----------------------
 # Helpers
 # -----------------------
@@ -1037,24 +1038,36 @@ def deterministic_name(
     return name
 
 
-def forge_monster_name(
-    seed: MonsterSeed, style: str = "fantasy", salt: str = ""
-) -> MonsterSeed:
-    """
-    Summary:
-        Generates a name for a monster and assigns it to the `name` attribute.
-        This function modifies the seed object in-place.
+def forge_monster_name(seed: MonsterSeed, salt: str = "") -> str:
+    rng = random.Random(
+        _stable_seed_int(
+            seed.idnum,
+            seed.primary_type,
+            seed.secondary_type,
+            seed.form,
+            ",".join(seed.mutagens.get("major", [])),
+            salt=salt,
+        )
+    )
 
-    Args:
-        seed: The MonsterSeed object to name.
-        style: The naming style to use.
-        salt: An optional salt for the name generation.
+    primary = seed.primary_type
+    secondary = seed.secondary_type
 
-    Returns:
-        The modified MonsterSeed object with the new name.
-    """
-    seed.name = _generate_name_from_seed(seed, style, salt)
-    return seed
+    begin = rng.choice(TYPE_NAME_PARTS[primary]["begin"])
+
+    mid_pool = list(TYPE_NAME_PARTS[primary]["mid"])
+    if secondary and secondary in TYPE_NAME_PARTS:
+        mid_pool += TYPE_NAME_PARTS[secondary]["mid"]
+
+    mid = rng.choice(mid_pool) if mid_pool else ""
+
+    end = rng.choice(TYPE_NAME_PARTS[primary]["end"])
+
+    name = f"{begin}{mid}{end}".capitalize()
+    name = re.sub(r"(.)\1{2,}", r"\1\1", name)
+
+    return name
+
 
 
 def generate_alternative_names(

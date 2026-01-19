@@ -97,7 +97,7 @@ This layer is the **source of truth** for all content.
 - Select form (species silhouette)
 - Select habitat
 - Select initial mutagens (1 major, 1 utility)
-- Select tempers
+
 - Select physical traits
 - Select held item
 - Compute base stats

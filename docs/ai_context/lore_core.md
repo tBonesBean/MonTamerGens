@@ -1,4 +1,5 @@
-# **lore_core.md_Your guide to understanding the responsibilities of every Python module in MonTamerGens._ Lumen Mythos & Narrative Canon**  
+# **lore_core.md_Your guide to understanding the responsibilities of every Python module in MonTamerGens.* Lumen Mythos & Narrative Canon**
+
 _The metaphysical, psychological, and thematic foundation of MonTamerGens._
 
 ---
@@ -10,19 +11,19 @@ It is **cognitive radiance** — a metaphysical energy produced when a being’s
 
 It is:
 
-- emotional resonance  
-- psychological coherence  
-- memory, desire, fear, and potential  
-- the “signal” of a mind aligning with the world  
+- emotional resonance
+- psychological coherence
+- memory, desire, fear, and potential
+- the “signal” of a mind aligning with the world
 
 Lumen is **felt**, not seen.  
 It manifests physically only through:
 
-- markings  
-- organs  
-- glow patterns  
-- behavioral anomalies  
-- environmental reactions  
+- markings
+- organs
+- glow patterns
+- behavioral anomalies
+- environmental reactions
 
 Monsters evolved to channel Lumen long before humans understood it.  
 Humans generate Lumen unconsciously — monsters generate it **intentionally**.
@@ -36,18 +37,18 @@ This difference is the root of the bond between them.
 Monsters are not just animals.  
 They are **biological metaphors** — living expressions of:
 
-- emotional states  
-- environmental pressures  
-- ancestral memory  
-- metaphysical forces  
+- emotional states
+- environmental pressures
+- ancestral memory
+- metaphysical forces
 
 A monster’s:
 
-- **Type** reflects its elemental or conceptual alignment  
-- **Form** reflects its ecological niche  
-- **Traits** reflect its lived experience  
-- **Mutagens** reflect its Lumen‑driven evolution  
-- **Habitat** reflects the environment that shaped its resonance  
+- **Type** reflects its elemental or conceptual alignment
+- **Form** reflects its ecological niche
+- **Traits** reflect its lived experience
+- **Mutagens** reflect its Lumen‑driven evolution
+- **Habitat** reflects the environment that shaped its resonance
 
 Every monster is a **story**, encoded in biology.
 
@@ -60,23 +61,23 @@ It **manifests** in response to the player’s internal resonance.
 
 The bond forms when:
 
-- the player’s Lumen signature stabilizes  
-- a monster’s dormant Lumen harmonizes with it  
-- both beings “recognize” each other in the Lumen Echo  
+- the player’s Lumen signature stabilizes
+- a monster’s dormant Lumen harmonizes with it
+- both beings “recognize” each other in the Lumen Echo
 
 This bond is:
 
-- quantum‑entangled  
-- emotionally reciprocal  
-- narratively meaningful  
-- mechanically impactful  
+- quantum‑entangled
+- emotionally reciprocal
+- narratively meaningful
+- mechanically impactful
 
 The bond grants:
 
-- **Kin Passive** — a shared buff  
-- **Kin Drive** — a stat bias  
-- **Kin Wound** — a flaw or neurosis  
-- **Kin Spark** — an evolution trigger  
+- **Kin Passive** — a shared buff
+- **Kin Drive** — a stat bias
+- **Kin Wound** — a flaw or neurosis
+- **Kin Spark** — an evolution trigger
 
 These are not cosmetic.  
 They define the creature’s **identity arc**.
@@ -87,43 +88,46 @@ They define the creature’s **identity arc**.
 
 These three concepts form the psychological backbone of monster identity.
 
-## **4.1 Kin Drive**  
+## **4.1 Kin Drive**
+
 A latent direction of growth.  
 Examples:
 
-- ATK_bias  
-- DEF_bias  
-- SPD_bias  
-- LUCK_bias  
+- ATK_bias
+- DEF_bias
+- SPD_bias
+- LUCK_bias
 
 Drives shape:
 
-- stat curves  
-- battle behavior  
-- evolution tendencies  
+- stat curves
+- battle behavior
+- evolution tendencies
 
 ---
 
-## **4.2 Kin Wound**  
+## **4.2 Kin Wound**
+
 A flaw inherited at bond time.  
 Not a debuff — a **story hook**.
 
 Examples:
 
-- Terrified of silence  
-- Allergic to gold  
-- Forgets faces instantly  
-- Dreams predict rainfall  
+- Terrified of silence
+- Allergic to gold
+- Forgets faces instantly
+- Dreams predict rainfall
 
 Wounds influence:
 
-- personality  
-- evolution conditions  
-- narrative beats  
+- personality
+- evolution conditions
+- narrative beats
 
 ---
 
-## **4.3 Kin Spark**  
+## **4.3 Kin Spark**
+
 The condition for evolution.  
 Not XP.  
 Not level.  
@@ -131,11 +135,11 @@ Not level.
 
 Examples:
 
-- Witness a Lumen Storm  
-- Heal its own Wound  
-- Experience betrayal  
-- Reach a place tied to its Deep Memory  
-- Survive a fear becoming real  
+- Witness a Lumen Storm
+- Heal its own Wound
+- Experience betrayal
+- Reach a place tied to its Deep Memory
+- Survive a fear becoming real
 
 Sparks make evolution **personal**.
 
@@ -145,25 +149,25 @@ Sparks make evolution **personal**.
 
 The Lumen Echo is a dreamlike metaphysical space where:
 
-- memory  
-- fear  
-- desire  
-- potential  
-- unresolved trauma  
+- memory
+- fear
+- desire
+- potential
+- unresolved trauma
 
 …all manifest as shifting silhouettes and symbolic landscapes.
 
 It is:
 
-- the player’s subconscious  
-- the monster’s dormant consciousness  
-- the bridge between worlds  
+- the player’s subconscious
+- the monster’s dormant consciousness
+- the bridge between worlds
 
 The Lumen‑Kin appears here because:
 
-- it is drawn to the player’s resonance  
-- it is “called” into being by their internal truth  
-- it is the creature most aligned with who the player is becoming  
+- it is drawn to the player’s resonance
+- it is “called” into being by their internal truth
+- it is the creature most aligned with who the player is becoming
 
 This is why the bond feels fated.
 
@@ -173,24 +177,24 @@ This is why the bond feels fated.
 
 Lumen Storms are environmental anomalies caused by:
 
-- emotional turbulence  
-- metaphysical instability  
-- ancient forces awakening  
-- fractures in the world’s cognitive field  
+- emotional turbulence
+- metaphysical instability
+- ancient forces awakening
+- fractures in the world’s cognitive field
 
 Effects include:
 
-- crystallized Lumen deposits  
-- unstable monsters  
-- distorted terrain  
-- memory echoes  
-- sigils  
-- temporary rifts  
+- crystallized Lumen deposits
+- unstable monsters
+- distorted terrain
+- memory echoes
+- sigils
+- temporary rifts
 
 Storms are both:
 
-- **threats**  
-- **opportunities for evolution**  
+- **threats**
+- **opportunities for evolution**
 
 They are the world’s way of “speaking.”
 
@@ -200,22 +204,22 @@ They are the world’s way of “speaking.”
 
 The player’s backstory generates resonance values:
 
-- Courage  
-- Empathy  
-- Instinct  
-- Memory  
-- Curiosity  
-- Solitude  
-- Discipline  
-- Lightbound  
+- Courage
+- Empathy
+- Instinct
+- Memory
+- Curiosity
+- Solitude
+- Discipline
+- Lightbound
 
 These combine into five emergent archetypes:
 
-1. **Strength Mirror**  
-2. **Flaw Mirror**  
-3. **Deep Memory**  
-4. **Hidden Desire**  
-5. **Potential Form**  
+1. **Strength Mirror**
+2. **Flaw Mirror**
+3. **Deep Memory**
+4. **Hidden Desire**
+5. **Potential Form**
 
 Each corresponds to a possible starter.
 
@@ -228,20 +232,22 @@ The strongest harmonic match becomes the **Lumen‑Kin**.
 The player may accept or refuse the bond.
 
 ## **Acceptance Path**
-- Shared Lumen Passive  
-- Emotional synchronization  
-- Exclusive story beats  
-- Resonance‑aligned evolution  
-- Stronger Sparks  
-- Higher XP sync  
+
+- Shared Lumen Passive
+- Emotional synchronization
+- Exclusive story beats
+- Resonance‑aligned evolution
+- Stronger Sparks
+- Higher XP sync
 
 ## **Refusal Path**
-- Creature becomes a normal early‑game monster  
-- Player enters the **Solo Lumen** path  
+
+- Creature becomes a normal early‑game monster
+- Player enters the **Solo Lumen** path
 - Gains:
-  - mastery classes  
-  - artificer‑style augmentations  
-  - self‑forged Lumen abilities  
+    - mastery classes
+    - artificer‑style augmentations
+    - self‑forged Lumen abilities
 
 Both paths are valid.  
 Neither is moralized.
@@ -255,17 +261,17 @@ It is a **story of becoming**.
 
 A monster evolves when:
 
-- its Spark conditions are met  
-- its Wound is confronted  
-- its Drive is expressed  
-- its Lumen harmonizes with a new truth  
+- its Spark conditions are met
+- its Wound is confronted
+- its Drive is expressed
+- its Lumen harmonizes with a new truth
 
 Evolution is:
 
-- emotional  
-- narrative  
-- metaphysical  
-- environmental  
+- emotional
+- narrative
+- metaphysical
+- environmental
 
 Not numerical.
 
@@ -275,22 +281,28 @@ Not numerical.
 
 The world itself has a Lumen field — a global cognitive ecosystem.
 
-### Monsters  
+### Monsters
+
 Stabilize and shape the field.
 
-### Humans  
+### Humans
+
 Influence it unconsciously.
 
-### Lumen Storms  
+### Lumen Storms
+
 Are ruptures in the field.
 
-### Ancient Ruins  
+### Ancient Ruins
+
 Are places where the field was once strong.
 
-### Sigils  
+### Sigils
+
 Are imprints of past Lumen events.
 
-### Evolution  
+### Evolution
+
 Is a creature’s way of adapting to the field’s shifts.
 
 The world is alive with thought.
@@ -301,17 +313,17 @@ The world is alive with thought.
 
 Your procedural systems map perfectly onto the metaphysics:
 
-| Lore Concept | Engine System |
-|--------------|---------------|
-| Lumen | Base stats, tags, meta |
-| Drives | Stat biases |
-| Wounds | Traits, quirks |
-| Sparks | Evolution triggers |
-| Resonance | Starter generation |
-| Archetypes | Type/form selection |
-| Storms | Mutagens, anomalies |
-| Echo | Naming, silhouette logic |
-| Cognitive ecology | Habitats, forms |
+| Lore Concept      | Engine System            |
+| ----------------- | ------------------------ |
+| Lumen             | Base stats, tags, meta   |
+| Drives            | Stat biases              |
+| Wounds            | Traits, quirks           |
+| Sparks            | Evolution triggers       |
+| Resonance         | Starter generation       |
+| Archetypes/Types  | Ontological forces that shape a monster's being |
+| Storms            | Mutagens, anomalies      |
+| Echo              | Naming, silhouette logic |
+| Cognitive ecology | Habitats, forms          |
 
 Your engine is not just generating monsters.  
 It is generating **stories of identity**.
@@ -322,13 +334,13 @@ It is generating **stories of identity**.
 
 MonTamerGens is about:
 
-- self‑discovery  
-- emotional resonance  
-- healing  
-- potential  
-- transformation  
-- connection  
-- the tension between who we are and who we could become  
+- self‑discovery
+- emotional resonance
+- healing
+- potential
+- transformation
+- connection
+- the tension between who we are and who we could become
 
 It is hopeful, mysterious, and introspective.
 
@@ -338,14 +350,14 @@ It is hopeful, mysterious, and introspective.
 
 To maintain narrative coherence:
 
-- Evolution must always be tied to Sparks  
-- Mutagens must feel like Lumen mutations  
-- Types must reflect metaphysical alignment  
-- Forms must reflect ecological truth  
-- Traits must reflect lived experience  
-- Names must reflect identity  
-- Habitats must reflect resonance  
-- Starters must reflect the player’s psyche  
+- Evolution must always be tied to Sparks
+- Mutagens must feel like Lumen mutations
+- Types must reflect metaphysical alignment
+- Forms must reflect ecological truth
+- Traits must reflect lived experience
+- Names must reflect identity
+- Habitats must reflect resonance
+- Starters must reflect the player’s psyche
 
 These constraints keep the world believable.
 
@@ -355,12 +367,12 @@ These constraints keep the world believable.
 
 `lore_core.md` defines:
 
-- what Lumen is  
-- how monsters work  
-- how bonds form  
-- how evolution happens  
-- how the world behaves  
-- how the player fits into the mythos  
+- what Lumen is
+- how monsters work
+- how bonds form
+- how evolution happens
+- how the world behaves
+- how the player fits into the mythos
 
 This is the **creative north star** for MonTamerGens.
 

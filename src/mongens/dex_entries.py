@@ -71,7 +71,7 @@ def dex_formatter(seed: MonsterSeed) -> str:
     """
     num = seed.idnum
     name = seed.name
-    species = seed.species
+    form = seed.form
     habitat = seed.habitat
     primary_type = seed.primary_type
     secondary_type = seed.secondary_type
@@ -93,7 +93,7 @@ def dex_formatter(seed: MonsterSeed) -> str:
 
     lines.append(sep_line)
     lines.append("")
-    header_line = f"#{num:03d}: '{name}' --- a(n) {species} monster"
+    header_line = f"#{num:03d}: '{name}' --- a(n) {form} monster"
     lines.append(header_line)
     lines.append("")
 
