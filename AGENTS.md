@@ -325,14 +325,12 @@ Tests must cover:
 This document is **v1.2** - updated to reflect the current canonical type taxonomy, YAML-first content model, and recent data migration.
 Changes in this release:
 
-- Normalized `seed_types.yaml` to the schema shape (list habitats, explicit tags).
-- Clarified that `seed_types_schema.md` requires `attributes.notes`.
-- Added schema and module-purpose documentation updates (including module_purposes and schemas readmes).
-- Documented current pipeline behavior based on the refactor state.
-- Confirmed `prompt_engine.py` and `dex_entries.py` are implemented (removed presumed labels).
+-   Migrated core types to YAML (`seed_types.yaml` / `type_forms.yaml`).
+-   Reconciled major mutagens and utility mods to canonical type names.
+-   Adjusted generation code paths to use `SEED_TYPE_DATA` and `MonsterSeed.forge()` improvements.
+-   Clarified the roles of `monsterseed.py` and `mon_forge.py` in the generation pipeline.
+-   Updated the "Technical Architecture" and "Systems Design" sections to match the current implementation.
 
-All future edits should continue the principle: changes must be additive, clarifying, or canon-strengthening.
-
-Last updated: 2026-01-13 04:56:41 -07:00
+All future edits should continue the principle: changes must be additive, clarifying, or canon‑strengthening.
 
 ---
