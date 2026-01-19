@@ -18,23 +18,44 @@
 				"servers": [
 					{
 						"name": "IntelliHub",
-						"connectionString": "https://intellihub.sync.server/api"
-					},
-					{
-						"name": "IntelliHub",
-						"url": 
+						"remotehost": "vision:SecureIntelliHubServer"
 					}
 				]
 			}
 		},
 		"plugins": [
-			"spellChecker": true,
-			"autoComplete": true,
-			"codeFormatter": true,
-			"intelligentSuggestions": true,
-			"serverSync": true,
-			"versionControl": true
+			"spellChecker",
+			"autoComplete",
+			"codeFormatter",
+			"intelligentSuggestions",
+			"serverSync",
+			"versionControl",
+			"themeManager",
+			"IntelliHubIntegration",
+			"markdownPreview",
+			"liveCollaboration",
+			"MCPSyncPlugin"
 		]
-	}
+	},
+	"MCPSyncPlugin": {
+		"version": "1.0.0",
+		"settings": {
+			"syncInterval": 10,
+			"lastSync": "2024-06-15T12:00:00Z",
+			"conflictResolution": "prompt",
+			"servers": {
+				"IntelliHub": {
+					"command": "C:\\Services\\IntelliHubMCP\\intellihub_tool\\.venv\\Scripts\\python.exe",
+					"args": ["C:\\Services\\IntelliHubMCP\\intellihub_tool\\stdio_server.py", "--mcp"]
+				}
+			}
+		}
+	},
+	"IntelliHubIntegration": {
+		"version": "1.0.0",
+		"settings": {
+			"enabled": true,
+			"server": "vision:SecureIntelliHubServer"
+		}
 	}
 }

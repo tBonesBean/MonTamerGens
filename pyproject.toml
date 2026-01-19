@@ -1,16 +1,11 @@
 [build-system]
-requires = [
-	"setuptools>=61.0",
-	"wheel>=0.45.1"
-]
+requires = ["setuptools>=61.0", "wheel>=0.45.1"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "MonsterGenerators"
+name = "MonTamerGens"
 version = "1.0.0"
-authors = [
-	{ name = "LaGrange.3", email = "your.email@example.com" },
-]
+authors = [{ name = "LaGrange.3", email = "your.email@example.com" }]
 description = "A fantasy monster generator."
 readme = "README.MD"
 requires-python = ">=3.9"
@@ -23,23 +18,21 @@ classifiers = [
 	"Topic :: Games/Entertainment",
 ]
 # Runtime dependencies
-dependencies = [
-	"PyYAML>=6.0.0",
-]
+dependencies = ["PyYAML>=6.0.0"]
 license = { text = "MIT" }
 
 [project.scripts]
 mongen = "mongens.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/tBonesBean/monstergenerators"
+Homepage = "https://github.com/tBonesBean/MonTamerGens"
 
 [project.optional-dependencies]
 # To install: pip install -e .[dev]
-dev = [
-	"pytest>=8.0",
-	"pylint>=3.0",
-	"build>=1.0",
-	"twine>=5.0",
-	"isort>=5.10",
-]
+dev = ["pytest>=8.0", "pylint>=3.0", "build>=1.0", "twine>=5.0", "isort>=5.10"]
+
+[tool.setuptools]
+package-dir = { "" = "SRC" }
+
+[tool.setuptools.packages.find]
+where = ["SRC"]
