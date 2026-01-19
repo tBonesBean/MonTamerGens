@@ -1,4 +1,4 @@
-# MonTamerGens Type Glossary (Canonical)
+# Appendix C: Expanded Type Glossary
 
 This document defines the **deep semantic meaning** of each core Type in MonTamerGens.
 
@@ -11,6 +11,20 @@ Use this glossary as:
 -   constraints for **Dex entry tone**
 -   alignment checks for future systems (evolution, resonance, emotion)
 
+## Canonical Clusters
+
+**1. STRUCTURAL** (Limits, Constraint, Load)
+Axiom, Bastion, Vessel, Nadir
+
+**2. VECTOR** (Motion, Direction, Disruption)
+Spur, Flow, Rift, Azimuth
+
+**3. RESIDUAL** (Aftermath, Persistence, Decay)
+Echo, Geist, Mire, Fracture
+
+**4. EXPRESSIVE** (Meaning, Projection, Culmination)
+Bloom, Idol, Oracle, Zenith
+
 ---
 
 ## AXIOM — _Order, Law, Structure_
@@ -21,8 +35,8 @@ Use this glossary as:
 
 **Naming Language:**
 
--   Prefixes: _Lex-_, _Ordo-_, _Prime-_, _Rule-_, _Null-_
--   Suffixes: _-core_, _-frame_, _-sentinel_, _-bound_
+-   Prefixes: _Axio-_, _Regu-_, _Canon-_, _Ortho-_, _Legis-_
+-   Suffixes: _-us_, _-on_, _-is_, _-os_, _-um_
 
 **Narrative Flavor:** Archivists, sentinels, constructs of truth, living laws.
 
@@ -36,8 +50,8 @@ Use this glossary as:
 
 **Naming Language:**
 
--   Prefixes: _Rend-_, _Bolt-_, _Rush-_, _Fang-_
--   Suffixes: _-lash_, _-strike_, _-flare_, _-drive_
+-   Prefixes: _Imp-_, _Vel-_, _Celer-_, _Rush-_, _Dart-_
+-   Suffixes: _-ex_, _-ix_, _-ax_, _-is_, _-us_
 
 **Narrative Flavor:** Shock troops, hunters, berserkers, living accelerants.
 
@@ -51,8 +65,8 @@ Use this glossary as:
 
 **Naming Language:**
 
--   Prefixes: _Re-_, _Pale-_, _Grave-_, _Recall-_
--   Suffixes: _-remnant_, _-hollow_, _-trace_, _-loop_
+-   Prefixes: _Reso-_, _Mem-_, _Pale-_, _Re-_, _Whis-_
+-   Suffixes: _-ic_, _-al_, _-or_, _-is_, _-um_
 
 **Narrative Flavor:** Relics, revenants, living histories, mnemonic entities.
 
@@ -66,8 +80,8 @@ Use this glossary as:
 
 **Naming Language:**
 
--   Prefixes: _Current-_, _Drift-_, _Weave-_, _Soft-_
--   Suffixes: _-tide_, _-bend_, _-stream_, _-veil_
+-   Prefixes: _Flu-_, _Hydr-_, _Liq-_, _Aqua-_, _Curr-_
+-   Suffixes: _-us_, _-a_, _-is_, _-os_, _-on_
 
 **Narrative Flavor:** Guides, healers, symbiotes, environmental responders.
 
@@ -81,8 +95,8 @@ Use this glossary as:
 
 **Naming Language:**
 
--   Prefixes: _Iron-_, _Stone-_, _Ward-_, _Bulwark-_
--   Suffixes: _-wall_, _-anchor_, _-guard_, _-citadel_
+-   Prefixes: _Bulw-_, _Gard-_, _Mur-_, _Fort-_, _Dura-_
+-   Suffixes: _-on_, _-ad_, _-it_, _-um_, _-ark_
 
 **Narrative Flavor:** Guardians, shields, last stands, living fortresses.
 
@@ -96,8 +110,8 @@ Use this glossary as:
 
 **Naming Language:**
 
--   Prefixes: _Void-_, _Split-_, _Warp-_, _Phase-_
--   Suffixes: _-fracture_, _-rift_, _-tear_, _-anomaly_
+-   Prefixes: _Para-_, _Xeno-_, _Warp-_, _Flux-_, _Dox-_
+-   Suffixes: _-on_, _-ia_, _-is_, _-us_, _-os_
 
 **Narrative Flavor:** Anomalies, experiment failures, dimensional walkers.
 
@@ -111,8 +125,8 @@ Use this glossary as:
 
 **Naming Language:**
 
--   Prefixes: _Bog-_, _Sludge-_, _Rot-_, _Murk-_
--   Suffixes: _-husk_, _-ooze_, _-residue_, _-clot_
+-   Prefixes: _Stag-_, _Bog-_, _Fester-_, _Rot-_, _Sludge-_
+-   Suffixes: _-os_, _-us_, _-y_, _-is_, _-um_
 
 **Narrative Flavor:** Polluters, survivors of collapse, toxic ecosystems.
 
@@ -126,8 +140,8 @@ Use this glossary as:
 
 **Naming Language:**
 
--   Prefixes: _Flare-_, _Crest-_, _Halo-_, _Crown-_
--   Suffixes: _-icon_, _-beacon_, _-mantle_, _-radiant_
+-   Prefixes: _Icon-_, _Dei-_, _Sacr-_, _Vener-_, _Glo-_
+-   Suffixes: _-a_, _-on_, _-is_, _-us_, _-or_
 
 **Narrative Flavor:** Champions, cult icons, living myths.
 
@@ -141,8 +155,8 @@ Use this glossary as:
 
 **Naming Language:**
 
--   Prefixes: _Wisp-_, _Pale-_, _Shade-_, _Null-_
--   Suffixes: _-phantom_, _-veil_, _-liminal_, _-echo_
+-   Prefixes: _Spec-_, _Phant-_, _Ect-_, _Spir-_, _Void-_
+-   Suffixes: _-os_, _-us_, _-is_, _-es_, _-um_
 
 **Narrative Flavor:** Ghosts, watchers, liminal entities.
 
@@ -156,8 +170,8 @@ Use this glossary as:
 
 **Naming Language:**
 
--   Prefixes: _Sprout-_, _Green-_, _Bloom-_, _Verdant-_
--   Suffixes: _-canopy_, _-vine_, _-seed_, _-flourish_
+-   Prefixes: _Flor-_, _Ver-_, _Syl-_, _Germ-_, _Petal-_
+-   Suffixes: _-ia_, _-is_, _-a_, _-on_, _-us_
 
 **Narrative Flavor:** Gardeners, overgrowth, life reclaiming space.
 

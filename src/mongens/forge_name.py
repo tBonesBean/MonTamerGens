@@ -114,6 +114,11 @@ _TYPE_FLAVORS = {
             "For",
             "Tikk",
             "Skor",
+            "Flor",
+            "Ver",
+            "Syl",
+            "Germ",
+            "Petal",
         ],
         "suffixes": [
             "ian",
@@ -124,6 +129,10 @@ _TYPE_FLAVORS = {
             "ula",
             "opter",
             "nid",
+            "ia",
+            "is",
+            "a",
+            "on",
         ],
     },
     "Bastion": {
@@ -143,6 +152,11 @@ _TYPE_FLAVORS = {
             "Kno",
             "Doj",
             "Fen",
+            "Bulw",
+            "Gard",
+            "Mur",
+            "Fort",
+            "Dura",
         ],
         "suffixes": [
             "os",
@@ -157,6 +171,11 @@ _TYPE_FLAVORS = {
             "unch",
             "ite",
             "fist",
+            "on",
+            "ad",
+            "it",
+            "um",
+            "ark",
         ],
     },
     "Geist": {
@@ -171,6 +190,11 @@ _TYPE_FLAVORS = {
             "Cel",
             "Cosm",
             "Psion",
+            "Spec",
+            "Phant",
+            "Ect",
+            "Spir",
+            "Void",
         ],
         "suffixes": [
             "ius",
@@ -181,6 +205,9 @@ _TYPE_FLAVORS = {
             "ith",
             "ius",
             "aeon",
+            "is",
+            "es",
+            "um",
         ],
     },
     "Idol": {
@@ -202,9 +229,16 @@ _TYPE_FLAVORS = {
             "Nova",
             "Sign",
             "Radi",
+            "Icon",
+            "Dei",
+            "Sacr",
+            "Vener",
+            "Glo",
         ],
         "suffixes": [
             "ar",
+            "a",
+            "on",
             "is",
             "flare",
             "blaze",
@@ -218,9 +252,12 @@ _TYPE_FLAVORS = {
             "brand",
             "sigil",
             "aura",
+            "us",
+            "or",
         ],
     },
     "Dread": {
+    "Nadir": {
         "prefixes": [
             "Noct",
             "Umbr",
@@ -237,6 +274,11 @@ _TYPE_FLAVORS = {
             "Shroud",
             "Grave",
             "Pall",
+            "Abys",
+            "Sub",
+            "Infra",
+            "Low",
+            "Prof",
         ],
         "suffixes": [
             "oth",
@@ -253,6 +295,11 @@ _TYPE_FLAVORS = {
             "howl",
             "dusk",
             "reap",
+            "ir",
+            "um",
+            "on",
+            "us",
+            "is",
         ],
     },
     "Axiom": {
@@ -267,6 +314,8 @@ _TYPE_FLAVORS = {
             "Prime",
             "Rule",
             "Null",
+            "Axio",
+            "Regu",
             "Canon",
             "Index",
             "Axi",
@@ -277,8 +326,12 @@ _TYPE_FLAVORS = {
             "Sig",
             "Rank",
             "Reg",
+            "Ortho",
+            "Legis",
+            "Stat",
         ],
         "suffixes": [
+            "us",
             "on",
             "ite",
             "lith",
@@ -295,6 +348,9 @@ _TYPE_FLAVORS = {
             "lock",
             "ward",
             "meter",
+            "is",
+            "os",
+            "um",
         ],
     },
     "Flow": {
@@ -309,6 +365,11 @@ _TYPE_FLAVORS = {
             "Rill",
             "Naut",
             "Thal",
+            "Flu",
+            "Hydr",
+            "Liq",
+            "Aqua",
+            "Curr",
         ],
         "suffixes": [
             "is",
@@ -319,6 +380,10 @@ _TYPE_FLAVORS = {
             "ix",
             "eon",
             "frost",
+            "us",
+            "a",
+            "os",
+            "on",
         ],
     },
     "Spur": {
@@ -330,6 +395,9 @@ _TYPE_FLAVORS = {
             "Zil",
             "Rend",
             "Bolt",
+            "Imp",
+            "Vel",
+            "Celer",
             "Rush",
             "Fang",
             "Thrust",
@@ -341,8 +409,10 @@ _TYPE_FLAVORS = {
             "Pike",
             "Drive",
             "Volt",
+            "Dart",
         ],
         "suffixes": [
+            "ex",
             "ix",
             "ark",
             "eon",
@@ -359,6 +429,9 @@ _TYPE_FLAVORS = {
             "pierce",
             "bolt",
             "maul",
+            "ax",
+            "is",
+            "us",
         ],
     },
     "Mire": {
@@ -368,7 +441,10 @@ _TYPE_FLAVORS = {
             "Bligh",
             "Tox",
             "Vek",
+            "Stag",
             "Bog",
+            "Fester",
+            "Rot",
             "Sludge",
             "Rot",
             "Murk",
@@ -383,6 +459,7 @@ _TYPE_FLAVORS = {
         ],
         "suffixes": [
             "ex",
+            "os",
             "ius",
             "ile",
             "spore",
@@ -397,6 +474,9 @@ _TYPE_FLAVORS = {
             "taint",
             "muck",
             "drip",
+            "y",
+            "is",
+            "um",
         ],
     },
     "Rift": {
@@ -410,20 +490,32 @@ _TYPE_FLAVORS = {
             "Null",
             "Eth",
             "Anom",
+            "Para",
+            "Xeno",
+            "Warp",
+            "Flux",
+            "Dox",
         ],
         "suffixes": [
             "lith",
             "don",
             "yx",
             "raptor",
+            "on",
+            "ia",
+            "is",
             "us",
             "ex",
             "ion",
             "oid",
+            "os",
         ],
     },
     "Echo": {
         "prefixes": [
+            "Reso",
+            "Mem",
+            "Pale",
             "Re",
             "Pale",
             "Grav",
@@ -448,6 +540,7 @@ _TYPE_FLAVORS = {
             "Aft",
             "Murm",
             "Whisp",
+            "Whis",
         ],
         "suffixes": [
             "rem",
@@ -473,6 +566,11 @@ _TYPE_FLAVORS = {
             "cadence",
             "hymn",
             "call",
+            "ic",
+            "al",
+            "or",
+            "is",
+            "um",
         ],
     },
     "Vessel": {
@@ -483,6 +581,8 @@ _TYPE_FLAVORS = {
             "Frame",
             "Vess",
             "Hollow",
+            "Vas",
+            "Urn",
             "Cask",
             "Cradle",
             "Vault",
@@ -496,6 +596,8 @@ _TYPE_FLAVORS = {
             "Sarc",
             "Carb",
             "Coffer",
+            "Hol",
+            "Cell",
         ],
         "suffixes": [
             "core",
@@ -514,6 +616,75 @@ _TYPE_FLAVORS = {
             "capsule",
             "chamber",
             "shroud",
+            "um",
+            "or",
+            "os",
+            "is",
+            "on",
+        ],
+    },
+    "Azimuth": {
+        "prefixes": [
+            "Vect",
+            "Azi",
+            "Comp",
+            "Pol",
+            "Traj",
+        ],
+        "suffixes": [
+            "or",
+            "an",
+            "is",
+            "ar",
+            "ith",
+        ],
+    },
+    "Fracture": {
+        "prefixes": [
+            "Frag",
+            "Rup",
+            "Bre",
+            "Schis",
+            "Clast",
+        ],
+        "suffixes": [
+            "ure",
+            "is",
+            "os",
+            "er",
+            "or",
+        ],
+    },
+    "Oracle": {
+        "prefixes": [
+            "Vis",
+            "Proph",
+            "Aug",
+            "Omen",
+            "Scry",
+        ],
+        "suffixes": [
+            "ia",
+            "us",
+            "or",
+            "is",
+            "on",
+        ],
+    },
+    "Zenith": {
+        "prefixes": [
+            "Apex",
+            "Sum",
+            "Vert",
+            "Culm",
+            "High",
+        ],
+        "suffixes": [
+            "ia",
+            "on",
+            "us",
+            "is",
+            "ar",
         ],
     },
 }
@@ -531,7 +702,12 @@ TYPE_TO_ADJ: Dict[str, str] = {
     "Mire": "Miry",
     "Vessel": "Hollow",
     "Dread": "Dread",
+    "Nadir": "Abyssal",
     "Echo": "Echoing",
+    "Azimuth": "Directed",
+    "Fracture": "Fractured",
+    "Oracle": "Prophetic",
+    "Zenith": "Exalted",
 }
 
 
@@ -968,20 +1144,26 @@ def deterministic_name(
             )
             s_suf = secondary_flavor.get("suffixes", [])
             s_pre = secondary_flavor.get("prefixes", [])
+            s_core = secondary_flavor.get("cores", [])
             flavors_list = {
                 "prefixes": p_pre + s_pre,
                 "suffixes": p_suf + s_suf,
+                "cores": primary_flavor.get("cores", []) + s_core,
             }
         else:
-            flavors_list = {"prefixes": p_pre, "suffixes": p_suf}
+            flavors_list = {"prefixes": p_pre, "suffixes": p_suf, "cores": primary_flavor.get("cores", [])}
 
         if flavors_list["prefixes"] and flavors_list["suffixes"]:
             prefix = rng.choice(flavors_list["prefixes"])
             suffix = rng.choice(flavors_list["suffixes"])
+            core = rng.choice(flavors_list["cores"]) if flavors_list.get("cores") else ""
 
             # Mix and match parts
-            if rng.random() < 0.5:
+            roll = rng.random()
+            if roll < 0.4:
                 name = prefix + suffix.lower()
+            elif roll < 0.7 and core:
+                name = prefix + core + suffix.lower()
             else:
                 name = (
                     rng.choice(flavors_list["prefixes"])
@@ -1053,15 +1235,18 @@ def forge_monster_name(seed: MonsterSeed, salt: str = "") -> str:
     primary = seed.primary_type
     secondary = seed.secondary_type
 
-    begin = rng.choice(TYPE_NAME_PARTS[primary]["begin"])
+    # Map _TYPE_FLAVORS to begin/mid/end
+    flavor = _TYPE_FLAVORS.get(primary, {})
+    begin_pool = flavor.get("prefixes", [])
+    mid_pool = flavor.get("cores", [])
+    end_pool = flavor.get("suffixes", [])
 
-    mid_pool = list(TYPE_NAME_PARTS[primary]["mid"])
-    if secondary and secondary in TYPE_NAME_PARTS:
-        mid_pool += TYPE_NAME_PARTS[secondary]["mid"]
+    if secondary and secondary in _TYPE_FLAVORS:
+        mid_pool += _TYPE_FLAVORS[secondary].get("cores", [])
 
+    begin = rng.choice(begin_pool) if begin_pool else ""
     mid = rng.choice(mid_pool) if mid_pool else ""
-
-    end = rng.choice(TYPE_NAME_PARTS[primary]["end"])
+    end = rng.choice(end_pool) if end_pool else ""
 
     name = f"{begin}{mid}{end}".capitalize()
     name = re.sub(r"(.)\1{2,}", r"\1\1", name)
