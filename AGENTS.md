@@ -12,7 +12,7 @@ The documents within `ai_context/` define the project's architecture, data schem
 
 **By proceeding with any contribution, you affirm that you have fully reviewed and understood the complete contents of the `./ai_context/` directory.**
 
-# 🌑 **MonTamerGens — Unified Design Bible (v1.1)**
+# 🌑 **MonTamerGens — Unified Design Bible (v1.2)**
 
 _A living canon for the MonTamerGens universe, systems, aesthetics, and architecture._
 
@@ -320,15 +320,25 @@ Tests must cover:
 
 ## **9. Versioning**
 
-This document is **v1.1** — updated to reflect the current canonical type taxonomy, YAML-first content model, and recent data migration.  
+This document is **v1.2** - updated to reflect the current canonical type taxonomy, YAML-first content model, and recent data migration.
 Changes in this release:
+
+<<<<<<< HEAD
 
 - Migrated core types to YAML (`seed_types.yaml` / `type_forms.yaml`).
 - Reconciled major mutagens and utility mods to canonical type names.
 - Adjusted generation code paths to use `SEED_TYPE_DATA` and `MonsterSeed.forge()` improvements.
 - Clarified the roles of `monsterseed.py` and `mon_forge.py` in the generation pipeline.
-- Updated the "Technical Architecture" and "Systems Design" sections to match the current implementation.
+- # Updated the "Technical Architecture" and "Systems Design" sections to match the current implementation.
+- Normalized `seed_types.yaml` to the schema shape (list habitats, explicit tags).
+- Clarified that `seed_types_schema.md` requires `attributes.notes`.
+- Added schema and module-purpose documentation updates (including module_purposes and schemas readmes).
+- Documented current pipeline behavior based on the refactor state.
+- Confirmed `prompt_engine.py` and `dex_entries.py` are implemented (removed presumed labels).
+    > > > > > > > 5eceb7dd67c04572419517c0fb816b598f28087d
 
-All future edits should continue the principle: changes must be additive, clarifying, or canon‑strengthening.
+All future edits should continue the principle: changes must be additive, clarifying, or canon-strengthening.
+
+Last updated: 2026-01-13 04:56:41 -07:00
 
 ---
