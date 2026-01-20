@@ -20,7 +20,6 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-tools/
 archive/
 dist/
 **/desktop
