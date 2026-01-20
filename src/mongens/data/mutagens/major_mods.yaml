@@ -26,6 +26,7 @@
     EVA: 5
   tags:
     - "Ability:Heal"
+    - "Weak:Nadir"
   rarity: 0.95
   synergy_bonus:
     Flow: 1.4
@@ -208,6 +209,7 @@
   tags:
     - "Night:Bloom"
     - "Unsung:Song"
+    - "Weak:Zenith"
   rarity: 1.1
   synergy_bonus:
     Bloom: 1.35
@@ -361,6 +363,7 @@
     LUCK: 5
   tags:
     - "Choir:Light"
+    - "Weaken:Geist"
   rarity: 1.0
   synergy_bonus:
     Idol: 1.4
