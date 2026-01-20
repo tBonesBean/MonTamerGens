@@ -172,12 +172,8 @@ def apply_mutagens(
         if key in seed_mutagen_set:
             continue
 
-        allowed = mod_def.get("allowed_types", []) or []
         incompatible = mod_def.get("incompatible_types", []) or []
 
-        # Type gating: if allowed_types are specified, monster must have at least one.
-        if allowed and monster_types.isdisjoint(allowed):
-            continue
         # Type gating: monster cannot have any incompatible types.
         if any(t in monster_types for t in incompatible):
             continue
@@ -202,12 +198,8 @@ def apply_mutagens(
         if key in seed_mutagen_set:
             continue
 
-        allowed = mod_def.get("allowed_types", []) or []
         incompatible = mod_def.get("incompatible_types", []) or []
 
-        # Type gating: if allowed_types are specified, monster must have at least one.
-        if allowed and monster_types.isdisjoint(allowed):
-            continue
         # Type gating: monster cannot have any incompatible types.
         if any(t in monster_types for t in incompatible):
             continue
