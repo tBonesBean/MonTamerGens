@@ -9,14 +9,15 @@
     - "Resist:Lumen"
     - "Spark:Resolve"
     - "Glow:Harmony"
-  allowed_types:
-    - Axiom
-    - Geist
-    - Bastion
   rarity: 1.1
   synergy_bonus:
-    Axiom: 1.3
-    Geist: 1.25
+    Axiom: 1.35
+    Geist: 1.3
+    Bastion: 1.25
+    Vessel: 1.2
+  incompatible_types:
+    - Nadir
+    - Rift
 "Flowbloom Current":
   mul:
     SPD: 1.2
@@ -25,15 +26,16 @@
     EVA: 5
   tags:
     - "Ability:Heal"
-    - "Weak:Bastion"
-  allowed_types:
-    - Flow
-    - Bloom
-    - Idol
+    - "Weak:Nadir"
   rarity: 0.95
   synergy_bonus:
     Flow: 1.4
-    Bloom: 1.1
+    Bloom: 1.35
+    Idol: 1.2
+    Azimuth: 1.15
+  incompatible_types:
+    - Nadir
+    - Fracture
 "Echoed Memory":
   mul:
     SPATK: 1.3
@@ -43,14 +45,13 @@
   tags:
     - "EchoChant"
     - "Resist:Silence"
-    - "Weak:Solar"
-  allowed_types:
-    - Echo
-    - Geist
-    - Rift
+    - "Weak:Zenith"
   rarity: 1.15
   synergy_bonus:
     Echo: 1.4
+    Geist: 1.3
+    Oracle: 1.25
+    Mire: 1.15
 "Spurforged Pulse":
   mul:
     ATK: 1.25
@@ -61,14 +62,16 @@
   tags:
     - "KineticMark"
     - "GaleStrike"
-    - "Weak:Stasis"
-  allowed_types:
-    - Spur
-    - Idol
-    - Bloom
+    - "Weak:Bastion"
   rarity: 0.9
   synergy_bonus:
-    Spur: 1.35
+    Spur: 1.4
+    Azimuth: 1.3
+    Rift: 1.2
+    Flow: 1.15
+  incompatible_types:
+    - Bastion
+    - Vessel
 "Bastion Halo":
   mul:
     DEF: 1.25
@@ -79,14 +82,16 @@
   tags:
     - "Aegis:Neutral"
     - "KinBond:Shield"
-    - "Weak:Everglow"
-  allowed_types:
-    - Bastion
-    - Axiom
-    - Bloom
+    - "Weak:Rift"
   rarity: 1.0
   synergy_bonus:
     Bastion: 1.4
+    Axiom: 1.3
+    Vessel: 1.2
+    Nadir: 1.15
+  incompatible_types:
+    - Spur
+    - Rift
 "Riftflare Fracture":
   mul:
     SPD: 1.18
@@ -96,14 +101,16 @@
   tags:
     - "Fracture:Time"
     - "Blink:Spark"
-    - "Resist:Gravity"
-  allowed_types:
-    - Rift
-    - Geist
-    - Idol
+    - "Resist:Axiom"
   rarity: 1.2
   synergy_bonus:
-    Rift: 1.3
+    Rift: 1.4
+    Fracture: 1.35
+    Geist: 1.25
+    Spur: 1.2
+  incompatible_types:
+    - Axiom
+    - Bastion
 "Bloomglow Embers":
   mul:
     HP: 1.1
@@ -113,13 +120,16 @@
   tags:
     - "Soothe:Flora"
     - "Decay:Shield"
-    - "Weak:Frigid"
-  allowed_types:
-    - Bloom
-    - Flow
+    - "Weak:Mire"
   rarity: 1.0
   synergy_bonus:
-    Bloom: 1.2
+    Bloom: 1.35
+    Flow: 1.25
+    Zenith: 1.2
+    Idol: 1.15
+  incompatible_types:
+    - Mire
+    - Nadir
 "Geistbound Lattice":
   mul:
     SPDEF: 1.22
@@ -130,13 +140,15 @@
     - "Phase:Overtone"
     - "MindLink"
     - "Resist:Fear"
-  allowed_types:
-    - Geist
-    - Axiom
-    - Echo
   rarity: 1.25
   synergy_bonus:
-    Geist: 1.35
+    Geist: 1.4
+    Echo: 1.3
+    Rift: 1.25
+    Oracle: 1.2
+  incompatible_types:
+    - Idol
+    - Zenith
 "Idolflare Beacon":
   mul:
     SPATK: 1.2
@@ -146,13 +158,16 @@
   tags:
     - "Stagecraft"
     - "RadiantPulse"
-    - "Weak:Void"
-  allowed_types:
-    - Idol
-    - Bloom
+    - "Weak:Geist"
   rarity: 0.95
   synergy_bonus:
     Idol: 1.4
+    Zenith: 1.3
+    Bloom: 1.25
+    Oracle: 1.15
+  incompatible_types:
+    - Geist
+    - Mire
 "Flowveil Torrent":
   mul:
     SPD: 1.15
@@ -162,12 +177,12 @@
   tags:
     - "Recede:Shield"
     - "Cleanse:Tide"
-  allowed_types:
-    - Flow
-    - Rift
   rarity: 1.1
   synergy_bonus:
-    Flow: 1.25
+    Flow: 1.35
+    Azimuth: 1.25
+    Bloom: 1.2
+    Rift: 1.15
 "Sparkborne Artefact":
   mul:
     LUCK: 1.3
@@ -177,15 +192,14 @@
   tags:
     - "Spark:Surge"
     - "Meta:Resonance"
-    - "Weak:Anchor"
-  allowed_types:
-    - Axiom
-    - Idol
-    - Rift
+    - "Weak:Mire"
   rarity: 1.3
   synergy_bonus:
-    Axiom: 1.15
-    Idol: 1.15
+    Axiom: 1.3
+    Idol: 1.25
+    Zenith: 1.25
+    Oracle: 1.2
+    Rift: 1.15
 "Tenebral Bloom":
   mul:
     SPDEF: 1.2
@@ -195,14 +209,16 @@
   tags:
     - "Night:Bloom"
     - "Unsung:Song"
-    - "Weak:Solar"
-  allowed_types:
-    - Bloom
-    - Flow
-    - Geist
+    - "Weak:Zenith"
   rarity: 1.1
   synergy_bonus:
     Bloom: 1.35
+    Geist: 1.25
+    Echo: 1.2
+    Flow: 1.15
+  incompatible_types:
+    - Zenith
+    - Idol
 "Cascade Prism":
   mul:
     SPATK: 1.18
@@ -212,12 +228,12 @@
   tags:
     - "PrismaticRush"
     - "Refract:Shield"
-  allowed_types:
-    - Flow
-    - Idol
   rarity: 0.95
   synergy_bonus:
-    Flow: 1.25
+    Flow: 1.35
+    Idol: 1.25
+    Oracle: 1.2
+    Azimuth: 1.15
 "Sapphire Spiral":
   mul:
     ACC: 1.1
@@ -227,13 +243,12 @@
   tags:
     - "Spiral:Calm"
     - "Resist:Freeze"
-  allowed_types:
-    - Flow
-    - Geist
-    - Bloom
   rarity: 1.0
   synergy_bonus:
-    Geist: 1.2
+    Flow: 1.3
+    Geist: 1.25
+    Bloom: 1.2
+    Echo: 1.15
 "Guardian Resonance":
   mul:
     DEF: 1.25
@@ -243,12 +258,15 @@
   tags:
     - "Guard:Wave"
     - "KinPassive:Strong"
-  allowed_types:
-    - Bastion
-    - Axiom
   rarity: 1.05
   synergy_bonus:
-    Bastion: 1.3
+    Bastion: 1.35
+    Axiom: 1.3
+    Vessel: 1.2
+    Nadir: 1.15
+  incompatible_types:
+    - Rift
+    - Spur
 "Echoisle Whisper":
   mul:
     SPATK: 1.15
@@ -258,13 +276,15 @@
   tags:
     - "IsleCall"
     - "Trace:Echo"
-    - "Weak:Fracture"
-  allowed_types:
-    - Echo
-    - Rift
+    - "Weak:Zenith"
   rarity: 1.2
   synergy_bonus:
-    Echo: 1.25
+    Echo: 1.35
+    Geist: 1.25
+    Oracle: 1.2
+    Rift: 1.15
+  incompatible_types:
+    - Spur
 "Spiralbound Lash":
   mul:
     SPD: 1.18
@@ -273,13 +293,16 @@
     EVA: 3
   tags:
     - "Tornado:Strike"
-    - "Weak:Still"
-  allowed_types:
-    - Spur
-    - Flow
+    - "Weak:Bastion"
   rarity: 0.9
   synergy_bonus:
-    Spur: 1.25
+    Spur: 1.4
+    Azimuth: 1.3
+    Flow: 1.25
+    Rift: 1.15
+  incompatible_types:
+    - Bastion
+    - Nadir
 "Twilight Bloom":
   mul:
     SPDEF: 1.18
@@ -288,13 +311,13 @@
     LUCK: 4
   tags:
     - "TwilightGlow"
-    - "Weak:Glare"
-  allowed_types:
-    - Bloom
-    - Flow
+    - "Weak:Zenith"
   rarity: 1.05
   synergy_bonus:
-    Bloom: 1.25
+    Bloom: 1.35
+    Flow: 1.25
+    Geist: 1.2
+    Echo: 1.15
 "Axiom Concord":
   mul:
     DEF: 1.2
@@ -304,12 +327,16 @@
     ACC: 3
   tags:
     - "OrderlyPulse"
-    - "Resist:Chaos"
-  allowed_types:
-    - Axiom
+    - "Resist:Rift"
   rarity: 1.2
   synergy_bonus:
     Axiom: 1.4
+    Bastion: 1.3
+    Vessel: 1.25
+    Oracle: 1.15
+  incompatible_types:
+    - Rift
+    - Fracture
 "Lumenrift Shard":
   mul:
     SPATK: 1.25
@@ -318,13 +345,16 @@
     SPD: 3
   tags:
     - "Shard:Repeat"
-    - "Resist:Gravity"
-  allowed_types:
-    - Rift
-    - Idol
+    - "Resist:Axiom"
   rarity: 1.3
   synergy_bonus:
-    Rift: 1.3
+    Rift: 1.4
+    Fracture: 1.3
+    Geist: 1.25
+    Spur: 1.2
+  incompatible_types:
+    - Axiom
+    - Bastion
 "Radiant Choir":
   mul:
     SPATK: 1.2
@@ -333,13 +363,16 @@
     LUCK: 5
   tags:
     - "Choir:Light"
-    - "Weaken:Shadow"
-  allowed_types:
-    - Idol
-    - Bloom
+    - "Weaken:Geist"
   rarity: 1.0
   synergy_bonus:
-    Idol: 1.35
+    Idol: 1.4
+    Zenith: 1.3
+    Bloom: 1.25
+    Oracle: 1.15
+  incompatible_types:
+    - Geist
+    - Nadir
 "Gloamsteel Ward":
   mul:
     DEF: 1.2
@@ -348,13 +381,13 @@
     HP: 5
   tags:
     - "Steel:Glint"
-    - "Weak:Bloom"
-  allowed_types:
-    - Bastion
-    - Geist
+    - "Weak:Spur"
   rarity: 1.1
   synergy_bonus:
-    Geist: 1.2
+    Bastion: 1.3
+    Geist: 1.25
+    Nadir: 1.2
+    Echo: 1.15
 "Flowrift Surge":
   mul:
     SPD: 1.25
@@ -364,13 +397,12 @@
   tags:
     - "Surge:Stream"
     - "Phase:Lumen"
-  allowed_types:
-    - Flow
-    - Rift
   rarity: 1.2
   synergy_bonus:
-    Flow: 1.2
-    Rift: 1.15
+    Flow: 1.35
+    Rift: 1.3
+    Azimuth: 1.25
+    Spur: 1.15
 
 "Dreadmaw Eclipse":
   mul:
@@ -382,14 +414,16 @@
   tags:
     - "Umbral:Keen"
     - "Resist:Fear"
-    - "Weak:Radiant"
-  allowed_types:
-    - Dread
-    - Geist
-    - Rift
+    - "Weak:Zenith"
   rarity: 1.2
   synergy_bonus:
-    Dread: 1.35
+    Nadir: 1.4
+    Geist: 1.3
+    Mire: 1.25
+    Echo: 1.15
+  incompatible_types:
+    - Zenith
+    - Idol
 "Mirebound Rot":
   mul:
     HP: 1.18
@@ -400,14 +434,16 @@
   tags:
     - "Rot:Veil"
     - "Resist:Decay"
-    - "Weak:Purity"
-  allowed_types:
-    - Mire
-    - Bloom
-    - Flow
+    - "Weak:Bloom"
   rarity: 1.1
   synergy_bonus:
-    Mire: 1.35
+    Mire: 1.4
+    Nadir: 1.3
+    Echo: 1.2
+    Fracture: 1.15
+  incompatible_types:
+    - Bloom
+    - Zenith
 "Vesselcore Hollow":
   mul:
     LUCK: 1.2
@@ -418,12 +454,13 @@
   tags:
     - "Hollow:Core"
     - "Resist:Void"
-    - "Weak:Anchor"
-  allowed_types:
-    - Vessel
-    - Axiom
-    - Geist
+    - "Weak:Rift"
   rarity: 1.15
   synergy_bonus:
-    Vessel: 1.35
+    Vessel: 1.4
+    Axiom: 1.3
+    Bastion: 1.25
+    Geist: 1.2
+  incompatible_types:
+    - Spur
 
