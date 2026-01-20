@@ -249,18 +249,8 @@ class MonsterSeed:
         # Select mutagens using their configured rarity weights (prefer rarer mods less)
         # Both MAJOR_MODS and UTILITY_MODS are dicts mapping mod-name -> metadata dict,
         # where the 'rarity' key is used as the selection weight (default 1.0).
-        # Filter mods by allowed_types (if present) so selected mods are thematically appropriate.
+        # Filter mods by incompatible_types only (allowed_types removed)
         def _mod_allowed(mod: dict, primary: str, secondary: Optional[str]) -> bool:
-            allowed = mod.get("allowed_types")
-            if allowed is None or len(allowed) == 0:
-                allowed_ok = True
-            else:
-                allowed_ok = (primary in allowed) or (
-                    secondary in allowed if secondary else False
-                )
-            if not allowed_ok:
-                return False
-
             incompatible = mod.get("incompatible_types", []) or []
             if primary in incompatible:
                 return False

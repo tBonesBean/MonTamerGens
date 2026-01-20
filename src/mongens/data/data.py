@@ -258,20 +258,20 @@ def _validate_mods(
             ):
                 raise ValueError(f"{label} mod '{mod_name}' tags must be a list")
 
-        for list_key in ("allowed_types", "incompatible_types"):
-            types_list = mod.get(list_key, [])
-            if types_list is not None:
-                if not isinstance(types_list, list) or not all(
-                    isinstance(t, str) for t in types_list
-                ):
-                    raise ValueError(
-                        f"{label} mod '{mod_name}' {list_key} must be a list of strings"
-                    )
-                unknown = [t for t in types_list if t not in seed_type_set]
-                if unknown:
-                    raise ValueError(
-                        f"{label} mod '{mod_name}' has unknown {list_key}: {unknown}"
-                    )
+        # Validate incompatible_types only (allowed_types removed)
+        incompatible = mod.get("incompatible_types", [])
+        if incompatible is not None:
+            if not isinstance(incompatible, list) or not all(
+                isinstance(t, str) for t in incompatible
+            ):
+                raise ValueError(
+                    f"{label} mod '{mod_name}' incompatible_types must be a list of strings"
+                )
+            unknown = [t for t in incompatible if t not in seed_type_set]
+            if unknown:
+                raise ValueError(
+                    f"{label} mod '{mod_name}' has unknown incompatible_types: {unknown}"
+                )
 
         rarity = mod.get("rarity")
         if rarity is not None:
@@ -422,8 +422,7 @@ def _normalize_mods(mods: Dict[str, Dict[str, Any]]) -> None:
     for mod_name, mod in mods.items():
         if not isinstance(mod, dict):
             continue
-        if "allowed_types" in mod and isinstance(mod["allowed_types"], list):
-            mod["allowed_types"] = [_remap_type(t) for t in mod["allowed_types"]]
+        # Remove allowed_types normalization (no longer used)
         if "incompatible_types" in mod and isinstance(mod["incompatible_types"], list):
             mod["incompatible_types"] = [
                 _remap_type(t) for t in mod["incompatible_types"]
@@ -461,16 +460,10 @@ except NameError:
     pass
 
 
-# Final cleanup: deduplicate and sort allowed_types lists and synergy_bonus keys
+# Final cleanup: deduplicate and sort incompatible_types and synergy_bonus keys
 def _cleanup_mods(mods: Dict[str, Dict[str, Any]]) -> None:
     for mod in mods.values():
-        if "allowed_types" in mod and isinstance(mod["allowed_types"], list):
-            seen = []
-            for t in mod["allowed_types"]:
-                tnorm = _remap_type(t)
-                if tnorm not in seen:
-                    seen.append(tnorm)
-            mod["allowed_types"] = sorted(seen)
+        # Remove allowed_types cleanup (no longer used)
         if "incompatible_types" in mod and isinstance(mod["incompatible_types"], list):
             seen = []
             for t in mod["incompatible_types"]:
