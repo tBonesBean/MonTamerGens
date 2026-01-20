@@ -1,5 +1,5 @@
 - name: Axiom
-  weight: 3.0
+  weight: 1.0
   habitats:
       - Clockwork City
       - Classified Research Facilities
@@ -33,7 +33,7 @@
           - Inevitability
           - Order
 - name: Spur
-  weight: 3.0
+  weight: 1.0
   habitats:
       - Ennoan Grasslands
       - Verdant Plains
@@ -71,7 +71,7 @@
           - Magnitude
           - Velocity
 - name: Echo
-  weight: 3.0
+  weight: 1.0
   habitats:
       - Echoing Grotto
       - Archive Stone
@@ -101,7 +101,7 @@
           - Resonance
           - Persistence
 - name: Flow
-  weight: 3.0
+  weight: 1.0
   habitats:
       - Freshwater Springs
       - Riverlands
@@ -135,7 +135,7 @@
           - Continuity
           - Response
 - name: Bastion
-  weight: 4.0
+  weight: 1.0
   habitats:
       - Monolithic Structures
       - Ancient Battlefield
@@ -153,9 +153,10 @@
       - Thornveil Thicket
   attributes:
       mul:
-          ATK: 1.20
-          HP: 1.25
+          SPDEF: 1.12
+          HP: 1.08
           DEF: 1.20
+          SPATK: 0.90
       add:
           DEF: 10
       tags:
@@ -168,7 +169,7 @@
           - Immovability
           - Refusal
 - name: Rift
-  weight: 2.0
+  weight: 1.0
   habitats:
       - Starfall Crater
       - Astral Terrace
@@ -185,9 +186,10 @@
       - Wyrmscar Ridge
   attributes:
       mul:
+          SPATK: 1.18
           SPD: 1.20
           SPDEF: 1.15
-          LUCK: 1.20
+          HP: 0.92
       add:
           EVA: 5
       tags:
@@ -206,18 +208,20 @@
   attributes:
       mul:
           HP: 1.12
-          DEF: 1.05
+          DEF: 1.15
+          SPDEF: 1.1
           SPD: 0.90
       add:
           SPDEF: 5
-      tags: []
+          ACC: 10
+      tags:
       notes:
           - Decay
           - Stagnation
           - Suffocation
           - Rot
 - name: Idol
-  weight: 3.0
+  weight: 1.0
   habitats:
       - Smoldering Flats
       - Mt. Thermallia
@@ -234,7 +238,7 @@
           SPATK: 1.25
           SPD: 1.10
       add:
-          LUCK: 2
+          LUCK: 10
       tags:
           - Resist:Axiom
           - Weak:Flow
@@ -258,10 +262,10 @@
   attributes:
       mul:
           SPATK: 1.20
-          SPDEF: 1.25
-          SPD: 1.20
+          SPDEF: 1.15
+          HP: 0.95
       add:
-          EVA: 5
+          EVA: 8
       tags:
           - Resist:Echo
           - Weak:Bloom
@@ -271,7 +275,7 @@
           - Threshold
           - Spirit
 - name: Bloom
-  weight: 4.0
+  weight: 1.0
   habitats:
       - Blooming Valley
       - Verdant Plains
@@ -338,9 +342,9 @@
       - Sunless Abyss
   attributes:
       mul:
-          HP: 1.20
-          DEF: 1.20
-          SPDEF: 1.20
+          ATK: 0.92
+          DEF: 1.10
+          SPDEF: 1.12
           SPD: 0.80
       add:
           HP: 20
@@ -353,7 +357,7 @@
           - Final Limit
           - Terminal
 - name: Azimuth
-  weight: 2.0
+  weight: 1.0
   habitats:
       - Skybridge Peaks
       - Whispering Dunes
@@ -370,11 +374,11 @@
       tags:
           - Resist:Rift
           - Weak:Nadir
-  notes:
-      - Orientation
-      - Bearing
-      - Vector
-      - Direction
+      notes:
+          - Orientation
+          - Bearing
+          - Vector
+          - Direction
 - name: Fracture
   weight: 1.0
   habitats:
@@ -386,20 +390,20 @@
   attributes:
       mul:
           ATK: 1.20
-          SPD: 1.10
+          SPATK: 1.25
           HP: 0.90
       add:
-          CRIT: 5
+          EVA: 6
       tags:
           - Resist:Bastion
           - Weak:Axiom
-  notes:
-      - Strain
-      - Fault
-      - Instability
-      - Failure
+      notes:
+          - Strain
+          - Fault
+          - Instability
+          - Failure
 - name: Oracle
-  weight: 2.0
+  weight: 1.0
   habitats:
       - Archive Stone
       - Celestial Spire
@@ -410,19 +414,20 @@
       mul:
           SPATK: 1.20
           ACC: 1.25
-          EVA: 1.10
+          SPDEF: 1.10
+          DEF: 0.92
       add:
-          LUCK: 5
+          EVA: 8
       tags:
           - Resist:Echo
           - Weak:Rift
-  notes:
-      - Perception
-      - Pattern
-      - Foresight
-      - Vision
+      notes:
+          - Perception
+          - Pattern
+          - Foresight
+          - Vision
 - name: Zenith
-  weight: 2.0
+  weight: 1.0
   habitats:
       - Celestial Spire
       - Snowcapped Peaks
@@ -435,12 +440,13 @@
           SPATK: 1.15
           HP: 1.10
       add:
-          ALL: 2
+          ACC: 3
+          LUCK: 2
       tags:
           - Resist:Nadir
           - Weak:Mire
-  notes:
-      - Apex
-      - Culmination
-      - Realization
-      - Highest Bound
+      notes:
+          - Apex
+          - Culmination
+          - Realization
+          - Highest Bound

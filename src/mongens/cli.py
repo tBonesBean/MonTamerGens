@@ -374,7 +374,7 @@ def main():
         """
         seed = MonsterSeed.forge(idnum, primary_type, secondary_type)
         seed = apply_mutagens(seed, major_count=major_count, util_count=util_count)
-        seed = forge_monster_name(seed)
+        seed.name = forge_monster_name(seed)
         return seed
 
     def _write_seed_json(output_path: str, seeds: list[MonsterSeed]) -> None:

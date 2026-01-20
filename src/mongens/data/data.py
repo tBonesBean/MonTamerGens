@@ -336,7 +336,7 @@ def _normalize_seed_type_data(
 
 
 # -- Loader
-SEED_TYPE_DATA, SEED_TYPES_WEIGHTED = _load_seed_types_data("seed_types.yaml")
+SEED_TYPE_DATA, SEED_TYPES_WEIGHTED = _load_seed_types_data("types/seed_types.yaml")
 FORMS_BY_TYPE = _load_yaml("type_forms.yaml")
 
 # -- Normalizer
@@ -353,7 +353,7 @@ TYPE_SYNERGY_BOOSTS = {
     frozenset(["Bloom", "Flow"]): 0.7,  # (Gaian, Azure)
     frozenset(["Idol", "Bloom"]): 1.1,  # (Vermillion, Veridian)
     frozenset(["Geist", "Axiom"]): 1.2,  # (Aether, Arcane)
-    frozenset(["Dread", "Echo"]): 0.8,  # (Abyssal, Echo)
+    frozenset(["Nadir", "Echo"]): 0.8,  # (legacy Dread -> Nadir)
     frozenset(["Rift", "Spur"]): 0.7,  # (Chrono, Kinetic)
     frozenset(["Bastion", "Bloom"]): 1.1,  # (Apex, Gaian)
 }
@@ -361,13 +361,13 @@ TYPE_SYNERGY_BOOSTS = {
 INCOMPATIBLE_TYPE_PAIRS = {
     frozenset(["Idol", "Flow"]),  # (Vermillion, Azure)
     frozenset(["Bloom", "Geist"]),  # (Gaian, Aether)
-    frozenset(["Bastion", "Dread"]),  # (Apex, Abyssal)
+    frozenset(["Bastion", "Nadir"]),  # (legacy Dread -> Nadir)
     frozenset(["Axiom", "Idol"]),  # (Argent, Vermillion)
     frozenset(["Rift", "Axiom"]),  # (Chrono, Arcane)
 }
 
-MAJOR_MODS = _load_mods_yaml("major_mods.yaml")
-UTILITY_MODS = _load_mods_yaml("utility_mods.yaml")
+MAJOR_MODS = _load_mods_yaml("mutagens/major_mods.yaml")
+UTILITY_MODS = _load_mods_yaml("mutagens/utility_mods.yaml")
 ALL_MODS = [MAJOR_MODS, UTILITY_MODS]
 
 
@@ -382,7 +382,7 @@ LEGACY_TYPE_MAP: Dict[str, str] = {
     "Azure": "Flow",
     "Aether": "Geist",
     "Arcane": "Axiom",
-    "Abyssal": "Dread",
+    "Abyssal": "Nadir",
     "Apex": "Bastion",
     "Sylvan": "Bloom",
     "Inferno": "Idol",
@@ -398,6 +398,8 @@ LEGACY_TYPE_MAP: Dict[str, str] = {
     "Insect": "Bloom",
     "Astral": "Geist",
     "Anomalous": "Rift",
+    # Map legacy or deprecated types to canonical
+    "Dread": "Nadir",
 }
 
 

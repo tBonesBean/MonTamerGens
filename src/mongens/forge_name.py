@@ -255,8 +255,7 @@ _TYPE_FLAVORS = {
             "us",
             "or",
         ],
-    },
-    "Dread": {
+	},
     "Nadir": {
         "prefixes": [
             "Noct",
@@ -701,7 +700,6 @@ TYPE_TO_ADJ: Dict[str, str] = {
     "Rift": "Temporal",
     "Mire": "Miry",
     "Vessel": "Hollow",
-    "Dread": "Dread",
     "Nadir": "Abyssal",
     "Echo": "Echoing",
     "Azimuth": "Directed",
@@ -1144,26 +1142,26 @@ def deterministic_name(
             )
             s_suf = secondary_flavor.get("suffixes", [])
             s_pre = secondary_flavor.get("prefixes", [])
-            s_core = secondary_flavor.get("cores", [])
+            s_core = secondary_flavor.get("stems", [])
             flavors_list = {
                 "prefixes": p_pre + s_pre,
                 "suffixes": p_suf + s_suf,
-                "cores": primary_flavor.get("cores", []) + s_core,
+                "stems": primary_flavor.get("stems", []) + s_core,
             }
         else:
-            flavors_list = {"prefixes": p_pre, "suffixes": p_suf, "cores": primary_flavor.get("cores", [])}
+            flavors_list = {"prefixes": p_pre, "suffixes": p_suf, "stems": primary_flavor.get("stems", [])}
 
         if flavors_list["prefixes"] and flavors_list["suffixes"]:
             prefix = rng.choice(flavors_list["prefixes"])
             suffix = rng.choice(flavors_list["suffixes"])
-            core = rng.choice(flavors_list["cores"]) if flavors_list.get("cores") else ""
+            stem = rng.choice(flavors_list["stems"]) if flavors_list.get("stems") else ""
 
             # Mix and match parts
             roll = rng.random()
             if roll < 0.4:
                 name = prefix + suffix.lower()
-            elif roll < 0.7 and core:
-                name = prefix + core + suffix.lower()
+            elif roll < 0.7 and stem:
+                name = prefix + stem + suffix.lower()
             else:
                 name = (
                     rng.choice(flavors_list["prefixes"])
@@ -1238,11 +1236,11 @@ def forge_monster_name(seed: MonsterSeed, salt: str = "") -> str:
     # Map _TYPE_FLAVORS to begin/mid/end
     flavor = _TYPE_FLAVORS.get(primary, {})
     begin_pool = flavor.get("prefixes", [])
-    mid_pool = flavor.get("cores", [])
+    mid_pool = flavor.get("stems", [])
     end_pool = flavor.get("suffixes", [])
 
     if secondary and secondary in _TYPE_FLAVORS:
-        mid_pool += _TYPE_FLAVORS[secondary].get("cores", [])
+        mid_pool += _TYPE_FLAVORS[secondary].get("stems", [])
 
     begin = rng.choice(begin_pool) if begin_pool else ""
     mid = rng.choice(mid_pool) if mid_pool else ""
@@ -1316,8 +1314,8 @@ def _generate_name_from_seed(seed_obj, style: str = "fantasy", salt: str = "") -
         mutagens = {"major": [], "utility": []}
 
     return deterministic_name(
-        int(idnum),
-        primary,
+        idnum=int(idnum),
+        primary_type=primary,
         secondary_type=secondary,
         mutagens=mutagens,
         style=style,

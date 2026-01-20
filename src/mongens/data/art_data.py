@@ -156,7 +156,7 @@ TYPE_VISUALS = {  # --- 3. BODY PLAN (60% Weight)
     "Geist": "ethereal, semi-translucent presence; floating components and soft glowing nodes",
     "Bloom": "organic growth-driven shapes: petals, shoots, canopies, and symbiotic appendages",
     "Vessel": "hollow-forward anatomy with cavities, receptacles, and inward-facing geometry",
-    "Dread": "unnerving elongation, shadow-first shapes, jagged or extra appendages that hint at predation",
+    "Nadir": "sinking, heavy silhouettes with downward mass; crushed plates, subsiding posture, cavernous voids",
 }
 
 # Palette guidance by canonical type — primary palette, accent suggestions, shadow tint guidance
@@ -172,7 +172,7 @@ PALETTE_BY_TYPE = {
     "Geist": {"primary": "pale-cerulean", "accent": "ghost-white", "shadow_tint": "lavender"},
     "Bloom": {"primary": "leaf-green", "accent": "veridian", "shadow_tint": "purple"},
     "Vessel": {"primary": "hollow-ivory", "accent": "muted-amber", "shadow_tint": "plum"},
-    "Dread": {"primary": "obsidian", "accent": "blood-red", "shadow_tint": "deep-purple"},
+    "Nadir": {"primary": "charcoal", "accent": "abyssal-blue", "shadow_tint": "black-purple"},
 }
 # --- Specific Species Visual Override... because they really are mega abstract ---
 SPECIES_VISUAL_OVERRIDES = {

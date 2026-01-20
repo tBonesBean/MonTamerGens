@@ -8,20 +8,20 @@ _Your anchor for navigating MonTamerGens’ architecture, lore, and design._
 
 This folder (`/ai_context/`) contains the **IntelliHub** — a curated set of documents that define:
 
--   the system architecture
--   the creative canon
--   the data contracts
--   the naming rules
--   the responsibilities of each module
--   the metaphysical lore
--   the visual and narrative design pillars
+- the system architecture
+- the creative canon
+- the data contracts
+- the naming rules
+- the responsibilities of each module
+- the metaphysical lore
+- the visual and narrative design pillars
 
 It is designed to be:
 
--   readable by humans
--   parseable by AI agents
--   trustworthy for future collaborators
--   extensible as the project evolves
+- readable by humans
+- parseable by AI agents
+- trustworthy for future collaborators
+- extensible as the project evolves
 
 ---
 
@@ -105,13 +105,13 @@ Canonical data shapes and contracts for YAML + Python structures.
 
 ## 🧠 How to Use This Hub
 
--   Start with **design_bible.md** and **lore_core.md** to understand the world.
--   Read **architecture_overview.md** to understand the engine.
--   Use **module_purposes/** to trace specific modules.
--   Use **schemas/** to validate data shapes.
--   Use **appendices/** for quick reference and navigation.
+- Start with **design_bible.md** and **lore_core.md** to understand the world.
+- Read **architecture_overview.md** to understand the engine.
+- Use **module_purposes/** to trace specific modules.
+- Use **schemas/** to validate data shapes.
+- Use **appendices/** for quick reference and navigation.
 
 This hub is your **source of truth**.  
 If something isn’t documented here, it isn’t canonical yet.
 
-Last updated: 2026-01-13 04:56:41 -07:00
+Last updated: 2026-01-19 12:30:00 -07:00

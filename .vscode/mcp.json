@@ -1,10 +1,6 @@
 {
 	"servers": {
 		"intellihub": {
-			"command": "C:\\services\\IntelliHubMCP\\intellihub_tool\\.venv\\Scripts\\python.exe",
-			"args": ["C:\\services\\IntelliHubMCP\\intellihub_tool\\stdio_server.py", "--mcp"]
-		},
-		"F_intellihub": {
 			"command": "F:\\IntelliHubMCP\\intellihub_tool\\.venv\\Scripts\\python.exe",
 			"args": ["F:\\IntelliHubMCP\\intellihub_tool\\stdio_server.py", "--mcp"]
 		}

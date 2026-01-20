@@ -22,6 +22,7 @@ Use this glossary as:
 **Naming Language:**
 
 - Prefixes: _Lex-_, _Ordo-_, _Prime-_, _Rule-_, _Null-_
+- Stems:
 - Suffixes: _-core_, _-frame_, _-sentinel_, _-bound_
 
 **Narrative Flavor:** Archivists, sentinels, constructs of truth, living laws.
@@ -37,6 +38,7 @@ Use this glossary as:
 **Naming Language:**
 
 - Prefixes: _Rend-_, _Bolt-_, _Rush-_, _Fang-_
+- Stems:
 - Suffixes: _-lash_, _-strike_, _-flare_, _-drive_
 
 **Narrative Flavor:** Shock troops, hunters, berserkers, living accelerants.
@@ -52,6 +54,7 @@ Use this glossary as:
 **Naming Language:**
 
 - Prefixes: _Re-_, _Pale-_, _Grave-_, _Recall-_
+- Stems:
 - Suffixes: _-remnant_, _-hollow_, _-trace_, _-loop_
 
 **Narrative Flavor:** Relics, revenants, living histories, mnemonic entities.
@@ -67,6 +70,7 @@ Use this glossary as:
 **Naming Language:**
 
 - Prefixes: _Current-_, _Drift-_, _Weave-_, _Soft-_
+- Stems:
 - Suffixes: _-tide_, _-bend_, _-stream_, _-veil_
 
 **Narrative Flavor:** Guides, healers, symbiotes, environmental responders.
@@ -82,6 +86,7 @@ Use this glossary as:
 **Naming Language:**
 
 - Prefixes: _Iron-_, _Stone-_, _Ward-_, _Bulwark-_
+- Stems:
 - Suffixes: _-wall_, _-anchor_, _-guard_, _-citadel_
 
 **Narrative Flavor:** Guardians, shields, last stands, living fortresses.
@@ -97,6 +102,7 @@ Use this glossary as:
 **Naming Language:**
 
 - Prefixes: _Void-_, _Split-_, _Warp-_, _Phase-_
+- Stems:
 - Suffixes: _-fracture_, _-rift_, _-tear_, _-anomaly_
 
 **Narrative Flavor:** Anomalies, experiment failures, dimensional walkers.
@@ -112,6 +118,7 @@ Use this glossary as:
 **Naming Language:**
 
 - Prefixes: _Bog-_, _Sludge-_, _Rot-_, _Murk-_
+- Stems:
 - Suffixes: _-husk_, _-ooze_, _-residue_, _-clot_
 
 **Narrative Flavor:** Polluters, survivors of collapse, toxic ecosystems.
@@ -127,6 +134,7 @@ Use this glossary as:
 **Naming Language:**
 
 - Prefixes: _Flare-_, _Crest-_, _Halo-_, _Crown-_
+- Stems:
 - Suffixes: _-icon_, _-beacon_, _-mantle_, _-radiant_
 
 **Narrative Flavor:** Champions, cult icons, living myths.
@@ -142,6 +150,7 @@ Use this glossary as:
 **Naming Language:**
 
 - Prefixes: _Wisp-_, _Pale-_, _Shade-_, _Null-_
+- Stems:
 - Suffixes: _-phantom_, _-veil_, _-liminal_, _-echo_
 
 **Narrative Flavor:** Ghosts, watchers, liminal entities.
@@ -157,6 +166,7 @@ Use this glossary as:
 **Naming Language:**
 
 - Prefixes: _Sprout-_, _Green-_, _Bloom-_, _Verdant-_
+- Stems:
 - Suffixes: _-canopy_, _-vine_, _-seed_, _-flourish_
 
 **Narrative Flavor:** Gardeners, overgrowth, life reclaiming space.
@@ -172,24 +182,28 @@ Use this glossary as:
 **Naming Language:**
 
 - Prefixes: _Hollow-_, _Frame-_, _Null-_, _Shell-_
+- Stems:
 - Suffixes: _-vessel_, _-recept_, _-core_, _-ward_
 
 **Narrative Flavor:** Experiments, avatars, catalysts for change.
 
 ---
 
-## DREAD — _Fear, Predation, Suppression_
+## NADIR — _Collapse, Depth, Final Limit_
 
-**Core Meaning:** Dread is fear given agency. These monsters dominate by presence alone.
+**Core Meaning:** 
 
-**Cognitive Axis:** Terror → Control → Consumption
+**Core Meaning:** 
+
+**Cognitive Axis:** 
 
 **Naming Language:**
 
-- Prefixes: _Grim-_, _Maw-_, _Night-_, _Dread-_
-- Suffixes: _-stalker_, _-omen_, _-gloom_, _-devourer_
+- Prefixes: 
+- Stems:
+- Suffixes: 
 
-**Narrative Flavor:** Apex predators, living nightmares, suppressive forces.
+**Narrative Flavor:** 
 
 ---
 
@@ -201,7 +215,7 @@ _(NOW 16 TOTAL PRIMARY TYPES)_
 - 4 Distinct Type Clusters (Non-mechanical, Canonical):
     - 4 Types in Each Cluster
 
-                  1.  **Structural**Commonality:
+                  1.  **Structural**
                   	- Axiom
                   	- Bastion
                   	- Vessel

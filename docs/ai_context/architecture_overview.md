@@ -2,7 +2,7 @@
 
 _A complete, accurate, and refactor‑aligned map of the engine._
 
-Last updated: 2026-01-13 04:56:41 -07:00
+Last updated: 2026-01-19 12:30:00 -07:00
 
 ---
 
@@ -60,12 +60,12 @@ Each layer is independent, testable, and replaceable.
 ### Responsibilities:
 
 - Load YAML files:
-  - seed types
-  - type forms
-  - physical traits
-  - held items
-  - tempers
-  - mutagens
+    - seed types
+    - type forms
+    - physical traits
+    - held items
+    - tempers
+    - mutagens
 - Validate schema correctness
 - Normalize shapes
 - Provide canonical data structures
@@ -119,17 +119,17 @@ This is the **heart** of the engine.
 ### Responsibilities:
 
 - Filter mutagens by:
-  - allowed types
-  - incompatible types
-  - rarity
-  - synergy multipliers
+    - allowed types
+    - incompatible types
+    - rarity
+    - synergy multipliers
 - Weighted sampling without replacement
 - Apply:
-  - multiplicative stat changes
-  - additive stat changes
-  - tags
-  - resistances
-  - weaknesses
+    - multiplicative stat changes
+    - additive stat changes
+    - tags
+    - resistances
+    - weaknesses
 - Save final monster to cache
 - Produce a fully forged monster
 
@@ -171,14 +171,14 @@ This is the **identity layer** of the engine.
 ### Responsibilities:
 
 - Format:
-  - name
-  - form
-  - types
-  - mutagens
-  - stats
-  - habitat
-  - traits
-  - meta tags
+    - name
+    - form
+    - types
+    - mutagens
+    - stats
+    - habitat
+    - traits
+    - meta tags
 - Save to text file
 - Save seeds to cache
 
@@ -194,12 +194,12 @@ This is the **narrative output layer**.
 
 - Convert monster attributes into visual descriptors
 - Integrate:
-  - type
-  - form
-  - traits
-  - mutagens
-  - habitat
-  - meta tags
+    - type
+    - form
+    - traits
+    - mutagens
+    - habitat
+    - meta tags
 - Output a Stable Diffusion‑style prompt
 
 This is the **visual output layer**.
@@ -230,8 +230,8 @@ This is the **storage backbone** of the engine.
 
 - Load monster from cache
 - Reroll:
-  - physical traits
-  - major mutagens
+    - physical traits
+    - major mutagens
 - Recompute stats from scratch
 - Reapply mutagens
 - Reforge name

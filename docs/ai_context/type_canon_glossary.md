@@ -6,7 +6,7 @@ Types are **not elements** and **not species**. They are _ontological forces_ â€
 
 Use this glossary as:
 
-- a reference for **name generation** (prefixes, suffixes, roots)
+- a reference for **name generation** (prefixes, stems, suffixes, epithets)
 - guidance for **mutagen compatibility**
 - constraints for **Dex entry tone**
 - alignment checks for future systems (evolution, resonance, emotion)

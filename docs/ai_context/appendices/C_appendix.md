@@ -36,6 +36,7 @@ Bloom, Idol, Oracle, Zenith
 **Naming Language:**
 
 -   Prefixes: _Axio-_, _Regu-_, _Canon-_, _Ortho-_, _Legis-_
+-	Stems:
 -   Suffixes: _-us_, _-on_, _-is_, _-os_, _-um_
 
 **Narrative Flavor:** Archivists, sentinels, constructs of truth, living laws.
@@ -51,6 +52,7 @@ Bloom, Idol, Oracle, Zenith
 **Naming Language:**
 
 -   Prefixes: _Imp-_, _Vel-_, _Celer-_, _Rush-_, _Dart-_
+-	Stems:
 -   Suffixes: _-ex_, _-ix_, _-ax_, _-is_, _-us_
 
 **Narrative Flavor:** Shock troops, hunters, berserkers, living accelerants.
@@ -66,6 +68,7 @@ Bloom, Idol, Oracle, Zenith
 **Naming Language:**
 
 -   Prefixes: _Reso-_, _Mem-_, _Pale-_, _Re-_, _Whis-_
+-	Stems:
 -   Suffixes: _-ic_, _-al_, _-or_, _-is_, _-um_
 
 **Narrative Flavor:** Relics, revenants, living histories, mnemonic entities.
@@ -81,6 +84,7 @@ Bloom, Idol, Oracle, Zenith
 **Naming Language:**
 
 -   Prefixes: _Flu-_, _Hydr-_, _Liq-_, _Aqua-_, _Curr-_
+-	Stems:
 -   Suffixes: _-us_, _-a_, _-is_, _-os_, _-on_
 
 **Narrative Flavor:** Guides, healers, symbiotes, environmental responders.
@@ -96,7 +100,9 @@ Bloom, Idol, Oracle, Zenith
 **Naming Language:**
 
 -   Prefixes: _Bulw-_, _Gard-_, _Mur-_, _Fort-_, _Dura-_
+-	Stems:
 -   Suffixes: _-on_, _-ad_, _-it_, _-um_, _-ark_
+
 
 **Narrative Flavor:** Guardians, shields, last stands, living fortresses.
 
@@ -111,9 +117,11 @@ Bloom, Idol, Oracle, Zenith
 **Naming Language:**
 
 -   Prefixes: _Para-_, _Xeno-_, _Warp-_, _Flux-_, _Dox-_
+-   Stems:
 -   Suffixes: _-on_, _-ia_, _-is_, _-us_, _-os_
 
 **Narrative Flavor:** Anomalies, experiment failures, dimensional walkers.
+
 
 ---
 
@@ -126,6 +134,7 @@ Bloom, Idol, Oracle, Zenith
 **Naming Language:**
 
 -   Prefixes: _Stag-_, _Bog-_, _Fester-_, _Rot-_, _Sludge-_
+-   Stems: _-ort-_,
 -   Suffixes: _-os_, _-us_, _-y_, _-is_, _-um_
 
 **Narrative Flavor:** Polluters, survivors of collapse, toxic ecosystems.
@@ -141,6 +150,7 @@ Bloom, Idol, Oracle, Zenith
 **Naming Language:**
 
 -   Prefixes: _Icon-_, _Dei-_, _Sacr-_, _Vener-_, _Glo-_
+-   Stems:
 -   Suffixes: _-a_, _-on_, _-is_, _-us_, _-or_
 
 **Narrative Flavor:** Champions, cult icons, living myths.
@@ -156,6 +166,7 @@ Bloom, Idol, Oracle, Zenith
 **Naming Language:**
 
 -   Prefixes: _Spec-_, _Phant-_, _Ect-_, _Spir-_, _Void-_
+-   Stems:
 -   Suffixes: _-os_, _-us_, _-is_, _-es_, _-um_
 
 **Narrative Flavor:** Ghosts, watchers, liminal entities.
@@ -171,6 +182,7 @@ Bloom, Idol, Oracle, Zenith
 **Naming Language:**
 
 -   Prefixes: _Flor-_, _Ver-_, _Syl-_, _Germ-_, _Petal-_
+-   Stems:
 -   Suffixes: _-ia_, _-is_, _-a_, _-on_, _-us_
 
 **Narrative Flavor:** Gardeners, overgrowth, life reclaiming space.
@@ -186,6 +198,7 @@ Bloom, Idol, Oracle, Zenith
 **Naming Language:**
 
 -   Prefixes: _Hollow-_, _Frame-_, _Null-_, _Shell-_
+-   Stems:
 -   Suffixes: _-vessel_, _-recept_, _-core_, _-ward_
 
 **Narrative Flavor:** Experiments, avatars, catalysts for change.
@@ -201,7 +214,8 @@ Bloom, Idol, Oracle, Zenith
 **Naming Language:**
 
 -   Prefixes: _Grim-_, _Maw-_, _Night-_, _Dread-_
--   Suffixes: _-stalker_, _-omen_, _-gloom_, _-devourer_
+-   Stems:
+-   Suffixes: _-alker_, _-omen_, _-gloom_, _-vour_
 
 **Narrative Flavor:** Apex predators, living nightmares, suppressive forces.
 

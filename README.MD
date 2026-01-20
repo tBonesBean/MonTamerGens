@@ -1,27 +1,28 @@
 # MonsterGenerators
 
-Last updated: 2026-01-13 04:56:41 -07:00
+Last updated: 2026-01-19 12:30:00 -07:00
 
 This project is a Python package for procedurally generating fantasy monster data. It includes a command-line tool and a library to create monster "seeds" with unique stats, traits, dual-types, and abilities. It can format this data into Pokedex-style catalog entries, raw data for game development, and detailed prompts for AI image generators.
 
 ## Changelog
 
 ### 2026-01-13
+
 - Updated documentation and examples to use the canonical type taxonomy.
 - Clarified mutagen categories and CLI flag usage.
 - Added documentation update stamps across core project docs.
 
 ## Features
 
-* **Dual-Type System**: Monsters are generated with a primary type and have a chance to gain a secondary type, creating complex and unique creatures.
-* **Stat Biasing**: Each monster's stats are intelligently biased based on its primary and secondary types, giving them a distinct feel.
-* **Mutagens**: Apply "mutagens" (major and utility) to generate unique "wild" instances with special stats, tags, and abilities.
-* **Re-roll Attributes**: Fine-tune generated monsters by re-rolling specific attributes like traits or major mutagens.
-* **Multiple Output Formats**:
-  * **Canonical Dex Entries**: Generate Pokedex-style entries that describe the pure, base form of a species.
-  * **Unique Instances**: Generate the raw data for a fully randomized "wild" monster, perfect for in-game encounters.
-  * **AI Art Prompts**: Convert monster data into a detailed, style-compliant prompt for image models like DALL-E or Stable Diffusion.
-* **Powerful Command-Line Interface**: A rich CLI with subcommands for accessing all of the generator's features.
+- **Dual-Type System**: Monsters are generated with a primary type and have a chance to gain a secondary type, creating complex and unique creatures.
+- **Stat Biasing**: Each monster's stats are intelligently biased based on its primary and secondary types, giving them a distinct feel.
+- **Mutagens**: Apply "mutagens" (major and utility) to generate unique "wild" instances with special stats, tags, and abilities.
+- **Re-roll Attributes**: Fine-tune generated monsters by re-rolling specific attributes like traits or major mutagens.
+- **Multiple Output Formats**:
+    - **Canonical Dex Entries**: Generate Pokedex-style entries that describe the pure, base form of a species.
+    - **Unique Instances**: Generate the raw data for a fully randomized "wild" monster, perfect for in-game encounters.
+    - **AI Art Prompts**: Convert monster data into a detailed, style-compliant prompt for image models like DALL-E or Stable Diffusion.
+- **Powerful Command-Line Interface**: A rich CLI with subcommands for accessing all of the generator's features.
 
 ## Installation
 
@@ -33,8 +34,8 @@ To install the package for development, clone the repository and run the followi
 pip install -e .[dev]
 ```
 
-* The `-e` flag installs the package in "editable" mode, so your code changes are immediately reflected.
-* The `[dev]` part installs all the extra tools for development and testing, like `pytest`.
+- The `-e` flag installs the package in "editable" mode, so your code changes are immediately reflected.
+- The `[dev]` part installs all the extra tools for development and testing, like `pytest`.
 
 This command also installs the `mongen` command-line tool.
 
@@ -69,8 +70,8 @@ Generates the raw data for a single "wild" monster instance, including randomize
   # Get the raw data for one fully randomized monster
 mongen unique
 
-  # Generate a unique Dread monster with a 60% chance of a random secondary type
-mongen unique --primary_type Dread --secondary_type random
+  # Generate a unique Nadir monster with a 60% chance of a random secondary type
+mongen unique --primary_type Nadir --secondary_type random
 
   # Generate a powerful unique monster with extra mutagens
 mongen unique --primary_type Idol --majors 2 --utils 1
@@ -78,7 +79,7 @@ mongen unique --primary_type Idol --majors 2 --utils 1
 
 ### `mongen reroll`
 
-Re-rolls attributes of a previously generated monster. This is useful for fine-tuning a monster you like without starting from scratch. Each re-roll creates a *new* monster with a new PIN.
+Re-rolls attributes of a previously generated monster. This is useful for fine-tuning a monster you like without starting from scratch. Each re-roll creates a _new_ monster with a new PIN.
 
 **Examples:**
 
@@ -90,7 +91,7 @@ Re-rolls attributes of a previously generated monster. This is useful for fine-t
   mongen reroll <PIN> --majors
 ```
 
-*You can find a monster's PIN in the output of the `unique` command or in the cached data.*
+_You can find a monster's PIN in the output of the `unique` command or in the cached data._
 
 ### `mongen artprompt`
 
@@ -106,7 +107,7 @@ mongen artprompt
 mongen artprompt -t1 Geist -t2 Spur -o ./prompts.txt --json
 ```
 
-*The `--json` flag will also save the monster's raw data, which is useful for regenerating the same image later.*
+_The `--json` flag will also save the monster's raw data, which is useful for regenerating the same image later._
 
 ### `mongen list`
 

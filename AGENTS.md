@@ -322,14 +322,14 @@ Tests must cover:
 
 ## **9. Versioning**
 
-This document is **v1.2** - updated to reflect the current canonical type taxonomy, YAML-first content model, and recent data migration.
+This document is **v1.3** - updated to reflect data layer corrections, expanded type naming pools, and full validation of all 16 canonical types.
 Changes in this release:
 
--   Migrated core types to YAML (`seed_types.yaml` / `type_forms.yaml`).
--   Reconciled major mutagens and utility mods to canonical type names.
--   Adjusted generation code paths to use `SEED_TYPE_DATA` and `MonsterSeed.forge()` improvements.
--   Clarified the roles of `monsterseed.py` and `mon_forge.py` in the generation pipeline.
--   Updated the "Technical Architecture" and "Systems Design" sections to match the current implementation.
+- **Data Layer Path Corrections**: Fixed relative paths in `data.py` for `seed_types.yaml`, `major_mods.yaml`, and `utility_mods.yaml` to use proper subdirectories (`types/`, `mutagens/`).
+- **Type Naming Pools**: Expanded `type_parts.yaml` with 14+ prefix/stem/suffix options per type for richer name generation across all 16 canonical types.
+- **YAML Structure Fixes**: Corrected indentation in `seed_types.yaml` for newly added types (Azimuth, Fracture, Oracle, Zenith) to nest `notes` field inside `attributes` block.
+- **Full Type Validation**: Confirmed all 16 canonical types now forge successfully with deterministic seeds, proper form selection, habitat assignment, and mutagen compatibility.
+- **Smoke Test Pass**: Data layer loads without errors; monster generation pipeline operational for all types.
 
 All future edits should continue the principle: changes must be additive, clarifying, or canon‑strengthening.
 

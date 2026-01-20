@@ -1,0 +1,5290 @@
+[
+  {
+    "idnum": 1,
+    "name": "Martide",
+    "form": "Driftframe",
+    "primary_type": "Flow",
+    "secondary_type": null,
+    "stats": {
+      "HP": 130,
+      "ATK": 50,
+      "DEF": 50,
+      "SPATK": 50,
+      "SPDEF": 62,
+      "SPD": 55,
+      "ACC": 95,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Bloomglow Embers"
+      ],
+      "utility": [
+        "Flowfield Botanica",
+        "Stillwater Refuge"
+      ]
+    },
+    "habitat": "Riverlands",
+    "physical_traits": [
+      "Covered in bark-like plating with glowing sap veins"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Devious",
+      "affinity": "Hostility"
+    },
+    "meta": {
+      "tags": [
+        "Refuge",
+        "Still:Watered"
+      ],
+      "resist": [
+        "Idol"
+      ],
+      "weak": [
+        "Bloom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "V2ETC45SYQ"
+    }
+  },
+  {
+    "idnum": 2,
+    "name": "Apexia",
+    "form": "Crowned",
+    "primary_type": "Zenith",
+    "secondary_type": "Oracle",
+    "stats": {
+      "HP": 110,
+      "ATK": 57,
+      "DEF": 48,
+      "SPATK": 63,
+      "SPDEF": 52,
+      "SPD": 50,
+      "ACC": 110,
+      "EVA": 9,
+      "LUCK": 12
+    },
+    "mutagens": {
+      "major": [
+        "Riftflare Fracture"
+      ],
+      "utility": [
+        "Sagewarden Beacon"
+      ]
+    },
+    "habitat": "Snowcapped Peaks",
+    "physical_traits": [
+      "Skin ripples and shifts like a heat haze"
+    ],
+    "held_item": "A petrified seed from an unknown tree",
+    "tempers": {
+      "mood": "Moody",
+      "affinity": "Cruelty"
+    },
+    "meta": {
+      "tags": [],
+      "resist": [
+        "Nadir",
+        "Echo"
+      ],
+      "weak": [
+        "Mire",
+        "Rift"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "89GVGZZZJ2"
+    }
+  },
+  {
+    "idnum": 3,
+    "name": "Infrashade",
+    "form": "Abyssal",
+    "primary_type": "Nadir",
+    "secondary_type": "Bloom",
+    "stats": {
+      "HP": 142,
+      "ATK": 48,
+      "DEF": 59,
+      "SPATK": 54,
+      "SPDEF": 60,
+      "SPD": 40,
+      "ACC": 95,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Twilight Bloom"
+      ],
+      "utility": [
+        "Mirewick Talisman",
+        "Resonant Cartographer"
+      ]
+    },
+    "habitat": "Sunless Abyss",
+    "physical_traits": [
+      "Skin ripples and shifts like a heat haze"
+    ],
+    "held_item": "Equipped With Satellite Dish",
+    "tempers": {
+      "mood": "Tolerant",
+      "affinity": "Compassion"
+    },
+    "meta": {
+      "tags": [
+        "Trail:Resound",
+        "LoreMapped"
+      ],
+      "resist": [
+        "Zenith",
+        "Flow"
+      ],
+      "weak": [
+        "Bloom",
+        "Bastion"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "3DG8IUBM62"
+    }
+  },
+  {
+    "idnum": 4,
+    "name": "Baros",
+    "form": "Rampart",
+    "primary_type": "Bastion",
+    "secondary_type": "Zenith",
+    "stats": {
+      "HP": 113,
+      "ATK": 54,
+      "DEF": 70,
+      "SPATK": 48,
+      "SPDEF": 56,
+      "SPD": 50,
+      "ACC": 96,
+      "EVA": 5,
+      "LUCK": 11
+    },
+    "mutagens": {
+      "major": [
+        "Guardian Resonance"
+      ],
+      "utility": [
+        "Prismatic Bulwark",
+        "Pulseforged Mentor"
+      ]
+    },
+    "habitat": "Alpine Slopes",
+    "physical_traits": [
+      "Vines with small, metallic flowers grow from its back"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Patient",
+      "affinity": "Cheerfulness"
+    },
+    "meta": {
+      "tags": [
+        "Guide:Pulse",
+        "KindredAdvice"
+      ],
+      "resist": [
+        "Bloom",
+        "Nadir"
+      ],
+      "weak": [
+        "Spur",
+        "Mire"
+      ],
+      "abilities": [
+        "Guard"
+      ],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "Y1XDEBVUIJ"
+    }
+  },
+  {
+    "idnum": 5,
+    "name": "Novaicon",
+    "form": "Mantle",
+    "primary_type": "Idol",
+    "secondary_type": null,
+    "stats": {
+      "HP": 100,
+      "ATK": 57,
+      "DEF": 50,
+      "SPATK": 62,
+      "SPDEF": 50,
+      "SPD": 55,
+      "ACC": 95,
+      "EVA": 5,
+      "LUCK": 20
+    },
+    "mutagens": {
+      "major": [
+        "Radiant Choir"
+      ],
+      "utility": [
+        "Siren's Accord",
+        "Sagewarden Beacon"
+      ]
+    },
+    "habitat": "Petrified Forest",
+    "physical_traits": [
+      "Highly Fashionable"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Trusting",
+      "affinity": "Open-Mindedness"
+    },
+    "meta": {
+      "tags": [
+        "Sage:Beacon",
+        "MentorGlow"
+      ],
+      "resist": [
+        "Axiom"
+      ],
+      "weak": [
+        "Flow"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "VRKWU9XRNJ"
+    }
+  },
+  {
+    "idnum": 6,
+    "name": "Nullia",
+    "form": "Paradox",
+    "primary_type": "Rift",
+    "secondary_type": null,
+    "stats": {
+      "HP": 92,
+      "ATK": 50,
+      "DEF": 50,
+      "SPATK": 59,
+      "SPDEF": 57,
+      "SPD": 60,
+      "ACC": 95,
+      "EVA": 10,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Lumenrift Shard"
+      ],
+      "utility": [
+        "Sparkward Tendril",
+        "Flux Chronicle"
+      ]
+    },
+    "habitat": "Monolithic Structures",
+    "physical_traits": [
+      "Glowing Runic Markings",
+      "Fossilized bone plating on back"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Indifferent",
+      "affinity": "Curiosity"
+    },
+    "meta": {
+      "tags": [
+        "Record:Flux",
+        "FlowingNotes"
+      ],
+      "resist": [
+        "Nadir"
+      ],
+      "weak": [
+        "Geist"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "08X5X9B4FC"
+    }
+  },
+  {
+    "idnum": 7,
+    "name": "Wombcapsule",
+    "form": "Receptacle",
+    "primary_type": "Vessel",
+    "secondary_type": "Nadir",
+    "stats": {
+      "HP": 110,
+      "ATK": 48,
+      "DEF": 52,
+      "SPATK": 50,
+      "SPDEF": 53,
+      "SPD": 45,
+      "ACC": 100,
+      "EVA": 5,
+      "LUCK": 11
+    },
+    "mutagens": {
+      "major": [
+        "Vesselcore Hollow"
+      ],
+      "utility": [
+        "Dreadbound Sigil",
+        "Vesselborne Reliquary"
+      ]
+    },
+    "habitat": "Cocoon Sentinel",
+    "physical_traits": [
+      "Small, Detached Floating Limbs"
+    ],
+    "held_item": "Equipped With Satellite Dish",
+    "tempers": {
+      "mood": "Arrogant",
+      "affinity": "Sensitivity"
+    },
+    "meta": {
+      "tags": [
+        "Hollow:Carry",
+        "Signal:Call"
+      ],
+      "resist": [
+        "Zenith"
+      ],
+      "weak": [
+        "Bloom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "UT2B9IVF4Z"
+    }
+  },
+  {
+    "idnum": 8,
+    "name": "Schiser",
+    "form": "Splinter",
+    "primary_type": "Fracture",
+    "secondary_type": "Azimuth",
+    "stats": {
+      "HP": 90,
+      "ATK": 60,
+      "DEF": 50,
+      "SPATK": 62,
+      "SPDEF": 50,
+      "SPD": 56,
+      "ACC": 105,
+      "EVA": 12,
+      "LUCK": 12
+    },
+    "mutagens": {
+      "major": [
+        "Flowbloom Current"
+      ],
+      "utility": [
+        "Echoing Ledger"
+      ]
+    },
+    "habitat": "Wyrmscar Ridge",
+    "physical_traits": [
+      "Has horns that are shaped like tuning forks"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Friendly",
+      "affinity": "Boldness"
+    },
+    "meta": {
+      "tags": [],
+      "resist": [
+        "Bastion",
+        "Rift"
+      ],
+      "weak": [
+        "Axiom",
+        "Nadir"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "PGFNIIN11A"
+    }
+  },
+  {
+    "idnum": 9,
+    "name": "Toxius",
+    "form": "Tangle",
+    "primary_type": "Mire",
+    "secondary_type": "Echo",
+    "stats": {
+      "HP": 112,
+      "ATK": 50,
+      "DEF": 57,
+      "SPATK": 55,
+      "SPDEF": 60,
+      "SPD": 50,
+      "ACC": 110,
+      "EVA": 5,
+      "LUCK": 12
+    },
+    "mutagens": {
+      "major": [
+        "Mirebound Rot"
+      ],
+      "utility": [
+        "Boundless Chorus",
+        "Echoing Ledger"
+      ]
+    },
+    "habitat": "Gloomfen Bogs",
+    "physical_traits": [
+      "Weeps a thick, ink-like substance"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Irritable",
+      "affinity": "Sensitivity"
+    },
+    "meta": {
+      "tags": [
+        "Recall:Data",
+        "Clarity"
+      ],
+      "resist": [
+        "Geist"
+      ],
+      "weak": [
+        "Axiom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "OUHT0R7BQK"
+    }
+  },
+  {
+    "idnum": 10,
+    "name": "Dojum",
+    "form": "Citadel",
+    "primary_type": "Bastion",
+    "secondary_type": "Echo",
+    "stats": {
+      "HP": 108,
+      "ATK": 50,
+      "DEF": 70,
+      "SPATK": 50,
+      "SPDEF": 56,
+      "SPD": 55,
+      "ACC": 100,
+      "EVA": 5,
+      "LUCK": 12
+    },
+    "mutagens": {
+      "major": [
+        "Echoisle Whisper"
+      ],
+      "utility": [
+        "Boundless Chorus",
+        "Prismatic Bulwark"
+      ]
+    },
+    "habitat": "Ancient Battlefield",
+    "physical_traits": [
+      "Translucent Skin",
+      "Has a single, large eye that shows weather patterns"
+    ],
+    "held_item": "Pet Rock on a Leash",
+    "tempers": {
+      "mood": "Kind",
+      "affinity": "Cynicism"
+    },
+    "meta": {
+      "tags": [
+        "PrismGuard",
+        "Spectrum"
+      ],
+      "resist": [
+        "Bloom",
+        "Geist"
+      ],
+      "weak": [
+        "Spur",
+        "Axiom"
+      ],
+      "abilities": [
+        "Guard"
+      ],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "QA7VX1W7FG"
+    }
+  },
+  {
+    "idnum": 11,
+    "name": "Brutok",
+    "form": "Anchor",
+    "primary_type": "Bastion",
+    "secondary_type": "Rift",
+    "stats": {
+      "HP": 104,
+      "ATK": 50,
+      "DEF": 70,
+      "SPATK": 49,
+      "SPDEF": 60,
+      "SPD": 55,
+      "ACC": 95,
+      "EVA": 8,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Bastion Halo"
+      ],
+      "utility": [
+        "Lumenic Steward",
+        "Flux Chronicle"
+      ]
+    },
+    "habitat": "Lunaglow Plateau",
+    "physical_traits": [
+      "A small, orbiting ring of ice shards"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Shy",
+      "affinity": "Amiability"
+    },
+    "meta": {
+      "tags": [
+        "Record:Flux",
+        "FlowingNotes"
+      ],
+      "resist": [
+        "Bloom",
+        "Nadir"
+      ],
+      "weak": [
+        "Spur",
+        "Geist"
+      ],
+      "abilities": [
+        "Guard"
+      ],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "88363K51UB"
+    }
+  },
+  {
+    "idnum": 12,
+    "name": "Bogos",
+    "form": "Sink",
+    "primary_type": "Mire",
+    "secondary_type": "Oracle",
+    "stats": {
+      "HP": 112,
+      "ATK": 50,
+      "DEF": 55,
+      "SPATK": 55,
+      "SPDEF": 63,
+      "SPD": 45,
+      "ACC": 118,
+      "EVA": 9,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Mirebound Rot"
+      ],
+      "utility": [
+        "Mirewick Talisman"
+      ]
+    },
+    "habitat": "Gloomfen Bogs",
+    "physical_traits": [
+      "Crystallized Tear Ducts"
+    ],
+    "held_item": "A lens that shows the viewer's potential",
+    "tempers": {
+      "mood": "Clever",
+      "affinity": "Glory"
+    },
+    "meta": {
+      "tags": [],
+      "resist": [
+        "Echo"
+      ],
+      "weak": [
+        "Rift"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "P0E18B2K9M"
+    }
+  },
+  {
+    "idnum": 13,
+    "name": "Gravewraith",
+    "form": "Omen",
+    "primary_type": "Nadir",
+    "secondary_type": "Oracle",
+    "stats": {
+      "HP": 120,
+      "ATK": 46,
+      "DEF": 53,
+      "SPATK": 55,
+      "SPDEF": 59,
+      "SPD": 40,
+      "ACC": 107,
+      "EVA": 9,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Dreadmaw Eclipse"
+      ],
+      "utility": [
+        "Dreadbound Sigil"
+      ]
+    },
+    "habitat": "Dread Catacombs",
+    "physical_traits": [
+      "Covered in tiny, moss-like growths"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Confident",
+      "affinity": "Resentment"
+    },
+    "meta": {
+      "tags": [],
+      "resist": [
+        "Zenith",
+        "Echo"
+      ],
+      "weak": [
+        "Bloom",
+        "Rift"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "6IJF7NDXNG"
+    }
+  },
+  {
+    "idnum": 14,
+    "name": "Germula",
+    "form": "Shoot",
+    "primary_type": "Bloom",
+    "secondary_type": "Idol",
+    "stats": {
+      "HP": 140,
+      "ATK": 59,
+      "DEF": 57,
+      "SPATK": 64,
+      "SPDEF": 57,
+      "SPD": 52,
+      "ACC": 95,
+      "EVA": 5,
+      "LUCK": 15
+    },
+    "mutagens": {
+      "major": [
+        "Idolflare Beacon"
+      ],
+      "utility": [
+        "Mirewick Talisman",
+        "Sagewarden Beacon"
+      ]
+    },
+    "habitat": "Alpine Lakes",
+    "physical_traits": [
+      "Body is covered in smooth, river-worn stones",
+      "Its body is partially pixelated, as if not fully rendered"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Confident",
+      "affinity": "Distrust"
+    },
+    "meta": {
+      "tags": [
+        "Sage:Beacon",
+        "MentorGlow"
+      ],
+      "resist": [
+        "Flow",
+        "Axiom"
+      ],
+      "weak": [
+        "Bastion",
+        "Flow"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "KTL1X1LU0X"
+    }
+  },
+  {
+    "idnum": 15,
+    "name": "Dreadhowl",
+    "form": "Abyssal",
+    "primary_type": "Nadir",
+    "secondary_type": "Bloom",
+    "stats": {
+      "HP": 142,
+      "ATK": 48,
+      "DEF": 59,
+      "SPATK": 54,
+      "SPDEF": 60,
+      "SPD": 40,
+      "ACC": 95,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Idolflare Beacon"
+      ],
+      "utility": [
+        "Mirewick Talisman",
+        "Harmonic Field"
+      ]
+    },
+    "habitat": "AshGlass Tombs",
+    "physical_traits": [
+      "Covered in bark-like plating with glowing sap veins"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Moody",
+      "affinity": "Honor"
+    },
+    "meta": {
+      "tags": [
+        "Balance:Field",
+        "Cohesion"
+      ],
+      "resist": [
+        "Zenith",
+        "Flow"
+      ],
+      "weak": [
+        "Bloom",
+        "Bastion"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "DB4Q1625H4"
+    }
+  },
+  {
+    "idnum": 16,
+    "name": "Umbrdusk",
+    "form": "Inevitable",
+    "primary_type": "Nadir",
+    "secondary_type": "Axiom",
+    "stats": {
+      "HP": 126,
+      "ATK": 48,
+      "DEF": 61,
+      "SPATK": 55,
+      "SPDEF": 62,
+      "SPD": 40,
+      "ACC": 102,
+      "EVA": 5,
+      "LUCK": 11
+    },
+    "mutagens": {
+      "major": [
+        "Vesselcore Hollow"
+      ],
+      "utility": [
+        "Vesselborne Reliquary",
+        "Sagewarden Beacon"
+      ]
+    },
+    "habitat": "Netherbleak Hollow",
+    "physical_traits": [
+      "Glowing Runic Markings",
+      "Asymmetrical Horns, one broken"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Sincere",
+      "affinity": "Coyness"
+    },
+    "meta": {
+      "tags": [
+        "Sage:Beacon",
+        "MentorGlow"
+      ],
+      "resist": [
+        "Zenith",
+        "Spur",
+        "Rift"
+      ],
+      "weak": [
+        "Bloom",
+        "Idol",
+        "Nadir"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "N7IE2RRBRI"
+    }
+  },
+  {
+    "idnum": 17,
+    "name": "Whispcadence",
+    "form": "Loop",
+    "primary_type": "Echo",
+    "secondary_type": "Bloom",
+    "stats": {
+      "HP": 120,
+      "ATK": 52,
+      "DEF": 54,
+      "SPATK": 64,
+      "SPDEF": 54,
+      "SPD": 60,
+      "ACC": 105,
+      "EVA": 6,
+      "LUCK": 13
+    },
+    "mutagens": {
+      "major": [
+        "Echoed Memory"
+      ],
+      "utility": [
+        "Stillwater Refuge",
+        "Siren's Accord"
+      ]
+    },
+    "habitat": "Skybridge Peaks",
+    "physical_traits": [
+      "Adorned with naturally growing, crystalline structures"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Gentle",
+      "affinity": "Impatience"
+    },
+    "meta": {
+      "tags": [
+        "SirenSong",
+        "Harmony:Strike"
+      ],
+      "resist": [
+        "Geist",
+        "Flow"
+      ],
+      "weak": [
+        "Axiom",
+        "Bastion"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "DCCJ5HS35A"
+    }
+  },
+  {
+    "idnum": 18,
+    "name": "Highar",
+    "form": "Keystone",
+    "primary_type": "Zenith",
+    "secondary_type": "Axiom",
+    "stats": {
+      "HP": 116,
+      "ATK": 60,
+      "DEF": 55,
+      "SPATK": 63,
+      "SPDEF": 55,
+      "SPD": 50,
+      "ACC": 105,
+      "EVA": 5,
+      "LUCK": 13
+    },
+    "mutagens": {
+      "major": [
+        "Axiom Concord"
+      ],
+      "utility": [
+        "Lumenic Steward",
+        "Resonance Surveyor"
+      ]
+    },
+    "habitat": "Celestial Spire",
+    "physical_traits": [
+      "Bipedal"
+    ],
+    "held_item": "A Single, Polished Bone",
+    "tempers": {
+      "mood": "Clever",
+      "affinity": "Deviousness"
+    },
+    "meta": {
+      "tags": [
+        "Survey:Resonance",
+        "LumenGuide"
+      ],
+      "resist": [
+        "Nadir",
+        "Spur",
+        "Rift"
+      ],
+      "weak": [
+        "Mire",
+        "Idol",
+        "Nadir"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "I6N7LTPLG5"
+    }
+  },
+  {
+    "idnum": 19,
+    "name": "Lowmaw",
+    "form": "Inevitable",
+    "primary_type": "Nadir",
+    "secondary_type": null,
+    "stats": {
+      "HP": 120,
+      "ATK": 46,
+      "DEF": 55,
+      "SPATK": 50,
+      "SPDEF": 56,
+      "SPD": 40,
+      "ACC": 95,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Dreadmaw Eclipse"
+      ],
+      "utility": [
+        "Dreadbound Sigil"
+      ]
+    },
+    "habitat": "Darkmist Chasm",
+    "physical_traits": [
+      "Its body is partially pixelated, as if not fully rendered"
+    ],
+    "held_item": "A petrified seed from an unknown tree",
+    "tempers": {
+      "mood": "Humble",
+      "affinity": "Caution"
+    },
+    "meta": {
+      "tags": [],
+      "resist": [
+        "Zenith"
+      ],
+      "weak": [
+        "Bloom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "HJZWIZTUGH"
+    }
+  },
+  {
+    "idnum": 20,
+    "name": "Stagius",
+    "form": "Tangle",
+    "primary_type": "Mire",
+    "secondary_type": "Fracture",
+    "stats": {
+      "HP": 106,
+      "ATK": 55,
+      "DEF": 57,
+      "SPATK": 56,
+      "SPDEF": 60,
+      "SPD": 45,
+      "ACC": 105,
+      "EVA": 8,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Mirebound Rot"
+      ],
+      "utility": [
+        "Mirewick Talisman"
+      ]
+    },
+    "habitat": "Oldgrowth Marsh",
+    "physical_traits": [
+      "Has a mane of crackling energy"
+    ],
+    "held_item": "A tiny, self-contained thundercloud",
+    "tempers": {
+      "mood": "Trusting",
+      "affinity": "Envy"
+    },
+    "meta": {
+      "tags": [],
+      "resist": [
+        "Bastion"
+      ],
+      "weak": [
+        "Axiom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "31DI3PHP1Q"
+    }
+  },
+  {
+    "idnum": 21,
+    "name": "Fossos",
+    "form": "Slipform",
+    "primary_type": "Rift",
+    "secondary_type": "Zenith",
+    "stats": {
+      "HP": 97,
+      "ATK": 54,
+      "DEF": 50,
+      "SPATK": 63,
+      "SPDEF": 57,
+      "SPD": 60,
+      "ACC": 96,
+      "EVA": 10,
+      "LUCK": 11
+    },
+    "mutagens": {
+      "major": [
+        "Sparkborne Artefact"
+      ],
+      "utility": [
+        "Stormborn Scribe",
+        "Sparkward Tendril"
+      ]
+    },
+    "habitat": "Synthetic Biosphere",
+    "physical_traits": [
+      "Body appears as a shifting, glitching silhouette"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Irritable",
+      "affinity": "Impatience"
+    },
+    "meta": {
+      "tags": [
+        "Tether:Lumen",
+        "AnchorBreak"
+      ],
+      "resist": [
+        "Nadir",
+        "Nadir"
+      ],
+      "weak": [
+        "Geist",
+        "Mire"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "AOMKTBUL2Z"
+    }
+  },
+  {
+    "idnum": 22,
+    "name": "Clasture",
+    "form": "Faultline",
+    "primary_type": "Fracture",
+    "secondary_type": "Echo",
+    "stats": {
+      "HP": 90,
+      "ATK": 60,
+      "DEF": 50,
+      "SPATK": 68,
+      "SPDEF": 50,
+      "SPD": 55,
+      "ACC": 100,
+      "EVA": 12,
+      "LUCK": 12
+    },
+    "mutagens": {
+      "major": [
+        "Geistbound Lattice"
+      ],
+      "utility": [
+        "Dreadbound Sigil",
+        "Truthbinder Ledger"
+      ]
+    },
+    "habitat": "Collapsed Magma Tubes",
+    "physical_traits": [
+      "Has a tail that ends in a functioning lantern",
+      "Bipedal"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Compassionate",
+      "affinity": "Intellect"
+    },
+    "meta": {
+      "tags": [
+        "Truthbind",
+        "Clarity",
+        "Record:Oath"
+      ],
+      "resist": [
+        "Bastion",
+        "Geist"
+      ],
+      "weak": [
+        "Axiom",
+        "Axiom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "FW6T0SPJY5"
+    }
+  },
+  {
+    "idnum": 23,
+    "name": "Tracetrace",
+    "form": "Relic",
+    "primary_type": "Echo",
+    "secondary_type": "Mire",
+    "stats": {
+      "HP": 106,
+      "ATK": 50,
+      "DEF": 54,
+      "SPATK": 60,
+      "SPDEF": 54,
+      "SPD": 57,
+      "ACC": 110,
+      "EVA": 6,
+      "LUCK": 13
+    },
+    "mutagens": {
+      "major": [
+        "Echoisle Whisper"
+      ],
+      "utility": [
+        "Lantern of Echo",
+        "Truthbinder Ledger"
+      ]
+    },
+    "habitat": "Archive Stone",
+    "physical_traits": [
+      "Covered in bark-like plating with glowing sap veins"
+    ],
+    "held_item": "Faded photograph of a place that doesn't exist",
+    "tempers": {
+      "mood": "Warm",
+      "affinity": "Selflessness"
+    },
+    "meta": {
+      "tags": [
+        "Truthbind",
+        "Clarity",
+        "Record:Oath"
+      ],
+      "resist": [
+        "Geist"
+      ],
+      "weak": [
+        "Axiom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "MV1V4HCUJY"
+    }
+  },
+  {
+    "idnum": 24,
+    "name": "Braxbeacon",
+    "form": "Mantle",
+    "primary_type": "Idol",
+    "secondary_type": "Nadir",
+    "stats": {
+      "HP": 110,
+      "ATK": 55,
+      "DEF": 52,
+      "SPATK": 62,
+      "SPDEF": 53,
+      "SPD": 50,
+      "ACC": 95,
+      "EVA": 5,
+      "LUCK": 20
+    },
+    "mutagens": {
+      "major": [
+        "Dreadmaw Eclipse"
+      ],
+      "utility": [
+        "Stormborn Scribe",
+        "Cohort Harmony"
+      ]
+    },
+    "habitat": "Collapsed Magma Tubes",
+    "physical_traits": [
+      "Body is composed of tightly packed, living insects"
+    ],
+    "held_item": "Music Box Playing a Faint Melody",
+    "tempers": {
+      "mood": "Outgoing",
+      "affinity": "Sensitivity"
+    },
+    "meta": {
+      "tags": [
+        "ResonantLink",
+        "Choir"
+      ],
+      "resist": [
+        "Axiom",
+        "Zenith"
+      ],
+      "weak": [
+        "Flow",
+        "Bloom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "45JJ017J98"
+    }
+  },
+  {
+    "idnum": 25,
+    "name": "Clastor",
+    "form": "Splinter",
+    "primary_type": "Fracture",
+    "secondary_type": "Bastion",
+    "stats": {
+      "HP": 94,
+      "ATK": 60,
+      "DEF": 60,
+      "SPATK": 59,
+      "SPDEF": 53,
+      "SPD": 50,
+      "ACC": 95,
+      "EVA": 11,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Gloamsteel Ward"
+      ],
+      "utility": [
+        "Pulseforged Mentor",
+        "Prismatic Bulwark"
+      ]
+    },
+    "habitat": "Collapsed Magma Tubes",
+    "physical_traits": [
+      "Body is covered in smooth, river-worn stones"
+    ],
+    "held_item": "A single, perpetually blooming gear-flower",
+    "tempers": {
+      "mood": "Indifferent",
+      "affinity": "Gentleness"
+    },
+    "meta": {
+      "tags": [
+        "PrismGuard",
+        "Spectrum"
+      ],
+      "resist": [
+        "Bastion",
+        "Bloom"
+      ],
+      "weak": [
+        "Axiom",
+        "Spur"
+      ],
+      "abilities": [
+        "Guard"
+      ],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "QDL56LG41I"
+    }
+  },
+  {
+    "idnum": 26,
+    "name": "Fossex",
+    "form": "Fracture",
+    "primary_type": "Rift",
+    "secondary_type": null,
+    "stats": {
+      "HP": 92,
+      "ATK": 50,
+      "DEF": 50,
+      "SPATK": 59,
+      "SPDEF": 57,
+      "SPD": 60,
+      "ACC": 95,
+      "EVA": 10,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Echoed Memory"
+      ],
+      "utility": [
+        "Stormborn Scribe",
+        "Resonance Surveyor"
+      ]
+    },
+    "habitat": "Wyrmscar Ridge",
+    "physical_traits": [
+      "One arm is made of solidified smoke"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Patient",
+      "affinity": "Kindness"
+    },
+    "meta": {
+      "tags": [
+        "Survey:Resonance",
+        "LumenGuide"
+      ],
+      "resist": [
+        "Nadir"
+      ],
+      "weak": [
+        "Geist"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "YIG4N18JLC"
+    }
+  },
+  {
+    "idnum": 27,
+    "name": "Braxbrand",
+    "form": "Icon",
+    "primary_type": "Idol",
+    "secondary_type": "Nadir",
+    "stats": {
+      "HP": 110,
+      "ATK": 55,
+      "DEF": 52,
+      "SPATK": 62,
+      "SPDEF": 53,
+      "SPD": 50,
+      "ACC": 95,
+      "EVA": 5,
+      "LUCK": 20
+    },
+    "mutagens": {
+      "major": [
+        "Riftflare Fracture"
+      ],
+      "utility": [
+        "Pulseforged Mentor",
+        "Siren's Accord"
+      ]
+    },
+    "habitat": "Ancient Lavaflows",
+    "physical_traits": [
+      "Adorned with naturally growing, crystalline structures"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Curious",
+      "affinity": "Impatience"
+    },
+    "meta": {
+      "tags": [
+        "SirenSong",
+        "Harmony:Strike"
+      ],
+      "resist": [
+        "Axiom",
+        "Zenith"
+      ],
+      "weak": [
+        "Flow",
+        "Bloom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "W17KLJN65U"
+    }
+  },
+  {
+    "idnum": 28,
+    "name": "Glous",
+    "form": "Mantle",
+    "primary_type": "Idol",
+    "secondary_type": "Geist",
+    "stats": {
+      "HP": 98,
+      "ATK": 57,
+      "DEF": 50,
+      "SPATK": 68,
+      "SPDEF": 54,
+      "SPD": 55,
+      "ACC": 95,
+      "EVA": 9,
+      "LUCK": 20
+    },
+    "mutagens": {
+      "major": [
+        "LumenCrest"
+      ],
+      "utility": [
+        "Stormborn Scribe",
+        "Siren's Accord"
+      ]
+    },
+    "habitat": "Glass Caverns",
+    "physical_traits": [
+      "One arm is made of solidified smoke"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Devious",
+      "affinity": "Deviousness"
+    },
+    "meta": {
+      "tags": [
+        "SirenSong",
+        "Harmony:Strike"
+      ],
+      "resist": [
+        "Axiom",
+        "Echo"
+      ],
+      "weak": [
+        "Flow",
+        "Bloom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "N4I62VJ80D"
+    }
+  },
+  {
+    "idnum": 29,
+    "name": "Doxdon",
+    "form": "Fracture",
+    "primary_type": "Rift",
+    "secondary_type": "Fracture",
+    "stats": {
+      "HP": 87,
+      "ATK": 55,
+      "DEF": 50,
+      "SPATK": 66,
+      "SPDEF": 57,
+      "SPD": 60,
+      "ACC": 95,
+      "EVA": 13,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Echoed Memory"
+      ],
+      "utility": [
+        "Stormborn Scribe",
+        "Starpath Compass"
+      ]
+    },
+    "habitat": "Netherbleak Hollow",
+    "physical_traits": [
+      "Asymmetrical Horns, one broken"
+    ],
+    "held_item": "A bird's feather that feels heavier than lead",
+    "tempers": {
+      "mood": "Generous",
+      "affinity": "Cynicism"
+    },
+    "meta": {
+      "tags": [
+        "Compass:Star",
+        "AstralGuide"
+      ],
+      "resist": [
+        "Nadir",
+        "Bastion"
+      ],
+      "weak": [
+        "Geist",
+        "Axiom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "8YP5L7YDSJ"
+    }
+  },
+  {
+    "idnum": 30,
+    "name": "Skewpierce",
+    "form": "Breaker",
+    "primary_type": "Spur",
+    "secondary_type": "Axiom",
+    "stats": {
+      "HP": 110,
+      "ATK": 63,
+      "DEF": 55,
+      "SPATK": 50,
+      "SPDEF": 55,
+      "SPD": 62,
+      "ACC": 102,
+      "EVA": 5,
+      "LUCK": 11
+    },
+    "mutagens": {
+      "major": [
+        "Sparkborne Artefact"
+      ],
+      "utility": [
+        "Sagewarden Beacon",
+        "Lumenic Steward"
+      ]
+    },
+    "habitat": "Ancient Battlefield",
+    "physical_traits": [
+      "Fossilized bone plating on back"
+    ],
+    "held_item": "Oversized Crown",
+    "tempers": {
+      "mood": "Confident",
+      "affinity": "Honor"
+    },
+    "meta": {
+      "tags": [
+        "LumenCraft",
+        "Attunement"
+      ],
+      "resist": [
+        "Bloom",
+        "Spur",
+        "Rift"
+      ],
+      "weak": [
+        "Rift",
+        "Idol",
+        "Nadir"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "VUATS6FMUS"
+    }
+  },
+  {
+    "idnum": 31,
+    "name": "Malhowl",
+    "form": "Inevitable",
+    "primary_type": "Nadir",
+    "secondary_type": "Oracle",
+    "stats": {
+      "HP": 120,
+      "ATK": 46,
+      "DEF": 53,
+      "SPATK": 55,
+      "SPDEF": 59,
+      "SPD": 40,
+      "ACC": 107,
+      "EVA": 9,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Dreadmaw Eclipse"
+      ],
+      "utility": [
+        "Dreadbound Sigil"
+      ]
+    },
+    "habitat": "Sunless Abyss",
+    "physical_traits": [
+      "Full Plate Armor"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Proud",
+      "affinity": "Humility"
+    },
+    "meta": {
+      "tags": [],
+      "resist": [
+        "Zenith",
+        "Echo"
+      ],
+      "weak": [
+        "Bloom",
+        "Rift"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "84R71ONIKN"
+    }
+  },
+  {
+    "idnum": 32,
+    "name": "Huskcore",
+    "form": "Hollow",
+    "primary_type": "Vessel",
+    "secondary_type": "Spur",
+    "stats": {
+      "HP": 102,
+      "ATK": 55,
+      "DEF": 50,
+      "SPATK": 48,
+      "SPDEF": 50,
+      "SPD": 56,
+      "ACC": 100,
+      "EVA": 5,
+      "LUCK": 11
+    },
+    "mutagens": {
+      "major": [
+        "Vesselcore Hollow"
+      ],
+      "utility": [
+        "Vesselborne Reliquary"
+      ]
+    },
+    "habitat": "Cocoon Sentinel",
+    "physical_traits": [
+      "A Halo of Broken Light",
+      "Excess energy vents from small exhaust ports on its shoulders"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Shy",
+      "affinity": "Trustfulness"
+    },
+    "meta": {
+      "tags": [],
+      "resist": [
+        "Bloom"
+      ],
+      "weak": [
+        "Rift"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "I4WLNIS368"
+    }
+  },
+  {
+    "idnum": 33,
+    "name": "Ecteon",
+    "form": "Driftshade",
+    "primary_type": "Geist",
+    "secondary_type": "Vessel",
+    "stats": {
+      "HP": 95,
+      "ATK": 50,
+      "DEF": 50,
+      "SPATK": 60,
+      "SPDEF": 57,
+      "SPD": 50,
+      "ACC": 98,
+      "EVA": 13,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Echoed Memory"
+      ],
+      "utility": [
+        "Vesselborne Reliquary",
+        "Kinweave Meditation"
+      ]
+    },
+    "habitat": "Astral Terrace",
+    "physical_traits": [
+      "Its body is partially pixelated, as if not fully rendered"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Warm",
+      "affinity": "Distrust"
+    },
+    "meta": {
+      "tags": [
+        "Meditation:Kin",
+        "Pulse:Calm"
+      ],
+      "resist": [
+        "Echo"
+      ],
+      "weak": [
+        "Bloom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "T1YP5SMOVN"
+    }
+  },
+  {
+    "idnum": 34,
+    "name": "Voxtone",
+    "form": "Imprint",
+    "primary_type": "Echo",
+    "secondary_type": null,
+    "stats": {
+      "HP": 100,
+      "ATK": 50,
+      "DEF": 50,
+      "SPATK": 60,
+      "SPDEF": 50,
+      "SPD": 60,
+      "ACC": 105,
+      "EVA": 6,
+      "LUCK": 13
+    },
+    "mutagens": {
+      "major": [
+        "Echoisle Whisper"
+      ],
+      "utility": [
+        "Echoing Ledger",
+        "Boundless Chorus"
+      ]
+    },
+    "habitat": "Frozen Steppe",
+    "physical_traits": [
+      "Leaves a trail of fast-blooming, wilting flowers"
+    ],
+    "held_item": "A teacup that is always warm",
+    "tempers": {
+      "mood": "Compassionate",
+      "affinity": "Envy"
+    },
+    "meta": {
+      "tags": [
+        "Chorus:Boundless",
+        "Lumen:Choir"
+      ],
+      "resist": [
+        "Geist"
+      ],
+      "weak": [
+        "Axiom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "R3WBODYXKM"
+    }
+  },
+  {
+    "idnum": 35,
+    "name": "Folon",
+    "form": "Shoot",
+    "primary_type": "Bloom",
+    "secondary_type": "Azimuth",
+    "stats": {
+      "HP": 140,
+      "ATK": 55,
+      "DEF": 57,
+      "SPATK": 57,
+      "SPDEF": 57,
+      "SPD": 56,
+      "ACC": 105,
+      "EVA": 5,
+      "LUCK": 12
+    },
+    "mutagens": {
+      "major": [
+        "Radiant Choir"
+      ],
+      "utility": [
+        "Mirewick Talisman",
+        "Pulseforged Mentor"
+      ]
+    },
+    "habitat": "Dayless Mosswood",
+    "physical_traits": [
+      "A small, orbiting ring of ice shards"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Guarded",
+      "affinity": "Cheerfulness"
+    },
+    "meta": {
+      "tags": [
+        "Guide:Pulse",
+        "KindredAdvice"
+      ],
+      "resist": [
+        "Flow",
+        "Rift"
+      ],
+      "weak": [
+        "Bastion",
+        "Nadir"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "2BNRO9BFJZ"
+    }
+  },
+  {
+    "idnum": 36,
+    "name": "Omniion",
+    "form": "Fracture",
+    "primary_type": "Rift",
+    "secondary_type": "Idol",
+    "stats": {
+      "HP": 92,
+      "ATK": 54,
+      "DEF": 50,
+      "SPATK": 66,
+      "SPDEF": 57,
+      "SPD": 63,
+      "ACC": 95,
+      "EVA": 10,
+      "LUCK": 15
+    },
+    "mutagens": {
+      "major": [
+        "Echoed Memory"
+      ],
+      "utility": [
+        "Pulseforged Mentor",
+        "Siren's Accord"
+      ]
+    },
+    "habitat": "Netherbleak Hollow",
+    "physical_traits": [
+      "Crystallized Tear Ducts",
+      "Body appears as a shifting, glitching silhouette"
+    ],
+    "held_item": "A child's drawing of a monster",
+    "tempers": {
+      "mood": "Confident",
+      "affinity": "Impatience"
+    },
+    "meta": {
+      "tags": [
+        "SirenSong",
+        "Harmony:Strike"
+      ],
+      "resist": [
+        "Nadir",
+        "Axiom"
+      ],
+      "weak": [
+        "Geist",
+        "Flow"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "J9XRH5WM7R"
+    }
+  },
+  {
+    "idnum": 37,
+    "name": "Skorroot",
+    "form": "Shoot",
+    "primary_type": "Bloom",
+    "secondary_type": "Mire",
+    "stats": {
+      "HP": 148,
+      "ATK": 55,
+      "DEF": 61,
+      "SPATK": 57,
+      "SPDEF": 62,
+      "SPD": 48,
+      "ACC": 100,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Bloomglow Embers"
+      ],
+      "utility": [
+        "Flowfield Botanica",
+        "Pulseforged Mentor"
+      ]
+    },
+    "habitat": "Blooming Valley",
+    "physical_traits": [
+      "Has a tail that ends in a functioning lantern"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Moody",
+      "affinity": "Cruelty"
+    },
+    "meta": {
+      "tags": [
+        "Guide:Pulse",
+        "KindredAdvice"
+      ],
+      "resist": [
+        "Flow"
+      ],
+      "weak": [
+        "Bastion"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "TKDS473GQU"
+    }
+  },
+  {
+    "idnum": 38,
+    "name": "Blighthusk",
+    "form": "Residuum",
+    "primary_type": "Mire",
+    "secondary_type": "Zenith",
+    "stats": {
+      "HP": 118,
+      "ATK": 54,
+      "DEF": 57,
+      "SPATK": 54,
+      "SPDEF": 60,
+      "SPD": 45,
+      "ACC": 106,
+      "EVA": 5,
+      "LUCK": 11
+    },
+    "mutagens": {
+      "major": [
+        "Mirebound Rot"
+      ],
+      "utility": [
+        "Mirewick Talisman"
+      ]
+    },
+    "habitat": "Oldgrowth Marsh",
+    "physical_traits": [
+      "One arm is made of solidified smoke"
+    ],
+    "held_item": "Pocket Sundial",
+    "tempers": {
+      "mood": "Gentle",
+      "affinity": "Pettiness"
+    },
+    "meta": {
+      "tags": [],
+      "resist": [
+        "Nadir"
+      ],
+      "weak": [
+        "Mire"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "VMGYTHV530"
+    }
+  },
+  {
+    "idnum": 39,
+    "name": "Folopter",
+    "form": "Seedframe",
+    "primary_type": "Bloom",
+    "secondary_type": "Nadir",
+    "stats": {
+      "HP": 150,
+      "ATK": 53,
+      "DEF": 60,
+      "SPATK": 57,
+      "SPDEF": 60,
+      "SPD": 45,
+      "ACC": 95,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Twilight Bloom"
+      ],
+      "utility": [
+        "Pulseforged Mentor",
+        "Resonant Cartographer"
+      ]
+    },
+    "habitat": "Thriving Reefs",
+    "physical_traits": [
+      "Leaves footprints that quickly fade into mist"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Amiable",
+      "affinity": "Cheerfulness"
+    },
+    "meta": {
+      "tags": [
+        "Trail:Resound",
+        "LoreMapped"
+      ],
+      "resist": [
+        "Flow",
+        "Zenith"
+      ],
+      "weak": [
+        "Bastion",
+        "Bloom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "XG08DDAOP2"
+    }
+  },
+  {
+    "idnum": 40,
+    "name": "Ionbolt",
+    "form": "Breaker",
+    "primary_type": "Spur",
+    "secondary_type": "Zenith",
+    "stats": {
+      "HP": 110,
+      "ATK": 64,
+      "DEF": 50,
+      "SPATK": 48,
+      "SPDEF": 50,
+      "SPD": 62,
+      "ACC": 96,
+      "EVA": 5,
+      "LUCK": 11
+    },
+    "mutagens": {
+      "major": [
+        "Spurforged Pulse"
+      ],
+      "utility": [
+        "Flux Chronicle"
+      ]
+    },
+    "habitat": "Forgotten Temple",
+    "physical_traits": [
+      "Translucent Skin"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Confident",
+      "affinity": "Generosity"
+    },
+    "meta": {
+      "tags": [],
+      "resist": [
+        "Bloom",
+        "Nadir"
+      ],
+      "weak": [
+        "Rift",
+        "Mire"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "JMUQF2H43P"
+    }
+  },
+  {
+    "idnum": 41,
+    "name": "Fola",
+    "form": "Flourish",
+    "primary_type": "Bloom",
+    "secondary_type": null,
+    "stats": {
+      "HP": 140,
+      "ATK": 55,
+      "DEF": 57,
+      "SPATK": 57,
+      "SPDEF": 57,
+      "SPD": 50,
+      "ACC": 95,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Twilight Bloom"
+      ],
+      "utility": [
+        "Resonant Cartographer",
+        "Pulseforged Mentor"
+      ]
+    },
+    "habitat": "Darkmist Chasm",
+    "physical_traits": [
+      "A small, orbiting ring of ice shards",
+      "Covered in tiny, moss-like growths"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Arrogant",
+      "affinity": "Amiability"
+    },
+    "meta": {
+      "tags": [
+        "Guide:Pulse",
+        "KindredAdvice"
+      ],
+      "resist": [
+        "Flow"
+      ],
+      "weak": [
+        "Bastion"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "PPW8S8DK71"
+    }
+  },
+  {
+    "idnum": 42,
+    "name": "Boltus",
+    "form": "Flareframe",
+    "primary_type": "Spur",
+    "secondary_type": "Flow",
+    "stats": {
+      "HP": 121,
+      "ATK": 60,
+      "DEF": 50,
+      "SPATK": 45,
+      "SPDEF": 56,
+      "SPD": 65,
+      "ACC": 95,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Spiralbound Lash"
+      ],
+      "utility": [
+        "Starpath Compass",
+        "Flux Chronicle"
+      ]
+    },
+    "habitat": "Ancient Battlefield",
+    "physical_traits": [
+      "Adorned with naturally growing, crystalline structures"
+    ],
+    "held_item": "A bird's feather that feels heavier than lead",
+    "tempers": {
+      "mood": "Suspicious",
+      "affinity": "Sensitivity"
+    },
+    "meta": {
+      "tags": [
+        "Record:Flux",
+        "FlowingNotes"
+      ],
+      "resist": [
+        "Bloom",
+        "Idol"
+      ],
+      "weak": [
+        "Rift",
+        "Bloom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "VCZ1MPEVE9"
+    }
+  },
+  {
+    "idnum": 43,
+    "name": "Vectith",
+    "form": "Wayfinder",
+    "primary_type": "Azimuth",
+    "secondary_type": null,
+    "stats": {
+      "HP": 100,
+      "ATK": 50,
+      "DEF": 50,
+      "SPATK": 50,
+      "SPDEF": 50,
+      "SPD": 62,
+      "ACC": 114,
+      "EVA": 6,
+      "LUCK": 13
+    },
+    "mutagens": {
+      "major": [
+        "Cascade Prism"
+      ],
+      "utility": [
+        "Kinweave Meditation"
+      ]
+    },
+    "habitat": "Whispering Dunes",
+    "physical_traits": [
+      "Has a tail that ends in a functioning lantern"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Cold",
+      "affinity": "Gentleness"
+    },
+    "meta": {
+      "tags": [],
+      "resist": [
+        "Rift"
+      ],
+      "weak": [
+        "Nadir"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "L1BXMXLKI9"
+    }
+  },
+  {
+    "idnum": 44,
+    "name": "Marus",
+    "form": "Driftframe",
+    "primary_type": "Flow",
+    "secondary_type": "Zenith",
+    "stats": {
+      "HP": 136,
+      "ATK": 54,
+      "DEF": 50,
+      "SPATK": 54,
+      "SPDEF": 62,
+      "SPD": 55,
+      "ACC": 96,
+      "EVA": 5,
+      "LUCK": 11
+    },
+    "mutagens": {
+      "major": [
+        "Flowrift Surge"
+      ],
+      "utility": [
+        "Cohort Harmony",
+        "Stillwater Refuge"
+      ]
+    },
+    "habitat": "Frost Caps",
+    "physical_traits": [
+      "Eyes are Tiny, Constellated Starfields"
+    ],
+    "held_item": "Oversized Crown",
+    "tempers": {
+      "mood": "Jealous",
+      "affinity": "Amiability"
+    },
+    "meta": {
+      "tags": [
+        "Refuge",
+        "Still:Watered"
+      ],
+      "resist": [
+        "Idol",
+        "Nadir"
+      ],
+      "weak": [
+        "Bloom",
+        "Mire"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "EB23GXRL5P"
+    }
+  },
+  {
+    "idnum": 45,
+    "name": "Duraum",
+    "form": "Bulwark",
+    "primary_type": "Bastion",
+    "secondary_type": "Oracle",
+    "stats": {
+      "HP": 108,
+      "ATK": 50,
+      "DEF": 67,
+      "SPATK": 50,
+      "SPDEF": 59,
+      "SPD": 50,
+      "ACC": 107,
+      "EVA": 9,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Guardian Resonance"
+      ],
+      "utility": [
+        "Prismatic Bulwark",
+        "Quiet Resolve"
+      ]
+    },
+    "habitat": "Dayless Mosswood",
+    "physical_traits": [
+      "Crystallized Tear Ducts"
+    ],
+    "held_item": "Builds Nest With Shells",
+    "tempers": {
+      "mood": "Gentle",
+      "affinity": "Pride"
+    },
+    "meta": {
+      "tags": [
+        "Stillness",
+        "Resolve"
+      ],
+      "resist": [
+        "Bloom",
+        "Echo"
+      ],
+      "weak": [
+        "Spur",
+        "Rift"
+      ],
+      "abilities": [
+        "Guard"
+      ],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "T4BXAMWHMZ"
+    }
+  },
+  {
+    "idnum": 46,
+    "name": "Zephyrfang",
+    "form": "Rampart",
+    "primary_type": "Bastion",
+    "secondary_type": "Vessel",
+    "stats": {
+      "HP": 108,
+      "ATK": 50,
+      "DEF": 70,
+      "SPATK": 45,
+      "SPDEF": 56,
+      "SPD": 50,
+      "ACC": 98,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Gloamsteel Ward"
+      ],
+      "utility": [
+        "Lumenic Steward",
+        "Pulseforged Mentor"
+      ]
+    },
+    "habitat": "Blooming Valley",
+    "physical_traits": [
+      "Has a mane of crackling energy"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Kind",
+      "affinity": "Tolerance"
+    },
+    "meta": {
+      "tags": [
+        "Guide:Pulse",
+        "KindredAdvice"
+      ],
+      "resist": [
+        "Bloom"
+      ],
+      "weak": [
+        "Spur"
+      ],
+      "abilities": [
+        "Guard"
+      ],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "VIS539BSAL"
+    }
+  },
+  {
+    "idnum": 47,
+    "name": "Zephyrok",
+    "form": "Rampart",
+    "primary_type": "Bastion",
+    "secondary_type": "Bloom",
+    "stats": {
+      "HP": 130,
+      "ATK": 52,
+      "DEF": 75,
+      "SPATK": 48,
+      "SPDEF": 60,
+      "SPD": 50,
+      "ACC": 95,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Spurforged Pulse"
+      ],
+      "utility": [
+        "Pulseforged Mentor",
+        "Quiet Resolve"
+      ]
+    },
+    "habitat": "Crystalline Cave",
+    "physical_traits": [
+      "A visible, internal skeleton made of glowing lumen",
+      "Constantly Shedding Glowing Spores"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Cruel",
+      "affinity": "Caution"
+    },
+    "meta": {
+      "tags": [
+        "Stillness",
+        "Resolve"
+      ],
+      "resist": [
+        "Bloom",
+        "Flow"
+      ],
+      "weak": [
+        "Spur",
+        "Bastion"
+      ],
+      "abilities": [
+        "Guard"
+      ],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "DKX1BAJYKW"
+    }
+  },
+  {
+    "idnum": 48,
+    "name": "Celeon",
+    "form": "Phantasm",
+    "primary_type": "Geist",
+    "secondary_type": "Nadir",
+    "stats": {
+      "HP": 105,
+      "ATK": 48,
+      "DEF": 52,
+      "SPATK": 60,
+      "SPDEF": 60,
+      "SPD": 45,
+      "ACC": 95,
+      "EVA": 13,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Sapphire Spiral"
+      ],
+      "utility": [
+        "Lantern of Echo",
+        "Vesselborne Reliquary"
+      ]
+    },
+    "habitat": "Astral Terrace",
+    "physical_traits": [
+      "Excess energy vents from small exhaust ports on its shoulders"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Wary",
+      "affinity": "Distrust"
+    },
+    "meta": {
+      "tags": [
+        "Hollow:Carry",
+        "Signal:Call"
+      ],
+      "resist": [
+        "Echo",
+        "Zenith"
+      ],
+      "weak": [
+        "Bloom",
+        "Bloom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "74VLIN70L7"
+    }
+  },
+  {
+    "idnum": 49,
+    "name": "Rimor",
+    "form": "Symbiosis",
+    "primary_type": "Flow",
+    "secondary_type": "Spur",
+    "stats": {
+      "HP": 132,
+      "ATK": 55,
+      "DEF": 50,
+      "SPATK": 48,
+      "SPDEF": 62,
+      "SPD": 62,
+      "ACC": 95,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Cascade Prism"
+      ],
+      "utility": [
+        "Stillwater Refuge",
+        "Starpath Compass"
+      ]
+    },
+    "habitat": "Riverlands",
+    "physical_traits": [
+      "Body is composed of tightly packed, living insects"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Wary",
+      "affinity": "Honor"
+    },
+    "meta": {
+      "tags": [
+        "Compass:Star",
+        "AstralGuide"
+      ],
+      "resist": [
+        "Idol",
+        "Bloom"
+      ],
+      "weak": [
+        "Bloom",
+        "Rift"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "QJLRSSK2O7"
+    }
+  },
+  {
+    "idnum": 50,
+    "name": "Polor",
+    "form": "Gyre",
+    "primary_type": "Azimuth",
+    "secondary_type": "Bastion",
+    "stats": {
+      "HP": 104,
+      "ATK": 50,
+      "DEF": 60,
+      "SPATK": 48,
+      "SPDEF": 53,
+      "SPD": 62,
+      "ACC": 114,
+      "EVA": 6,
+      "LUCK": 13
+    },
+    "mutagens": {
+      "major": [
+        "Bastion Halo"
+      ],
+      "utility": [
+        "Pulseforged Mentor",
+        "Lumenic Steward"
+      ]
+    },
+    "habitat": "Whispering Dunes",
+    "physical_traits": [
+      "Faint, ghostly after-images follow its movements"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Cruel",
+      "affinity": "Amiability"
+    },
+    "meta": {
+      "tags": [
+        "LumenCraft",
+        "Attunement"
+      ],
+      "resist": [
+        "Rift",
+        "Bloom"
+      ],
+      "weak": [
+        "Nadir",
+        "Spur"
+      ],
+      "abilities": [
+        "Guard"
+      ],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "D8XQXH011Q"
+    }
+  },
+  {
+    "idnum": 51,
+    "name": "Tesclaw",
+    "form": "Talon",
+    "primary_type": "Spur",
+    "secondary_type": "Echo",
+    "stats": {
+      "HP": 105,
+      "ATK": 60,
+      "DEF": 50,
+      "SPATK": 50,
+      "SPDEF": 50,
+      "SPD": 68,
+      "ACC": 100,
+      "EVA": 5,
+      "LUCK": 12
+    },
+    "mutagens": {
+      "major": [
+        "Spurforged Pulse"
+      ],
+      "utility": [
+        "Echoing Ledger",
+        "Truthbinder Ledger"
+      ]
+    },
+    "habitat": "Power Plant",
+    "physical_traits": [
+      "A small, orbiting ring of ice shards"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Proud",
+      "affinity": "Generosity"
+    },
+    "meta": {
+      "tags": [
+        "Truthbind",
+        "Clarity",
+        "Record:Oath"
+      ],
+      "resist": [
+        "Bloom",
+        "Geist"
+      ],
+      "weak": [
+        "Rift",
+        "Axiom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "W2KC5XPYAI"
+    }
+  },
+  {
+    "idnum": 52,
+    "name": "Schisor",
+    "form": "Faultline",
+    "primary_type": "Fracture",
+    "secondary_type": "Zenith",
+    "stats": {
+      "HP": 94,
+      "ATK": 64,
+      "DEF": 50,
+      "SPATK": 67,
+      "SPDEF": 50,
+      "SPD": 50,
+      "ACC": 96,
+      "EVA": 11,
+      "LUCK": 11
+    },
+    "mutagens": {
+      "major": [
+        "Echoisle Whisper"
+      ],
+      "utility": [
+        "Stillwater Refuge"
+      ]
+    },
+    "habitat": "Crumbling Ruins",
+    "physical_traits": [
+      "Highly Fashionable"
+    ],
+    "held_item": "A miniature, silent metronome",
+    "tempers": {
+      "mood": "Amiable",
+      "affinity": "Open-Mindedness"
+    },
+    "meta": {
+      "tags": [],
+      "resist": [
+        "Bastion",
+        "Nadir"
+      ],
+      "weak": [
+        "Axiom",
+        "Mire"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "BKOVMS9K9V"
+    }
+  },
+  {
+    "idnum": 53,
+    "name": "Gelis",
+    "form": "Weave",
+    "primary_type": "Flow",
+    "secondary_type": "Mire",
+    "stats": {
+      "HP": 138,
+      "ATK": 50,
+      "DEF": 54,
+      "SPATK": 50,
+      "SPDEF": 68,
+      "SPD": 52,
+      "ACC": 100,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Spiralbound Lash"
+      ],
+      "utility": [
+        "Stillwater Refuge",
+        "Cohort Harmony"
+      ]
+    },
+    "habitat": "Still Tidepools",
+    "physical_traits": [
+      "Asymmetrical Horns, one broken",
+      "Faint, ghostly after-images follow its movements"
+    ],
+    "held_item": "A lens that shows the viewer's potential",
+    "tempers": {
+      "mood": "Wary",
+      "affinity": "Gentleness"
+    },
+    "meta": {
+      "tags": [
+        "ResonantLink",
+        "Choir"
+      ],
+      "resist": [
+        "Idol"
+      ],
+      "weak": [
+        "Bloom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "5206PZ5R3M"
+    }
+  },
+  {
+    "idnum": 54,
+    "name": "Vekmire",
+    "form": "Sink",
+    "primary_type": "Mire",
+    "secondary_type": "Vessel",
+    "stats": {
+      "HP": 112,
+      "ATK": 50,
+      "DEF": 57,
+      "SPATK": 50,
+      "SPDEF": 60,
+      "SPD": 45,
+      "ACC": 108,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Vesselcore Hollow"
+      ],
+      "utility": [
+        "Vesselborne Reliquary",
+        "Mirewick Talisman"
+      ]
+    },
+    "habitat": "Gloomfen Bogs",
+    "physical_traits": [
+      "Vines with small, metallic flowers grow from its back"
+    ],
+    "held_item": "Compass That Hums",
+    "tempers": {
+      "mood": "Cold",
+      "affinity": "Curiosity"
+    },
+    "meta": {
+      "tags": [
+        "Bog:Ward",
+        "Muck:Trail"
+      ],
+      "resist": [],
+      "weak": [],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "O7RWQ0ZY1Z"
+    }
+  },
+  {
+    "idnum": 55,
+    "name": "Astaeon",
+    "form": "Wisp",
+    "primary_type": "Geist",
+    "secondary_type": null,
+    "stats": {
+      "HP": 95,
+      "ATK": 50,
+      "DEF": 50,
+      "SPATK": 60,
+      "SPDEF": 57,
+      "SPD": 50,
+      "ACC": 95,
+      "EVA": 13,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Gloamsteel Ward"
+      ],
+      "utility": [
+        "Quiet Resolve",
+        "Harmonic Field"
+      ]
+    },
+    "habitat": "Aurora Fields",
+    "physical_traits": [
+      "Adorned with naturally growing, crystalline structures"
+    ],
+    "held_item": "Faded photograph of a place that doesn't exist",
+    "tempers": {
+      "mood": "Friendly",
+      "affinity": "Compassion"
+    },
+    "meta": {
+      "tags": [
+        "Balance:Field",
+        "Cohesion"
+      ],
+      "resist": [
+        "Echo"
+      ],
+      "weak": [
+        "Bloom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "9RRSKYBW6P"
+    }
+  },
+  {
+    "idnum": 56,
+    "name": "Clastis",
+    "form": "Faultline",
+    "primary_type": "Fracture",
+    "secondary_type": "Bloom",
+    "stats": {
+      "HP": 108,
+      "ATK": 63,
+      "DEF": 54,
+      "SPATK": 67,
+      "SPDEF": 54,
+      "SPD": 50,
+      "ACC": 95,
+      "EVA": 11,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Bastion Halo"
+      ],
+      "utility": [
+        "Resonant Cartographer",
+        "Harmonic Field"
+      ]
+    },
+    "habitat": "Crumbling Ruins",
+    "physical_traits": [
+      "Body is covered in smooth, river-worn stones"
+    ],
+    "held_item": "A compass needle that points to the nearest heart",
+    "tempers": {
+      "mood": "Gracious",
+      "affinity": "Impatience"
+    },
+    "meta": {
+      "tags": [
+        "Balance:Field",
+        "Cohesion"
+      ],
+      "resist": [
+        "Bastion",
+        "Flow"
+      ],
+      "weak": [
+        "Axiom",
+        "Bastion"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "PN2CNUTUJ6"
+    }
+  },
+  {
+    "idnum": 57,
+    "name": "Clastor",
+    "form": "Stressform",
+    "primary_type": "Fracture",
+    "secondary_type": "Rift",
+    "stats": {
+      "HP": 86,
+      "ATK": 60,
+      "DEF": 50,
+      "SPATK": 68,
+      "SPDEF": 54,
+      "SPD": 55,
+      "ACC": 95,
+      "EVA": 14,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Sparkborne Artefact"
+      ],
+      "utility": [
+        "Stormborn Scribe",
+        "Starpath Compass"
+      ]
+    },
+    "habitat": "Wyrmscar Ridge",
+    "physical_traits": [
+      "Vines with small, metallic flowers grow from its back"
+    ],
+    "held_item": "A small, perfectly spherical piece of obsidian",
+    "tempers": {
+      "mood": "Sincere",
+      "affinity": "Selflessness"
+    },
+    "meta": {
+      "tags": [
+        "Compass:Star",
+        "AstralGuide"
+      ],
+      "resist": [
+        "Bastion",
+        "Nadir"
+      ],
+      "weak": [
+        "Axiom",
+        "Geist"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "UCAQDFD7U7"
+    }
+  },
+  {
+    "idnum": 58,
+    "name": "Bryis",
+    "form": "Seedframe",
+    "primary_type": "Bloom",
+    "secondary_type": "Rift",
+    "stats": {
+      "HP": 134,
+      "ATK": 55,
+      "DEF": 57,
+      "SPATK": 62,
+      "SPDEF": 61,
+      "SPD": 55,
+      "ACC": 95,
+      "EVA": 8,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Flowbloom Current"
+      ],
+      "utility": [
+        "Starpath Compass",
+        "Pulseforged Mentor"
+      ]
+    },
+    "habitat": "Whispering Dunes",
+    "physical_traits": [
+      "Asymmetrical Horns, one broken"
+    ],
+    "held_item": "A cracked lumen-battery leaking faint light",
+    "tempers": {
+      "mood": "Cold",
+      "affinity": "Gentleness"
+    },
+    "meta": {
+      "tags": [
+        "Guide:Pulse",
+        "KindredAdvice"
+      ],
+      "resist": [
+        "Flow",
+        "Nadir"
+      ],
+      "weak": [
+        "Bastion",
+        "Geist"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "YIIWPNB3KQ"
+    }
+  },
+  {
+    "idnum": 59,
+    "name": "Pyra",
+    "form": "Icon",
+    "primary_type": "Idol",
+    "secondary_type": "Echo",
+    "stats": {
+      "HP": 100,
+      "ATK": 57,
+      "DEF": 50,
+      "SPATK": 68,
+      "SPDEF": 50,
+      "SPD": 61,
+      "ACC": 100,
+      "EVA": 5,
+      "LUCK": 22
+    },
+    "mutagens": {
+      "major": [
+        "Flowbloom Current"
+      ],
+      "utility": [
+        "Lantern of Echo",
+        "Stormborn Scribe"
+      ]
+    },
+    "habitat": "Whispering Dunes",
+    "physical_traits": [
+      "Crystallized Tear Ducts"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Compassionate",
+      "affinity": "Resentment"
+    },
+    "meta": {
+      "tags": [
+        "Record:Storm",
+        "SparkNotes"
+      ],
+      "resist": [
+        "Axiom",
+        "Geist"
+      ],
+      "weak": [
+        "Flow",
+        "Axiom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "QKXT4EWCV6"
+    }
+  },
+  {
+    "idnum": 60,
+    "name": "Paleresound",
+    "form": "Imprint",
+    "primary_type": "Echo",
+    "secondary_type": "Fracture",
+    "stats": {
+      "HP": 95,
+      "ATK": 55,
+      "DEF": 50,
+      "SPATK": 68,
+      "SPDEF": 50,
+      "SPD": 60,
+      "ACC": 105,
+      "EVA": 9,
+      "LUCK": 13
+    },
+    "mutagens": {
+      "major": [
+        "Echoed Memory"
+      ],
+      "utility": [
+        "Dreadbound Sigil",
+        "Truthbinder Ledger"
+      ]
+    },
+    "habitat": "Yittrosian Forest",
+    "physical_traits": [
+      "A small, orbiting ring of ice shards"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Cheerful",
+      "affinity": "Envy"
+    },
+    "meta": {
+      "tags": [
+        "Truthbind",
+        "Clarity",
+        "Record:Oath"
+      ],
+      "resist": [
+        "Geist",
+        "Bastion"
+      ],
+      "weak": [
+        "Axiom",
+        "Axiom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "3PQB2DWAER"
+    }
+  },
+  {
+    "idnum": 61,
+    "name": "Cosmith",
+    "form": "Liminal",
+    "primary_type": "Geist",
+    "secondary_type": null,
+    "stats": {
+      "HP": 95,
+      "ATK": 50,
+      "DEF": 50,
+      "SPATK": 60,
+      "SPDEF": 57,
+      "SPD": 50,
+      "ACC": 95,
+      "EVA": 13,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Riftflare Fracture"
+      ],
+      "utility": [
+        "Quiet Resolve",
+        "Lantern of Echo"
+      ]
+    },
+    "habitat": "Astral Terrace",
+    "physical_traits": [
+      "Adorned with naturally growing, crystalline structures"
+    ],
+    "held_item": "A cracked lumen-battery leaking faint light",
+    "tempers": {
+      "mood": "Distrustful",
+      "affinity": "Intellect"
+    },
+    "meta": {
+      "tags": [
+        "Beacon",
+        "MemoryLight"
+      ],
+      "resist": [
+        "Echo"
+      ],
+      "weak": [
+        "Bloom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "GBT4VA5S7M"
+    }
+  },
+  {
+    "idnum": 62,
+    "name": "Sacraura",
+    "form": "Crestform",
+    "primary_type": "Idol",
+    "secondary_type": "Vessel",
+    "stats": {
+      "HP": 100,
+      "ATK": 57,
+      "DEF": 50,
+      "SPATK": 62,
+      "SPDEF": 50,
+      "SPD": 55,
+      "ACC": 98,
+      "EVA": 5,
+      "LUCK": 21
+    },
+    "mutagens": {
+      "major": [
+        "Sparkborne Artefact"
+      ],
+      "utility": [
+        "Pulseforged Mentor",
+        "Vesselborne Reliquary"
+      ]
+    },
+    "habitat": "Strikken Ashlands",
+    "physical_traits": [
+      "Excess energy vents from small exhaust ports on its shoulders"
+    ],
+    "held_item": "Crown of Thorns",
+    "tempers": {
+      "mood": "Lonely",
+      "affinity": "Hostility"
+    },
+    "meta": {
+      "tags": [
+        "Hollow:Carry",
+        "Signal:Call"
+      ],
+      "resist": [
+        "Axiom"
+      ],
+      "weak": [
+        "Flow"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "V2BTTECML7"
+    }
+  },
+  {
+    "idnum": 63,
+    "name": "Grimey",
+    "form": "Sink",
+    "primary_type": "Mire",
+    "secondary_type": "Vessel",
+    "stats": {
+      "HP": 112,
+      "ATK": 50,
+      "DEF": 57,
+      "SPATK": 50,
+      "SPDEF": 60,
+      "SPD": 45,
+      "ACC": 108,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Vesselcore Hollow"
+      ],
+      "utility": [
+        "Vesselborne Reliquary",
+        "Mirewick Talisman"
+      ]
+    },
+    "habitat": "Oldgrowth Marsh",
+    "physical_traits": [
+      "Face Obscured By Mist"
+    ],
+    "held_item": "A Single, Polished Bone",
+    "tempers": {
+      "mood": "Irritable",
+      "affinity": "Deviousness"
+    },
+    "meta": {
+      "tags": [
+        "Bog:Ward",
+        "Muck:Trail"
+      ],
+      "resist": [],
+      "weak": [],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "X30ZM1DLKZ"
+    }
+  },
+  {
+    "idnum": 64,
+    "name": "Speceon",
+    "form": "Phantasm",
+    "primary_type": "Geist",
+    "secondary_type": "Fracture",
+    "stats": {
+      "HP": 90,
+      "ATK": 55,
+      "DEF": 50,
+      "SPATK": 68,
+      "SPDEF": 57,
+      "SPD": 50,
+      "ACC": 95,
+      "EVA": 16,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Dreadmaw Eclipse"
+      ],
+      "utility": [
+        "Quiet Resolve",
+        "Sparkward Tendril"
+      ]
+    },
+    "habitat": "Echoing Grotto",
+    "physical_traits": [
+      "Shadow seems to move on its own"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Confident",
+      "affinity": "Amiability"
+    },
+    "meta": {
+      "tags": [
+        "Tether:Lumen",
+        "AnchorBreak"
+      ],
+      "resist": [
+        "Echo",
+        "Bastion"
+      ],
+      "weak": [
+        "Bloom",
+        "Axiom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "J3I59RO9DO"
+    }
+  },
+  {
+    "idnum": 65,
+    "name": "Noxsour",
+    "form": "Sink",
+    "primary_type": "Mire",
+    "secondary_type": "Geist",
+    "stats": {
+      "HP": 109,
+      "ATK": 50,
+      "DEF": 57,
+      "SPATK": 55,
+      "SPDEF": 64,
+      "SPD": 45,
+      "ACC": 105,
+      "EVA": 9,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "LumenCrest"
+      ],
+      "utility": [
+        "Harmonic Field",
+        "Quiet Resolve"
+      ]
+    },
+    "habitat": "Oldgrowth Marsh",
+    "physical_traits": [
+      "Adorned with naturally growing, crystalline structures"
+    ],
+    "held_item": "Pet Rock on a Leash",
+    "tempers": {
+      "mood": "Petty",
+      "affinity": "Impatience"
+    },
+    "meta": {
+      "tags": [
+        "Stillness",
+        "Resolve"
+      ],
+      "resist": [
+        "Echo"
+      ],
+      "weak": [
+        "Bloom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "RO4U95IXIZ"
+    }
+  },
+  {
+    "idnum": 66,
+    "name": "Chamberurn",
+    "form": "Shellform",
+    "primary_type": "Vessel",
+    "secondary_type": "Rift",
+    "stats": {
+      "HP": 96,
+      "ATK": 50,
+      "DEF": 50,
+      "SPATK": 54,
+      "SPDEF": 54,
+      "SPD": 55,
+      "ACC": 100,
+      "EVA": 8,
+      "LUCK": 11
+    },
+    "mutagens": {
+      "major": [
+        "Flowrift Surge"
+      ],
+      "utility": [
+        "Stormborn Scribe",
+        "Flux Chronicle"
+      ]
+    },
+    "habitat": "Cocoon Sentinel",
+    "physical_traits": [
+      "Leaves footprints that quickly fade into mist"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Envious",
+      "affinity": "Cheerfulness"
+    },
+    "meta": {
+      "tags": [
+        "Record:Flux",
+        "FlowingNotes"
+      ],
+      "resist": [
+        "Nadir"
+      ],
+      "weak": [
+        "Geist"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "4CIXXGRELH"
+    }
+  },
+  {
+    "idnum": 67,
+    "name": "Vertar",
+    "form": "Apex",
+    "primary_type": "Zenith",
+    "secondary_type": "Oracle",
+    "stats": {
+      "HP": 110,
+      "ATK": 57,
+      "DEF": 48,
+      "SPATK": 63,
+      "SPDEF": 52,
+      "SPD": 50,
+      "ACC": 110,
+      "EVA": 9,
+      "LUCK": 12
+    },
+    "mutagens": {
+      "major": [
+        "Axiom Concord"
+      ],
+      "utility": [
+        "Sagewarden Beacon"
+      ]
+    },
+    "habitat": "Celestial Spire",
+    "physical_traits": [
+      "Always followed by a small, personal rain cloud"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Clever",
+      "affinity": "Open-Mindedness"
+    },
+    "meta": {
+      "tags": [],
+      "resist": [
+        "Nadir",
+        "Echo"
+      ],
+      "weak": [
+        "Mire",
+        "Rift"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "KDKPV1K30F"
+    }
+  },
+  {
+    "idnum": 68,
+    "name": "Mycoa",
+    "form": "Flourish",
+    "primary_type": "Bloom",
+    "secondary_type": "Rift",
+    "stats": {
+      "HP": 134,
+      "ATK": 55,
+      "DEF": 57,
+      "SPATK": 62,
+      "SPDEF": 61,
+      "SPD": 55,
+      "ACC": 95,
+      "EVA": 8,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Bloomglow Embers"
+      ],
+      "utility": [
+        "Pulseforged Mentor",
+        "Harmonic Field"
+      ]
+    },
+    "habitat": "Restricted Labratory",
+    "physical_traits": [
+      "Small, holographic symbols flicker around its head"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Generous",
+      "affinity": "Boldness"
+    },
+    "meta": {
+      "tags": [
+        "Balance:Field",
+        "Cohesion"
+      ],
+      "resist": [
+        "Flow",
+        "Nadir"
+      ],
+      "weak": [
+        "Bastion",
+        "Geist"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "3PL2YSLHUR"
+    }
+  },
+  {
+    "idnum": 69,
+    "name": "Sumis",
+    "form": "Pinnacle",
+    "primary_type": "Zenith",
+    "secondary_type": "Rift",
+    "stats": {
+      "HP": 106,
+      "ATK": 57,
+      "DEF": 50,
+      "SPATK": 62,
+      "SPDEF": 54,
+      "SPD": 55,
+      "ACC": 98,
+      "EVA": 8,
+      "LUCK": 12
+    },
+    "mutagens": {
+      "major": [
+        "Riftflare Fracture"
+      ],
+      "utility": [
+        "Sparkward Tendril",
+        "Starpath Compass"
+      ]
+    },
+    "habitat": "Mt. Thermallia",
+    "physical_traits": [
+      "Multiple Tails"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Suspicious",
+      "affinity": "Amiability"
+    },
+    "meta": {
+      "tags": [
+        "Compass:Star",
+        "AstralGuide"
+      ],
+      "resist": [
+        "Nadir",
+        "Nadir"
+      ],
+      "weak": [
+        "Mire",
+        "Geist"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "GECOTBUV1V"
+    }
+  },
+  {
+    "idnum": 70,
+    "name": "Rendrend",
+    "form": "Surge",
+    "primary_type": "Spur",
+    "secondary_type": "Echo",
+    "stats": {
+      "HP": 105,
+      "ATK": 60,
+      "DEF": 50,
+      "SPATK": 50,
+      "SPDEF": 50,
+      "SPD": 68,
+      "ACC": 100,
+      "EVA": 5,
+      "LUCK": 12
+    },
+    "mutagens": {
+      "major": [
+        "Spiralbound Lash"
+      ],
+      "utility": [
+        "Echoing Ledger",
+        "Dreadbound Sigil"
+      ]
+    },
+    "habitat": "Ancient Battlefield",
+    "physical_traits": [
+      "Eyes are Tiny, Constellated Starfields"
+    ],
+    "held_item": "Broken Hourglass",
+    "tempers": {
+      "mood": "Jealous",
+      "affinity": "Generosity"
+    },
+    "meta": {
+      "tags": [
+        "Omen:Mark",
+        "Night:Guide"
+      ],
+      "resist": [
+        "Bloom",
+        "Geist"
+      ],
+      "weak": [
+        "Rift",
+        "Axiom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "12ZXM9WRBR"
+    }
+  },
+  {
+    "idnum": 71,
+    "name": "Thruststrike",
+    "form": "Surge",
+    "primary_type": "Spur",
+    "secondary_type": "Flow",
+    "stats": {
+      "HP": 121,
+      "ATK": 60,
+      "DEF": 50,
+      "SPATK": 45,
+      "SPDEF": 56,
+      "SPD": 65,
+      "ACC": 95,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Flowbloom Current"
+      ],
+      "utility": [
+        "Stillwater Refuge",
+        "Kinweave Meditation"
+      ]
+    },
+    "habitat": "Ennoan Grasslands",
+    "physical_traits": [
+      "Highly Fashionable",
+      "Small, holographic symbols flicker around its head"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Distrustful",
+      "affinity": "Sincerity"
+    },
+    "meta": {
+      "tags": [
+        "Meditation:Kin",
+        "Pulse:Calm"
+      ],
+      "resist": [
+        "Bloom",
+        "Idol"
+      ],
+      "weak": [
+        "Rift",
+        "Bloom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "88CSB4SA0L"
+    }
+  },
+  {
+    "idnum": 72,
+    "name": "Skoris",
+    "form": "Canopy",
+    "primary_type": "Bloom",
+    "secondary_type": "Nadir",
+    "stats": {
+      "HP": 150,
+      "ATK": 53,
+      "DEF": 60,
+      "SPATK": 57,
+      "SPDEF": 60,
+      "SPD": 45,
+      "ACC": 95,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Bastion Halo"
+      ],
+      "utility": [
+        "Stillwater Refuge",
+        "Pulseforged Mentor"
+      ]
+    },
+    "habitat": "Bewitched Glen",
+    "physical_traits": [
+      "Visible, pulsing Lumen Organ in chest"
+    ],
+    "held_item": "A small pouch of polished, magnetic stones",
+    "tempers": {
+      "mood": "Irritable",
+      "affinity": "Gentleness"
+    },
+    "meta": {
+      "tags": [
+        "Guide:Pulse",
+        "KindredAdvice"
+      ],
+      "resist": [
+        "Flow",
+        "Zenith"
+      ],
+      "weak": [
+        "Bastion",
+        "Bloom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "INYR13GKBR"
+    }
+  },
+  {
+    "idnum": 73,
+    "name": "Rendis",
+    "form": "Talon",
+    "primary_type": "Spur",
+    "secondary_type": null,
+    "stats": {
+      "HP": 105,
+      "ATK": 60,
+      "DEF": 50,
+      "SPATK": 45,
+      "SPDEF": 50,
+      "SPD": 62,
+      "ACC": 95,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Spiralbound Lash"
+      ],
+      "utility": [
+        "Truthbinder Ledger"
+      ]
+    },
+    "habitat": "Synthetic Biosphere",
+    "physical_traits": [
+      "Its body is a walking terrarium of glowing fungi"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Trusting",
+      "affinity": "Generosity"
+    },
+    "meta": {
+      "tags": [],
+      "resist": [
+        "Bloom"
+      ],
+      "weak": [
+        "Rift"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "N1MILO17X1"
+    }
+  },
+  {
+    "idnum": 74,
+    "name": "Pyrbrand",
+    "form": "Beacon",
+    "primary_type": "Idol",
+    "secondary_type": "Zenith",
+    "stats": {
+      "HP": 105,
+      "ATK": 61,
+      "DEF": 50,
+      "SPATK": 67,
+      "SPDEF": 50,
+      "SPD": 55,
+      "ACC": 96,
+      "EVA": 5,
+      "LUCK": 21
+    },
+    "mutagens": {
+      "major": [
+        "Radiant Choir"
+      ],
+      "utility": [
+        "Stormborn Scribe",
+        "Sagewarden Beacon"
+      ]
+    },
+    "habitat": "Ancient Lavaflows",
+    "physical_traits": [
+      "Steps Make Subtle Sparks",
+      "Small, holographic symbols flicker around its head"
+    ],
+    "held_item": "A worn-out cog from a celestial machine",
+    "tempers": {
+      "mood": "Jealous",
+      "affinity": "Cynicism"
+    },
+    "meta": {
+      "tags": [
+        "Sage:Beacon",
+        "MentorGlow"
+      ],
+      "resist": [
+        "Axiom",
+        "Nadir"
+      ],
+      "weak": [
+        "Flow",
+        "Mire"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "6X2M90GX1E"
+    }
+  },
+  {
+    "idnum": 75,
+    "name": "Vectan",
+    "form": "Gyre",
+    "primary_type": "Azimuth",
+    "secondary_type": null,
+    "stats": {
+      "HP": 100,
+      "ATK": 50,
+      "DEF": 50,
+      "SPATK": 50,
+      "SPDEF": 50,
+      "SPD": 62,
+      "ACC": 114,
+      "EVA": 6,
+      "LUCK": 13
+    },
+    "mutagens": {
+      "major": [
+        "Vesselcore Hollow"
+      ],
+      "utility": [
+        "Flowfield Botanica"
+      ]
+    },
+    "habitat": "Skybridge Peaks",
+    "physical_traits": [
+      "Eyes are Tiny, Constellated Starfields"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Proud",
+      "affinity": "Cheerfulness"
+    },
+    "meta": {
+      "tags": [],
+      "resist": [
+        "Rift"
+      ],
+      "weak": [
+        "Nadir"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "8IQL4I40CB"
+    }
+  },
+  {
+    "idnum": 76,
+    "name": "Breer",
+    "form": "Splinter",
+    "primary_type": "Fracture",
+    "secondary_type": null,
+    "stats": {
+      "HP": 90,
+      "ATK": 60,
+      "DEF": 50,
+      "SPATK": 62,
+      "SPDEF": 50,
+      "SPD": 50,
+      "ACC": 95,
+      "EVA": 11,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Axiom Concord"
+      ],
+      "utility": [
+        "Starpath Compass"
+      ]
+    },
+    "habitat": "Crumbling Ruins",
+    "physical_traits": [
+      "Body appears as a shifting, glitching silhouette"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Curious",
+      "affinity": "Cruelty"
+    },
+    "meta": {
+      "tags": [],
+      "resist": [
+        "Bastion"
+      ],
+      "weak": [
+        "Axiom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "6DMM8PLQ6M"
+    }
+  },
+  {
+    "idnum": 77,
+    "name": "Aftis",
+    "form": "Ossuary",
+    "primary_type": "Echo",
+    "secondary_type": "Idol",
+    "stats": {
+      "HP": 100,
+      "ATK": 54,
+      "DEF": 50,
+      "SPATK": 68,
+      "SPDEF": 50,
+      "SPD": 63,
+      "ACC": 105,
+      "EVA": 6,
+      "LUCK": 18
+    },
+    "mutagens": {
+      "major": [
+        "Sparkborne Artefact"
+      ],
+      "utility": [
+        "Truthbinder Ledger",
+        "Siren's Accord"
+      ]
+    },
+    "habitat": "Wyrmscar Ridge",
+    "physical_traits": [
+      "A small, orbiting ring of ice shards"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Aggressive",
+      "affinity": "Cynicism"
+    },
+    "meta": {
+      "tags": [
+        "SirenSong",
+        "Harmony:Strike"
+      ],
+      "resist": [
+        "Geist",
+        "Axiom"
+      ],
+      "weak": [
+        "Axiom",
+        "Flow"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "1Y8MOT3NHW"
+    }
+  },
+  {
+    "idnum": 78,
+    "name": "Fragos",
+    "form": "Stressform",
+    "primary_type": "Fracture",
+    "secondary_type": "Geist",
+    "stats": {
+      "HP": 88,
+      "ATK": 60,
+      "DEF": 50,
+      "SPATK": 68,
+      "SPDEF": 54,
+      "SPD": 50,
+      "ACC": 95,
+      "EVA": 15,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Sapphire Spiral"
+      ],
+      "utility": [
+        "Vesselborne Reliquary",
+        "Dreadbound Sigil"
+      ]
+    },
+    "habitat": "Crumbling Ruins",
+    "physical_traits": [
+      "Multiple Tails",
+      "Has a mane of crackling energy"
+    ],
+    "held_item": "A teacup that is always warm",
+    "tempers": {
+      "mood": "Amiable",
+      "affinity": "Glory"
+    },
+    "meta": {
+      "tags": [
+        "Omen:Mark",
+        "Night:Guide"
+      ],
+      "resist": [
+        "Bastion",
+        "Echo"
+      ],
+      "weak": [
+        "Axiom",
+        "Bloom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "M7MQXDLYWE"
+    }
+  },
+  {
+    "idnum": 79,
+    "name": "Wraithhowl",
+    "form": "Abyssal",
+    "primary_type": "Nadir",
+    "secondary_type": "Spur",
+    "stats": {
+      "HP": 122,
+      "ATK": 51,
+      "DEF": 55,
+      "SPATK": 48,
+      "SPDEF": 56,
+      "SPD": 45,
+      "ACC": 95,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Spiralbound Lash"
+      ],
+      "utility": [
+        "Dreadbound Sigil"
+      ]
+    },
+    "habitat": "Darkmist Chasm",
+    "physical_traits": [
+      "Has a mane of crackling energy"
+    ],
+    "held_item": "A small pouch of polished, magnetic stones",
+    "tempers": {
+      "mood": "Friendly",
+      "affinity": "Cruelty"
+    },
+    "meta": {
+      "tags": [],
+      "resist": [
+        "Zenith",
+        "Bloom"
+      ],
+      "weak": [
+        "Bloom",
+        "Rift"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "Q6QKCHQTDZ"
+    }
+  },
+  {
+    "idnum": 80,
+    "name": "Aquix",
+    "form": "Symbiosis",
+    "primary_type": "Flow",
+    "secondary_type": "Vessel",
+    "stats": {
+      "HP": 130,
+      "ATK": 50,
+      "DEF": 50,
+      "SPATK": 50,
+      "SPDEF": 62,
+      "SPD": 55,
+      "ACC": 98,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Flowrift Surge"
+      ],
+      "utility": [
+        "Starpath Compass",
+        "Stillwater Refuge"
+      ]
+    },
+    "habitat": "Still Tidepools",
+    "physical_traits": [
+      "Covered in tiny, moss-like growths",
+      "Crystallized Tear Ducts"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Lonely",
+      "affinity": "Honor"
+    },
+    "meta": {
+      "tags": [
+        "Refuge",
+        "Still:Watered"
+      ],
+      "resist": [
+        "Idol"
+      ],
+      "weak": [
+        "Bloom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "N2P3EUNLMQ"
+    }
+  },
+  {
+    "idnum": 81,
+    "name": "Omenon",
+    "form": "Seer",
+    "primary_type": "Oracle",
+    "secondary_type": "Rift",
+    "stats": {
+      "HP": 96,
+      "ATK": 50,
+      "DEF": 46,
+      "SPATK": 65,
+      "SPDEF": 59,
+      "SPD": 55,
+      "ACC": 119,
+      "EVA": 16,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Lumenrift Shard"
+      ],
+      "utility": [
+        "Flux Chronicle",
+        "Starpath Compass"
+      ]
+    },
+    "habitat": "Archive Stone",
+    "physical_traits": [
+      "Leaves a trail of cooled ash"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Amiable",
+      "affinity": "Resentment"
+    },
+    "meta": {
+      "tags": [
+        "Compass:Star",
+        "AstralGuide"
+      ],
+      "resist": [
+        "Echo",
+        "Nadir"
+      ],
+      "weak": [
+        "Rift",
+        "Geist"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "YHLKUC3LZ2"
+    }
+  },
+  {
+    "idnum": 82,
+    "name": "Currus",
+    "form": "Current",
+    "primary_type": "Flow",
+    "secondary_type": "Vessel",
+    "stats": {
+      "HP": 130,
+      "ATK": 50,
+      "DEF": 50,
+      "SPATK": 50,
+      "SPDEF": 62,
+      "SPD": 55,
+      "ACC": 98,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Bloomglow Embers"
+      ],
+      "utility": [
+        "Stillwater Refuge",
+        "Vesselborne Reliquary"
+      ]
+    },
+    "habitat": "Frost Caps",
+    "physical_traits": [
+      "A Halo of Broken Light",
+      "Glowing Freckles"
+    ],
+    "held_item": "Tiny Bell that Doesn't Ring",
+    "tempers": {
+      "mood": "Optimistic",
+      "affinity": "Pride"
+    },
+    "meta": {
+      "tags": [
+        "Hollow:Carry",
+        "Signal:Call"
+      ],
+      "resist": [
+        "Idol"
+      ],
+      "weak": [
+        "Bloom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "2DUPYEZ4O6"
+    }
+  },
+  {
+    "idnum": 83,
+    "name": "Visor",
+    "form": "Seer",
+    "primary_type": "Oracle",
+    "secondary_type": "Geist",
+    "stats": {
+      "HP": 98,
+      "ATK": 50,
+      "DEF": 46,
+      "SPATK": 66,
+      "SPDEF": 59,
+      "SPD": 50,
+      "ACC": 119,
+      "EVA": 17,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Tenebral Bloom"
+      ],
+      "utility": [
+        "Lantern of Echo",
+        "Prismatic Bulwark"
+      ]
+    },
+    "habitat": "Lunaglow Plateau",
+    "physical_traits": [
+      "Leaves a trail of cooled ash",
+      "Covered in tiny, moss-like growths"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Envious",
+      "affinity": "Deviousness"
+    },
+    "meta": {
+      "tags": [
+        "PrismGuard",
+        "Spectrum"
+      ],
+      "resist": [
+        "Echo",
+        "Echo"
+      ],
+      "weak": [
+        "Rift",
+        "Bloom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "9W1G1KSMQF"
+    }
+  },
+  {
+    "idnum": 84,
+    "name": "Memring",
+    "form": "Relic",
+    "primary_type": "Echo",
+    "secondary_type": "Fracture",
+    "stats": {
+      "HP": 95,
+      "ATK": 55,
+      "DEF": 50,
+      "SPATK": 68,
+      "SPDEF": 50,
+      "SPD": 60,
+      "ACC": 105,
+      "EVA": 9,
+      "LUCK": 13
+    },
+    "mutagens": {
+      "major": [
+        "Echoed Memory"
+      ],
+      "utility": [
+        "Dreadbound Sigil",
+        "Boundless Chorus"
+      ]
+    },
+    "habitat": "Whispering Dunes",
+    "physical_traits": [
+      "Eyes are Tiny, Constellated Starfields",
+      "One arm is made of solidified smoke"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Guarded",
+      "affinity": "Hostility"
+    },
+    "meta": {
+      "tags": [
+        "Chorus:Boundless",
+        "Lumen:Choir"
+      ],
+      "resist": [
+        "Geist",
+        "Bastion"
+      ],
+      "weak": [
+        "Axiom",
+        "Axiom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "J6YU5ACZU6"
+    }
+  },
+  {
+    "idnum": 85,
+    "name": "Shellvessel",
+    "form": "Shellform",
+    "primary_type": "Vessel",
+    "secondary_type": "Geist",
+    "stats": {
+      "HP": 98,
+      "ATK": 50,
+      "DEF": 50,
+      "SPATK": 55,
+      "SPDEF": 54,
+      "SPD": 50,
+      "ACC": 100,
+      "EVA": 9,
+      "LUCK": 11
+    },
+    "mutagens": {
+      "major": [
+        "Dreadmaw Eclipse"
+      ],
+      "utility": [
+        "Kinweave Meditation",
+        "Dreadbound Sigil"
+      ]
+    },
+    "habitat": "Secret Lab",
+    "physical_traits": [
+      "A small, orbiting ring of ice shards"
+    ],
+    "held_item": "A child's drawing of a monster",
+    "tempers": {
+      "mood": "Kind",
+      "affinity": "Tolerance"
+    },
+    "meta": {
+      "tags": [
+        "Omen:Mark",
+        "Night:Guide"
+      ],
+      "resist": [
+        "Echo"
+      ],
+      "weak": [
+        "Bloom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "AP1J97C85S"
+    }
+  },
+  {
+    "idnum": 86,
+    "name": "Megaraptor",
+    "form": "Fracture",
+    "primary_type": "Rift",
+    "secondary_type": "Echo",
+    "stats": {
+      "HP": 92,
+      "ATK": 50,
+      "DEF": 50,
+      "SPATK": 65,
+      "SPDEF": 57,
+      "SPD": 66,
+      "ACC": 100,
+      "EVA": 10,
+      "LUCK": 12
+    },
+    "mutagens": {
+      "major": [
+        "Echoisle Whisper"
+      ],
+      "utility": [
+        "Dreadbound Sigil",
+        "Echoing Ledger"
+      ]
+    },
+    "habitat": "Forgotten Temple",
+    "physical_traits": [
+      "Constantly dripping a viscous, non-staining fluid",
+      "Eyes are Tiny, Constellated Starfields"
+    ],
+    "held_item": "A worn-out cog from a celestial machine",
+    "tempers": {
+      "mood": "Compassionate",
+      "affinity": "Pettiness"
+    },
+    "meta": {
+      "tags": [
+        "Recall:Data",
+        "Clarity"
+      ],
+      "resist": [
+        "Nadir",
+        "Geist"
+      ],
+      "weak": [
+        "Geist",
+        "Axiom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "25BE46LRPC"
+    }
+  },
+  {
+    "idnum": 87,
+    "name": "Florian",
+    "form": "Shoot",
+    "primary_type": "Bloom",
+    "secondary_type": "Mire",
+    "stats": {
+      "HP": 148,
+      "ATK": 55,
+      "DEF": 61,
+      "SPATK": 57,
+      "SPDEF": 62,
+      "SPD": 48,
+      "ACC": 100,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Sapphire Spiral"
+      ],
+      "utility": [
+        "Mirewick Talisman",
+        "Pulseforged Mentor"
+      ]
+    },
+    "habitat": "Thornveil Thicket",
+    "physical_traits": [
+      "Face Obscured By Mist"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Devious",
+      "affinity": "Generosity"
+    },
+    "meta": {
+      "tags": [
+        "Guide:Pulse",
+        "KindredAdvice"
+      ],
+      "resist": [
+        "Flow"
+      ],
+      "weak": [
+        "Bastion"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "CP6S3FXP1K"
+    }
+  },
+  {
+    "idnum": 88,
+    "name": "Pikeix",
+    "form": "Breaker",
+    "primary_type": "Spur",
+    "secondary_type": null,
+    "stats": {
+      "HP": 105,
+      "ATK": 60,
+      "DEF": 50,
+      "SPATK": 45,
+      "SPDEF": 50,
+      "SPD": 62,
+      "ACC": 95,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Spurforged Pulse"
+      ],
+      "utility": [
+        "Stillwater Refuge"
+      ]
+    },
+    "habitat": "Ancient Battlefield",
+    "physical_traits": [
+      "Body is composed of tightly packed, living insects"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Sincere",
+      "affinity": "Amiability"
+    },
+    "meta": {
+      "tags": [],
+      "resist": [
+        "Bloom"
+      ],
+      "weak": [
+        "Rift"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "8YRL2X2GKW"
+    }
+  },
+  {
+    "idnum": 89,
+    "name": "Vertia",
+    "form": "Keystone",
+    "primary_type": "Zenith",
+    "secondary_type": "Bastion",
+    "stats": {
+      "HP": 114,
+      "ATK": 57,
+      "DEF": 60,
+      "SPATK": 54,
+      "SPDEF": 53,
+      "SPD": 50,
+      "ACC": 98,
+      "EVA": 5,
+      "LUCK": 12
+    },
+    "mutagens": {
+      "major": [
+        "Gloamsteel Ward"
+      ],
+      "utility": [
+        "Lumenic Steward",
+        "Quiet Resolve"
+      ]
+    },
+    "habitat": "Celestial Spire",
+    "physical_traits": [
+      "Skin is patterned like a circuit board"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Patient",
+      "affinity": "Hostility"
+    },
+    "meta": {
+      "tags": [
+        "Stillness",
+        "Resolve"
+      ],
+      "resist": [
+        "Nadir",
+        "Bloom"
+      ],
+      "weak": [
+        "Mire",
+        "Spur"
+      ],
+      "abilities": [
+        "Guard"
+      ],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "CDDTMVZ9BT"
+    }
+  },
+  {
+    "idnum": 90,
+    "name": "Statnode",
+    "form": "Mechanism",
+    "primary_type": "Axiom",
+    "secondary_type": null,
+    "stats": {
+      "HP": 110,
+      "ATK": 55,
+      "DEF": 60,
+      "SPATK": 60,
+      "SPDEF": 60,
+      "SPD": 50,
+      "ACC": 109,
+      "EVA": 5,
+      "LUCK": 12
+    },
+    "mutagens": {
+      "major": [
+        "Bastion Halo"
+      ],
+      "utility": [
+        "Vesselborne Reliquary",
+        "Sagewarden Beacon"
+      ]
+    },
+    "habitat": "Crumbling Ruins",
+    "physical_traits": [
+      "Has horns that are shaped like tuning forks",
+      "Leaves a trail of cooled ash"
+    ],
+    "held_item": "A bird's feather that feels heavier than lead",
+    "tempers": {
+      "mood": "Cold",
+      "affinity": "Generosity"
+    },
+    "meta": {
+      "tags": [
+        "Sage:Beacon",
+        "MentorGlow"
+      ],
+      "resist": [
+        "Spur",
+        "Rift"
+      ],
+      "weak": [
+        "Idol",
+        "Nadir"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "1320FLH5IK"
+    }
+  },
+  {
+    "idnum": 91,
+    "name": "Sumia",
+    "form": "Apex",
+    "primary_type": "Zenith",
+    "secondary_type": "Mire",
+    "stats": {
+      "HP": 117,
+      "ATK": 57,
+      "DEF": 54,
+      "SPATK": 57,
+      "SPDEF": 54,
+      "SPD": 48,
+      "ACC": 103,
+      "EVA": 5,
+      "LUCK": 12
+    },
+    "mutagens": {
+      "major": [
+        "Mirebound Rot"
+      ],
+      "utility": [
+        "Mirewick Talisman"
+      ]
+    },
+    "habitat": "Mt. Thermallia",
+    "physical_traits": [
+      "Eyes are Tiny, Constellated Starfields"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Indifferent",
+      "affinity": "Honor"
+    },
+    "meta": {
+      "tags": [],
+      "resist": [
+        "Nadir"
+      ],
+      "weak": [
+        "Mire"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "678U2PRC8M"
+    }
+  },
+  {
+    "idnum": 92,
+    "name": "Abysmaw",
+    "form": "Inevitable",
+    "primary_type": "Nadir",
+    "secondary_type": "Azimuth",
+    "stats": {
+      "HP": 120,
+      "ATK": 46,
+      "DEF": 55,
+      "SPATK": 50,
+      "SPDEF": 56,
+      "SPD": 45,
+      "ACC": 105,
+      "EVA": 5,
+      "LUCK": 12
+    },
+    "mutagens": {
+      "major": [
+        "Dreadmaw Eclipse"
+      ],
+      "utility": [
+        "Dreadbound Sigil"
+      ]
+    },
+    "habitat": "Dread Catacombs",
+    "physical_traits": [
+      "A Halo of Broken Light",
+      "Bipedal"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Irritable",
+      "affinity": "Deviousness"
+    },
+    "meta": {
+      "tags": [],
+      "resist": [
+        "Zenith",
+        "Rift"
+      ],
+      "weak": [
+        "Bloom",
+        "Nadir"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "HKPBUYFB38"
+    }
+  },
+  {
+    "idnum": 93,
+    "name": "Pyrsigil",
+    "form": "Beacon",
+    "primary_type": "Idol",
+    "secondary_type": "Fracture",
+    "stats": {
+      "HP": 95,
+      "ATK": 63,
+      "DEF": 50,
+      "SPATK": 70,
+      "SPDEF": 50,
+      "SPD": 55,
+      "ACC": 95,
+      "EVA": 8,
+      "LUCK": 20
+    },
+    "mutagens": {
+      "major": [
+        "Idolflare Beacon"
+      ],
+      "utility": [
+        "Sagewarden Beacon",
+        "Cohort Harmony"
+      ]
+    },
+    "habitat": "Glass Caverns",
+    "physical_traits": [
+      "Bipedal"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Kind",
+      "affinity": "Coyness"
+    },
+    "meta": {
+      "tags": [
+        "ResonantLink",
+        "Choir"
+      ],
+      "resist": [
+        "Axiom",
+        "Bastion"
+      ],
+      "weak": [
+        "Flow",
+        "Axiom"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "JAVWL3HJO2"
+    }
+  },
+  {
+    "idnum": 94,
+    "name": "Baralon",
+    "form": "Rampart",
+    "primary_type": "Bastion",
+    "secondary_type": "Idol",
+    "stats": {
+      "HP": 108,
+      "ATK": 54,
+      "DEF": 70,
+      "SPATK": 51,
+      "SPDEF": 56,
+      "SPD": 52,
+      "ACC": 95,
+      "EVA": 5,
+      "LUCK": 15
+    },
+    "mutagens": {
+      "major": [
+        "Guardian Resonance"
+      ],
+      "utility": [
+        "Siren's Accord",
+        "Cohort Harmony"
+      ]
+    },
+    "habitat": "Blooming Valley",
+    "physical_traits": [
+      "Always followed by a small, personal rain cloud"
+    ],
+    "held_item": "Broken Hourglass",
+    "tempers": {
+      "mood": "Moody",
+      "affinity": "Trustfulness"
+    },
+    "meta": {
+      "tags": [
+        "ResonantLink",
+        "Choir"
+      ],
+      "resist": [
+        "Bloom",
+        "Axiom"
+      ],
+      "weak": [
+        "Spur",
+        "Flow"
+      ],
+      "abilities": [
+        "Guard"
+      ],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "XUC5EJOKTQ"
+    }
+  },
+  {
+    "idnum": 95,
+    "name": "Boltis",
+    "form": "Surge",
+    "primary_type": "Spur",
+    "secondary_type": null,
+    "stats": {
+      "HP": 105,
+      "ATK": 60,
+      "DEF": 50,
+      "SPATK": 45,
+      "SPDEF": 50,
+      "SPD": 62,
+      "ACC": 95,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Spiralbound Lash"
+      ],
+      "utility": [
+        "Resonant Cartographer"
+      ]
+    },
+    "habitat": "Condemned HydroPowerDam",
+    "physical_traits": [
+      "Body is covered in smooth, river-worn stones",
+      "Face Obscured By Mist"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Sincere",
+      "affinity": "Warmth"
+    },
+    "meta": {
+      "tags": [],
+      "resist": [
+        "Bloom"
+      ],
+      "weak": [
+        "Rift"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "YJX8P17ZOQ"
+    }
+  },
+  {
+    "idnum": 96,
+    "name": "Moldtaint",
+    "form": "Sink",
+    "primary_type": "Mire",
+    "secondary_type": "Axiom",
+    "stats": {
+      "HP": 118,
+      "ATK": 52,
+      "DEF": 63,
+      "SPATK": 55,
+      "SPDEF": 66,
+      "SPD": 45,
+      "ACC": 113,
+      "EVA": 5,
+      "LUCK": 11
+    },
+    "mutagens": {
+      "major": [
+        "Mirebound Rot"
+      ],
+      "utility": [
+        "Resonance Surveyor",
+        "Mirewick Talisman"
+      ]
+    },
+    "habitat": "Oldgrowth Marsh",
+    "physical_traits": [
+      "A Halo of Broken Light",
+      "Feathers made of thin, colored glass"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Jealous",
+      "affinity": "Sensitivity"
+    },
+    "meta": {
+      "tags": [
+        "Bog:Ward",
+        "Muck:Trail"
+      ],
+      "resist": [
+        "Spur",
+        "Rift"
+      ],
+      "weak": [
+        "Idol",
+        "Nadir"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "MKUHG89CGC"
+    }
+  },
+  {
+    "idnum": 97,
+    "name": "Celius",
+    "form": "Phantasm",
+    "primary_type": "Geist",
+    "secondary_type": "Spur",
+    "stats": {
+      "HP": 98,
+      "ATK": 55,
+      "DEF": 50,
+      "SPATK": 57,
+      "SPDEF": 57,
+      "SPD": 56,
+      "ACC": 95,
+      "EVA": 13,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Echoed Memory"
+      ],
+      "utility": [
+        "Sparkward Tendril",
+        "Quiet Resolve"
+      ]
+    },
+    "habitat": "Ghost Town",
+    "physical_traits": [
+      "Adorned with naturally growing, crystalline structures"
+    ],
+    "held_item": "Pocket Sundial",
+    "tempers": {
+      "mood": "Generous",
+      "affinity": "Impatience"
+    },
+    "meta": {
+      "tags": [
+        "Stillness",
+        "Resolve"
+      ],
+      "resist": [
+        "Echo",
+        "Bloom"
+      ],
+      "weak": [
+        "Bloom",
+        "Rift"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "X6B4WLTTZ8"
+    }
+  },
+  {
+    "idnum": 98,
+    "name": "Baslith",
+    "form": "Pillar",
+    "primary_type": "Axiom",
+    "secondary_type": "Mire",
+    "stats": {
+      "HP": 117,
+      "ATK": 55,
+      "DEF": 64,
+      "SPATK": 60,
+      "SPDEF": 66,
+      "SPD": 48,
+      "ACC": 114,
+      "EVA": 5,
+      "LUCK": 12
+    },
+    "mutagens": {
+      "major": [
+        "Bastion Halo"
+      ],
+      "utility": [
+        "Lumenic Steward",
+        "Resonance Surveyor"
+      ]
+    },
+    "habitat": "Crumbling Ruins",
+    "physical_traits": [
+      "Paws/feet are perpetually coated in shimmering dust",
+      "A visible, internal skeleton made of glowing lumen"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Optimistic",
+      "affinity": "Humility"
+    },
+    "meta": {
+      "tags": [
+        "Survey:Resonance",
+        "LumenGuide"
+      ],
+      "resist": [
+        "Spur",
+        "Rift"
+      ],
+      "weak": [
+        "Idol",
+        "Nadir"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "VVH7UE8JFL"
+    }
+  },
+  {
+    "idnum": 99,
+    "name": "Stagooze",
+    "form": "Tangle",
+    "primary_type": "Mire",
+    "secondary_type": "Bloom",
+    "stats": {
+      "HP": 134,
+      "ATK": 52,
+      "DEF": 61,
+      "SPATK": 54,
+      "SPDEF": 64,
+      "SPD": 45,
+      "ACC": 105,
+      "EVA": 5,
+      "LUCK": 10
+    },
+    "mutagens": {
+      "major": [
+        "Sapphire Spiral"
+      ],
+      "utility": [
+        "Harmonic Field",
+        "Mirewick Talisman"
+      ]
+    },
+    "habitat": "Gloomfen Bogs",
+    "physical_traits": [
+      "Weeps a thick, ink-like substance",
+      "Body is composed of tightly packed, living insects"
+    ],
+    "held_item": "A single, perpetually blooming gear-flower",
+    "tempers": {
+      "mood": "Guarded",
+      "affinity": "Irritability"
+    },
+    "meta": {
+      "tags": [
+        "Bog:Ward",
+        "Muck:Trail"
+      ],
+      "resist": [
+        "Flow"
+      ],
+      "weak": [
+        "Bastion"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "QHPEM57XEQ"
+    }
+  },
+  {
+    "idnum": 100,
+    "name": "Trajan",
+    "form": "Compass",
+    "primary_type": "Azimuth",
+    "secondary_type": "Bloom",
+    "stats": {
+      "HP": 120,
+      "ATK": 52,
+      "DEF": 54,
+      "SPATK": 54,
+      "SPDEF": 54,
+      "SPD": 62,
+      "ACC": 114,
+      "EVA": 6,
+      "LUCK": 13
+    },
+    "mutagens": {
+      "major": [
+        "Bastion Halo"
+      ],
+      "utility": [
+        "Mirewick Talisman",
+        "Pulseforged Mentor"
+      ]
+    },
+    "habitat": "Skybridge Peaks",
+    "physical_traits": [
+      "Its roar sounds like dial-up modem static"
+    ],
+    "held_item": null,
+    "tempers": {
+      "mood": "Gracious",
+      "affinity": "Warmth"
+    },
+    "meta": {
+      "tags": [
+        "Guide:Pulse",
+        "KindredAdvice"
+      ],
+      "resist": [
+        "Rift",
+        "Flow"
+      ],
+      "weak": [
+        "Nadir",
+        "Bastion"
+      ],
+      "abilities": [],
+      "triggers": [],
+      "notes": [],
+      "unique_id": "4ASFJTERQJ"
+    }
+  }
+]

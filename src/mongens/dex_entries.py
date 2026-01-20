@@ -69,7 +69,7 @@ def dex_formatter(seed: MonsterSeed) -> str:
     Returns:
         A string containing the formatted Pokédex-style entry.
     """
-    num = seed.idnum
+    idnum = seed.idnum
     name = seed.name
     form = seed.form
     habitat = seed.habitat
@@ -90,10 +90,10 @@ def dex_formatter(seed: MonsterSeed) -> str:
     # Build the final entry text
     lines = []
     sep_line = f"{'-' * 60}"
-
+	
     lines.append(sep_line)
     lines.append("")
-    header_line = f"#{num:03d}: '{name}' --- a(n) {form} monster"
+    header_line = f"#{idnum:03d}: '{name}' --- a(n) {form} monster"
     lines.append(header_line)
     lines.append("")
 

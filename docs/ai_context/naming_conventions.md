@@ -147,15 +147,21 @@ attributes:
     mul:
     add:
 tags:
-allowed_types:
-synergy_bonus:
+incompatible_types: <list>
+synergy_bonus: <float>
 ```
 
 ### **5.2 Singular keys for objects, plural for lists**
 **Examples:**
 ```yaml
-species: <string>
-species_list: <list>
+name: <string>
+attributes:
+	mul: <float>
+	add: <float>
+	notes: <string>
+tags: <list>
+synergy_bonus: <float>
+incompatible_types: <list>
 habitats: <list>
 attributes: <dict>
 ```
@@ -215,14 +221,13 @@ Names must be reproducible from:
 - types 
 - forms  
 - mutagens  
-- traits  
-- stats  
+- traits   
 
 ### **8.2 Syllable Pools**
 Each type has:
 
 - prefixes  
-- infixes  
+- stems  
 - suffixes  
 
 ### **8.3 Epithet Rules**
@@ -238,7 +243,8 @@ Descriptors come from:
 - mutagens  
 - stat biases  
 
-### **8.4 No More Than 3 Syllables**
+### **8.4 No More Than 3 Syllables**(_epithets not included_)
+
 Unless the creature is legendary or aberrant.
 
 ---
