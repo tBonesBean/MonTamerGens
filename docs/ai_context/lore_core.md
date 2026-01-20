@@ -1,4 +1,4 @@
-# **lore*core.md_Your guide to understanding the responsibilities of every Python module in MonTamerGens.* Lumen Mythos & Narrative Canon**
+# **lore_core.md_Your guide to understanding the responsibilities of every Python module in MonTamerGens.* Lumen Mythos & Narrative Canon**
 
 _The metaphysical, psychological, and thematic foundation of MonTamerGens._
 
@@ -320,7 +320,7 @@ Your procedural systems map perfectly onto the metaphysics:
 | Wounds            | Traits, quirks           |
 | Sparks            | Evolution triggers       |
 | Resonance         | Starter generation       |
-| Archetypes        | Type/form selection      |
+| Archetypes/Types  | Ontological forces that shape a monster's being |
 | Storms            | Mutagens, anomalies      |
 | Echo              | Naming, silhouette logic |
 | Cognitive ecology | Habitats, forms          |

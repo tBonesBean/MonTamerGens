@@ -17,17 +17,18 @@
 				"conflictResolution": "prompt",
 				"servers": [
 					{
-						"name": "IntelliHub",
-						"connectionString": "https://intellihub.sync.server/api"
+						"name": "PrimaryServer",
+						"url": "https://sync.geminiapp.com",
+						"authToken": "abcd1234efgh5678"
 					},
 					{
 						"name": "IntelliHub",
-						"url": 
+						"url": "",
 					}
 				]
 			}
 		},
-		"plugins": [
+		{"plugins": [
 			"spellChecker": true,
 			"autoComplete": true,
 			"codeFormatter": true,

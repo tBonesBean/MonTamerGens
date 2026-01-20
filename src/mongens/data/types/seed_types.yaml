@@ -26,12 +26,12 @@
           - Resist:Spur
           - Weak:Idol
           - Resist:Rift
-          - Weak:Dread
+          - Weak:Nadir
       notes:
-          - Discipline
-          - Logical
-          - Ordered
-          - Geometric
+          - Law
+          - Rule
+          - Inevitability
+          - Order
 - name: Spur
   weight: 3.0
   habitats:
@@ -67,9 +67,9 @@
           - Weak:Rift
       notes:
           - Impulse
-          - Aggressive
-          - Kinetic
-          - Explosive
+          - Acceleration
+          - Magnitude
+          - Velocity
 - name: Echo
   weight: 3.0
   habitats:
@@ -96,10 +96,10 @@
           - Resist:Geist
           - Weak:Axiom
       notes:
-          - Resonance
           - Memory
-          - Recursive
-          - Harmonic
+          - Recurrence
+          - Resonance
+          - Persistence
 - name: Flow
   weight: 3.0
   habitats:
@@ -130,10 +130,10 @@
           - Resist:Idol
           - Weak:Bloom
       notes:
-          - Empathic
           - Adaptive
-          - Fluid
-          - Current
+          - Redirection
+          - Continuity
+          - Response
 - name: Bastion
   weight: 4.0
   habitats:
@@ -163,10 +163,10 @@
           - Resist:Bloom
           - Weak:Spur
       notes:
-          - Resilient
-          - Stalwart
-          - Fortified
-          - Unyielding
+          - Endurance
+          - Defense
+          - Immovability
+          - Refusal
 - name: Rift
   weight: 2.0
   habitats:
@@ -191,13 +191,13 @@
       add:
           EVA: 5
       tags:
-          - Resist:Dread
+          - Resist:Nadir
           - Weak:Geist
       notes:
-          - Curious
-          - Chaotic
-          - Temporal
+          - Discontinuity
           - Paradox
+          - Rupture
+          - Instability
 - name: Mire
   weight: 1.0
   habitats:
@@ -212,10 +212,10 @@
           SPDEF: 5
       tags: []
       notes:
-          - Stagnant
-          - Corrupting
-          - Viscous
           - Decay
+          - Stagnation
+          - Suffocation
+          - Rot
 - name: Idol
   weight: 3.0
   habitats:
@@ -239,10 +239,10 @@
           - Resist:Axiom
           - Weak:Flow
       notes:
-          - Passionate
-          - Radiant
-          - Symbolic
-          - Flare
+          - Belief
+          - Projection
+          - Attention
+          - Symbol
 - name: Geist
   weight: 1.0
   habitats:
@@ -266,10 +266,10 @@
           - Resist:Echo
           - Weak:Bloom
       notes:
-          - Spiritual
-          - Incorporeal
-          - Ethereal
-          - Phantasm
+          - Absence
+          - Liminality
+          - Threshold
+          - Spirit
 - name: Bloom
   weight: 4.0
   habitats:
@@ -309,9 +309,9 @@
           - Weak:Bastion
       notes:
           - Growth
-          - Regenerative
-          - Organic
-          - Flourish
+          - Vitality
+          - Expansion
+          - Life
 - name: Vessel
   weight: 1.0
   habitats:
@@ -324,34 +324,123 @@
           ACC: 5
       tags: []
       notes:
-          - Empty
+          - Capacity
+          - Containment
           - Potential
-          - Latent
-          - Structural
-- name: Dread
-  weight: 2.0
+          - Becoming
+- name: Nadir
+  weight: 1.0
   habitats:
       - Dread Catacombs
       - Darkmist Chasm
-      - Gloomfen Bogs
       - AshGlass Tombs
       - Netherbleak Hollow
-      - Abandoned Wastes
-      - Retired Military Base
-      - Monolithic Structures
-      - Dayless Mosswood
+      - Sunless Abyss
   attributes:
       mul:
-          SPATK: 1.25
-          HP: 1.15
-          ATK: 1.10
+          HP: 1.20
+          DEF: 1.20
+          SPDEF: 1.20
+          SPD: 0.80
       add:
-          ACC: -5
+          HP: 20
       tags:
-          - Resist:Axiom
-          - Weak:Bastion
+          - Resist:Zenith
+          - Weak:Bloom
       notes:
-          - Fear
-          - Primal
-          - Consumption
-          - Gloom
+          - Collapse
+          - Depth
+          - Final Limit
+          - Terminal
+- name: Azimuth
+  weight: 2.0
+  habitats:
+      - Skybridge Peaks
+      - Whispering Dunes
+      - Astral Terrace
+      - Magnetic North
+      - Starfall Crater
+  attributes:
+      mul:
+          SPD: 1.25
+          ACC: 1.20
+          EVA: 1.15
+      add:
+          LUCK: 3
+      tags:
+          - Resist:Rift
+          - Weak:Nadir
+  notes:
+      - Orientation
+      - Bearing
+      - Vector
+      - Direction
+- name: Fracture
+  weight: 1.0
+  habitats:
+      - Shattered Plateau
+      - Wyrmscar Ridge
+      - Ancient Battlefield
+      - Crumbling Ruins
+      - Collapsed Magma Tubes
+  attributes:
+      mul:
+          ATK: 1.20
+          SPD: 1.10
+          HP: 0.90
+      add:
+          CRIT: 5
+      tags:
+          - Resist:Bastion
+          - Weak:Axiom
+  notes:
+      - Strain
+      - Fault
+      - Instability
+      - Failure
+- name: Oracle
+  weight: 2.0
+  habitats:
+      - Archive Stone
+      - Celestial Spire
+      - Forgotten Temple
+      - Crystalline Cave
+      - Lunaglow Plateau
+  attributes:
+      mul:
+          SPATK: 1.20
+          ACC: 1.25
+          EVA: 1.10
+      add:
+          LUCK: 5
+      tags:
+          - Resist:Echo
+          - Weak:Rift
+  notes:
+      - Perception
+      - Pattern
+      - Foresight
+      - Vision
+- name: Zenith
+  weight: 2.0
+  habitats:
+      - Celestial Spire
+      - Snowcapped Peaks
+      - Mt. Thermallia
+      - Astral Terrace
+      - Aurora Fields
+  attributes:
+      mul:
+          ATK: 1.15
+          SPATK: 1.15
+          HP: 1.10
+      add:
+          ALL: 2
+      tags:
+          - Resist:Nadir
+          - Weak:Mire
+  notes:
+      - Apex
+      - Culmination
+      - Realization
+      - Highest Bound
