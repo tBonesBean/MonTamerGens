@@ -6,18 +6,21 @@
         - 'Meditation:Kin'
         - 'Pulse:Calm'
     rarity: 1.0
-    allowed_types:
-        - Geist
-        - Flow
+    synergy_bonus:
+        Geist: 1.3
+        Flow: 1.25
+        Echo: 1.2
+        Oracle: 1.15
 'Echoing Ledger':
     identify_rates: 0.2
     tags:
         - 'Recall:Data'
         - 'Clarity'
     rarity: 0.9
-    allowed_types:
-        - Axiom
-        - Echo
+    synergy_bonus:
+        Echo: 1.35
+        Axiom: 1.3
+        Oracle: 1.2
 'Flowfield Botanica':
     field_heal_ticks: 0.1
     ally_heal_on_kill: 0.05
@@ -25,9 +28,13 @@
         - 'Lumen:Bloom'
         - 'Harvest:Calm'
     rarity: 1.0
-    allowed_types:
-        - Bloom
-        - Flow
+    synergy_bonus:
+        Bloom: 1.35
+        Flow: 1.3
+        Zenith: 1.2
+    incompatible_types:
+        - Mire
+        - Nadir
 'Sparkward Tendril':
     unlock_tags:
         - 'Path:LumenStorm'
@@ -36,19 +43,23 @@
         - 'Tether:Lumen'
         - 'AnchorBreak'
     rarity: 1.1
-    allowed_types:
-        - Rift
-        - Geist
+    synergy_bonus:
+        Rift: 1.35
+        Geist: 1.3
+        Fracture: 1.25
+    incompatible_types:
+        - Axiom
 'Pulseforged Mentor':
     npc_dialog_plus: true
     tags:
         - 'Guide:Pulse'
         - 'KindredAdvice'
     rarity: 1.0
-    allowed_types:
-        - Bastion
-        - Bloom
-        - Idol
+    synergy_bonus:
+        Idol: 1.3
+        Bloom: 1.25
+        Bastion: 1.2
+        Zenith: 1.15
 'Cohort Harmony':
     ally_buff:
         ATK: 1.1
@@ -57,27 +68,34 @@
         - 'ResonantLink'
         - 'Choir'
     rarity: 1.0
-    allowed_types:
-        - Idol
-        - Flow
+    synergy_bonus:
+        Idol: 1.35
+        Flow: 1.25
+        Bloom: 1.2
+        Azimuth: 1.15
 'Lantern of Echo':
     minimap_reveal: true
     tags:
         - 'Beacon'
         - 'MemoryLight'
     rarity: 1.2
-    allowed_types:
-        - Echo
-        - Geist
+    synergy_bonus:
+        Echo: 1.4
+        Geist: 1.3
+        Oracle: 1.2
+    incompatible_types:
+        - Nadir
 'Lumenic Steward':
     crafting_bonus: 0.15
     tags:
         - 'LumenCraft'
         - 'Attunement'
     rarity: 1.0
-    allowed_types:
-        - Axiom
-        - Bastion
+    synergy_bonus:
+        Axiom: 1.35
+        Bastion: 1.3
+        Vessel: 1.2
+        Oracle: 1.15
 'Resonant Cartographer':
     map_reveal_radius: 1.3
     fast_travel_nodes: true
@@ -85,9 +103,11 @@
         - 'Trail:Resound'
         - 'LoreMapped'
     rarity: 1.0
-    allowed_types:
-        - Flow
-        - Bloom
+    synergy_bonus:
+        Azimuth: 1.35
+        Flow: 1.3
+        Oracle: 1.25
+        Bloom: 1.15
 'Stormborn Scribe':
     exp_mult: 1.1
     loot_mult: 1.1
@@ -95,9 +115,11 @@
         - 'Record:Storm'
         - 'SparkNotes'
     rarity: 1.0
-    allowed_types:
-        - Rift
-        - Idol
+    synergy_bonus:
+        Rift: 1.35
+        Spur: 1.25
+        Fracture: 1.2
+        Idol: 1.15
 'Quiet Resolve':
     camp_bonus:
         'Heal%': 0.1
@@ -106,9 +128,14 @@
         - 'Stillness'
         - 'Resolve'
     rarity: 1.1
-    allowed_types:
-        - Geist
-        - Bastion
+    synergy_bonus:
+        Bastion: 1.3
+        Geist: 1.25
+        Vessel: 1.2
+        Echo: 1.15
+    incompatible_types:
+        - Spur
+        - Rift
 'Sagewarden Beacon':
     ally_buff:
         SPATK: 1.1
@@ -117,18 +144,22 @@
         - 'Sage:Beacon'
         - 'MentorGlow'
     rarity: 1.0
-    allowed_types:
-        - Idol
-        - Axiom
+    synergy_bonus:
+        Idol: 1.35
+        Axiom: 1.3
+        Oracle: 1.25
+        Zenith: 1.2
 'Flux Chronicle':
     identify_rates: 0.18
     tags:
         - 'Record:Flux'
         - 'FlowingNotes'
     rarity: 1.0
-    allowed_types:
-        - Flow
-        - Rift
+    synergy_bonus:
+        Flow: 1.35
+        Rift: 1.3
+        Azimuth: 1.25
+        Oracle: 1.15
 'Harmonic Field':
     field_buff:
         LUCK: 1.2
@@ -136,9 +167,11 @@
         - 'Balance:Field'
         - 'Cohesion'
     rarity: 1.1
-    allowed_types:
-        - Geist
-        - Bloom
+    synergy_bonus:
+        Bloom: 1.3
+        Geist: 1.25
+        Flow: 1.2
+        Idol: 1.15
 'Truthbinder Ledger':
     npc_dialog_plus: true
     tags:
@@ -146,18 +179,24 @@
         - 'Clarity'
         - 'Record:Oath'
     rarity: 1.0
-    allowed_types:
-        - Axiom
-        - Echo
+    synergy_bonus:
+        Axiom: 1.4
+        Echo: 1.3
+        Oracle: 1.25
+        Vessel: 1.15
+    incompatible_types:
+        - Rift
 "Siren's Accord":
     ally_heal_on_kill: 0.04
     tags:
         - 'SirenSong'
         - 'Harmony:Strike'
     rarity: 1.1
-    allowed_types:
-        - Idol
-        - Bloom
+    synergy_bonus:
+        Idol: 1.35
+        Bloom: 1.3
+        Flow: 1.2
+        Echo: 1.15
 'Stillwater Refuge':
     camp_bonus:
         'Heal%': 0.15
@@ -166,9 +205,13 @@
         - 'Refuge'
         - 'Still:Watered'
     rarity: 1.0
-    allowed_types:
-        - Flow
-        - Bloom
+    synergy_bonus:
+        Flow: 1.35
+        Bloom: 1.3
+        Geist: 1.2
+    incompatible_types:
+        - Spur
+        - Rift
 'Starpath Compass':
     map_reveal_radius: 1.4
     fast_travel_nodes: true
@@ -176,9 +219,11 @@
         - 'Compass:Star'
         - 'AstralGuide'
     rarity: 1.0
-    allowed_types:
-        - Rift
-        - Flow
+    synergy_bonus:
+        Azimuth: 1.4
+        Oracle: 1.3
+        Flow: 1.25
+        Rift: 1.2
 'Boundless Chorus':
     ally_buff:
         SPATK: 1.12
@@ -186,9 +231,11 @@
         - 'Chorus:Boundless'
         - 'Lumen:Choir'
     rarity: 1.0
-    allowed_types:
-        - Idol
-        - Echo
+    synergy_bonus:
+        Idol: 1.4
+        Echo: 1.3
+        Zenith: 1.25
+        Oracle: 1.15
 'Prismatic Bulwark':
     ally_buff:
         DEF: 1.1
@@ -197,9 +244,14 @@
         - 'PrismGuard'
         - 'Spectrum'
     rarity: 1.2
-    allowed_types:
-        - Bastion
-        - Geist
+    synergy_bonus:
+        Bastion: 1.35
+        Axiom: 1.25
+        Geist: 1.2
+        Vessel: 1.15
+    incompatible_types:
+        - Spur
+        - Rift
 'Resonance Surveyor':
     minimap_reveal: true
     unlock_tags:
@@ -208,9 +260,11 @@
         - 'Survey:Resonance'
         - 'LumenGuide'
     rarity: 1.15
-    allowed_types:
-        - Rift
-        - Axiom
+    synergy_bonus:
+        Oracle: 1.4
+        Axiom: 1.3
+        Azimuth: 1.25
+        Rift: 1.2
 
 'Dreadbound Sigil':
     npc_dialog_plus: true
@@ -218,20 +272,28 @@
         - 'Omen:Mark'
         - 'Night:Guide'
     rarity: 1.05
-    allowed_types:
-        - Nadir
-        - Echo
-        - Geist
+    synergy_bonus:
+        Nadir: 1.4
+        Geist: 1.3
+        Echo: 1.25
+        Mire: 1.15
+    incompatible_types:
+        - Zenith
+        - Idol
 'Mirewick Talisman':
     field_heal_ticks: 0.06
     tags:
         - 'Bog:Ward'
         - 'Muck:Trail'
     rarity: 1.0
-    allowed_types:
-        - Mire
+    synergy_bonus:
+        Mire: 1.4
+        Nadir: 1.3
+        Echo: 1.2
+        Fracture: 1.15
+    incompatible_types:
         - Bloom
-        - Flow
+        - Zenith
 'Vesselborne Reliquary':
     unlock_tags:
         - 'Vault:Signal'
@@ -239,7 +301,10 @@
         - 'Hollow:Carry'
         - 'Signal:Call'
     rarity: 1.05
-    allowed_types:
-        - Vessel
-        - Axiom
-        - Geist
+    synergy_bonus:
+        Vessel: 1.4
+        Axiom: 1.3
+        Bastion: 1.25
+        Geist: 1.2
+    incompatible_types:
+        - Spur

@@ -23435,3 +23435,25 @@ Physical Traits: Its roar sounds like dial-up modem static
 Tags: Guide:Pulse, KindredAdvice
 Resists: Rift, Flow
 Weak To: Nadir, Bastion
+------------------------------------------------------------
+
+#001: 'Liqis' --- a(n) Current monster
+
+  -Type: Flow
+
+Documented Near-Lumen Mutagen: ['Sapphire Spiral', 'Geistbound Lattice'] | Known Utility: ['Kinweave Meditation', 'Vesselborne Reliquary']
+
+
+Base Profile: HP 130 • ATK 50 • DEF 50 • SPATK 50 • SPDEF 76 • SPD 55 • ACC 105 • EVA 5 • LUCK 12
+
+
+
+Habitat: Sunless Abyss
+
+
+Physical Traits: Bipedal
+Observed carrying: Builds Nest With Shells
+
+Tags: Phase:Overtone, MindLink, Hollow:Carry, Signal:Call
+Resists: Idol, Fear
+Weak To: Bloom

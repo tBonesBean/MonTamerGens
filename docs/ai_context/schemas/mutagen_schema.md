@@ -2,6 +2,8 @@
 
 _Describes the required structure, allowed fields, constraints, and validation rules for `MAJOR_MODS` and `UTILITY_MODS`, and their respective `major_mods.yaml` and `utility_mods.yaml` files._
 
+**Last updated:** 2026-01-20 (v1.1 - removed `allowed_types`)
+
 ---
 
 # 🧬 **1. Purpose of This Schema**
@@ -17,7 +19,7 @@ It ensures:
 - consistent structure
 - valid stat modifiers
 - predictable tag behavior
-- correct type gating
+- lore-aligned type relationships
 - safe synergy logic
 - compatibility with the mutagen forge
 
@@ -50,12 +52,12 @@ add: # OPTIONAL
 tags: # OPTIONAL
     - <string:string>
 
-incompatible_types: # OPTIONAL
+incompatible_types: # OPTIONAL (use sparingly, for semantic conflicts only)
     - <string>
 
 rarity: <float> # OPTIONAL (default: 1.0)
 
-synergy_bonus: # OPTIONAL
+synergy_bonus: # RECOMMENDED (expresses positive type relationships)
     <TYPE_NAME>: <float>
 
 # Utility-only fields (OPTIONAL)
@@ -70,6 +72,8 @@ unlock_tags: <list>
 field_heal_ticks: <float>
 ally_heal_ticks: <float>
 ```
+
+**Note:** The `allowed_types` field has been removed as of v1.1. Use `incompatible_types` sparingly for semantic conflicts and `synergy_bonus` to express positive relationships.
 
 Mutagens are intentionally flexible, but the **core fields** must follow strict rules.
 
