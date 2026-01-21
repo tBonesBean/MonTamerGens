@@ -23,10 +23,13 @@ wheels/
 archive/
 dist/
 **/desktop
-
+*/watch_yaml_stdout.log
+*/watch_yaml_stderr.log
+*/last_validation.txt
 # Virtual Environments
 .tox/
 ENV/
-
+.venv/
 # IDE-specific files
 .idea/
+
