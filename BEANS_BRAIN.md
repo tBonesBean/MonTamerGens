@@ -31,6 +31,12 @@
     6.  🔮 Contrarian / Circumvental Modifiers
         _How something reacts oppositionally when boundary conditions or restraints are introduced_
 
+    7.  👑 Power / Authority Modifiers
+        _Social or metaphysical dominance_
+
+    8.  ☠️ Moral / Transgressive Modifiers
+        _Ethical alignment or taboo-breaking tendencies. How the world judges this behavior_
+
 ### Potential secondaries without trying to fit them into clusters yet:
 
 - type: Locus[\*](#a)
@@ -60,8 +66,13 @@
 - type: Rogue[\*](#a)
 - type: Zealot
 - type: Cyclic
-- type: Revert[\*](#a)
-- ... I'm sure there are more, but I have to force myself to move on for now.
+- type: Convalesce
+- type: Paradox
+- type: Aquiescent
+- type: Contrary
+- type: Zeitgeist[\*](#a)
+- type: Inverse
+- ... I'm sure there are more, but I have to force myself to move on for now. Dex will help me tighten up the terminology and linguistic structure.
   <br><br>
 
 <a id="a">\* </a>feel less impactful, not sure of the fit.
