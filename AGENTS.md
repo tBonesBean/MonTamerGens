@@ -7,9 +7,8 @@ _Master Instructions for both AI and Stupid Human Contributors_
 
 ## **MANDATORY PREREQUISITE:** Full Context Review
 
-Before making any contribution, you, the AI collaborator, **MUST:**
+Before making any contribution, you, the AI collaborator, **MUST:** _recursively_
 
-    **_recursively_**
     ☑️ READ,
     ☑️ COMPREHEND,
     ☑️ RETAIN,
