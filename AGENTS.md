@@ -7,12 +7,12 @@ _Master Instructions for both AI and Stupid Human Contributors_
 
 ## **MANDATORY PREREQUISITE:** Full Context Review
 
-Before making any contribution, you, the AI collaborator, **MUST:** _recursively_
+Before making any contribution, you, the AI collaborator, **MUST** (_recursively_):
 
-    ☑️ READ,
-    ☑️ COMPREHEND,
-    ☑️ RETAIN,
-    ☑️ and ADHERE
+☑️ READ,
+☑️ COMPREHEND,
+☑️ RETAIN,
+☑️ and ADHERE
 
 -to the entire contents of the [`ai_context`](./docs/ai_context/) directory.🗂️ This is not an optional step.
 
