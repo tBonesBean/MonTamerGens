@@ -12,6 +12,7 @@ INTELLIHUB (*OR*) docs/
 		├── design_bible.md
 		├── lore_core.md
 		├── naming_conventions.md
+  ├── type_glossary.md
 		├── appendices/
 		│   ├── A_appendix.md
 		│   ├── B_appendix.md
