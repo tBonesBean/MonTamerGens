@@ -1,41 +1,78 @@
 {
 	"gemini": {
-		"version": "3.1.0",
-		"settings": {
-			"theme": "dark",
-			"fontSize": 14,
-			"showLineNumbers": true,
-			"autoSaveInterval": 5,
-			"tabSize": 4,
-			"enableLinting": true,
-			"defaultLanguage": "en-US",
-			"backupEnabled": true,
-			"mcpsync": {
+		"servers": {
+			"intellihub": {
+				"type": "stdio",
+				"command": "python.exe",
+				"args": [
+					"intellihub_tool/stdio_server.py",
+					"--host",
+					"localhost",
+					"--port",
+					"8002",
+					"--reload",
+					"--mcp"
+				],
+				"allowedModels": [
+					"copilot/auto",
+					"copilot/claude-haiku-4.5",
+					"copilot/*",
+					"gemini/models/*",
+					"openai/*",
+					"copilot/grok-code-fast-1"
+				]
+			},
+			"defaultServer": "intellihub",
+			"version": "3.1.0",
+			"settings": {
+				"theme": "dark",
+				"fontSize": 14,
+				"showLineNumbers": true,
+				"autoSaveInterval": 5,
+				"tabSize": 4,
+				"enableLinting": true,
+				"defaultLanguage": "en-US",
+				"backupEnabled": true
+			},
+			"mcp": {
+				"server": "intellihub",
+				"syncInterval": 15,
+				"communicationProtocol": "stdio"
+			},
+			"serverSync": {
 				"enabled": true,
 				"interval": 10,
 				"lastSync": "2024-06-15T12:00:00Z",
-				"conflictResolution": "prompt",
-				"servers": [
-					{
-						"name": "PrimaryServer",
-						"url": "https://sync.geminiapp.com",
-						"authToken": "abcd1234efgh5678"
-					},
-					{
-						"name": "IntelliHub",
-						"url": "",
-					}
-				]
-			}
-		},
-		{"plugins": [
-			"spellChecker": true,
-			"autoComplete": true,
-			"codeFormatter": true,
-			"intelligentSuggestions": true,
-			"serverSync": true,
-			"versionControl": true
-		]
-	}
+				"conflictResolution": "prompt"
+			},
+			"versionControl": {
+				"enabled": true,
+				"autoCommit": false,
+				"commitInterval": 30,
+				"lastCommit": "2024-06-15T12:00:00Z"
+			},
+			"IntelliHub": {
+				"enabled": true,
+				"interval": 10,
+				"lastSync": "2024-06-15T12:00:00Z",
+				"conflictResolution": "prompt"
+			},
+			"CodeSync": {
+				"enabled": true,
+				"syncInterval": 20,
+				"communicationProtocol": "stdio"
+			},
+			"plugins": [
+				"spellChecker",
+				"autoComplete",
+				"codeFormatter",
+				"intelligentSuggestions",
+				"serverSync",
+				"versionControl",
+				"themeManager",
+				"mcpIntegration",
+				"intelliHubConnector"
+			]
+		}
 	}
 }

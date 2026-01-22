@@ -20,14 +20,12 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-
 archive/
 dist/
 **/desktop
-
 # Virtual Environments
 .tox/
 ENV/
-
+.venv/
 # IDE-specific files
 .idea/
