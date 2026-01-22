@@ -20,14 +20,14 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-
 archive/
 dist/
 **/desktop
-
+*/watch_yaml_stdout.log
+*/watch_yaml_stderr.log
 # Virtual Environments
 .tox/
 ENV/
-
+.venv/
 # IDE-specific files
 .idea/

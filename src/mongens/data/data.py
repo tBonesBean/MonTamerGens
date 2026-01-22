@@ -136,15 +136,21 @@ def _validate_seed_type_data(
         if tags is None:
             raise ValueError(f"'attributes.tags' is required for seed type '{name}'")
         if not isinstance(tags, list) or not all(isinstance(t, str) for t in tags):
-            raise ValueError(f"'attributes.tags' must be a list of strings for seed type '{name}'")
+            raise ValueError(
+                f"'attributes.tags' must be a list of strings for seed type '{name}'"
+            )
 
         notes = attributes.get("notes")
         if notes is None:
             raise ValueError(f"'attributes.notes' is required for seed type '{name}'")
         if not isinstance(notes, list) or not all(isinstance(n, str) for n in notes):
-            raise ValueError(f"'attributes.notes' must be a list of strings for seed type '{name}'")
+            raise ValueError(
+                f"'attributes.notes' must be a list of strings for seed type '{name}'"
+            )
         if len(notes) < 3:
-            raise ValueError(f"'attributes.notes' must include at least 3 entries for seed type '{name}'")
+            raise ValueError(
+                f"'attributes.notes' must include at least 3 entries for seed type '{name}'"
+            )
 
         habitats = entry.get("habitats", [])
         if habitats is not None:
@@ -295,6 +301,7 @@ def _validate_mods(
                     raise ValueError(
                         f"{label} mod '{mod_name}' has invalid synergy for {type_name}: {value}"
                     )
+
 
 # -- Baseline stats (can override per species later, after mutagens do # there thing and populate stat boxes)
 BASE_STATS: Dict[str, int] = {

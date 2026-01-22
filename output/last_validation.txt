@@ -1,0 +1,7 @@
+[2026-01-20 22:59:18] PASS
+Changed: src\mongens\data\types\secondary_types.yaml
+
+--- stdout ---
+YAML validation passed
+
+ExitCode: 0
