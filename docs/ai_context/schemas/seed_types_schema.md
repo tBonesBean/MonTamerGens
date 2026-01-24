@@ -27,13 +27,13 @@ Each entry must be a **mapping** with the following structure:
 
 ```yaml
 - name: <string> # REQUIRED
-  weight: <float> # OPTIONAL (default: 1.0)
+  weight: 1.0 # REQUIRED (default to 1.0 throughout the project, to be manually addressed at a later date)
   habitats: <list[string]> # REQUIRED
   attributes: # REQUIRED
-      mul: <dict> # OPTIONAL
-      add: <dict> # OPTIONAL
-	  tags: <list[string]> # OPTIONAL
-      notes: <list[string]> # OPTIONAL
+      mul: <dict> # REQUIRED
+      add: <dict> # REQUIRED 
+      tags: <list[string]> # REQUIRED
+      notes: <list[string]> # REQUIRED
 ```
 
 ---
@@ -56,7 +56,7 @@ Each entry must be a **mapping** with the following structure:
 name: Bastion
 ```
 
-## **3.2 weight (OPTIONAL)**
+## **3.2 weight (REQUIRED)**
 
 **Type:** float
 **Default:** `1.0`
@@ -66,6 +66,7 @@ name: Bastion
 
 -   Must be a numeric value.
 -   Must be greater than 0.
+-   ❗Default to 1.0 - applies to any and all 'weight:' fields anywhere in the project (temporary)
 
 **Example:**
 
@@ -143,7 +144,7 @@ add:
     -   `Resist:X` → adds to `meta.resist`
     -   `Weak:X` → adds to `meta.weak`
     -   `Ability:X` → adds to `meta.abilities`
-	-   `Trigger:X` → adds to `meta.triggers`
+    -   `Trigger:X` → adds to `meta.triggers`
 
 
 **Example:**
@@ -190,14 +191,14 @@ notes:
       SPD: 1.05
     add:
       HP: 10
-	tags:
-	  - Resist:Dread
-	  - Weak:Vessel
-	  - Ability:HealAlly
+    tags:
+      - Resist:Dread
+      - Weak:Vessel
+      - Ability:HealAlly
     notes:
       - Empathic
       - Adaptable
-	  - Intuitive
+      - Intuitive
 ```
 
 ---
@@ -232,7 +233,7 @@ After being loaded and processed by `data.py`, the collection of seed types is s
   "attributes": {
     "mul": {"SPDEF": 1.12, "SPD": 1.05},
     "add": {"HP": 10},
-	"tags": ["Resist:Dread", "Weak:Vessel", "Ability:HealAlly"],
+    "tags": ["Resist:Dread", "Weak:Vessel", "Ability:HealAlly"],
     "notes": ["Empathic", "Adaptive"]
   }
 }
