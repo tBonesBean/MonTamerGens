@@ -4,12 +4,11 @@
 			"type": "stdio",
 			"command": "python.exe",
 			"args": [
-				"F:\\Repos\\IntelliHubMCP\\intellihub_tool\\stdio_server.py",
+				"C:\\Repos\\IntelliHubMCP\\intellihub_tool\\stdio_server.py",
 				"--host",
 				"localhost",
 				"--port",
 				"8002",
-				"--reload",
 				"--mcp"
 			]
 		},
@@ -17,12 +16,11 @@
 			"type": "stdio",
 			"command": "python.exe",
 			"args": [
-				"F:\\Repos\\IntelliHubMCP\\intellihub_tool\\server.py",
+				"C:\\Repos\\IntelliHubMCP\\intellihub_tool\\server.py",
 				"--host",
 				"localhost",
 				"--port",
 				"8001",
-				"--path",
 				"/mcp"
 			]
 		}
