@@ -1,16 +1,66 @@
-- type: Axiom
-- type: Azimuth
-- type: Bastion
-- type: Bloom
-- type: Echo
-- type: Flow
-- type: Geist
-- type: Idol
-- type: Mire
-- type: Nadir
-- type: Oracle
-- type: Rift
-- type: Spur
-- type: Vessel
-- type: Zenith
-- type: Fracture
+primary_types:
+  Axiom:
+    cluster: STRUCTURE
+    summary: "Law, rule, inevitability"
+  Bastion:
+    cluster: STRUCTURE
+    summary: "Endurance, refusal to yield"
+  Vessel:
+    cluster: STRUCTURE
+    summary: "Capacity, containment, unrealized potential"
+  Nadir:
+    cluster: STRUCTURE
+    summary: "Terminal collapse, lowest bound"
+  Zenith:
+    cluster: STRUCTURE
+    summary: "Culmination, apex, realization"
+
+  Spur:
+    cluster: DYNAMICS
+    summary: "Impulse, acceleration magnitude"
+  Flow:
+    cluster: DYNAMICS
+    summary: "Adaptation, continuity, redirection"
+  Rift:
+    cluster: DYNAMICS
+    summary: "Discontinuity, paradox, rupture"
+  Azimuth:
+    cluster: DYNAMICS
+    summary: "Orientation, bearing, vector without destination"
+  Fracture:
+    cluster: DYNAMICS
+    summary: "Strain, latent failure, pre-collapse instability"
+
+  Bloom:
+    cluster: EXPRESSION
+    summary: "Growth, vitality, renewal"
+  Echo:
+    cluster: EXPRESSION
+    summary: "Memory, recurrence, resonance"
+  Idol:
+    cluster: EXPRESSION
+    summary: "Belief, projection, attention"
+  Oracle:
+    cluster: EXPRESSION
+    summary: "Pattern perception, foresight without certainty"
+  Geist:
+    cluster: EXPRESSION
+    summary: "Absence, liminality, threshold states"
+
+
+Axiom
+Azimuth
+Bastion
+Bloom
+Echo
+Flow
+Geist
+Idol
+Mire
+Nadir
+Oracle
+Rift
+Spur
+Vessel
+Zenith
+Fracture

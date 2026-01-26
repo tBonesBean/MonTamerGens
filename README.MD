@@ -19,9 +19,9 @@ This project is a Python package for procedurally generating fantasy monster dat
 - **Mutagens**: Apply "mutagens" (major and utility) to generate unique "wild" instances with special stats, tags, and abilities.
 - **Re-roll Attributes**: Fine-tune generated monsters by re-rolling specific attributes like traits or major mutagens.
 - **Multiple Output Formats**:
-    - **Canonical Dex Entries**: Generate Pokedex-style entries that describe the pure, base form of a species.
-    - **Unique Instances**: Generate the raw data for a fully randomized "wild" monster, perfect for in-game encounters.
-    - **AI Art Prompts**: Convert monster data into a detailed, style-compliant prompt for image models like DALL-E or Stable Diffusion.
+  - **Canonical Dex Entries**: Generate Pokedex-style entries that describe the pure, base form of a species.
+  - **Unique Instances**: Generate the raw data for a fully randomized "wild" monster, perfect for in-game encounters.
+  - **AI Art Prompts**: Convert monster data into a detailed, style-compliant prompt for image models like DALL-E or Stable Diffusion.
 - **Powerful Command-Line Interface**: A rich CLI with subcommands for accessing all of the generator's features.
 
 ## Installation
