@@ -1,0 +1,22 @@
+version: 0.1
+
+primary_clusters:
+    STRUCTURAL:
+        label: 'Positional / Structural'
+        question: 'Where does this sit?'
+        tagline: 'Bounds, load, inevitability'
+
+    DYNAMIC:
+        label: 'Kinetic / Dynamic'
+        question: 'How does this move?'
+        tagline: 'Momentum, disruption, change'
+
+    POTENTIAL:
+        label: 'Potential / Expressive'
+        question: 'What could be?'
+        tagline: 'Capacity, recursion, foresight'
+
+    RESIDUAL:
+        label: 'Residual / Remnant'
+        question: 'What remains?'
+        tagline: 'Persistence, decay, aftermath'

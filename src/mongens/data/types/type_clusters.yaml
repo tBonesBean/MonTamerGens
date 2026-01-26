@@ -1,0 +1,38 @@
+clusters:
+    STRUCTURE:
+        label: Structure
+        tagline: 'Limits, constraint, load'
+        verbs: ['bind', 'contain', 'endure', 'enforce']
+        beats: DYNAMICS
+        loses_to: EXPRESSION
+
+    DYNAMICS:
+        label: Dynamics
+        tagline: 'Motion, disruption, transformation'
+        verbs: ['shift', 'rupture', 'accelerate', 'erode']
+        beats: EXPRESSION
+        loses_to: STRUCTURE
+
+    EXPRESSION:
+        label: Expression
+        tagline: 'Meaning, persistence, interpretation'
+        verbs: ['reframe', 'haunt', 'prophesy', 'bloom']
+        beats: STRUCTURE
+        loses_to: DYNAMICS
+version: 0.1
+
+secondary_clusters:
+  IMPETUS:
+    label: "Impetus"
+    role: "Applied pressure"
+    tagline: "Forward force, momentum, continuation"
+
+  VEIL:
+    label: "Veil"
+    role: "Interference"
+    tagline: "Refraction, obscuring, redirection without destruction"
+
+  HOLDFAST:
+    label: "Holdfast"
+    role: "Inertial resistance"
+    tagline: "Local commitment, persistence, refusal through presence"

@@ -1,16 +1,50 @@
-- type: Axiom
-- type: Azimuth
-- type: Bastion
-- type: Bloom
-- type: Echo
-- type: Flow
-- type: Geist
-- type: Idol
-- type: Mire
-- type: Nadir
-- type: Oracle
-- type: Rift
-- type: Spur
-- type: Vessel
-- type: Zenith
-- type: Fracture
+version: 0.1
+
+rules:
+    one_primary_type_per_monster: true
+    primary_type_changes_in_combat: false
+
+primary_types:
+    # STRUCTURAL
+    Axiom:
+        cluster: STRUCTURAL
+        summary: 'Law, rule, inevitability'
+    Nadir:
+        cluster: STRUCTURAL
+        summary: 'Terminal collapse, lowest bound'
+    Zenith:
+        cluster: STRUCTURAL
+        summary: 'Culmination, apex, realized limit'
+
+    # DYNAMIC
+    Spur:
+        cluster: DYNAMIC
+        summary: 'Impulse, sudden acceleration'
+    Flux:
+        cluster: DYNAMIC
+        summary: 'Continuous change, instability'
+    Surge:
+        cluster: DYNAMIC
+        summary: 'Runaway escalation, overflow'
+
+    # POTENTIAL
+    Fractal:
+        cluster: POTENTIAL
+        summary: 'Recursive pattern, scale-invariant possibility'
+    Vessel:
+        cluster: POTENTIAL
+        summary: 'Capacity, containment, unrealized potential'
+    Oracle:
+        cluster: POTENTIAL
+        summary: 'Pattern perception, foresight without certainty'
+
+    # RESIDUAL
+    Echo:
+        cluster: RESIDUAL
+        summary: 'Memory, recurrence, resonance'
+    Relic:
+        cluster: RESIDUAL
+        summary: 'Persisting artifact, history made physical'
+    Mire:
+        cluster: RESIDUAL
+        summary: 'Stagnation, decay, suffocation'

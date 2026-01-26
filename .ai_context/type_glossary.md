@@ -191,19 +191,19 @@ Use this glossary as:
 
 ## NADIR — _Collapse, Depth, Final Limit_
 
-**Core Meaning:** 
+**Core Meaning:**
 
-**Core Meaning:** 
+**Core Meaning:**
 
-**Cognitive Axis:** 
+**Cognitive Axis:**
 
 **Naming Language:**
 
-- Prefixes: 
+- Prefixes:
 - Stems:
-- Suffixes: 
+- Suffixes:
 
-**Narrative Flavor:** 
+**Narrative Flavor:**
 
 ---
 
@@ -215,70 +215,70 @@ _(NOW 16 TOTAL PRIMARY TYPES)_
 - 4 Distinct Type Clusters (Non-mechanical, Canonical):
     - 4 Types in Each Cluster
 
-                  1.  **Structural**
-                  	- Axiom
-                  	- Bastion
-                  	- Vessel
-                  	- Nadir
+                    1.  **Structural**
+                    	- Axiom
+                    	- Bastion
+                    	- Vessel
+                    	- Nadir
 
-              		Commonality:
-              		These types define limits — what cannot be exceeded, escaped, or ignored.
+                		Commonality:
+                		These types define limits — what cannot be exceeded, escaped, or ignored.
 
-              		Interference idea:
-              			Lumen in this cluster resists change.
-              			World events might feel heavy, static, or oppressive when these types co-locate.
-
-
-                  2.  **Vector**
-                  	- Spur
-                  	- Flow
-                  	- Rift
-                  	- Azimuth
-
-              		Commonality:
-              		These types define motion, not results.
-
-              		Interference idea:
-              		When multiple of these coexist:
-              		- paths open and close
-              		- terrain shifts
-              		- monsters migrate
-              		- evolution triggers via movement, not combat
+                		Interference idea:
+                			Lumen in this cluster resists change.
+                			World events might feel heavy, static, or oppressive when these types co-locate.
 
 
-                  3.  **Residual**
-                  	- Echo
-                  	- Mire
-                  	- Geist
-                  	- Fracture
+                    2.  **Vector**
+                    	- Spur
+                    	- Flow
+                    	- Rift
+                    	- Azimuth
 
-              		Commonality:
-              		These types define aftermath — the world after something happened.
+                		Commonality:
+                		These types define motion, not results.
 
-              		Interference idea:
-              		Zones dominated by this cluster could:
-              		- repeat encounters
-              		- spawn variants
-              		- blur time or identity
-              		- alter naming / Dex tone automatically
-
-
-                  4.  **Expressive**
-                  	- Zenith
-                  	- Oracle
-                  	- Idol
-                  	- Bloom
+                		Interference idea:
+                		When multiple of these coexist:
+                		- paths open and close
+                		- terrain shifts
+                		- monsters migrate
+                		- evolution triggers via movement, not combat
 
 
-              		Commonality:
-              		These types define interpretation — not mechanics, but meaning.
+                    3.  **Residual**
+                    	- Echo
+                    	- Mire
+                    	- Geist
+                    	- Fracture
 
-              		Interference idea:
-              		High concentrations could:
-              		- attract attention
-              		- trigger cult behavior
-              		- bias narrative outcomes
-              		- alter player choice framing
+                		Commonality:
+                		These types define aftermath — the world after something happened.
+
+                		Interference idea:
+                		Zones dominated by this cluster could:
+                		- repeat encounters
+                		- spawn variants
+                		- blur time or identity
+                		- alter naming / Dex tone automatically
+
+
+                    4.  **Expressive**
+                    	- Zenith
+                    	- Oracle
+                    	- Idol
+                    	- Bloom
+
+
+                		Commonality:
+                		These types define interpretation — not mechanics, but meaning.
+
+                		Interference idea:
+                		High concentrations could:
+                		- attract attention
+                		- trigger cult behavior
+                		- bias narrative outcomes
+                		- alter player choice framing
 
 ## IMMEDIATELY APPLY THESE CHANGES TO ALL RELEVANT DOCUMENTATION!!!!
 

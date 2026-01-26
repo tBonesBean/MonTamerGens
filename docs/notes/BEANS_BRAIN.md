@@ -79,36 +79,49 @@ _Cluster flavor:_ Attention‑drawing, narrative bias, belief‑driven outcomes.
 
 ---
 
-## IDEA for Secondary Types
+## IDEA: EXPAND PRIMARY TYPE SYSTEM TO INCLUDE CLUSTERS
+
+1. 🧭 Positional / Structural Modifiers
+   _Where something sits in a system_
+    - Axiom · Nadir · Zenith
+
+2. ⚙️ Dynamic / Energetic Modifiers
+   _How energy, change, or motion expresses_
+    - Spur · Flux · Surge
+
+3. 🧠 Potential / Expressive Modifiers
+   _How something aspires, projects, or manifests potential_
+    - Fractal · Vessel · Oracle
+
+4. 👤 Residual / Remnant Modifiers
+   _How something leaves traces, memories, or aftermaths_
+    - Echo · Relic · Mire
+
+### RESOLVED: EXPANDED PRIMARY TYPE SYSTEM: IDEA for Secondary Types
 
 - Primary and Secondary type isolation.
   primary != `seed.secondary_type`
   secondary != `seed.primary_type`
 
-- Type Clusters, same structure as primary type system, with altered and added content:
-    1.  🧭 Positional / Structural Modifiers
-        _Where something sits in a system_
+Type Clusters, same structure as primary type system, with altered and added content:
 
-    2.  ⚙️ Dynamic / Energetic Modifiers
-        _How energy, change, or motion expresses_
+1. 🧠 Role / Capability / Identity Modifiers
+   _How competent, trained, or shaped something is_
 
-    3.  🧠 Role / Capability / Identity Modifiers
-        _How competent, trained, or shaped something is_
+2. 🧪 State / Reactivity Modifiers
+   _How something responds or changes in different conditions_
 
-    4.  🧪 State / Reactivity Modifiers
-        _How something responds or changes in different conditions_
+3. 🌌 Abstract / Exotic Modifiers
+   _How something exists outside normal parameters_
 
-    5.  🌌 Abstract / Exotic Modifiers
-        _How something exists outside normal parameters_
+4. 🔮 Contrarian / Circumvental Modifiers
+   _How something reacts oppositionally when boundary conditions or restraints are introduced_
 
-    6.  🔮 Contrarian / Circumvental Modifiers
-        _How something reacts oppositionally when boundary conditions or restraints are introduced_
+5. 👑 Power / Authority Modifiers
+   _Social or metaphysical dominance_
 
-    7.  👑 Power / Authority Modifiers
-        _Social or metaphysical dominance_
-
-    8.  ☠️ Moral / Transgressive Modifiers
-        _Ethical alignment or taboo-breaking tendencies. How the world judges this behavior_
+6. ☠️ Moral / Transgressive Modifiers
+   _Ethical alignment or taboo-breaking tendencies. How the world judges this behavior_
 
 ### Potential secondaries without trying to fit them into clusters yet:
 
@@ -161,9 +174,9 @@ _Cluster flavor:_ Attention‑drawing, narrative bias, belief‑driven outcomes.
 
 ---
 
-#### **CHECKPOINT** Mulling it over...
+#### **CHECKPOINT** Mulling it over
 
-_2026-01-20_
+_*2026-01-20*_
 
 ---
 
@@ -177,43 +190,49 @@ _Where things sit. The architecture of reality._
 
 - **Nadir** (The lowest point)
 - **Zenith** (The highest point)
-- **Locus** (The specific point of focus)
-- **Nexus** (The connection point/hub)
+- **Anchor** (The specific point of focus)
+- **Nexus** (The connection hub, interface point)
+- **Axiom** (The origin point, foundational concept)
+- **Akasha** or **Akashic** (The eternal persistence of reality)
 
-### 2. 🧭 Dynamic / Energetic
+### 2. 🧭 Kinetic / Dynamic
 
 _How things move. The physics of reality._
 
 - **Spur** (Sudden, sharp acceleration)
 - **Pulse** (Rhythmic emission)
 - **Flux** (Constant, chaotic change)
-- **Drift** (Aimless motion)
-- **Shear** (Tearing motion)
+- **Surge** (Powerful, overwhelming motion)
+- **Drift** (Slow, aimless motion)
 
-### 3. 💯 Expressive / Actualize
+### 3. 💯 Potential / Expressive
 
-_How the inevitability of change is projected. The outcome of reality._
+_What can be. The unrealized possibilities._
 
+- **Burgeon** or **Bloom** (From nothing, it can spring forth)
 - **Oracle** (The speaker or vehicle of the immenent)
-- **Phenomena** (The inexplicable, unbelievable - yet witnessed)
-- **Zeitgeist** (The spirit of the times/moment)
+- **Idol** (The embodiment of belief)
+- **Vessel** (Vehicle for potential)
+- **Locus** (The focal point of potential)
+- **Charge** (The stored energy ready to be unleashed)
 
 ### 4. 👤 Residual / Remnant
 
 _What remains. The shadow of reality._
 
 - **Echo** (The repeating sound/memory)
-- **Scar** (The lasting mark of trauma)
-- **Akasha** (The eternal record)
-- **Revenant** (The returning entity)
+- **Mire** (The stagnation/decay)
+- **Fracture** (The broken remnant)
+- **Rift** (The lasting mark of trauma)
 - **Vestige** (The remaining trace/sign)
+- **Revenant** (The returning entity)
 
 ### 5. 🌌 Abstract / Exotic
 
 _What is outside. The metaphysical edge._
 
 - **Ethereal** (The spirit/non-matter)
-- **Vessel** (Vehicle for potential)
+
 - **Void** (Absence manifested)
 - **Veil** (The barrier between truths)
 
@@ -236,6 +255,8 @@ _How consequence is justified and reacted to. Friction within order._
 - **Dogma** (Collective perception)
 - **Empyreal** (The one who enforces the rule)
 - **Petulant** (The one who resists the rule)
+- **Akasha** (The eternal record)
+- **Zeitgeist** (The spirit of the times/moment)
 
 ### 8. ☠️ Moral / Transgressive
 
@@ -265,16 +286,13 @@ _How something feels/reacts. The condition._
 
 ### ? Growith / Increase
 
-_How something changes over time - especially as it pertains to growth vs decay. A position on a spectrum of increase/decrease_
-
-- **Mire** (The stagnation/decay)
 - **Flourish** (Consistent growth / typically favorable circumstances)
-- **Burgeon** (From nothing, it can spring forth)
 
 ### ?
 
 ---
 
+- **Shear** (Tearing motion)
 - **Surfeit** (State of excess/abundance)
 - **Dearth** (State of desperation/lacking)
 - **Convalesce** (Healing state)
@@ -309,3 +327,10 @@ The mega 'dense' lore vibe from the types in **Power** and **Moral** (Hegemon, P
 _2026-01-21T13:45:00Z_
 
 ---
+
+## IMPLEMENTED CHANGES SUMMARY:
+
+- Added a new section for "Implemented Changes Summary" at the end of the document.
+- Documented the decision to expand the primary type system to include clusters for better mental clarity.
+- Noted the distinction between "factions/alignments" and "types" for certain clusters (Power & Moral).
+- Clarified that "factions/alignments" are not types but rather "Orders" that can be attained.

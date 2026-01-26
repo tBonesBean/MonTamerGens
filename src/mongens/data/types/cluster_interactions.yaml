@@ -1,0 +1,61 @@
+interaction_model:
+    version: 0.1
+    rule: 'Primary cluster defines context; secondary cluster modifies interaction.'
+
+    by_primary_cluster:
+        STRUCTURAL:
+            FORCE:
+                incoming_damage_multiplier: 1.25
+                outgoing_damage_multiplier: 0.95
+                suppresses:
+                    - 'Passive:Stability'
+                    - 'Passive:Anchor'
+            FLUX:
+                incoming_damage_multiplier: 1.05
+                outgoing_damage_multiplier: 1.10
+                suppresses:
+                    - 'Passive:Fortify'
+            FORM:
+                incoming_damage_multiplier: 0.90
+                outgoing_damage_multiplier: 1.00
+                grants:
+                    - 'State:Braced'
+
+        DYNAMIC:
+            FORCE:
+                incoming_damage_multiplier: 1.10
+                outgoing_damage_multiplier: 1.20
+            FLUX:
+                incoming_damage_multiplier: 0.95
+                outgoing_damage_multiplier: 1.05
+                suppresses:
+                    - 'Passive:Momentum'
+            FORM:
+                incoming_damage_multiplier: 1.00
+                outgoing_damage_multiplier: 0.90
+
+        POTENTIAL:
+            FORCE:
+                incoming_damage_multiplier: 1.10
+                outgoing_damage_multiplier: 1.20
+            FLUX:
+                incoming_damage_multiplier: 0.95
+                outgoing_damage_multiplier: 1.05
+                suppresses:
+                    - 'Passive:Momentum'
+            FORM:
+                incoming_damage_multiplier: 1.00
+                outgoing_damage_multiplier: 0.90
+
+        RESIDUAL:
+            FORCE:
+                incoming_damage_multiplier: 1.20
+                outgoing_damage_multiplier: 0.85
+            FLUX:
+                incoming_damage_multiplier: 1.00
+                outgoing_damage_multiplier: 1.00
+            FORM:
+                incoming_damage_multiplier: 0.90
+                outgoing_damage_multiplier: 1.10
+                grants:
+                    - 'State:Resilient'

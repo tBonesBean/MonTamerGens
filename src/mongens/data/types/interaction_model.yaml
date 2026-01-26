@@ -1,0 +1,66 @@
+version: 0.1
+
+interaction_model:
+    rule: 'Primary cluster defines context; secondary cluster modifies interaction.'
+    invariants:
+        - 'Secondary effects may not override primary type or cluster.'
+        - 'Secondary effects may modify multipliers, suppress passives, or grant states.'
+
+    by_primary_cluster:
+        STRUCTURAL:
+            IMPETUS:
+                incoming_damage_multiplier: 1.25
+                notes: 'Structure yields under sustained applied pressure.'
+            VEIL:
+                incoming_damage_multiplier: 1.05
+                suppresses:
+                    - 'Passive:Stability'
+                    - 'Passive:Anchor'
+                notes: 'Interference can bypass certain stabilizing assumptions.'
+            HOLDFAST:
+                incoming_damage_multiplier: 0.90
+                grants:
+                    - 'State:Braced'
+                notes: 'Like meets like; local inertia reduces impact.'
+
+        DYNAMIC:
+            IMPETUS:
+                outgoing_damage_multiplier: 1.15
+                notes: 'Dynamics amplify pressure into action.'
+            VEIL:
+                outgoing_damage_multiplier: 1.05
+                suppresses:
+                    - 'Passive:Momentum'
+                notes: 'Interference disrupts chain behavior.'
+            HOLDFAST:
+                outgoing_damage_multiplier: 0.90
+                incoming_damage_multiplier: 1.00
+                notes: 'Holding still reduces dynamism; not a natural advantage.'
+
+        POTENTIAL:
+            IMPETUS:
+                incoming_damage_multiplier: 1.10
+                notes: 'Unrealized states can be forced into premature resolution.'
+            VEIL:
+                incoming_damage_multiplier: 0.95
+                grants:
+                    - 'State:Uncertain'
+                notes: 'Interference preserves possibility; outcomes become less direct.'
+            HOLDFAST:
+                incoming_damage_multiplier: 0.90
+                notes: 'Capacity + refusal is resilient.'
+
+        RESIDUAL:
+            IMPETUS:
+                incoming_damage_multiplier: 0.95
+                notes: 'Residuals persist; brute pressure is less final.'
+            VEIL:
+                incoming_damage_multiplier: 0.90
+                suppresses:
+                    - 'Passive:Afterimage'
+                notes: 'Interference can disrupt persistence patterns.'
+            HOLDFAST:
+                incoming_damage_multiplier: 1.00
+                grants:
+                    - 'State:Steady'
+                notes: 'Residual endurance is already slow; holdfast is neutral.'
