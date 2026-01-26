@@ -1,4 +1,6 @@
-clusters:
+version: 0.
+
+primary_clusters:
     STRUCTURE:
         label: Structure
         tagline: 'Limits, constraint, load'
@@ -19,20 +21,19 @@ clusters:
         verbs: ['reframe', 'haunt', 'prophesy', 'bloom']
         beats: STRUCTURE
         loses_to: DYNAMICS
-version: 0.1
 
 secondary_clusters:
-  IMPETUS:
-    label: "Impetus"
-    role: "Applied pressure"
-    tagline: "Forward force, momentum, continuation"
+    IMPETUS:
+        label: 'Impetus'
+        role: 'Applied pressure'
+        tagline: 'Forward force, momentum, continuation'
 
-  VEIL:
-    label: "Veil"
-    role: "Interference"
-    tagline: "Refraction, obscuring, redirection without destruction"
+    VEIL:
+        label: 'Veil'
+        role: 'Interference'
+        tagline: 'Refraction, obscuring, redirection without destruction'
 
-  HOLDFAST:
-    label: "Holdfast"
-    role: "Inertial resistance"
-    tagline: "Local commitment, persistence, refusal through presence"
+    HOLDFAST:
+        label: 'Holdfast'
+        role: 'Inertial resistance'
+        tagline: 'Local commitment, persistence, refusal through presence'
