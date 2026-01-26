@@ -30,7 +30,7 @@ This project is managed with modern Python packaging standards using `pyproject.
 
 To install the package for development, clone the repository and run the following command in the project root:
 
-```bash
+```powershell
 pip install -e .[dev]
 ```
 
@@ -49,7 +49,7 @@ Generates the "canonical" Pokedex-style entry for a species (base stats + type b
 
 **Examples:**
 
-```shell
+```powershell
   # Generate a single dex entry for a random monster
 mongen dexentry
 
@@ -66,7 +66,7 @@ Generates the raw data for a single "wild" monster instance, including randomize
 
 **Examples:**
 
-```shell
+```powershell
   # Get the raw data for one fully randomized monster
 mongen unique
 
@@ -83,7 +83,7 @@ Re-rolls attributes of a previously generated monster. This is useful for fine-t
 
 **Examples:**
 
-```shell
+```powershell
   # Re-roll the traits of a monster with a given PIN
   mongen reroll <PIN> --traits
 
@@ -99,7 +99,7 @@ Generates a detailed prompt for an AI image generator based on a fully realized 
 
 **Examples:**
 
-```shell
+```powershell
   # Generate a prompt for a random monster
 mongen artprompt
 
@@ -115,7 +115,7 @@ Lists the available data used by the generator.
 
 **Examples:**
 
-```shell
+```powershell
   # List all available primary monster types
 mongen list --types
 
