@@ -1,6 +1,6 @@
 # Type System Overview
 
-This document captures the **current mental model and architectural direction** of the MonTamerGens type system as of this checkpoint. It is not a final specification, but a *coherent snapshot* of intent, ontology, and system boundaries.
+This document captures the **current mental model and architectural direction** of the MonTamerGens type system as of this checkpoint. It is not a final specification, but a _coherent snapshot_ of intent, ontology, and system boundaries.
 
 ---
 
@@ -8,11 +8,12 @@ This document captures the **current mental model and architectural direction** 
 
 The type system is intentionally split into **layers with different responsibilities**:
 
-- **Primary Types** describe *what a monster is* at an ontological level.
+- **Primary Types** describe _what a monster is_ at an ontological level.
 - **Primary Clusters** group those truths into existential categories.
-- **Secondary Types (Clusters)** describe *how force interacts* with those truths.
+- **Secondary Types (Clusters)** describe _how force interacts_ with those truths.
 
 This separation exists to:
+
 - avoid elemental reductionism
 - preserve lore depth
 - enable future systems (breeding, wounds, Lumen, evolution)
@@ -29,44 +30,52 @@ Primary clusters answer **fundamental questions about existence**. They are not 
 
 ### The Four Primary Clusters
 
-#### 🧱 STRUCTURAL — *Where things sit*
+#### 🧱 STRUCTURAL — _Where things sit_
+
 - Bounds, limits, load, inevitability
 - Concerned with position, law, and collapse
 
 Representative Primary Types:
+
 - Axiom
 - Nadir
 - Zenith
 
 ---
 
-#### ⚙️ DYNAMIC — *How things move*
+#### ⚙️ DYNAMIC — _How things move_
+
 - Motion, disruption, pressure, instability
 - Concerned with change, momentum, rupture
 
 Representative Primary Types:
+
 - Spur
 - Flux
 - Surge
 
 ---
 
-#### 🌱 POTENTIAL — *What could be*
+#### 🌱 POTENTIAL — _What could be_
+
 - Capacity, recursion, foresight
 - Concerned with unrealized states and pattern emergence
 
 Representative Primary Types:
+
 - Fractal
 - Vessel
 - Oracle
 
 ---
 
-#### 🕯 RESIDUAL — *What remains*
+#### 🕯 RESIDUAL — _What remains_
+
 - Persistence, decay, memory, aftermath
 - Concerned with time, residue, and consequence
 
 Representative Primary Types:
+
 - Echo
 - Relic
 - Mire
@@ -80,7 +89,7 @@ Representative Primary Types:
 - Primary Types define narrative truth, evolution constraints, and long-term identity.
 - Primary Clusters do **not** participate in simple rock–paper–scissors logic.
 
-Primary interactions are *contextual*, not oppositional.
+Primary interactions are _contextual_, not oppositional.
 
 ---
 
@@ -89,6 +98,7 @@ Primary interactions are *contextual*, not oppositional.
 Secondary clusters exist to model **force, resistance, and interference** without redefining identity.
 
 They are intentionally:
+
 - more physical
 - more mechanical
 - more mutable
@@ -97,11 +107,13 @@ They are intentionally:
 ### Current Working Triad (Provisional)
 
 #### 🟥 IMPETUS
+
 - Applied force
 - Forward pressure
 - Momentum that continues because it has begun
 
 Used for:
+
 - damage amplification
 - initiative pressure
 - combo inheritance
@@ -109,10 +121,12 @@ Used for:
 ---
 
 #### 🟦 VEIL
+
 - Interference without destruction
 - Obscuring, refracting, redirecting
 
 Used for:
+
 - passive suppression
 - redirection
 - information distortion
@@ -120,11 +134,13 @@ Used for:
 ---
 
 #### 🟩 HOLDFAST
+
 - Local resistance
 - Inertial presence
 - Refusal through persistence
 
 Used for:
+
 - damage mitigation
 - integrity preservation
 - defensive states
@@ -142,18 +158,19 @@ Combat interactions follow a **context → modifier** model:
 
 ```yaml
 interaction:
-  primary_cluster: STRUCTURAL
-  secondary_cluster:
-    IMPETUS:
-      incoming_damage_multiplier: 1.25
-    VEIL:
-      suppresses:
-        - Passive:Stability
-    HOLDFAST:
-      incoming_damage_multiplier: 0.9
+    primary_cluster: STRUCTURAL
+    secondary_cluster:
+        IMPETUS:
+            incoming_damage_multiplier: 1.25
+        VEIL:
+            suppresses:
+                - Passive:Stability
+        HOLDFAST:
+            incoming_damage_multiplier: 0.9
 ```
 
 Key rules:
+
 - Secondary effects may modify damage, suppress passives, or grant states
 - Secondary effects may **never** override Primary identity
 
@@ -161,8 +178,8 @@ Key rules:
 
 ## 6. Guardrails (Critical Invariants)
 
-- Primary Types define *truth*, not tactics
-- Secondary Types define *interaction*, not essence
+- Primary Types define _truth_, not tactics
+- Secondary Types define _interaction_, not essence
 - No monster ever has two Primary Types
 - Secondary clusters must never collapse back into elemental identity
 
@@ -177,6 +194,7 @@ Key rules:
 This system is considered **future-safe but intentionally unfinished**.
 
 Next steps may include:
+
 - YAML formalization
 - interaction simulations
 - secondary subtypes
@@ -185,5 +203,4 @@ Next steps may include:
 
 ---
 
-*Checkpoint reached.*
-
+_Checkpoint reached._
