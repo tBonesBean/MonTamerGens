@@ -1,0 +1,42 @@
+version: 0.1
+
+# Optional layer: biases secondary type selection AFTER a secondary cluster is chosen.
+# Keys are primary types. Values are per-secondary-cluster weight nudges.
+
+type_affinities:
+  # Example primary types — replace with your canon list
+  Axiom:
+    secondary_type_bias:
+      HOLDFAST:
+        favored: [Bulwark, Anchor]
+        strained: [Surge]
+      VEIL:
+        favored: [Ward]
+        strained: [Imposter]
+      IMPETUS:
+        favored: [Shear]
+        strained: [Pulse]
+
+  Azimuth:
+    secondary_type_bias:
+      IMPETUS:
+        favored: [Surge, Drive]
+        strained: [Pulse]
+      VEIL:
+        favored: [Refraction]
+        strained: [Ward]
+      HOLDFAST:
+        favored: [Anchor]
+        strained: [Inert]
+
+  Echo:
+    secondary_type_bias:
+      VEIL:
+        favored: [Veil, Imposter]
+        strained: [Ward]
+      IMPETUS:
+        favored: [Pulse]
+        strained: [Shear]
+      HOLDFAST:
+        favored: [Tenacity]
+        strained: [Bulwark]

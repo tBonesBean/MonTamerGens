@@ -1,6 +1,6 @@
 from typing import Dict, Any, Tuple, Iterable
 from pathlib import Path
-import yaml
+import pyyaml
 
 
 def _load_yaml(filename: str) -> Any:
@@ -24,8 +24,8 @@ def _load_yaml(filename: str) -> Any:
 
 def _load_seed_types_data(filename: str) -> Tuple[Dict[str, Any], Dict[str, float]]:
     """
-            Load seed type definitions from a YAML file.
-            The YAML file should contain a sequence (list) of mappings, each with a
+        Load seed type definitions from a YAML file.
+    The YAML file should contain a sequence (list) of mappings, each with a
     required "name" key. This function returns a tuple of two dictionaries:
     - types_data: mapping of name -> full item dict
     - types_weighted: mapping of name -> weight (float)
@@ -302,6 +302,43 @@ def _validate_mods(
                         f"{label} mod '{mod_name}' has invalid synergy for {type_name}: {value}"
                     )
 
+
+def _validate_type_system(ts: Dict[str, Any]) -> None:
+    pcs = ts["primary_clusters"].get("primary_clusters", {})
+    pts = ts["primary_types"].get("primary_types", {})
+
+    # primary cluster keys must exist
+    for tname, tdef in pts.items():
+        cluster = tdef.get("cluster")
+        if cluster not in pcs:
+            raise ValueError(
+                f"Primary type '{tname}' references unknown cluster '{cluster}'"
+            )
+
+
+# -- Type-system manifest (YAML-first, runtime-ingested)
+TYPE_SYSTEM_MANIFEST = {
+    "primary_clusters": "types/primary_clusters.yaml",
+    "primary_types": "types/primary_types.yaml",
+    "secondary_clusters": "types/secondary_clusters.yaml",
+    "secondary_types": "types/secondary_types.yaml",
+    "type_affinities": "types/type_affinities.yaml",
+    "type_clusters": "types/type_clusters.yaml",
+    "interaction_model": "types/interaction_model.yaml",
+    # Choose one canonical interaction file long-term:
+    # "cluster_interactions": "types/cluster_interactions.yaml",
+}
+
+
+def _load_manifest(manifest: Dict[str, str]) -> Dict[str, Any]:
+    loaded: Dict[str, Any] = {}
+    for key, relpath in manifest.items():
+        loaded[key] = _load_yaml(relpath)
+    return loaded
+
+
+TYPE_SYSTEM = _load_manifest(TYPE_SYSTEM_MANIFEST)
+_validate_type_system(TYPE_SYSTEM)
 
 # -- Baseline stats (can override per species later, after mutagens do # there thing and populate stat boxes)
 BASE_STATS: Dict[str, int] = {

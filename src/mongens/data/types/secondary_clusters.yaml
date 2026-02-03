@@ -1,0 +1,27 @@
+secondary_clusters:
+    IMPETUS:
+        description: >
+            Applied force and forward momentum.
+            Effects that escalate, propagate, or inherit motion once begun.
+        design_bias:
+            - damage amplification
+            - tempo pressure
+            - combo inheritance
+
+    VEIL:
+        description: >
+            Interference without destruction.
+            Effects that obscure, redirect, or distort interaction outcomes.
+        design_bias:
+            - redirection
+            - suppression
+            - information distortion
+
+    HOLDFAST:
+        description: >
+            Local resistance and inertial persistence.
+            Effects that mitigate, endure, or refuse displacement.
+        design_bias:
+            - damage mitigation
+            - integrity preservation
+            - defensive states

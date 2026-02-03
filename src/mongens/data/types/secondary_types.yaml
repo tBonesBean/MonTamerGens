@@ -1,16 +1,51 @@
-- type: Locus
-- type: Shear
-- type: Dread
-- type: Imposter
-- type: Catalyst
-- type: Nexus
-- type: Paragon
-- type: Profane
-- type: Adept
-- type: Ward
-- type: Inert
-- type: Pulse
-- type: Abundaance
-- type: Surge
-- type: Hegemon
-- type: Pious
+secondary_types:
+    # IMPETUS
+    Surge:
+        cluster: IMPETUS
+        notes: Sudden acceleration; burst application of force
+
+    Shear:
+        cluster: IMPETUS
+        notes: Force applied across boundaries; tearing or splitting effects
+
+    Pulse:
+        cluster: IMPETUS
+        notes: Rhythmic emission of force; repetition over magnitude
+
+    Drive:
+        cluster: IMPETUS
+        notes: Sustained forward pressure; momentum that compounds over time
+
+    # VEIL
+    Ward:
+        cluster: VEIL
+        notes: Structured interference; imposed rules on interaction
+
+    Refraction:
+        cluster: VEIL
+        notes: Redirection of effects without absorption
+
+    Imposter:
+        cluster: VEIL
+        notes: False signal; misattribution of source or target
+
+    Veil:
+        cluster: VEIL
+        notes: Obscuration of state, intent, or presence
+
+    # HOLDFAST
+    Inert:
+        cluster: HOLDFAST
+        notes: Resistance through non-response; dampening of effects
+
+    Anchor:
+        cluster: HOLDFAST
+        notes: Positional inertia; refusal to be displaced
+
+    Bulwark:
+        cluster: HOLDFAST
+        notes: Layered endurance; structured defense
+
+    Tenacity:
+        cluster: HOLDFAST
+        notes: Persistence under attrition; refusal to collapse

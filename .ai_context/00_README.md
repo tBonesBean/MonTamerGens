@@ -37,7 +37,8 @@ ai_context/
 ├── appendices/
 │   ├── A_appendix.md  <- Lore Glossary
 │   ├── B_appendix.md  <- MonTamerGens File Tree
-│   └── C_appendix.md  <- Encyclopedia of 'Monster Types'
+│   ├── C_appendix.md  <- Encyclopedia of 'Monster Types'
+│   └── D_appendix.md  <- Project File Tree (Focused)
 ├── module_purposes/
 │   ├── 00_README.md
 │   ├── cli.md
@@ -92,6 +93,10 @@ Full IntelliHub file tree for navigation and onboarding.
 ### **[appendices/C_appendix.md](appendices/C_appendix.md)**
 
 Encyclopedia of 'Types' and their place within the lore.
+
+### **[appendices/D_appendix.md](appendices/D_appendix.md)**
+
+Focused project file tree for the MonTamerGens repository.
 
 ### **[module_purposes/](module_purposes/00_README.md)**
 
