@@ -8,6 +8,7 @@ interaction_model:
 
     by_primary_cluster:
         STRUCTURAL:
+            # Secondary Cluster Effects on STRUCTURAL Primary Cluster
             IMPETUS:
                 incoming_damage_multiplier: 1.25
                 notes: 'Structure yields under sustained applied pressure.'
@@ -24,6 +25,7 @@ interaction_model:
                 notes: 'Like meets like; local inertia reduces impact.'
 
         DYNAMIC:
+            # Secondary Cluster Effects on DYNAMIC Primary Cluster
             IMPETUS:
                 outgoing_damage_multiplier: 1.15
                 notes: 'Dynamics amplify pressure into action.'
@@ -38,6 +40,7 @@ interaction_model:
                 notes: 'Holding still reduces dynamism; not a natural advantage.'
 
         POTENTIAL:
+            # Secondary Cluster Effects on POTENTIAL Primary Cluster
             IMPETUS:
                 incoming_damage_multiplier: 1.10
                 notes: 'Unrealized states can be forced into premature resolution.'
@@ -51,6 +54,7 @@ interaction_model:
                 notes: 'Capacity + refusal is resilient.'
 
         RESIDUAL:
+            # Secondary Cluster Effects on RESIDUAL Primary Cluster
             IMPETUS:
                 incoming_damage_multiplier: 0.95
                 notes: 'Residuals persist; brute pressure is less final.'
