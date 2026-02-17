@@ -40,5 +40,6 @@
 	},
 	"[markdown]": {
 		"editor.formatOnSave": false
-	}
+	},
+	"python.languageServer": "None"
 }
