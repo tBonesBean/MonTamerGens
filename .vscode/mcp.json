@@ -1,10 +1,18 @@
 {
-	"servers": {
-		"IntelliHub_stdio": {
-			"type": "stdio",
-			"command": "python",
+	"mcpServers": {
+		"Intellihub": {
+			"command": "C:\\PyDistro\\python.exe",
 			"args": [
-				"C:\\Services\\IntelliHubMCP\\intellihub_tool\\stdio_server.py"
+				"C:\\Services\\IntelliHub\\intellihub_tool\\server.py",
+				"--host",
+				"localhost",
+				"--reload"
+			]
+		},
+		"StdIO": {
+			"command": "C:\\PyDistro\\python.exe",
+			"args": [
+				"C:\\Services\\IntelliHub\\intellihub_tool\\stdio_server.py"
 			]
 		}
 	}
