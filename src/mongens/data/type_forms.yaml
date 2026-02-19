@@ -1,3 +1,5 @@
+# Visual form archetypes per canonical Primary Type (12 types)
+
 Axiom:
     Lattice:
         weight: 1.0
@@ -11,146 +13,6 @@ Axiom:
     Constellation:
         weight: 1.0
         notes: Distributed form; body defined by relation, not mass
-
-Spur:
-    Surge:
-        weight: 1.0
-        notes: Explosive posture, forward momentum, no restraint
-    Talon:
-        weight: 1.0
-        notes: Grasping, striking extremities emphasized
-    Breaker:
-        weight: 1.0
-        notes: Body shaped for impact and collision
-    Flareframe:
-        weight: 1.0
-        notes: Sharp angles, aggressive silhouette deformation
-
-Echo:
-    Relic:
-        weight: 1.0
-        notes: Worn, layered, time-scarred physicality
-    Loop:
-        weight: 1.0
-        notes: Repeating anatomy, mirrored or recursive features
-    Imprint:
-        weight: 1.0
-        notes: Presence defined by marks left behind
-    Ossuary:
-        weight: 1.0
-        notes: Hollowed mass, internal voids, memory-weighted form
-
-Flow:
-    Current:
-        weight: 1.0
-        notes: Streamlined, adaptive, motion-defined shape
-    Weave:
-        weight: 1.0
-        notes: Interconnected limbs or tendrils, cooperative geometry
-    Symbiosis:
-        weight: 1.0
-        notes: Multiple components functioning as one
-    Driftframe:
-        weight: 1.0
-        notes: Light, buoyant posture; effortless transitions
-
-Bastion:
-    Bulwark:
-        weight: 1.0
-        notes: Heavy plating, defensive mass, grounded stance
-    Citadel:
-        weight: 1.0
-        notes: Vertical fortification, immovable presence
-    Anchor:
-        weight: 1.0
-        notes: Low center of gravity, stability-first anatomy
-    Rampart:
-        weight: 1.0
-        notes: Broad silhouette, shield-like proportions
-
-Rift:
-    Fracture:
-        weight: 1.0
-        notes: Asymmetry, broken lines, unstable geometry
-    Shard:
-        weight: 1.0
-        notes: Jagged extensions, protrusions, sudden edges
-    Paradox:
-        weight: 1.0
-        notes: Conflicting body logic; parts disagree
-    Slipform:
-        weight: 1.0
-        notes: Misaligned posture, spatial disobedience
-
-Mire:
-    Husk:
-        weight: 1.0
-        notes: Degraded exterior, sagging or eroded form
-    Sink:
-        weight: 1.0
-        notes: Slumped posture, gravity-dominated mass
-    Tangle:
-        weight: 1.0
-        notes: Knotted limbs, obstructed motion
-    Residuum:
-        weight: 1.0
-        notes: Clinging textures, unresolved buildup
-
-Idol:
-    Icon:
-        weight: 1.0
-        notes: Visually striking, symbolic proportions
-    Beacon:
-        weight: 1.0
-        notes: Upward-reaching, attention-drawing form
-    Mantle:
-        weight: 1.0
-        notes: Draped layers, ceremonial framing
-    Crestform:
-        weight: 1.0
-        notes: Emblematic shapes, exaggerated features
-
-Geist:
-    Wisp:
-        weight: 1.0
-        notes: Minimal mass, translucent or implied body
-    Phantasm:
-        weight: 1.0
-        notes: Semi-coherent shape, shifting edges
-    Liminal:
-        weight: 1.0
-        notes: Between-states anatomy; incomplete definition
-    Driftshade:
-        weight: 1.0
-        notes: Shadow-first presence, form follows aura
-
-Bloom:
-    Shoot:
-        weight: 1.0
-        notes: Upward growth, youthful proportions
-    Canopy:
-        weight: 1.0
-        notes: Spreading limbs, protective reach
-    Flourish:
-        weight: 1.0
-        notes: Expressive extensions, creative excess
-    Seedframe:
-        weight: 1.0
-        notes: Compact core with latent expansion
-
-Vessel:
-    Hollow:
-        weight: 1.0
-        notes: Emptiness-forward body, cavities and voids
-    Frame:
-        weight: 1.0
-        notes: Structural outline more important than surface
-    Receptacle:
-        weight: 1.0
-        notes: Inward-facing geometry, containment logic
-    Shellform:
-        weight: 1.0
-        notes: Protective exterior around absence
 
 Nadir:
     Abyssal:
@@ -166,33 +28,89 @@ Nadir:
         weight: 1.0
         notes: Shape obscured by shadow and implication
 
-Azimuth:
-    Compass:
+Zenith:
+    Pinnacle:
         weight: 1.0
-        notes: Central directional core; limbs align to cardinal lines
-    Gyre:
+        notes: Upward-tapered silhouette; crown-like peak defines form
+    Apex:
         weight: 1.0
-        notes: Spiraling posture suggesting endless bearing without destination
-    Meridian:
+        notes: Broad base to narrow summit; stature radiates culmination
+    Crowned:
         weight: 1.0
-        notes: Tall, lean frame; vertical axis dominates silhouette
-    Wayfinder:
+        notes: Distinct headpiece or horn ring; presence asserts arrival
+    Keystone:
         weight: 1.0
-        notes: Subtle pointer-like extensions; body implies guidance and orientation
+        notes: Outstretched planes that level at the top; body embodies "highest bound"
 
-Fracture:
-    Faultline:
+Spur:
+    Surge:
         weight: 1.0
-        notes: Visible cracks along a main axis; body appears near failure
-    Splinter:
+        notes: Explosive posture, forward momentum, no restraint
+    Talon:
         weight: 1.0
-        notes: Multiple sharp projections; stress dispersed into shards
-    Shearform:
+        notes: Grasping, striking extremities emphasized
+    Breaker:
         weight: 1.0
-        notes: Offset planes sliding past each other; torsion visible in stance
-    Stressform:
+        notes: Body shaped for impact and collision
+    Flareframe:
         weight: 1.0
-        notes: Bent under invisible load; posture captures imminent break
+        notes: Sharp angles, aggressive silhouette deformation
+
+Flux:
+    Tide:
+        weight: 1.0
+        notes: Flowing, wave-like undulations; body never fully settles
+    Phase:
+        weight: 1.0
+        notes: Flickering between states; edges blur and reform
+    Shimmer:
+        weight: 1.0
+        notes: Surface instability, never quite solid; iridescent transitions
+    Eddy:
+        weight: 1.0
+        notes: Circular motion visible in limb arrangement; recursive flow
+
+Surge:
+    Cascade:
+        weight: 1.0
+        notes: Overflowing form; excess energy made visible as protrusions
+    Torrent:
+        weight: 1.0
+        notes: Powerful forward-moving mass; body implies unstoppable inertia
+    Crest:
+        weight: 1.0
+        notes: Peak of a wave frozen mid-break; tension before discharge
+    Voltform:
+        weight: 1.0
+        notes: Charged silhouette; arcing lines and branching extremities
+
+Fractal:
+    Mandala:
+        weight: 1.0
+        notes: Circular recursive patterns; symmetry at every level of detail
+    Branch:
+        weight: 1.0
+        notes: Tree-like fracturing limbs; self-similar at each division
+    Nest:
+        weight: 1.0
+        notes: Inward-facing recursive complexity; looking deeper always reveals more
+    Tessera:
+        weight: 1.0
+        notes: Mosaic-like repeating structure; body is tiled with its own motif
+
+Vessel:
+    Hollow:
+        weight: 1.0
+        notes: Emptiness-forward body, cavities and voids
+    Frame:
+        weight: 1.0
+        notes: Structural outline more important than surface
+    Receptacle:
+        weight: 1.0
+        notes: Inward-facing geometry, containment logic
+    Shellform:
+        weight: 1.0
+        notes: Protective exterior around absence
 
 Oracle:
     Augury:
@@ -208,16 +126,44 @@ Oracle:
         weight: 1.0
         notes: Forward-leaning stance as if anticipating; limbs poised mid-reading
 
-Zenith:
-    Pinnacle:
+Echo:
+    Relic:
         weight: 1.0
-        notes: Upward-tapered silhouette; crown-like peak defines form
-    Apex:
+        notes: Worn, layered, time-scarred physicality
+    Loop:
         weight: 1.0
-        notes: Broad base to narrow summit; stature radiates culmination
-    Crowned:
+        notes: Repeating anatomy, mirrored or recursive features
+    Imprint:
         weight: 1.0
-        notes: Distinct headpiece or horn ring; presence asserts arrival
-    Keystone:
+        notes: Presence defined by marks left behind
+    Ossuary:
         weight: 1.0
-        notes: Outstretched planes that level at the top; body embodies “highest bound”
+        notes: Hollowed mass, internal voids, memory-weighted form
+
+Relic:
+    Fossil:
+        weight: 1.0
+        notes: Preserved ancient form; mineralized features, compressed history
+    Monolith:
+        weight: 1.0
+        notes: Weathered standing mass; immovable and time-worn
+    Patina:
+        weight: 1.0
+        notes: Surface tells the story of time; layers of oxidation and wear
+    Archive:
+        weight: 1.0
+        notes: Form stores and displays history; inscribed or etched surfaces
+
+Mire:
+    Husk:
+        weight: 1.0
+        notes: Degraded exterior, sagging or eroded form
+    Sink:
+        weight: 1.0
+        notes: Slumped posture, gravity-dominated mass
+    Tangle:
+        weight: 1.0
+        notes: Knotted limbs, obstructed motion
+    Residuum:
+        weight: 1.0
+        notes: Clinging textures, unresolved buildup

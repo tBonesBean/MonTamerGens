@@ -1,3 +1,7 @@
+# Canonical Primary Types (12 types, 3 per cluster)
+# Cross-cluster resist/weak cycle: STRUCTURAL > DYNAMIC > POTENTIAL > RESIDUAL > STRUCTURAL
+
+# --- STRUCTURAL ---
 - name: Axiom
   weight: 1.0
   habitats:
@@ -24,14 +28,64 @@
           LUCK: 2
       tags:
           - Resist:Spur
-          - Weak:Idol
-          - Resist:Rift
-          - Weak:Nadir
+          - Weak:Echo
       notes:
           - Law
           - Rule
           - Inevitability
           - Order
+
+- name: Nadir
+  weight: 1.0
+  habitats:
+      - Dread Catacombs
+      - Darkmist Chasm
+      - AshGlass Tombs
+      - Netherbleak Hollow
+      - Sunless Abyss
+  attributes:
+      mul:
+          ATK: 0.92
+          DEF: 1.10
+          SPDEF: 1.12
+          SPD: 0.80
+      add:
+          HP: 20
+      tags:
+          - Resist:Flux
+          - Weak:Relic
+      notes:
+          - Collapse
+          - Depth
+          - Final Limit
+          - Terminal
+
+- name: Zenith
+  weight: 1.0
+  habitats:
+      - Celestial Spire
+      - Snowcapped Peaks
+      - Mt. Thermallia
+      - Astral Terrace
+      - Aurora Fields
+  attributes:
+      mul:
+          ATK: 1.15
+          SPATK: 1.15
+          HP: 1.10
+      add:
+          ACC: 3
+          LUCK: 2
+      tags:
+          - Resist:Surge
+          - Weak:Mire
+      notes:
+          - Apex
+          - Culmination
+          - Realization
+          - Highest Bound
+
+# --- DYNAMIC ---
 - name: Spur
   weight: 1.0
   habitats:
@@ -63,13 +117,163 @@
       add:
           HP: 5
       tags:
-          - Resist:Bloom
-          - Weak:Rift
+          - Resist:Vessel
+          - Weak:Axiom
       notes:
           - Impulse
           - Acceleration
           - Magnitude
           - Velocity
+
+- name: Flux
+  weight: 1.0
+  habitats:
+      - Freshwater Springs
+      - Riverlands
+      - Still Tidepools
+      - Thriving Reefs
+      - Sunless Abyss
+      - Alpine Lakes
+      - Moonlit Atolls
+      - Bioluminous Currents
+      - Violent Rapids
+      - Unyielding Cascades
+      - Shattered Plateau
+      - Wyrmscar Ridge
+  attributes:
+      mul:
+          SPDEF: 1.20
+          HP: 1.15
+          SPD: 1.15
+          SPATK: 1.10
+      add:
+          EVA: 4
+      tags:
+          - Resist:Oracle
+          - Weak:Nadir
+      notes:
+          - Change
+          - Instability
+          - Oscillation
+          - Transition
+
+- name: Surge
+  weight: 1.0
+  habitats:
+      - Skybridge Peaks
+      - Whispering Dunes
+      - Astral Terrace
+      - Starfall Crater
+      - Power Plant
+      - Condemned HydroPowerDam
+      - Collapsed Magma Tubes
+      - Ancient Lavaflows
+  attributes:
+      mul:
+          ATK: 1.20
+          SPATK: 1.20
+          SPD: 1.15
+          HP: 0.92
+      add:
+          LUCK: 5
+      tags:
+          - Resist:Fractal
+          - Weak:Zenith
+      notes:
+          - Escalation
+          - Overflow
+          - Cascade
+          - Runaway
+
+# --- POTENTIAL ---
+- name: Fractal
+  weight: 1.0
+  habitats:
+      - Starfall Crater
+      - Astral Terrace
+      - Bewitched Glen
+      - Darkmist Chasm
+      - Netherbleak Hollow
+      - Crumbling Ruins
+      - Forgotten Temple
+      - Synthetic Biosphere
+      - Retired Military Base
+      - Dayless Mosswood
+      - Wyrmscar Ridge
+  attributes:
+      mul:
+          SPATK: 1.18
+          SPD: 1.20
+          SPDEF: 1.15
+          HP: 0.92
+      add:
+          EVA: 5
+      tags:
+          - Resist:Echo
+          - Weak:Spur
+      notes:
+          - Recursion
+          - Pattern
+          - Self-Similarity
+          - Emergence
+
+- name: Vessel
+  weight: 1.0
+  habitats:
+      - Secret Lab
+      - Cocoon Sentinel
+      - Blooming Valley
+      - Verdant Plains
+      - Oldgrowth Marsh
+      - Misty Glades
+      - Ironwood Deep
+      - Fungal Vales
+      - Thornveil Thicket
+  attributes:
+      mul:
+          HP: 1.20
+          DEF: 1.12
+          SPATK: 1.15
+          SPDEF: 1.12
+      add:
+          HP: 10
+      tags:
+          - Resist:Relic
+          - Weak:Flux
+      notes:
+          - Capacity
+          - Containment
+          - Potential
+          - Becoming
+
+- name: Oracle
+  weight: 1.0
+  habitats:
+      - Archive Stone
+      - Celestial Spire
+      - Forgotten Temple
+      - Crystalline Cave
+      - Lunaglow Plateau
+      - Echoing Grotto
+      - Origin<UNKNOWN>
+  attributes:
+      mul:
+          SPATK: 1.20
+          ACC: 1.25
+          SPDEF: 1.10
+          DEF: 0.92
+      add:
+          EVA: 8
+      tags:
+          - Resist:Mire
+          - Weak:Surge
+      notes:
+          - Perception
+          - Pattern
+          - Foresight
+          - Vision
+
+# --- RESIDUAL ---
 - name: Echo
   weight: 1.0
   habitats:
@@ -93,118 +297,50 @@
       add:
           LUCK: 3
       tags:
-          - Resist:Geist
-          - Weak:Axiom
+          - Resist:Axiom
+          - Weak:Fractal
       notes:
           - Memory
           - Recurrence
           - Resonance
           - Persistence
-- name: Flow
-  weight: 1.0
-  habitats:
-      - Freshwater Springs
-      - Riverlands
-      - Still Tidepools
-      - Thriving Reefs
-      - Sunless Abyss
-      - Alpine Lakes
-      - Moonlit Atolls
-      - Bioluminous Currents
-      - Violent Rapids
-      - Unyielding Cascades
-      - Wild Tundra
-      - Frost Caps
-      - Snowcapped Peaks
-      - Frigid Icefields
-      - Snowpacked Mountains
-      - Permafrost Highlands
-  attributes:
-      mul:
-          SPDEF: 1.25
-          HP: 1.20
-          SPD: 1.10
-      add:
-          HP: 10
-      tags:
-          - Resist:Idol
-          - Weak:Bloom
-      notes:
-          - Adaptive
-          - Redirection
-          - Continuity
-          - Response
-- name: Bastion
+
+- name: Relic
   weight: 1.0
   habitats:
       - Monolithic Structures
       - Ancient Battlefield
-      - Crystalline Cave
-      - Ennoan Grasslands
-      - Alpine Slopes
-      - Lunaglow Plateau
-      - Riverlands
-      - Dayless Mosswood
-      - Still Tidepools
-      - Glass Desert
-      - Blooming Valley
-      - Ironwood Deep
-      - Fungal Vales
-      - Thornveil Thicket
+      - Crumbling Ruins
+      - Archaeological Dig
+      - Petrified Forest
+      - AshGlass Tombs
+      - Forgotten Temple
+      - Dread Catacombs
   attributes:
       mul:
+          DEF: 1.20
           SPDEF: 1.12
           HP: 1.08
-          DEF: 1.20
           SPATK: 0.90
       add:
           DEF: 10
       tags:
-          - Ability:Guard
-          - Resist:Bloom
-          - Weak:Spur
+          - Resist:Nadir
+          - Weak:Vessel
       notes:
           - Endurance
-          - Defense
-          - Immovability
-          - Refusal
-- name: Rift
-  weight: 1.0
-  habitats:
-      - Starfall Crater
-      - Astral Terrace
-      - Bewitched Glen
-      - Darkmist Chasm
-      - Netherbleak Hollow
-      - Crumbling Ruins
-      - Forgotten Temple
-      - Synthetic Biosphere
-      - Abandoned Wastes
-      - Retired Military Base
-      - Monolithic Structures
-      - Dayless Mosswood
-      - Wyrmscar Ridge
-  attributes:
-      mul:
-          SPATK: 1.18
-          SPD: 1.20
-          SPDEF: 1.15
-          HP: 0.92
-      add:
-          EVA: 5
-      tags:
-          - Resist:Nadir
-          - Weak:Geist
-      notes:
-          - Discontinuity
-          - Paradox
-          - Rupture
-          - Instability
+          - Artifact
+          - History
+          - Persistence
+
 - name: Mire
   weight: 1.0
   habitats:
       - Gloomfen Bogs
       - Oldgrowth Marsh
+      - Darkmist Chasm
+      - Netherbleak Hollow
+      - Abandoned Wastes
   attributes:
       mul:
           HP: 1.12
@@ -215,238 +351,10 @@
           SPDEF: 5
           ACC: 10
       tags:
+          - Resist:Zenith
+          - Weak:Oracle
       notes:
           - Decay
           - Stagnation
           - Suffocation
           - Rot
-- name: Idol
-  weight: 1.0
-  habitats:
-      - Smoldering Flats
-      - Mt. Thermallia
-      - Collapsed Magma Tubes
-      - Ancient Lavaflows
-      - Whispering Dunes
-      - Glass Caverns
-      - Obsidian Labyrinth
-      - Petrified Forest
-      - Strikken Ashlands
-  attributes:
-      mul:
-          ATK: 1.15
-          SPATK: 1.25
-          SPD: 1.10
-      add:
-          LUCK: 10
-      tags:
-          - Resist:Axiom
-          - Weak:Flow
-      notes:
-          - Belief
-          - Projection
-          - Attention
-          - Symbol
-- name: Geist
-  weight: 1.0
-  habitats:
-      - Sunless Abyss
-      - Ghost Town
-      - Starfall Crater
-      - Celestial Spire
-      - Aurora Fields
-      - Echoing Grotto
-      - Astral Terrace
-      - Synthetic Biosphere
-      - Origin<UNKNOWN>
-  attributes:
-      mul:
-          SPATK: 1.20
-          SPDEF: 1.15
-          HP: 0.95
-      add:
-          EVA: 8
-      tags:
-          - Resist:Echo
-          - Weak:Bloom
-      notes:
-          - Absence
-          - Liminality
-          - Threshold
-          - Spirit
-- name: Bloom
-  weight: 1.0
-  habitats:
-      - Blooming Valley
-      - Verdant Plains
-      - Oldgrowth Marsh
-      - Misty Glades
-      - Bewitched Glen
-      - Ironwood Deep
-      - Fungal Vales
-      - Thornveil Thicket
-      - Dayless Mosswood
-      - Shattered Plateau
-      - Wyrmscar Ridge
-      - Still Tidepools
-      - Thriving Reefs
-      - Secret Lab
-      - Restricted Labratory
-      - Darkmist Chasm
-      - Netherbleak Hollow
-      - Echoing Grotto
-      - Whispering Dunes
-      - Alpine Lakes
-      - Petrified Forest
-      - Bioluminous Currents
-  attributes:
-      mul:
-          HP: 1.25
-          DEF: 1.15
-          ATK: 1.10
-          SPATK: 1.15
-          SPDEF: 1.15
-      add:
-          HP: 15
-      tags:
-          - Resist:Flow
-          - Weak:Bastion
-      notes:
-          - Growth
-          - Vitality
-          - Expansion
-          - Life
-- name: Vessel
-  weight: 1.0
-  habitats:
-      - Secret Lab
-      - Cocoon Sentinel
-  attributes:
-      mul:
-          LUCK: 1.10
-      add:
-          ACC: 5
-      tags: []
-      notes:
-          - Capacity
-          - Containment
-          - Potential
-          - Becoming
-- name: Nadir
-  weight: 1.0
-  habitats:
-      - Dread Catacombs
-      - Darkmist Chasm
-      - AshGlass Tombs
-      - Netherbleak Hollow
-      - Sunless Abyss
-  attributes:
-      mul:
-          ATK: 0.92
-          DEF: 1.10
-          SPDEF: 1.12
-          SPD: 0.80
-      add:
-          HP: 20
-      tags:
-          - Resist:Zenith
-          - Weak:Bloom
-      notes:
-          - Collapse
-          - Depth
-          - Final Limit
-          - Terminal
-- name: Azimuth
-  weight: 1.0
-  habitats:
-      - Skybridge Peaks
-      - Whispering Dunes
-      - Astral Terrace
-      - Magnetic North
-      - Starfall Crater
-  attributes:
-      mul:
-          SPD: 1.25
-          ACC: 1.20
-          EVA: 1.15
-      add:
-          LUCK: 3
-      tags:
-          - Resist:Rift
-          - Weak:Nadir
-      notes:
-          - Orientation
-          - Bearing
-          - Vector
-          - Direction
-- name: Fracture
-  weight: 1.0
-  habitats:
-      - Shattered Plateau
-      - Wyrmscar Ridge
-      - Ancient Battlefield
-      - Crumbling Ruins
-      - Collapsed Magma Tubes
-  attributes:
-      mul:
-          ATK: 1.20
-          SPATK: 1.25
-          HP: 0.90
-      add:
-          EVA: 6
-      tags:
-          - Resist:Bastion
-          - Weak:Axiom
-      notes:
-          - Strain
-          - Fault
-          - Instability
-          - Failure
-- name: Oracle
-  weight: 1.0
-  habitats:
-      - Archive Stone
-      - Celestial Spire
-      - Forgotten Temple
-      - Crystalline Cave
-      - Lunaglow Plateau
-  attributes:
-      mul:
-          SPATK: 1.20
-          ACC: 1.25
-          SPDEF: 1.10
-          DEF: 0.92
-      add:
-          EVA: 8
-      tags:
-          - Resist:Echo
-          - Weak:Rift
-      notes:
-          - Perception
-          - Pattern
-          - Foresight
-          - Vision
-- name: Zenith
-  weight: 1.0
-  habitats:
-      - Celestial Spire
-      - Snowcapped Peaks
-      - Mt. Thermallia
-      - Astral Terrace
-      - Aurora Fields
-  attributes:
-      mul:
-          ATK: 1.15
-          SPATK: 1.15
-          HP: 1.10
-      add:
-          ACC: 3
-          LUCK: 2
-      tags:
-          - Resist:Nadir
-          - Weak:Mire
-      notes:
-          - Apex
-          - Culmination
-          - Realization
-          - Highest Bound

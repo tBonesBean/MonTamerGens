@@ -412,21 +412,21 @@ _validate_type_forms(FORMS_BY_TYPE, SEED_TYPE_DATA)
 
 """ Maps frozenset({primary, secondary}) -> multiplicative boost to apply when that pair is being considered. Values >1.0 = positive synergy, values <1.0 = penalty (but use INCOMPATIBLE_TYPE_PAIRS for hard forbids). """
 TYPE_SYNERGY_BOOSTS = {
-    frozenset(["Spur", "Axiom"]): 1.2,  # (Kinetic, Argent)
-    frozenset(["Bloom", "Flow"]): 0.7,  # (Gaian, Azure)
-    frozenset(["Idol", "Bloom"]): 1.1,  # (Vermillion, Veridian)
-    frozenset(["Geist", "Axiom"]): 1.2,  # (Aether, Arcane)
-    frozenset(["Nadir", "Echo"]): 0.8,  # (legacy Dread -> Nadir)
-    frozenset(["Rift", "Spur"]): 0.7,  # (Chrono, Kinetic)
-    frozenset(["Bastion", "Bloom"]): 1.1,  # (Apex, Gaian)
+    frozenset(["Spur", "Axiom"]): 1.2,
+    frozenset(["Vessel", "Flux"]): 0.7,
+    frozenset(["Zenith", "Vessel"]): 1.1,
+    frozenset(["Oracle", "Axiom"]): 1.2,
+    frozenset(["Nadir", "Echo"]): 0.8,
+    frozenset(["Fractal", "Spur"]): 0.7,
+    frozenset(["Relic", "Vessel"]): 1.1,
 }
 
 INCOMPATIBLE_TYPE_PAIRS = {
-    frozenset(["Idol", "Flow"]),  # (Vermillion, Azure)
-    frozenset(["Bloom", "Geist"]),  # (Gaian, Aether)
-    frozenset(["Bastion", "Nadir"]),  # (legacy Dread -> Nadir)
-    frozenset(["Axiom", "Idol"]),  # (Argent, Vermillion)
-    frozenset(["Rift", "Axiom"]),  # (Chrono, Arcane)
+    frozenset(["Zenith", "Flux"]),
+    frozenset(["Vessel", "Oracle"]),
+    frozenset(["Relic", "Nadir"]),
+    frozenset(["Axiom", "Zenith"]),
+    frozenset(["Fractal", "Axiom"]),
 }
 
 MAJOR_MODS = _load_mods_yaml("mutagens/major_mods.yaml")
@@ -435,34 +435,42 @@ ALL_MODS = [MAJOR_MODS, UTILITY_MODS]
 
 
 LEGACY_TYPE_MAP: Dict[str, str] = {
-    # Legacy -> new type mapping to help migrate existing mod and habitat data. Keys that are not present in this map will be left unchanged
+    # Legacy elemental names -> canonical types
     "Argent": "Axiom",
     "Kinetic": "Spur",
-    "Chrono": "Rift",
-    "Gaian": "Bloom",
-    "Vermillion": "Idol",
-    "Veridian": "Bloom",
-    "Azure": "Flow",
-    "Aether": "Geist",
+    "Chrono": "Fractal",
+    "Gaian": "Vessel",
+    "Vermillion": "Zenith",
+    "Veridian": "Vessel",
+    "Azure": "Flux",
+    "Aether": "Oracle",
     "Arcane": "Axiom",
     "Abyssal": "Nadir",
-    "Apex": "Bastion",
-    "Sylvan": "Bloom",
-    "Inferno": "Idol",
+    "Apex": "Relic",
+    "Sylvan": "Vessel",
+    "Inferno": "Zenith",
     "Mineral": "Axiom",
-    "Aerial": "Bastion",
-    "Beast": "Bastion",
+    "Aerial": "Relic",
+    "Beast": "Relic",
     "Toxic": "Mire",
     "Electric": "Spur",
-    "Frost": "Flow",
-    "Brawler": "Bastion",
-    "Ancient": "Rift",
-    "Mythic": "Geist",
-    "Insect": "Bloom",
-    "Astral": "Geist",
-    "Anomalous": "Rift",
-    # Map legacy or deprecated types to canonical
+    "Frost": "Flux",
+    "Brawler": "Relic",
+    "Ancient": "Fractal",
+    "Mythic": "Oracle",
+    "Insect": "Vessel",
+    "Astral": "Oracle",
+    "Anomalous": "Fractal",
     "Dread": "Nadir",
+    # Deprecated type names -> canonical replacements
+    "Flow": "Flux",
+    "Bastion": "Relic",
+    "Rift": "Fractal",
+    "Idol": "Zenith",
+    "Geist": "Oracle",
+    "Bloom": "Vessel",
+    "Azimuth": "Surge",
+    "Fracture": "Flux",
 }
 
 

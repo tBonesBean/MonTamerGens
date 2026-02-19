@@ -17,7 +17,7 @@ type_affinities:
         favored: [Shear]
         strained: [Pulse]
 
-  Azimuth:
+  Surge:
     secondary_type_bias:
       IMPETUS:
         favored: [Surge, Drive]
