@@ -4,16 +4,20 @@ This document defines the **authoritative schema and invariants** for the MonTam
 
 This file describes **what is allowed**, **what is forbidden**, and **what must never be inferred implicitly**.
 
+> **Governing authority:** `type_system_architecture.md` defines the canonical architecture from which this schema is derived.
+
 ---
 
 ## 1. System Overview
 
 The type system is split into **two orthogonal layers**:
 
-1. **Primary Type System** — Ontological identity
-2. **Secondary Type System** — Interaction posture
+1. **Primary Type System** -- Ontological identity
+2. **Secondary Type System** -- Interaction posture
 
 These layers must never collapse into one another.
+
+The four-layer identity stack (Primary Cluster, Primary Type, Secondary Cluster, Secondary Type) is collectively referred to as a monster's **BioMatrix**. The BioMatrix defines identity, determines possible forms, influences rarity, and shapes the generation process.
 
 ---
 
@@ -54,6 +58,18 @@ primary_type: <PrimaryTypeName>
 ```
 
 Where `<PrimaryTypeName>` is a key defined in `primary_types.yaml`.
+
+---
+
+### 2.3 Developmental Evolution Constraints
+
+Development operates on interference patterns, not identity. The following constraints are invariant:
+
+- **Phase Shifts** modify interaction thresholds, conversion rules, harmonic interference patterns, and expression pathways. They must **never** modify Primary identity, Secondary cluster grammar, or ontological classification.
+- **Kin Wounds** introduce distortion into the waveform (suppressed amplitudes, altered negotiation outcomes). They alter expression, not identity.
+- **Lumen Embracing** realigns harmonics (restores suppressed amplitudes, unlocks alternate behavioral interactions). This is identity affirmation, not stat modification.
+
+Any system that modifies Primary Type or Primary Cluster assignment through developmental mechanics is a **schema violation**.
 
 ---
 
@@ -101,7 +117,7 @@ Where `<SecondaryClusterName>` is one of the allowed Secondary Clusters.
 
 ## 4. Interaction Model
 
-Interactions follow a **context → modifier** pattern.
+Interactions follow a **context --> modifier** pattern.
 
 - Primary Cluster defines the interaction context
 - Secondary Cluster defines the modifier applied within that context
@@ -109,14 +125,25 @@ Interactions follow a **context → modifier** pattern.
 ### 4.1 Branching Rule
 
 ```text
-interaction = PrimaryCluster :: SecondaryCluster → Effect
+interaction = PrimaryCluster :: SecondaryCluster --> Effect
 ```
 
 This is referred to as the **1 :: [3] model**.
 
+### 4.2 Combat Resolution
+
+Interactions resolve cross-layer:
+
+```text
+Attacker Primary --> Defender Secondary
+Defender Primary --> Attacker Secondary
+```
+
+Not Primary vs Primary. This preserves ontological integrity.
+
 ---
 
-### 4.2 Allowed Interaction Effects
+### 4.3 Allowed Interaction Effects
 
 Secondary interactions may:
 
@@ -164,7 +191,21 @@ The type system must not create unnamed or implicit tags.
 
 ---
 
-## 7. Forbidden Patterns (Hard Errors)
+## 7. Waveform Model Constraints
+
+Every monster is conceptually a composite waveform:
+
+- Primary Cluster = Macro curvature class
+- Primary Type = Centroid emphasis
+- Secondary Cluster = Modulation style
+- Secondary Type = Fine modulation
+- Individual variation = Amplitude noise
+
+Development modifies **phase and interference**, not frequency identity. Any system that redefines a monster's fundamental waveform components (Primary Cluster or Primary Type) is a schema violation.
+
+---
+
+## 8. Forbidden Patterns (Hard Errors)
 
 The following are **schema violations**:
 
@@ -173,20 +214,22 @@ The following are **schema violations**:
 - Secondary effects overriding Primary identity
 - Implicit type conversions
 - Undeclared interaction effects
+- Developmental mechanics that alter Primary Type or Primary Cluster
+- Tertiary hidden identity layers
 
 Any AI or system encountering these must treat them as errors.
 
 ---
 
-## 8. Design Intent (Non-Negotiable)
+## 9. Design Intent (Non-Negotiable)
 
 - Ontology precedes mechanics
 - Interaction never redefines existence
 - Complexity is layered, not entangled
+- Monsters are signal profiles, not archetypes
 
 This schema exists to **protect future systems from early collapse**.
 
 ---
 
 *End of schema.*
-

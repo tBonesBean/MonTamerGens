@@ -1,6 +1,6 @@
-version: 0.1
+version: 0.2
 
-rules:   
+rules:
     one_primary_type_per_monster: true
     one_secondary_type_per_monster: true
 
@@ -8,43 +8,191 @@ primary_types:
     # STRUCTURAL
     Axiom:
         cluster: STRUCTURAL
+        label: 'Order / Law'
+        question: 'What rule holds here?'
+        tagline: 'Law, rule, inevitability'
         summary: 'Law, rule, inevitability'
+        affinity:
+            secondary_clusters:
+                favored: [HOLDFAST]
+                neutral: [VEIL]
+                strained: [IMPETUS]
+            notes: >
+                Axiom sustains through persistence and refusal (Holdfast), can impose structure
+                through redirection (Veil), but resists chaotic momentum (Impetus).
+
     Nadir:
         cluster: STRUCTURAL
+        label: 'Collapse / Depth'
+        question: 'How far down does this go?'
+        tagline: 'Terminal collapse, lowest bound'
         summary: 'Terminal collapse, lowest bound'
+        affinity:
+            secondary_clusters:
+                favored: [HOLDFAST]
+                neutral: [IMPETUS]
+                strained: [VEIL]
+            notes: >
+                Nadir endures through sheer inertial weight (Holdfast), can be pushed further
+                by escalation (Impetus), but resists redirection -- it only goes down (Veil).
+
     Zenith:
         cluster: STRUCTURAL
+        label: 'Apex / Culmination'
+        question: 'What is the ceiling here?'
+        tagline: 'Culmination, apex, realized limit'
         summary: 'Culmination, apex, realized limit'
+        affinity:
+            secondary_clusters:
+                favored: [VEIL]
+                neutral: [HOLDFAST]
+                strained: [IMPETUS]
+            notes: >
+                Zenith maintains its peak through redirection and reframing (Veil), can endure
+                at altitude (Holdfast), but is destabilized by momentum that demands more (Impetus).
 
     # DYNAMIC
     Spur:
         cluster: DYNAMIC
+        label: 'Impulse / Momentum'
+        question: 'What set this in motion?'
+        tagline: 'Impulse, sudden acceleration'
         summary: 'Impulse, sudden acceleration'
+        affinity:
+            secondary_clusters:
+                favored: [IMPETUS]
+                neutral: [VEIL]
+                strained: [HOLDFAST]
+            notes: >
+                Spur expresses naturally through forward pressure (Impetus), can be redirected
+                into feints (Veil), but chafes against inertia and resistance (Holdfast).
+
     Flux:
         cluster: DYNAMIC
+        label: 'Change / Instability'
+        question: 'What is shifting here?'
+        tagline: 'Continuous change, instability'
         summary: 'Continuous change, instability'
+        affinity:
+            secondary_clusters:
+                favored: [VEIL]
+                neutral: [IMPETUS]
+                strained: [HOLDFAST]
+            notes: >
+                Flux thrives through constant redirection and distortion (Veil), can ride
+                momentum when it shifts direction (Impetus), but collapses when forced to hold
+                still (Holdfast).
+
     Surge:
         cluster: DYNAMIC
+        label: 'Escalation / Overflow'
+        question: 'When does this break containment?'
+        tagline: 'Runaway escalation, overflow'
         summary: 'Runaway escalation, overflow'
+        affinity:
+            secondary_clusters:
+                favored: [IMPETUS]
+                neutral: [HOLDFAST]
+                strained: [VEIL]
+            notes: >
+                Surge compounds through momentum and escalation (Impetus), can be contained
+                temporarily by resistance (Holdfast), but is poorly served by subtle redirection
+                -- it overwhelms (Veil).
 
     # POTENTIAL
     Fractal:
         cluster: POTENTIAL
+        label: 'Recursion / Pattern'
+        question: 'What repeats at every scale?'
+        tagline: 'Recursive pattern, scale-invariant possibility'
         summary: 'Recursive pattern, scale-invariant possibility'
+        affinity:
+            secondary_clusters:
+                favored: [VEIL]
+                neutral: [HOLDFAST]
+                strained: [IMPETUS]
+            notes: >
+                Fractal expresses through interference and layered distortion (Veil), can
+                stabilize into persistent patterns (Holdfast), but is disrupted by blunt
+                forward force (Impetus).
+
     Vessel:
         cluster: POTENTIAL
+        label: 'Capacity / Containment'
+        question: 'What could this hold?'
+        tagline: 'Capacity, containment, unrealized potential'
         summary: 'Capacity, containment, unrealized potential'
+        affinity:
+            secondary_clusters:
+                favored: [HOLDFAST]
+                neutral: [VEIL]
+                strained: [IMPETUS]
+            notes: >
+                Vessel maintains itself through preservation and endurance (Holdfast), can
+                refract what it contains (Veil), but risks shattering under direct pressure
+                (Impetus).
+
     Oracle:
         cluster: POTENTIAL
+        label: 'Foresight / Perception'
+        question: 'What pattern is emerging?'
+        tagline: 'Pattern perception, foresight without certainty'
         summary: 'Pattern perception, foresight without certainty'
+        affinity:
+            secondary_clusters:
+                favored: [VEIL]
+                neutral: [IMPETUS]
+                strained: [HOLDFAST]
+            notes: >
+                Oracle reads possibility through interference and subtle signals (Veil), can
+                anticipate escalation (Impetus), but is least effective when locked into rigid
+                persistence (Holdfast).
 
     # RESIDUAL
     Echo:
         cluster: RESIDUAL
+        label: 'Memory / Recurrence'
+        question: 'What was here before?'
+        tagline: 'Memory, recurrence, resonance'
         summary: 'Memory, recurrence, resonance'
+        affinity:
+            secondary_clusters:
+                favored: [VEIL]
+                neutral: [HOLDFAST]
+                strained: [IMPETUS]
+            notes: >
+                Echo persists through distortion and repetition (Veil), can endure as a fixed
+                residue (Holdfast), but is scattered by forward momentum that overwrites the
+                past (Impetus).
+
     Relic:
         cluster: RESIDUAL
+        label: 'Artifact / History'
+        question: 'What survived?'
+        tagline: 'Persisting artifact, history made physical'
         summary: 'Persisting artifact, history made physical'
+        affinity:
+            secondary_clusters:
+                favored: [HOLDFAST]
+                neutral: [VEIL]
+                strained: [IMPETUS]
+            notes: >
+                Relic endures through sheer refusal to erode (Holdfast), may distort through
+                accumulated residue (Veil), but is poorly suited to forward escalation that
+                demands novelty (Impetus).
+
     Mire:
         cluster: RESIDUAL
+        label: 'Decay / Stagnation'
+        question: 'What is rotting here?'
+        tagline: 'Stagnation, decay, suffocation'
         summary: 'Stagnation, decay, suffocation'
+        affinity:
+            secondary_clusters:
+                favored: [HOLDFAST]
+                neutral: [IMPETUS]
+                strained: [VEIL]
+            notes: >
+                Mire persists through inertia and accumulated weight (Holdfast), can weaponize
+                pressure through slow escalation (Impetus), but is least natural when forced to
+                redirect or obscure -- it simply sits (Veil).

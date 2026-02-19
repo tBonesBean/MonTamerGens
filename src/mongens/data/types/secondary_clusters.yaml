@@ -1,5 +1,10 @@
+version: 0.1
+
 secondary_clusters:
     IMPETUS:
+        label: 'Force / Momentum'
+        question: 'How does pressure propagate?'
+        tagline: 'Applied force, escalation, inherited motion'
         description: >
             Applied force and forward momentum.
             Effects that escalate, propagate, or inherit motion once begun.
@@ -7,8 +12,20 @@ secondary_clusters:
             - damage amplification
             - tempo pressure
             - combo inheritance
+        affinity:
+            primary_clusters:
+                favored: [DYNAMIC]
+                neutral: [POTENTIAL]
+                strained: [STRUCTURAL, RESIDUAL]
+            notes: >
+                Impetus expresses most naturally through kinetic identity (Dynamic), can pressure
+                unrealized states into action (Potential), but struggles against rigid bounds
+                (Structural) and inertial weight (Residual).
 
     VEIL:
+        label: 'Interference / Distortion'
+        question: 'What is being obscured or redirected?'
+        tagline: 'Distortion, redirection, information control'
         description: >
             Interference without destruction.
             Effects that obscure, redirect, or distort interaction outcomes.
@@ -16,8 +33,20 @@ secondary_clusters:
             - redirection
             - suppression
             - information distortion
+        affinity:
+            primary_clusters:
+                favored: [POTENTIAL]
+                neutral: [STRUCTURAL, DYNAMIC]
+                strained: [RESIDUAL]
+            notes: >
+                Veil thrives alongside unrealized possibility (Potential), can bend both
+                structure and motion (Structural, Dynamic), but is least effective against
+                residue that simply persists regardless (Residual).
 
     HOLDFAST:
+        label: 'Resistance / Persistence'
+        question: 'What refuses to move?'
+        tagline: 'Inertia, endurance, refusal of displacement'
         description: >
             Local resistance and inertial persistence.
             Effects that mitigate, endure, or refuse displacement.
@@ -25,3 +54,12 @@ secondary_clusters:
             - damage mitigation
             - integrity preservation
             - defensive states
+        affinity:
+            primary_clusters:
+                favored: [STRUCTURAL, RESIDUAL]
+                neutral: [POTENTIAL]
+                strained: [DYNAMIC]
+            notes: >
+                Holdfast sustains most naturally alongside rigid identity (Structural) and
+                persistent aftermath (Residual), can contain unrealized potential (Potential),
+                but chafes against motion that demands change (Dynamic).

@@ -1,51 +1,197 @@
+version: 0.1
+
 secondary_types:
     # IMPETUS
     Surge:
         cluster: IMPETUS
+        label: 'Burst / Acceleration'
+        question: 'What erupts without warning?'
+        tagline: 'Sudden acceleration; burst application of force'
         notes: Sudden acceleration; burst application of force
+        affinity:
+            secondary_clusters:
+                favored: [IMPETUS]
+                neutral: [VEIL]
+                strained: [HOLDFAST]
+            notes: >
+                Surge compounds naturally with forward pressure (Impetus), can be refracted
+                into surprising directions (Veil), but is blunted by persistent resistance
+                (Holdfast).
 
     Shear:
         cluster: IMPETUS
+        label: 'Splitting / Boundary Force'
+        question: 'Where does this cut across?'
+        tagline: 'Force across boundaries; tearing effects'
         notes: Force applied across boundaries; tearing or splitting effects
+        affinity:
+            secondary_clusters:
+                favored: [IMPETUS]
+                neutral: [HOLDFAST]
+                strained: [VEIL]
+            notes: >
+                Shear amplifies through continued force application (Impetus), can grind against
+                resistance to widen cracks (Holdfast), but is poorly served by misdirection --
+                it needs a clear plane of action (Veil).
 
     Pulse:
         cluster: IMPETUS
+        label: 'Rhythm / Repetition'
+        question: 'What keeps hitting?'
+        tagline: 'Rhythmic emission of force; repetition over magnitude'
         notes: Rhythmic emission of force; repetition over magnitude
+        affinity:
+            secondary_clusters:
+                favored: [IMPETUS]
+                neutral: [VEIL]
+                strained: [HOLDFAST]
+            notes: >
+                Pulse gains strength through compounding rhythm (Impetus), can be layered with
+                interference patterns (Veil), but is dampened by inertia that absorbs each
+                beat (Holdfast).
 
     Drive:
         cluster: IMPETUS
+        label: 'Sustained Pressure / Compounding'
+        question: 'What refuses to stop pushing?'
+        tagline: 'Sustained forward pressure; compounding momentum'
         notes: Sustained forward pressure; momentum that compounds over time
+        affinity:
+            secondary_clusters:
+                favored: [IMPETUS]
+                neutral: [HOLDFAST]
+                strained: [VEIL]
+            notes: >
+                Drive expresses through relentless escalation (Impetus), can wear down even
+                persistent defenses over time (Holdfast), but is poorly served by distortion
+                that breaks its line of advance (Veil).
 
     # VEIL
     Ward:
         cluster: VEIL
+        label: 'Structured Interference / Imposed Rules'
+        question: 'What rules are being imposed on this interaction?'
+        tagline: 'Structured interference; imposed interaction rules'
         notes: Structured interference; imposed rules on interaction
+        affinity:
+            secondary_clusters:
+                favored: [VEIL]
+                neutral: [HOLDFAST]
+                strained: [IMPETUS]
+            notes: >
+                Ward layers naturally with other forms of interference (Veil), can reinforce
+                defensive structures (Holdfast), but is overwhelmed by blunt escalation that
+                ignores imposed rules (Impetus).
 
     Refraction:
         cluster: VEIL
+        label: 'Redirection / Deflection'
+        question: 'Where does this send the force instead?'
+        tagline: 'Redirection of effects without absorption'
         notes: Redirection of effects without absorption
+        affinity:
+            secondary_clusters:
+                favored: [VEIL]
+                neutral: [IMPETUS]
+                strained: [HOLDFAST]
+            notes: >
+                Refraction compounds with other distortion layers (Veil), can redirect momentum
+                to useful ends (Impetus), but cannot function when locked into rigid fixed
+                positions (Holdfast).
 
     Imposter:
         cluster: VEIL
+        label: 'False Signal / Misattribution'
+        question: 'What is pretending to be something else?'
+        tagline: 'False signal; misattribution of source or target'
         notes: False signal; misattribution of source or target
+        affinity:
+            secondary_clusters:
+                favored: [VEIL]
+                neutral: [HOLDFAST]
+                strained: [IMPETUS]
+            notes: >
+                Imposter thrives in layered deception (Veil), can masquerade as stability
+                (Holdfast), but is exposed by direct force that demands authentic response
+                (Impetus).
 
     Veil:
         cluster: VEIL
+        label: 'Obscuration / Concealment'
+        question: 'What is being hidden?'
+        tagline: 'Obscuration of state, intent, or presence'
         notes: Obscuration of state, intent, or presence
+        affinity:
+            secondary_clusters:
+                favored: [VEIL]
+                neutral: [HOLDFAST]
+                strained: [IMPETUS]
+            notes: >
+                Veil deepens with additional interference layers (Veil), can passively persist
+                behind defensive states (Holdfast), but is stripped away by sustained pressure
+                (Impetus).
 
     # HOLDFAST
     Inert:
         cluster: HOLDFAST
+        label: 'Non-Response / Dampening'
+        question: 'What refuses to react?'
+        tagline: 'Resistance through non-response; dampening'
         notes: Resistance through non-response; dampening of effects
+        affinity:
+            secondary_clusters:
+                favored: [HOLDFAST]
+                neutral: [VEIL]
+                strained: [IMPETUS]
+            notes: >
+                Inert compounds with other forms of persistence (Holdfast), can passively
+                support obscuration (Veil), but is least effective against escalation that
+                eventually forces a response (Impetus).
 
     Anchor:
         cluster: HOLDFAST
+        label: 'Positional Inertia / Immovability'
+        question: 'What will not be moved?'
+        tagline: 'Positional inertia; refusal of displacement'
         notes: Positional inertia; refusal to be displaced
+        affinity:
+            secondary_clusters:
+                favored: [HOLDFAST]
+                neutral: [IMPETUS]
+                strained: [VEIL]
+            notes: >
+                Anchor endures through layered resistance (Holdfast), can absorb and halt
+                momentum through mass (Impetus), but is poorly served by misdirection that
+                demands repositioning (Veil).
 
     Bulwark:
         cluster: HOLDFAST
+        label: 'Layered Endurance / Structured Defense'
+        question: 'How many layers must be broken?'
+        tagline: 'Layered endurance; structured defense'
         notes: Layered endurance; structured defense
+        affinity:
+            secondary_clusters:
+                favored: [HOLDFAST]
+                neutral: [VEIL]
+                strained: [IMPETUS]
+            notes: >
+                Bulwark stacks with other defensive states (Holdfast), can incorporate
+                interference into its layering (Veil), but is degraded by sustained escalation
+                that strips layers faster than they rebuild (Impetus).
 
     Tenacity:
         cluster: HOLDFAST
+        label: 'Persistence / Attrition Resistance'
+        question: 'What outlasts everything else?'
+        tagline: 'Persistence under attrition; refusal to collapse'
         notes: Persistence under attrition; refusal to collapse
+        affinity:
+            secondary_clusters:
+                favored: [HOLDFAST]
+                neutral: [IMPETUS]
+                strained: [VEIL]
+            notes: >
+                Tenacity endures through raw persistence (Holdfast), can slowly grind against
+                incoming force (Impetus), but is least natural when forced to misdirect or
+                obscure -- it simply refuses to fall (Veil).

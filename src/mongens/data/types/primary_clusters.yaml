@@ -1,54 +1,54 @@
 version: 0.2
 
 primary_clusters:
-  STRUCTURAL:
-    label: 'Positional / Structural'
-    question: 'Where does this sit?'
-    tagline: 'Bounds, load, inevitability'
-    affinity:
-      secondary_clusters:
-        favored: [HOLDFAST]
-        neutral: [VEIL]
-        strained: [IMPETUS]
-      notes: >
-        Structure endures most naturally (Holdfast), can bend outcomes via rules (Veil),
-        and resists momentum escalation (Impetus).
+    STRUCTURAL:
+        label: 'Positional / Structural'
+        question: 'Where does this sit?'
+        tagline: 'Bounds, load, inevitability'
+        affinity:
+            secondary_clusters:
+                favored: [HOLDFAST]
+                neutral: [VEIL]
+                strained: [IMPETUS]
+            notes: >
+                Structure endures most naturally (Holdfast), can bend outcomes via rules (Veil),
+                and resists momentum escalation (Impetus).
 
-  DYNAMIC:
-    label: 'Kinetic / Dynamic'
-    question: 'How does this move?'
-    tagline: 'Momentum, disruption, change'
-    affinity:
-      secondary_clusters:
-        favored: [IMPETUS]
-        neutral: [VEIL]
-        strained: [HOLDFAST]
-      notes: >
-        Motion expresses through momentum (Impetus), can misdirect or refract (Veil),
-        but chafes against inertia and refusal (Holdfast).
+    DYNAMIC:
+        label: 'Kinetic / Dynamic'
+        question: 'How does this move?'
+        tagline: 'Momentum, disruption, change'
+        affinity:
+            secondary_clusters:
+                favored: [IMPETUS]
+                neutral: [VEIL]
+                strained: [HOLDFAST]
+            notes: >
+                Motion expresses through momentum (Impetus), can misdirect or refract (Veil),
+                but chafes against inertia and refusal (Holdfast).
 
-  POTENTIAL:
-    label: 'Potential / Expressive'
-    question: 'What could be?'
-    tagline: 'Capacity, recursion, foresight'
-    affinity:
-      secondary_clusters:
-        favored: [VEIL]
-        neutral: [IMPETUS]
-        strained: [HOLDFAST]
-      notes: >
-        Potential interacts by reframing and interference (Veil), can pressure forward (Impetus),
-        and is least natural when forced into fixed inertia (Holdfast).
+    POTENTIAL:
+        label: 'Potential / Latent'
+        question: 'What could be?'
+        tagline: 'Capacity, recursion, foresight'
+        affinity:
+            secondary_clusters:
+                favored: [VEIL]
+                neutral: [IMPETUS]
+                strained: [HOLDFAST]
+            notes: >
+                Potential interacts by reframing and interference (Veil), can pressure forward (Impetus),
+                and is least natural when forced into fixed inertia (Holdfast).
 
-  RESIDUAL:
-    label: 'Residual / Remnant'
-    question: 'What remains?'
-    tagline: 'Persistence, decay, aftermath'
-    affinity:
-      secondary_clusters:
-        favored: [HOLDFAST]
-        neutral: [VEIL]
-        strained: [IMPETUS]
-      notes: >
-        Remnants persist and resist erasure (Holdfast), may distort through residue or echo (Veil),
-        and rarely express as clean forward escalation (Impetus).
+    RESIDUAL:
+        label: 'Residual / Remnant'
+        question: 'What remains?'
+        tagline: 'Persistence, decay, aftermath'
+        affinity:
+            secondary_clusters:
+                favored: [HOLDFAST]
+                neutral: [VEIL]
+                strained: [IMPETUS]
+            notes: >
+                Remnants persist and resist erasure (Holdfast), may distort through residue or echo (Veil),
+                and rarely express as clean forward escalation (Impetus).
