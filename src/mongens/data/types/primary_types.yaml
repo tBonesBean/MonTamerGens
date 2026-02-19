@@ -1,8 +1,8 @@
 version: 0.1
 
-rules:
+rules:   
     one_primary_type_per_monster: true
-    primary_type_changes_in_combat: false
+    one_secondary_type_per_monster: true
 
 primary_types:
     # STRUCTURAL

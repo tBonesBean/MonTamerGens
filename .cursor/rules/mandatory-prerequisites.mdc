@@ -1,0 +1,20 @@
+---
+description: Must read and ingest all contents of .ai_context/ before any contribution
+alwaysApply: true
+---
+
+# Mandatory Prerequisite
+
+Before any contribution can be made to the MonTamerGens project, AI contributors recursively READ and RETAIN the contents of `.ai_context/`.
+
+- Defines: architecture, data schemas, naming conventions, lore, canon, and perhaps detailed plans for updates or the implementation of future systems
+- Failure to comply = contribution rejected
+- BE AWARE: I reserve the right to request that an Agent edit the contents of `.ai_context/`, and that edit may take many forms: add/remove files, revise file contents, re-structuring of the directory, etc.
+
+>> *Updates can almost be cosidered constant on this project, and I will never be able to accomplish this project on my own, so I will be depending heavily on AI assistance I can trust to maintain an elevated contextual awareness and level of commitment to lore and canon as I do.*
+
+---
+
+## VERSIONING
+
+> **Version: 1.2.0_BETA (2026/02/19)**

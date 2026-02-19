@@ -4,5 +4,6 @@
 	"[markdown]": {
 		"editor.formatOnSave": false
 	},
-	"python.languageServer": "None"
+	"python.languageServer": "None",
+	"markdown.validate.enabled": true
 }

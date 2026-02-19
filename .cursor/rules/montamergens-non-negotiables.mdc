@@ -1,0 +1,16 @@
+---
+description: MTG non-negotiable design rules
+alwaysApply: true
+---
+
+# Non-Negotiable Rules
+
+- `Lumen` is the root of lore, canon, design, and mechanics
+- `MonsterSeed` defines the core of a Monster's identity
+- Stats/Visual Forms/Attributes/Monster Names are interdependent, built on a `monster type' or 'BioMatrix` foundation
+- Generation = guided randomness, constrained by lore and canon, essentially creates monsters using a "ground up" approach
+  - Often the latest property to roll then influences, in one way or another, the eligibility of the remaining properties
+  - This critically utilizes the logic flow to benefit from randomness without sacrificing a dedication to coherence
+- YAML defines content, maintains data integrity; Python defines logic, maintains consistent canon
+- Evolutionary Events, Monster Development, Obtaining New Abilities/Skills, Trainer-Monster Chemistry is narrative-triggered, allowing less reliance on accumulating EXP points or Levels
+- "Deterministic seeds" - considered such when manually assigned a unique ID# - must reproduce exact copies if put through the generation pipeline
