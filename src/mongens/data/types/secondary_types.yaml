@@ -2,7 +2,7 @@ version: 0.1
 
 secondary_types:
     # IMPETUS
-    Surge:
+    Burst:
         cluster: IMPETUS
         label: 'Burst / Acceleration'
         question: 'What erupts without warning?'
@@ -14,7 +14,7 @@ secondary_types:
                 neutral: [VEIL]
                 strained: [HOLDFAST]
             notes: >
-                Surge compounds naturally with forward pressure (Impetus), can be refracted
+                Burst compounds naturally with forward pressure (Impetus), can be refracted
                 into surprising directions (Veil), but is blunted by persistent resistance
                 (Holdfast).
 

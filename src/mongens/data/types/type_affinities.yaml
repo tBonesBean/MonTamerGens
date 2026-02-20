@@ -9,7 +9,7 @@ type_affinities:
     secondary_type_bias:
       HOLDFAST:
         favored: [Bulwark, Anchor]
-        strained: [Surge]
+        strained: [Burst]
       VEIL:
         favored: [Ward]
         strained: [Imposter]
@@ -20,7 +20,7 @@ type_affinities:
   Surge:
     secondary_type_bias:
       IMPETUS:
-        favored: [Surge, Drive]
+        favored: [Burst, Drive]
         strained: [Pulse]
       VEIL:
         favored: [Refraction]
