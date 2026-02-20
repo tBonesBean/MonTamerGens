@@ -469,7 +469,6 @@ LEGACY_TYPE_MAP: Dict[str, str] = {
     "Idol": "Zenith",
     "Geist": "Oracle",
     "Bloom": "Vessel",
-    "Azimuth": "Surge",
     "Fracture": "Flux",
 }
 
